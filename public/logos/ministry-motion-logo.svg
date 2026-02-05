@@ -1,0 +1,11 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Three upward arrows representing growth/motion -->
+  <!-- Yellow/Orange arrow (left) -->
+  <path d="M20 100 L35 60 L50 100 L42 100 L42 120 L28 120 L28 100 Z" fill="#FFA500"/>
+  
+  <!-- Purple/Blue arrow (middle) -->
+  <path d="M55 90 L70 45 L85 90 L77 90 L77 120 L63 120 L63 90 Z" fill="#7C3AED"/>
+  
+  <!-- Red/Pink arrow (right) -->
+  <path d="M90 80 L105 30 L120 80 L112 80 L112 120 L98 120 L98 80 Z" fill="#EF4444"/>
+</svg>
