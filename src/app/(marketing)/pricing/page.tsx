@@ -56,7 +56,7 @@ const pricingTiers = [
     name: 'Starter',
     price: '$99',
     period: '/month',
-    description: 'For small churches getting organized',
+    description: 'For churches ready to track transformation',
     teamSize: '15 team members',
     highlight: false,
     cta: 'Sign Up for Beta',
@@ -83,7 +83,7 @@ const pricingTiers = [
     name: 'Pro',
     price: '$249',
     period: '/month',
-    description: 'Full AI experience with 6 unique agents',
+    description: 'Full transformation tools for every ministry',
     teamSize: '100 team members • 1,000 church members',
     highlight: true,
     cta: 'Sign Up for Beta',
@@ -293,8 +293,11 @@ export default function PricingPage() {
             Simple,{' '}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">transparent pricing</span>
           </h1>
-          <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-8">
-            Start free, upgrade when you're ready. No hidden fees, no surprises.
+          <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-4">
+            One platform for every ministry leader. Start free, upgrade when you&apos;re ready.
+          </p>
+          <p className="text-sm text-blue-200/60 max-w-xl mx-auto mb-8">
+            Tools for worship, children&apos;s ministry, small groups, outreach, and more—all with transformation tracking built in.
           </p>
 
           {/* Billing toggle */}
@@ -508,10 +511,10 @@ export default function PricingPage() {
       <section className="py-24 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to get started?
+            Ready to Transform Your Ministry?
           </h2>
           <p className="text-xl text-blue-100 mb-10">
-            Join our beta program and be among the first to experience the future of church management.
+            Join churches moving from event management to transformation tracking—with tools for every ministry leader.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button

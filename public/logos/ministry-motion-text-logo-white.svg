@@ -1,0 +1,15 @@
+<svg width="200" height="32" viewBox="0 0 200 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon: Three upward arrows -->
+  <g transform="translate(0, 2)">
+    <!-- Yellow/Orange arrow (left) -->
+    <path d="M3 18 L7 8 L11 18 L9 18 L9 26 L5 26 L5 18 Z" fill="#FFA500"/>
+    <!-- Purple arrow (middle) -->
+    <path d="M13 15 L17 4 L21 15 L19 15 L19 26 L15 26 L15 15 Z" fill="#7C3AED"/>
+    <!-- Red arrow (right) -->
+    <path d="M23 12 L27 0 L31 12 L29 12 L29 26 L25 26 L25 12 Z" fill="#EF4444"/>
+  </g>
+  <!-- Text: Ministry Motion -->
+  <text x="40" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="white">
+    Ministry Motion
+  </text>
+</svg>

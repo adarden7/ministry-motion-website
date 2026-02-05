@@ -417,11 +417,14 @@ export default function ProductsPage() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-200/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
-            Every tool your worship ministry needs
+            Tools for Every Ministry Leader
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Plan, develop, engage, and analyze—all in one integrated platform.
-            No more switching between disconnected tools.
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
+            Plan, develop, engage, and analyze—all in one integrated transformation platform.
+          </p>
+          <p className="text-slate-500 max-w-2xl mx-auto mb-8">
+            Whether you lead worship, children&apos;s ministry, small groups, or the entire church—
+            Ministry Motion gives you the visibility and tools to track transformation.
           </p>
 
           {/* Quick nav */}

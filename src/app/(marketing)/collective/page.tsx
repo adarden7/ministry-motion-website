@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Crown,
   Users,
@@ -18,17 +19,30 @@ import {
   Trophy,
   Zap,
   Shield,
-  X
+  X,
+  Globe,
+  Building2,
+  DollarSign,
+  Calendar,
+  Play,
+  ArrowRight,
+  BadgeCheck,
+  Briefcase,
 } from 'lucide-react';
 import { useState } from 'react';
+import { useMarketing } from '@/context/MarketingContext';
+import { ShimmerButton } from '@/components/magicui/shimmer-button';
+import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text';
+import { NumberTicker } from '@/components/magicui/number-ticker';
 
 export default function WorshipCollectivePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const { openBetaModal } = useMarketing();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f0a0c] via-[#1a1215] to-[#0f0a0c] text-white antialiased">
 
-      {/* Hero Section  */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0">
@@ -39,14 +53,23 @@ export default function WorshipCollectivePage() {
         {/* Animated particles */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(20)].map((_, i) => (
-            <div
+            <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-rose-400/30 rounded-full animate-float-particle"
+              className="absolute w-1 h-1 bg-rose-400/30 rounded-full"
+              initial={{ opacity: 0.3 }}
+              animate={{
+                y: [0, -20, 0],
+                x: [0, 10, 0],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 5 + Math.random() * 10,
+                repeat: Infinity,
+                delay: Math.random() * 5,
+              }}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${5 + Math.random() * 10}s`
               }}
             />
           ))}
@@ -54,83 +77,230 @@ export default function WorshipCollectivePage() {
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Exclusive badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/30 mb-8">
-            <Sparkles className="w-4 h-4 text-rose-400" />
-            <span className="text-sm font-medium text-rose-300">Invitation Only · Limited Membership</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <AnimatedGradientText className="bg-rose-500/10 border-rose-500/30">
+              <span className="inline-flex items-center gap-2 text-rose-300">
+                <Crown className="w-4 h-4 text-rose-400" />
+                <span>Cross-Tenant Booking Network · Earn While You Lead</span>
+                <ChevronRight className="w-4 h-4" />
+              </span>
+            </AnimatedGradientText>
+          </motion.div>
 
           {/* Main heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mt-8 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]"
+          >
             <span className="bg-gradient-to-r from-rose-200 via-pink-300 to-rose-200 bg-clip-text text-transparent">
               The Worship Collective
             </span>
-          </h1>
+          </motion.h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-rose-100/70 max-w-3xl mx-auto mb-4 leading-relaxed">
-            An ultra-exclusive community for elite worship leaders ready to
-            <span className="text-rose-300"> master their craft</span> and
-            <span className="text-rose-300"> lead with excellence</span>.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-xl sm:text-2xl text-rose-100/70 max-w-3xl mx-auto mb-4 leading-relaxed"
+          >
+            Get certified. Get booked. Get paid.
+            <span className="text-rose-300"> The first cross-church worship leader network</span>{' '}
+            where your talent creates income.
+          </motion.p>
 
-          <p className="text-lg text-rose-100/50 max-w-2xl mx-auto mb-10">
-            Earn your invitation through dedication. Train with world-class mentors.
-            Join a global network of worship excellence.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-lg text-rose-100/50 max-w-2xl mx-auto mb-10"
+          >
+            Churches with open slots can book certified Collective members from other congregations.
+            Your certification becomes your credential. Your passion becomes your profession.
+          </motion.p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link
-              href="/signup"
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white font-bold rounded-full hover:shadow-2xl hover:shadow-rose-500/30 transition-all hover:-translate-y-1 text-lg"
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
+            <ShimmerButton
+              onClick={openBetaModal}
+              className="h-14 px-8 text-lg font-semibold"
+              background="linear-gradient(135deg, #f43f5e 0%, #ec4899 100%)"
             >
-              Sign Up for Beta
+              Join Beta Waitlist
+            </ShimmerButton>
+            <Link
+              href="#how-it-works"
+              className="h-14 px-8 bg-white/5 text-rose-100 font-semibold rounded-full border border-rose-500/30 hover:bg-rose-500/10 transition-all text-lg flex items-center justify-center gap-2"
+            >
+              <Play className="w-5 h-5" />
+              How It Works
             </Link>
-          </div>
+          </motion.div>
 
-          {/* Beta message */}
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-sm text-rose-100/50">
-              Be among the first to experience elite worship leadership training
-            </p>
-          </div>
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          >
+            {[
+              { value: 699, prefix: '$', label: 'Certification' },
+              { value: 5.99, prefix: '$', suffix: '/mo', label: 'Membership' },
+              { value: 100, suffix: '+', label: 'Booking Network' },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-rose-300">
+                  {stat.prefix}
+                  <NumberTicker value={stat.value} />
+                  {stat.suffix}
+                </div>
+                <div className="text-sm text-rose-100/50 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        >
           <span className="text-xs text-rose-500/50 uppercase tracking-widest">Discover</span>
-          <ChevronRight className="w-5 h-5 text-rose-500/50 rotate-90" />
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <ChevronRight className="w-5 h-5 text-rose-500/50 rotate-90" />
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* How It Works - The Flywheel */}
+      <section id="how-it-works" className="py-24 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
+              <Zap className="w-4 h-4 text-rose-400" />
+              <span className="text-sm font-medium text-rose-400">The Business Model</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              The Worship Collective Flywheel
+            </h2>
+            <p className="text-lg text-rose-100/70">
+              A self-sustaining ecosystem where excellence creates opportunity,
+              and opportunity fuels excellence.
+            </p>
+          </div>
+
+          {/* Flywheel Steps */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                icon: Award,
+                title: 'Get Certified',
+                description: '$699 certification program validates your vocal excellence and leadership capability through rigorous assessment.',
+                color: 'rose',
+              },
+              {
+                step: '02',
+                icon: Globe,
+                title: 'Join Network',
+                description: '$5.99/month membership places you in the cross-tenant booking network visible to all Ministry Motion churches.',
+                color: 'pink',
+              },
+              {
+                step: '03',
+                icon: Calendar,
+                title: 'Get Booked',
+                description: 'Churches with open service slots browse certified members and book you for their worship services.',
+                color: 'fuchsia',
+              },
+              {
+                step: '04',
+                icon: DollarSign,
+                title: 'Get Paid',
+                description: 'Receive compensation for your ministry. Your certification becomes income. Passion meets profession.',
+                color: 'violet',
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-px bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative p-6 rounded-2xl bg-stone-900/50 border border-rose-500/10 hover:border-rose-500/30 transition-all h-full">
+                  <div className="text-5xl font-bold text-rose-500/20 mb-4">{item.step}</div>
+                  <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-rose-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-rose-100/60 text-sm">{item.description}</p>
+                </div>
+                {i < 3 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 text-rose-500/30">
+                    <ArrowRight className="w-8 h-8" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* What is Collective */}
-      <section className="py-24 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* For Churches Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rose-950/10 to-transparent" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-                <Crown className="w-4 h-4 text-rose-400" />
-                <span className="text-sm font-medium text-rose-400">The Experience</span>
+                <Building2 className="w-4 h-4 text-rose-400" />
+                <span className="text-sm font-medium text-rose-400">For Churches</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                <span className="text-white">Not just training.</span>
+                <span className="text-white">Never have an empty</span>
                 <br />
                 <span className="bg-gradient-to-r from-rose-300 to-pink-400 bg-clip-text text-transparent">
-                  Transformation.
+                  worship slot again.
                 </span>
               </h2>
               <p className="text-lg text-rose-100/70 mb-8 leading-relaxed">
-                The Worship Collective is a rigorous credentialing program that elevates
-                dedicated worship leaders to the highest levels of musical and spiritual excellence.
-                This isn&apos;t for everyone—it&apos;s for those called to lead worship at the highest level.
+                Your worship leader is sick. Your backup is on vacation. Your service is in 3 days.
+                <br /><br />
+                With the Worship Collective network, browse pre-vetted, certified worship leaders
+                from other Ministry Motion churches and book them instantly.
               </p>
               <div className="space-y-4">
                 {[
-                  'Personal AI coaching with advanced analytics',
-                  'Weekly cohort sessions with expert mentors',
-                  'Masterclasses from globally recognized worship leaders',
-                  'Credential certification recognized across churches',
-                  'Exclusive community of like-minded leaders',
+                  'Browse certified leaders by skill level, style, and availability',
+                  'View vocal assessments, video recordings, and church endorsements',
+                  'Book with confidence—every member passed rigorous certification',
+                  'Handle all logistics through the platform',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center flex-shrink-0">
@@ -140,219 +310,149 @@ export default function WorshipCollectivePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Visual */}
-            <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-rose-500/20 to-pink-500/20 blur-3xl rounded-full" />
               <div className="relative bg-gradient-to-br from-stone-900 to-stone-950 rounded-3xl p-8 border border-rose-500/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
-                    <Crown className="w-7 h-7 text-white" />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-2">
+                    <Users className="w-5 h-5 text-rose-400" />
+                    <span className="font-semibold">Available This Weekend</span>
                   </div>
-                  <div>
-                    <div className="font-bold text-lg">Collective Member</div>
-                    <div className="text-rose-400 text-sm">Platinum Tier</div>
-                  </div>
+                  <span className="text-xs text-rose-400 bg-rose-500/10 px-2 py-1 rounded-full">12 Leaders</span>
                 </div>
 
-                {/* Progress visualization */}
+                {/* Available leaders preview */}
                 <div className="space-y-4 mb-6">
                   {[
-                    { label: 'Vocal Mastery', value: 92 },
-                    { label: 'Leadership Score', value: 88 },
-                    { label: 'Spiritual Depth', value: 95 },
-                  ].map((metric, i) => (
-                    <div key={i}>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-rose-100/70">{metric.label}</span>
-                        <span className="text-rose-400 font-medium">{metric.value}%</span>
+                    { name: 'Sarah M.', church: 'Grace Community', rating: 4.9, style: 'Contemporary', certified: 'Advanced' },
+                    { name: 'Marcus J.', church: 'Faith Chapel', rating: 4.8, style: 'Gospel', certified: 'Master' },
+                    { name: 'Emily R.', church: 'New Life Church', rating: 4.7, style: 'Hymns/Blended', certified: 'Certified' },
+                  ].map((leader, i) => (
+                    <div key={i} className="flex items-center gap-4 p-3 rounded-xl bg-white/5 border border-rose-500/10">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400/30 to-pink-500/30 flex items-center justify-center text-lg font-medium">
+                        {leader.name.charAt(0)}
                       </div>
-                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
-                          style={{ width: `${metric.value}%` }}
-                        />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium text-rose-100">{leader.name}</span>
+                          <BadgeCheck className="w-4 h-4 text-rose-400" />
+                        </div>
+                        <div className="text-xs text-rose-100/50 truncate">{leader.church} · {leader.style}</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="flex items-center gap-1 text-sm">
+                          <Star className="w-4 h-4 text-rose-400 fill-rose-400" />
+                          <span className="text-rose-100">{leader.rating}</span>
+                        </div>
+                        <div className="text-xs text-rose-400">{leader.certified}</div>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                {/* Badges */}
-                <div className="flex gap-2 flex-wrap">
-                  {['Certified Leader', 'Cohort Graduate', 'Master Vocalist'].map((badge, i) => (
-                    <span key={i} className="px-3 py-1 bg-rose-500/10 border border-rose-500/30 rounded-full text-xs text-rose-300">
-                      {badge}
-                    </span>
-                  ))}
-                </div>
+                <button className="w-full py-3 text-center bg-rose-500/20 text-rose-300 font-medium rounded-xl border border-rose-500/20 hover:bg-rose-500/30 transition-colors">
+                  View All Available Leaders
+                </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* The Journey / Credentialing Path */}
-      <section id="journey" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rose-950/10 to-transparent" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-              <Target className="w-4 h-4 text-rose-400" />
-              <span className="text-sm font-medium text-rose-400">The Credentialing Journey</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Earn your place among the elite
-            </h2>
-            <p className="text-lg text-rose-100/70">
-              Entry into The Worship Collective is earned, not given. Complete these requirements
-              within your church&apos;s Ministry Motion platform to unlock your invitation.
-            </p>
-          </div>
-
-          {/* Requirements grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                icon: Mic2,
-                title: 'Vocal Excellence',
-                requirement: 'Minimum 75% average',
-                description: 'Demonstrate consistent pitch accuracy, tone quality, and breath control across multiple assessments.'
-              },
-              {
-                icon: Trophy,
-                title: 'XP Achievement',
-                requirement: '5,000 XP in 6 months',
-                description: 'Show dedication through practice, community engagement, courses, and service participation.'
-              },
-              {
-                icon: BookOpen,
-                title: 'Course Completion',
-                requirement: 'Minimum 3 courses',
-                description: 'Complete foundational courses in vocal technique, worship theology, and leadership.'
-              },
-              {
-                icon: Heart,
-                title: 'Devotional Leadership',
-                requirement: 'Lead 10+ devotionals',
-                description: 'Demonstrate spiritual depth by leading team devotionals and prayer sessions.'
-              },
-              {
-                icon: Music,
-                title: 'Performance Hours',
-                requirement: '50+ hours recorded',
-                description: 'Accumulate tracked performance time through services and rehearsals.'
-              },
-              {
-                icon: Award,
-                title: 'Church Endorsement',
-                requirement: 'Leader recommendation',
-                description: 'Receive endorsement from your worship director or pastor confirming your readiness.'
-              },
-            ].map((req, i) => (
-              <div key={i} className="group p-6 rounded-2xl bg-gradient-to-br from-stone-900/50 to-stone-950/50 border border-rose-500/10 hover:border-rose-500/30 transition-all">
-                <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 group-hover:bg-rose-500/20 transition-colors">
-                  <req.icon className="w-6 h-6 text-rose-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-1">{req.title}</h3>
-                <div className="text-rose-400 text-sm font-medium mb-3">{req.requirement}</div>
-                <p className="text-sm text-rose-100/60">{req.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Timeline visual */}
-          <div className="mt-16 text-center">
-            <p className="text-rose-100/50 text-sm mb-4">Typical journey time</p>
-            <div className="inline-flex items-center gap-4 px-6 py-3 bg-stone-900/50 rounded-full border border-rose-500/20">
-              <span className="text-rose-100/70">Start</span>
-              <div className="flex gap-1">
-                {[...Array(6)].map((_, i) => (
-                  <div key={i} className="w-8 h-1 bg-gradient-to-r from-rose-500/50 to-pink-400/80 rounded-full" />
-                ))}
-              </div>
-              <span className="text-rose-400 font-semibold">6 months</span>
-              <ChevronRight className="w-4 h-4 text-rose-400" />
-              <span className="text-rose-300">Invitation</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Coaching Cohorts */}
-      <section id="cohorts" className="py-24 relative">
+      {/* For Worship Leaders Section */}
+      <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Cohort visual */}
-            <div className="order-2 lg:order-1">
+            {/* Visual */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-rose-500/10 to-pink-500/10 blur-3xl rounded-full" />
                 <div className="relative bg-gradient-to-br from-stone-900 to-stone-950 rounded-3xl p-8 border border-rose-500/20">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2">
-                      <Users className="w-5 h-5 text-rose-400" />
-                      <span className="font-semibold">Your Cohort</span>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
+                      <Crown className="w-7 h-7 text-white" />
                     </div>
-                    <span className="text-xs text-rose-400 bg-rose-500/10 px-2 py-1 rounded-full">8 members</span>
+                    <div>
+                      <div className="font-bold text-lg">Collective Member</div>
+                      <div className="text-rose-400 text-sm">Advanced Certification</div>
+                    </div>
                   </div>
 
-                  {/* Cohort members */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="aspect-square rounded-xl bg-gradient-to-br from-rose-500/20 to-pink-600/10 flex items-center justify-center border border-rose-500/20">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400/30 to-pink-500/30 flex items-center justify-center text-sm font-medium">
-                          {String.fromCharCode(65 + i)}
+                  {/* Earnings tracker */}
+                  <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 mb-6">
+                    <div className="text-sm text-rose-100/60 mb-1">This Month&apos;s Bookings</div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-rose-300">$1,240</span>
+                      <span className="text-sm text-green-400">+4 services</span>
+                    </div>
+                  </div>
+
+                  {/* Recent bookings */}
+                  <div className="space-y-3">
+                    {[
+                      { church: 'First Baptist', date: 'This Sunday', amount: '$350' },
+                      { church: 'Grace Community', date: 'Last Week', amount: '$350' },
+                      { church: 'New Hope', date: '2 Weeks Ago', amount: '$280' },
+                    ].map((booking, i) => (
+                      <div key={i} className="flex items-center justify-between text-sm">
+                        <div>
+                          <span className="text-rose-100">{booking.church}</span>
+                          <span className="text-rose-100/50 ml-2">· {booking.date}</span>
                         </div>
+                        <span className="text-green-400 font-medium">{booking.amount}</span>
                       </div>
                     ))}
                   </div>
-
-                  {/* Mentor */}
-                  <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
-                        <Crown className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-rose-100">Dr. Marcus Williams</div>
-                        <div className="text-sm text-rose-400">Master Vocal Coach · Cohort Mentor</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Next session */}
-                  <div className="mt-4 flex items-center justify-between text-sm">
-                    <span className="text-rose-100/60">Next Session</span>
-                    <span className="text-rose-300 font-medium">Thursday 7:00 PM EST</span>
-                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="order-1 lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-                <Users className="w-4 h-4 text-rose-400" />
-                <span className="text-sm font-medium text-rose-400">Coaching Cohorts</span>
+                <Mic2 className="w-4 h-4 text-rose-400" />
+                <span className="text-sm font-medium text-rose-400">For Worship Leaders</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                <span className="text-white">Learn together.</span>
+                <span className="text-white">Turn your calling</span>
                 <br />
                 <span className="bg-gradient-to-r from-rose-300 to-pink-400 bg-clip-text text-transparent">
-                  Grow together.
+                  into income.
                 </span>
               </h2>
               <p className="text-lg text-rose-100/70 mb-8 leading-relaxed">
-                You&apos;ll be placed in an intimate cohort of 8-12 worship leaders at similar skill levels.
-                Together, you&apos;ll progress through the program under the guidance of an expert mentor
-                who&apos;s walked the path before you.
+                You&apos;ve invested thousands of hours developing your gift. Now let that gift
+                open doors to new ministry opportunities and real compensation.
+                <br /><br />
+                Every certification holder becomes part of a cross-church network where your
+                excellence is visible to hundreds of Ministry Motion churches.
               </p>
               <div className="space-y-4">
                 {[
-                  { title: 'Weekly Live Sessions', desc: 'Real-time group coaching and feedback' },
-                  { title: 'Peer Accountability', desc: 'Partners who push you to excellence' },
-                  { title: 'Expert Mentorship', desc: 'Guidance from master worship leaders' },
-                  { title: 'Lifetime Network', desc: 'Connections that last beyond the program' },
+                  { title: 'Build Your Profile', desc: 'Showcase your certifications, recordings, and church endorsements' },
+                  { title: 'Set Your Availability', desc: 'Mark which weekends you\'re open for guest worship leading' },
+                  { title: 'Accept Bookings', desc: 'Get notified when churches want to book you' },
+                  { title: 'Lead & Earn', desc: 'Minister in new contexts while earning compensation' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -365,84 +465,126 @@ export default function WorshipCollectivePage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Interest Groups */}
-      <section className="py-24 relative overflow-hidden">
+      {/* Certification Journey */}
+      <section id="certification" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-rose-950/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-              <MessageCircle className="w-4 h-4 text-rose-400" />
-              <span className="text-sm font-medium text-rose-400">Interest Groups</span>
+              <Target className="w-4 h-4 text-rose-400" />
+              <span className="text-sm font-medium text-rose-400">$699 Certification Program</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Find your tribe
+              Earn your credential
             </h2>
             <p className="text-lg text-rose-100/70">
-              Beyond cohorts, join specialized interest groups that match your passions and goals.
+              A rigorous certification process that validates your excellence and
+              opens the door to the cross-tenant booking network.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Certification requirements grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                title: 'Vocal Health',
-                members: 45,
-                icon: '🎤',
-                description: 'Techniques, recovery, and prevention'
+                icon: Mic2,
+                title: 'Vocal Assessment',
+                requirement: '75%+ Score',
+                description: 'Pass our 1000-dimension AI vocal analysis covering pitch accuracy, tone quality, and breath control.'
               },
               {
-                title: 'Songwriting',
-                members: 38,
-                icon: '✍️',
-                description: 'Craft original worship music'
+                icon: Trophy,
+                title: 'XP Achievement',
+                requirement: '5,000 XP',
+                description: 'Demonstrate commitment through platform engagement: courses, practice, and community participation.'
               },
               {
-                title: 'Production',
-                members: 52,
-                icon: '🎛️',
-                description: 'Sound, mixing, and tech'
+                icon: BookOpen,
+                title: 'Course Completion',
+                requirement: '3+ Courses',
+                description: 'Complete foundational courses in vocal technique, worship theology, and leadership skills.'
               },
               {
-                title: 'Leadership',
-                members: 61,
-                icon: '👑',
-                description: 'Building and leading teams'
+                icon: Heart,
+                title: 'Devotional Leadership',
+                requirement: '10+ Led',
+                description: 'Demonstrate spiritual depth by leading team devotionals and prayer sessions in your church.'
               },
-            ].map((group, i) => (
-              <div key={i} className="group p-6 rounded-2xl bg-gradient-to-br from-stone-900/80 to-stone-950/80 border border-rose-500/10 hover:border-rose-500/30 transition-all cursor-pointer">
-                <div className="text-4xl mb-4">{group.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-1">{group.title}</h3>
-                <p className="text-sm text-rose-100/60 mb-4">{group.description}</p>
-                <div className="flex items-center gap-2 text-xs text-rose-400">
-                  <Users className="w-3 h-3" />
-                  <span>{group.members} members</span>
+              {
+                icon: Music,
+                title: 'Performance Hours',
+                requirement: '50+ Hours',
+                description: 'Accumulate tracked performance time through services, rehearsals, and practice sessions.'
+              },
+              {
+                icon: Award,
+                title: 'Church Endorsement',
+                requirement: 'Pastor Approval',
+                description: 'Receive official endorsement from your worship director and/or senior pastor.'
+              },
+            ].map((req, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-stone-900/50 to-stone-950/50 border border-rose-500/10 hover:border-rose-500/30 transition-all"
+              >
+                <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 group-hover:bg-rose-500/20 transition-colors">
+                  <req.icon className="w-6 h-6 text-rose-400" />
                 </div>
-              </div>
+                <h3 className="text-lg font-semibold text-white mb-1">{req.title}</h3>
+                <div className="text-rose-400 text-sm font-medium mb-3">{req.requirement}</div>
+                <p className="text-sm text-rose-100/60">{req.description}</p>
+              </motion.div>
             ))}
           </div>
+
+          {/* Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <p className="text-rose-100/50 text-sm mb-4">Average certification timeline</p>
+            <div className="inline-flex items-center gap-4 px-6 py-3 bg-stone-900/50 rounded-full border border-rose-500/20">
+              <span className="text-rose-100/70">Start</span>
+              <div className="flex gap-1">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="w-8 h-1 bg-gradient-to-r from-rose-500/50 to-pink-400/80 rounded-full" />
+                ))}
+              </div>
+              <span className="text-rose-400 font-semibold">6 months</span>
+              <ChevronRight className="w-4 h-4 text-rose-400" />
+              <span className="text-rose-300">Certified</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Credentials */}
+      {/* Credential Tiers */}
       <section id="credentials" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
               <Award className="w-4 h-4 text-rose-400" />
-              <span className="text-sm font-medium text-rose-400">Credentials</span>
+              <span className="text-sm font-medium text-rose-400">Credential Tiers</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Credentials that matter
+              Three levels of excellence
             </h2>
             <p className="text-lg text-rose-100/70">
-              Earn certifications recognized by churches worldwide. Your credential proves
-              you&apos;ve achieved excellence through rigorous training and assessment.
+              Progress through tiers as you demonstrate mastery. Higher tiers unlock
+              better booking visibility and premium rates.
             </p>
           </div>
 
@@ -454,14 +596,16 @@ export default function WorshipCollectivePage() {
                 color: 'from-slate-400 to-slate-500',
                 borderColor: 'border-slate-500/30',
                 bgColor: 'bg-slate-500/10',
-                requirements: ['Complete cohort program', 'Pass vocal assessment', '80%+ consistency score']
+                rate: '$150-250',
+                requirements: ['Complete certification program', 'Pass vocal assessment (75%+)', '80%+ consistency score']
               },
               {
                 level: 'Advanced',
                 color: 'from-rose-400 to-pink-500',
                 borderColor: 'border-rose-500/30',
                 bgColor: 'bg-rose-500/10',
-                requirements: ['Lead 3 cohort sessions', 'Mentor 2 new members', '90%+ excellence score'],
+                rate: '$250-400',
+                requirements: ['Lead 10+ booked services', 'Mentor 2 new members', '90%+ excellence score'],
                 featured: true
               },
               {
@@ -469,24 +613,32 @@ export default function WorshipCollectivePage() {
                 color: 'from-violet-400 to-purple-500',
                 borderColor: 'border-violet-500/30',
                 bgColor: 'bg-violet-500/10',
-                requirements: ['Graduate 10+ mentees', 'Published worship content', 'Board certification']
+                rate: '$400-600+',
+                requirements: ['50+ successful bookings', 'Published worship content', 'Board certification']
               },
             ].map((tier, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
                 className={`relative p-8 rounded-2xl border ${tier.borderColor} ${tier.bgColor} ${tier.featured ? 'scale-105' : ''}`}
               >
                 {tier.featured && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-xs font-bold rounded-full">
-                    Most Common
+                    Most Popular
                   </div>
                 )}
-                <div className={`w-16 h-8 rounded-2xl bg-gradient-to-br ${tier.color} flex items-center justify-center mx-auto mb-6`}>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${tier.color} flex items-center justify-center mx-auto mb-6`}>
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className={`text-2xl font-bold text-center mb-6 bg-gradient-to-r ${tier.color} bg-clip-text text-transparent`}>
+                <h3 className={`text-2xl font-bold text-center mb-2 bg-gradient-to-r ${tier.color} bg-clip-text text-transparent`}>
                   {tier.level}
                 </h3>
+                <div className="text-center text-rose-100/70 text-sm mb-6">
+                  <span className="font-semibold text-white">{tier.rate}</span> per service
+                </div>
                 <ul className="space-y-3">
                   {tier.requirements.map((req, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-rose-100/70">
@@ -495,7 +647,7 @@ export default function WorshipCollectivePage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -508,148 +660,146 @@ export default function WorshipCollectivePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-6">
-              <Zap className="w-4 h-4 text-rose-400" />
-              <span className="text-sm font-medium text-rose-400">Membership</span>
+              <DollarSign className="w-4 h-4 text-rose-400" />
+              <span className="text-sm font-medium text-rose-400">Investment</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Invest in your calling
+              Simple, transparent pricing
             </h2>
             <p className="text-lg text-rose-100/70">
-              Choose the path that matches your commitment to excellence.
+              One-time certification. Low monthly membership. Unlimited earning potential.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Pro Tier */}
-            <div className="relative p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-rose-500/20 hover:border-rose-500/40 transition-all">
+            {/* Certification */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-rose-500/20 hover:border-rose-500/40 transition-all"
+            >
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 mb-4">
-                  <Star className="w-4 h-4 text-rose-400" />
-                  <span className="text-sm font-medium text-rose-400">Pro</span>
+                  <Award className="w-4 h-4 text-rose-400" />
+                  <span className="text-sm font-medium text-rose-400">Certification</span>
                 </div>
-                <p className="text-rose-100/60 text-sm">For dedicated worship leaders ready to level up</p>
+                <p className="text-rose-100/60 text-sm">One-time investment to join the network</p>
               </div>
 
               <div className="mb-8">
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-4xl font-bold text-white">$49.99</span>
-                  <span className="text-rose-100/50">/month</span>
+                  <span className="text-5xl font-bold text-white">$699</span>
+                  <span className="text-rose-100/50">one-time</span>
                 </div>
-                <p className="text-rose-100/40 text-sm">or $479/year (save 20%)</p>
+                <p className="text-rose-100/40 text-sm">Payment plans available</p>
               </div>
 
               <div className="space-y-4 mb-8">
                 {[
-                  { feature: 'Coaching cohort placement (12 members)', included: true },
-                  { feature: 'Bi-weekly live group sessions', included: true },
-                  { feature: 'Access to all interest groups', included: true },
-                  { feature: 'Monthly masterclass recordings', included: true },
-                  { feature: 'AI vocal coaching (10 sessions/mo)', included: true },
-                  { feature: 'Credential certification path', included: true },
-                  { feature: 'Community chat & forums', included: true },
-                  { feature: 'Member-only events (virtual)', included: true },
-                  { feature: '1-on-1 mentor sessions', included: false },
-                  { feature: 'Live masterclass access', included: false },
-                  { feature: 'Priority credential review', included: false },
-                ].map((item, i) => (
-                  <div key={i} className={`flex items-center gap-3 ${!item.included ? 'opacity-40' : ''}`}>
-                    <div className={`w-5 h-5 rounded-full flex items-center justify-center ${item.included ? 'bg-rose-500/20' : 'bg-white/5'}`}>
-                      {item.included ? (
-                        <Check className="w-3 h-3 text-rose-400" />
-                      ) : (
-                        <X className="w-3 h-3 text-rose-100/30" />
-                      )}
-                    </div>
-                    <span className={item.included ? 'text-rose-100/80' : 'text-rose-100/40'}>{item.feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="/signup"
-                className="block w-full py-4 text-center bg-white/5 border border-rose-500/30 text-rose-100 font-bold rounded-full hover:bg-rose-500/10 transition-all text-lg"
-              >
-                Sign Up for Beta
-              </Link>
-            </div>
-
-            {/* Elite Tier */}
-            <div className="relative p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-rose-500/40 hover:border-rose-500/60 transition-all">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-sm font-bold rounded-full">
-                Most Popular
-              </div>
-
-              <div className="mb-6">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-500/30 mb-4">
-                  <Crown className="w-4 h-4 text-rose-300" />
-                  <span className="text-sm font-medium text-rose-300">Elite</span>
-                </div>
-                <p className="text-rose-100/60 text-sm">For serious leaders pursuing mastery</p>
-              </div>
-
-              <div className="mb-8">
-                <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-4xl font-bold text-white">$99.99</span>
-                  <span className="text-rose-100/50">/month</span>
-                </div>
-                <p className="text-rose-100/40 text-sm">or $959/year (save 20%)</p>
-              </div>
-
-              <div className="space-y-4 mb-8">
-                {[
-                  { feature: 'Intimate cohort placement (8 members)', included: true, highlight: true },
-                  { feature: 'Weekly live group sessions', included: true, highlight: true },
-                  { feature: 'Access to all interest groups', included: true },
-                  { feature: 'Live masterclasses + recordings', included: true, highlight: true },
-                  { feature: 'Unlimited AI vocal coaching', included: true, highlight: true },
-                  { feature: 'Credential certification path', included: true },
-                  { feature: 'Community chat & forums', included: true },
-                  { feature: 'Member-only events (virtual + in-person)', included: true, highlight: true },
-                  { feature: '2x monthly 1-on-1 mentor sessions', included: true, highlight: true },
-                  { feature: 'Priority credential review', included: true, highlight: true },
-                  { feature: 'Exclusive retreat invitations', included: true, highlight: true },
+                  'Complete certification curriculum',
+                  'AI vocal assessment & coaching',
+                  'Leadership training modules',
+                  'Church endorsement coordination',
+                  'Credential verification badge',
+                  'Profile setup in booking network',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-rose-500/20 flex items-center justify-center">
                       <Check className="w-3 h-3 text-rose-400" />
                     </div>
-                    <span className={`${item.highlight ? 'text-rose-100 font-medium' : 'text-rose-100/80'}`}>
-                      {item.feature}
-                      {item.highlight && <span className="ml-2 text-xs text-rose-400">★</span>}
-                    </span>
+                    <span className="text-rose-100/80">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <Link
-                href="/signup"
+              <button
+                onClick={openBetaModal}
+                className="block w-full py-4 text-center bg-white/5 border border-rose-500/30 text-rose-100 font-bold rounded-full hover:bg-rose-500/10 transition-all text-lg"
+              >
+                Join Beta Waitlist
+              </button>
+            </motion.div>
+
+            {/* Membership */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="relative p-8 rounded-3xl bg-gradient-to-b from-stone-900 to-stone-950 border border-rose-500/40 hover:border-rose-500/60 transition-all"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-sm font-bold rounded-full">
+                Required After Certification
+              </div>
+
+              <div className="mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-500/30 mb-4">
+                  <Crown className="w-4 h-4 text-rose-300" />
+                  <span className="text-sm font-medium text-rose-300">Network Membership</span>
+                </div>
+                <p className="text-rose-100/60 text-sm">Stay visible in the booking network</p>
+              </div>
+
+              <div className="mb-8">
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="text-5xl font-bold text-white">$5.99</span>
+                  <span className="text-rose-100/50">/month</span>
+                </div>
+                <p className="text-rose-100/40 text-sm">or $59/year (save 18%)</p>
+              </div>
+
+              <div className="space-y-4 mb-8">
+                {[
+                  { feature: 'Active listing in booking network', included: true },
+                  { feature: 'Booking request notifications', included: true },
+                  { feature: 'Member community access', included: true },
+                  { feature: 'Continued AI coaching access', included: true },
+                  { feature: 'Profile analytics & insights', included: true },
+                  { feature: 'Priority placement for Master tier', included: true },
+                  { feature: 'Earnings dashboard & history', included: true },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-rose-500/20 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-rose-400" />
+                    </div>
+                    <span className="text-rose-100/80">{item.feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={openBetaModal}
                 className="block w-full py-4 text-center bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white font-bold rounded-full hover:shadow-xl hover:shadow-rose-500/30 transition-all text-lg"
               >
-                Sign Up for Beta
-              </Link>
-            </div>
+                Join Beta Waitlist
+              </button>
+            </motion.div>
           </div>
 
-          {/* Additional info */}
-          <div className="mt-12 text-center">
-            <p className="text-rose-100/50 text-sm mb-4">
-              Both tiers require invitation · Must meet credentialing requirements
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-rose-100/40">
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span>14-day money-back guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
-                <span>Cancel anytime</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4" />
-                <span>Upgrade or downgrade freely</span>
+          {/* ROI Calculator */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="mt-16 max-w-2xl mx-auto text-center"
+          >
+            <div className="p-6 rounded-2xl bg-rose-500/10 border border-rose-500/20">
+              <Briefcase className="w-8 h-8 text-rose-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">The Math Works</h3>
+              <p className="text-rose-100/70 mb-4">
+                At just 3 bookings per year at the Certified tier ($200 avg), you&apos;ve paid for certification and membership. Everything after that is profit.
+              </p>
+              <div className="flex items-center justify-center gap-4 text-sm text-rose-100/50">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  <span>ROI positive by booking #3</span>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -663,27 +813,36 @@ export default function WorshipCollectivePage() {
           <div className="space-y-4">
             {[
               {
-                q: 'How do I get invited to The Worship Collective?',
-                a: 'Complete the credentialing requirements within your church\'s Ministry Motion platform. Once you meet all criteria (75% vocal score, 5,000 XP, 3 courses, etc.), you\'ll receive an invitation to apply.'
+                q: 'How does the cross-tenant booking work?',
+                a: 'Every Ministry Motion church can see certified Collective members from other churches. When a church has an open worship slot, they can browse available leaders, view their profiles and credentials, and send a booking request. The leader accepts or declines, and logistics are handled through the platform.'
               },
               {
-                a: 'Yes. The Worship Collective is a personal B2C subscription ($5.99/month) separate from your church\'s B2B subscription. It\'s your individual investment in advanced training.'
+                q: 'Do I need my church\'s permission to join?',
+                a: 'Yes. Part of the certification process requires endorsement from your senior pastor or worship director. This ensures everyone is aligned and your church supports your participation in the network.'
               },
               {
-                q: 'What if I don\'t meet all requirements yet?',
-                a: 'Keep working within your church\'s WorshipWise platform! Track your progress toward each requirement. Most dedicated members reach invitation status within 6 months.'
+                q: 'How much can I realistically earn?',
+                a: 'It depends on your availability and tier. Certified members typically earn $150-250 per service, Advanced members $250-400, and Master members $400-600+. Members who make themselves available most weekends often earn $500-1500/month.'
               },
               {
-                q: 'How are cohorts assigned?',
-                a: 'We match you with 8-12 members at similar skill levels and in compatible time zones. Cohort placement happens within 2 weeks of joining.'
+                q: 'What if I\'m not ready for certification?',
+                a: 'Start with Ministry Motion\'s free AI vocal coaching through your church. Build your skills, complete courses, and track your progress. When you hit the benchmarks, you\'ll be ready to apply for certification.'
               },
               {
-                q: 'Can I earn credentials without being in a cohort?',
-                a: 'No. The cohort experience is central to the program. Credentials are earned through cohort participation, peer accountability, and mentor assessment.'
+                q: 'Is the $5.99/month required after certification?',
+                a: 'Yes, the monthly membership keeps your profile active in the booking network. If you cancel, your profile becomes inactive but your certification remains valid. You can reactivate anytime.'
+              },
+              {
+                q: 'Can churches see my availability before booking?',
+                a: 'Yes. You set your availability calendar directly in the platform. Churches only see leaders who have marked themselves available for the dates they need.'
               },
             ].map((faq, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+                viewport={{ once: true }}
                 className="border border-rose-500/20 rounded-xl overflow-hidden"
               >
                 <button
@@ -698,44 +857,50 @@ export default function WorshipCollectivePage() {
                     {faq.a}
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Beta Signup CTA */}
-      <section id="waitlist" className="py-24 relative overflow-hidden">
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-rose-600/20 via-pink-500/20 to-rose-600/20" />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 border border-rose-500/30 mb-8">
-            <Sparkles className="w-4 h-4 text-rose-300" />
-            <span className="text-sm font-medium text-rose-200">Now accepting beta testers</span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 border border-rose-500/30 mb-8">
+              <Sparkles className="w-4 h-4 text-rose-300" />
+              <span className="text-sm font-medium text-rose-200">Beta launching soon</span>
+            </div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-rose-200 via-pink-300 to-rose-200 bg-clip-text text-transparent">
-              Ready to elevate your calling?
-            </span>
-          </h2>
-          <p className="text-xl text-rose-100/70 mb-10 max-w-2xl mx-auto">
-            Sign up for beta access and help shape the future of worship leadership excellence.
-          </p>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-rose-200 via-pink-300 to-rose-200 bg-clip-text text-transparent">
+                Your gift deserves to be shared.
+              </span>
+            </h2>
+            <p className="text-xl text-rose-100/70 mb-10 max-w-2xl mx-auto">
+              Join the waitlist for the first cross-church worship leader network.
+              Certification begins when beta launches.
+            </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/signup"
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white font-bold rounded-full hover:shadow-xl hover:shadow-rose-500/30 transition-all text-lg"
+            <ShimmerButton
+              onClick={openBetaModal}
+              className="h-16 px-10 text-xl font-semibold"
+              background="linear-gradient(135deg, #f43f5e 0%, #ec4899 100%)"
             >
-              Sign Up for Beta
-            </Link>
-          </div>
+              Join Beta Waitlist
+            </ShimmerButton>
 
-          <p className="text-sm text-rose-100/40 mt-6">
-            Be among the first to experience The Worship Collective
-          </p>
+            <p className="text-sm text-rose-100/40 mt-6">
+              Limited spots available. Be among the first certified Collective members.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -744,7 +909,9 @@ export default function WorshipCollectivePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
+                <Crown className="w-5 h-5 text-white" />
+              </div>
               <div>
                 <span className="font-bold text-rose-100">Worship Collective</span>
                 <div className="text-xs text-rose-500/60">By Ministry Motion</div>
@@ -752,35 +919,18 @@ export default function WorshipCollectivePage() {
             </div>
 
             <div className="flex items-center gap-8 text-sm text-rose-100/60">
-              <Link href="/landing" className="hover:text-rose-100 transition-colors">Ministry Motion</Link>
+              <Link href="/home" className="hover:text-rose-100 transition-colors">Ministry Motion</Link>
+              <Link href="/pricing" className="hover:text-rose-100 transition-colors">Pricing</Link>
               <Link href="#" className="hover:text-rose-100 transition-colors">Privacy</Link>
               <Link href="#" className="hover:text-rose-100 transition-colors">Terms</Link>
-              <Link href="#" className="hover:text-rose-100 transition-colors">Contact</Link>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-rose-500/10 text-center text-sm text-rose-100/40">
-            © 2025 Worship Collective by Ministry Motion. All rights reserved.
+            © {new Date().getFullYear()} Worship Collective by Ministry Motion. All rights reserved.
           </div>
         </div>
       </footer>
-
-      {/* Custom styles */}
-      <style jsx>{`
-        @keyframes float-particle {
-          0%, 100% {
-            transform: translateY(0) translateX(0);
-            opacity: 0.3;
-          }
-          50% {
-            transform: translateY(-20px) translateX(10px);
-            opacity: 0.6;
-          }
-        }
-        .animate-float-particle {
-          animation: float-particle 10s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 }
