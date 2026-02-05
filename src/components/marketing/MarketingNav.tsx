@@ -13,8 +13,7 @@ export function MarketingNav() {
             <div className="container mx-auto flex h-14 items-center">
                 <div className="mr-4 flex flex-shrink-0">
                     <Link href="/" className="mr-6 flex items-center space-x-2">
-                        {/* Ensure logo/text doesn't wrap or get cut off */}
-                        <span className="font-bold whitespace-nowrap text-lg">WorshipWise</span>
+                        <span className="font-bold whitespace-nowrap text-lg">Ministry Motion</span>
                     </Link>
                 </div>
                 <nav className="flex items-center space-x-6 text-sm font-medium">
