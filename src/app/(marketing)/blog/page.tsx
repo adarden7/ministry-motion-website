@@ -3,288 +3,321 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  BookOpen,
   Calendar,
   Clock,
-  Tag,
-  ChevronRight,
-  Search,
   ArrowRight,
+  ArrowUpRight,
+  Sparkles,
 } from 'lucide-react';
 import { useState } from 'react';
-import { getAllPosts, getAllCategories, getAllTags, type BlogPost } from '@/lib/blog-content';
+import { getAllPosts, getAllCategories, type BlogPost } from '@/lib/blog-content';
 import { useMarketing } from '@/context/MarketingContext';
-import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text';
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
   const { openBetaModal } = useMarketing();
 
   const allPosts = getAllPosts();
   const categories = getAllCategories();
-  const tags = getAllTags();
 
-  const filteredPosts = allPosts.filter((post) => {
-    const matchesCategory = !selectedCategory || post.category === selectedCategory;
-    const matchesSearch =
-      !searchQuery ||
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const filteredPosts = selectedCategory
+    ? allPosts.filter((post) => post.category === selectedCategory)
+    : allPosts;
 
-  const featuredPost = allPosts[0];
+  const featuredPost = filteredPosts[0];
+  const secondaryPosts = filteredPosts.slice(1, 3);
+  const remainingPosts = filteredPosts.slice(3);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
       {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+      <section className="relative pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-violet-600/10 rounded-full blur-[150px]" />
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px]" />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="relative max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <AnimatedGradientText className="mb-6">
-              <span className="inline-flex items-center gap-2 text-slate-200">
-                <BookOpen className="w-4 h-4 text-blue-400" />
-                <span>Research & Insights</span>
-                <ChevronRight className="w-4 h-4" />
-              </span>
-            </AnimatedGradientText>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.06] text-sm text-white/60 mb-8">
+              <Sparkles className="w-4 h-4 text-violet-400" />
+              Insights & Research
+            </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              The Ministry Motion{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-6">
+              The MinistryMotion
+              <br />
+              <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
                 Blog
               </span>
             </h1>
 
-            <p className="text-lg text-slate-400 mb-8">
-              Research-backed insights on church technology, discipleship, and ministry effectiveness.
-              Data-driven strategies to help your church grow.
+            <p className="text-lg text-white/50 mb-10">
+              Research-backed insights on discipleship, church technology, and ministry transformation.
             </p>
 
-            {/* Search */}
-            <div className="relative max-w-md mx-auto">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-full text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
-              />
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => setSelectedCategory(null)}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
+                  !selectedCategory
+                    ? 'bg-white text-black'
+                    : 'text-white/60 hover:text-white hover:bg-white/[0.05]'
+                }`}
+              >
+                All
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-white text-black'
+                      : 'text-white/60 hover:text-white hover:bg-white/[0.05]'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Featured Post */}
-      {featuredPost && !searchQuery && !selectedCategory && (
-        <section className="pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Link href={`/blog/${featuredPost.slug}`}>
-                <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-
-                  <div className="relative p-8 lg:p-12">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium">
-                        Featured
-                      </span>
-                      <span className="text-sm text-slate-500">{featuredPost.category}</span>
-                    </div>
-
-                    <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                      {featuredPost.title}
-                    </h2>
-
-                    <p className="text-lg text-slate-400 mb-6 max-w-3xl">
-                      {featuredPost.excerpt}
-                    </p>
-
-                    <div className="flex items-center gap-6 text-sm text-slate-500">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(featuredPost.publishedAt).toLocaleDateString('en-US', {
-                          month: 'long',
-                          day: 'numeric',
-                          year: 'numeric',
-                        })}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4" />
-                        {featuredPost.readTime}
-                      </div>
-                    </div>
-
-                    <div className="mt-8 flex items-center gap-2 text-blue-400 font-medium group-hover:gap-4 transition-all">
-                      Read Article
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* Category Filter */}
-      <section className="pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm text-slate-500">Filter by:</span>
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                !selectedCategory
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
-              }`}
-            >
-              All Posts
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  selectedCategory === category
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Posts Grid */}
-      <section className="pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Bento Grid */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-6">
           {filteredPosts.length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-slate-400 text-lg">No articles found matching your criteria.</p>
+            <div className="text-center py-20">
+              <p className="text-white/50 text-lg">No articles found.</p>
               <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory(null);
-                }}
-                className="mt-4 text-blue-400 hover:text-blue-300"
+                onClick={() => setSelectedCategory(null)}
+                className="mt-4 text-violet-400 hover:text-violet-300"
               >
-                Clear filters
+                View all posts
               </button>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts
-                .slice(searchQuery || selectedCategory ? 0 : 1)
-                .map((post, i) => (
+            <>
+              {/* Featured + Secondary Row */}
+              <div className="grid lg:grid-cols-3 gap-4 mb-4">
+                {/* Featured - Large */}
+                {featuredPost && (
                   <motion.div
-                    key={post.slug}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="lg:col-span-2 lg:row-span-2"
                   >
-                    <BlogCard post={post} />
+                    <Link href={`/blog/${featuredPost.slug}`} className="group block h-full">
+                      <article className="relative h-full min-h-[400px] lg:min-h-full p-8 rounded-2xl bg-gradient-to-br from-violet-500/10 to-blue-500/10 border border-white/[0.08] hover:border-white/20 transition-all duration-500 overflow-hidden">
+                        {/* Ambient glow */}
+                        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-violet-500/20 rounded-full blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                        <div className="relative h-full flex flex-col">
+                          <div className="flex items-center gap-3 mb-6">
+                            <span className="px-3 py-1 text-xs font-medium bg-violet-500/20 text-violet-400 rounded-full">
+                              Featured
+                            </span>
+                            <span className="text-sm text-white/40">{featuredPost.category}</span>
+                          </div>
+
+                          <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-4 group-hover:text-violet-300 transition-colors leading-tight">
+                            {featuredPost.title}
+                          </h2>
+
+                          <p className="text-white/50 mb-6 leading-relaxed flex-1 line-clamp-3 lg:line-clamp-4">
+                            {featuredPost.excerpt}
+                          </p>
+
+                          <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/[0.06]">
+                            <div className="flex items-center gap-4 text-sm text-white/40">
+                              <span className="flex items-center gap-1">
+                                <Calendar className="w-4 h-4" />
+                                {new Date(featuredPost.publishedAt).toLocaleDateString('en-US', {
+                                  month: 'short',
+                                  day: 'numeric',
+                                })}
+                              </span>
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-4 h-4" />
+                                {featuredPost.readTime}
+                              </span>
+                            </div>
+                            <span className="flex items-center gap-2 text-violet-400 font-medium group-hover:gap-3 transition-all">
+                              Read
+                              <ArrowUpRight className="w-4 h-4" />
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    </Link>
                   </motion.div>
-                ))}
-            </div>
+                )}
+
+                {/* Secondary Posts - Stacked */}
+                <div className="flex flex-col gap-4">
+                  {secondaryPosts.map((post, i) => (
+                    <motion.div
+                      key={post.slug}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: (i + 1) * 0.1 }}
+                      className="flex-1"
+                    >
+                      <Link href={`/blog/${post.slug}`} className="group block h-full">
+                        <article className="h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300">
+                          <span className="text-xs text-white/40 mb-3 block">{post.category}</span>
+                          <h3 className="text-lg font-medium text-white mb-2 group-hover:text-white/80 transition-colors line-clamp-2">
+                            {post.title}
+                          </h3>
+                          <p className="text-sm text-white/40 line-clamp-2 mb-4">
+                            {post.excerpt}
+                          </p>
+                          <div className="flex items-center justify-between text-xs text-white/30">
+                            <span>{post.readTime}</span>
+                            <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                        </article>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Remaining Posts Grid */}
+              {remainingPosts.length > 0 && (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {remainingPosts.map((post, i) => (
+                    <motion.div
+                      key={post.slug}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.5, delay: i * 0.05 }}
+                    >
+                      <Link href={`/blog/${post.slug}`} className="group block h-full">
+                        <article className="h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300">
+                          <div className="flex items-center gap-2 mb-4">
+                            <span className="text-xs text-white/40">{post.category}</span>
+                            <span className="text-white/20">·</span>
+                            <span className="text-xs text-white/30">{post.readTime}</span>
+                          </div>
+                          <h3 className="text-base font-medium text-white mb-2 group-hover:text-white/80 transition-colors line-clamp-2">
+                            {post.title}
+                          </h3>
+                          <p className="text-sm text-white/40 line-clamp-2 mb-4">
+                            {post.excerpt}
+                          </p>
+                          <div className="flex items-center gap-1 text-sm text-white/30 group-hover:text-white/50 transition-colors">
+                            <Calendar className="w-3 h-3" />
+                            {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                              month: 'short',
+                              day: 'numeric',
+                              year: 'numeric',
+                            })}
+                          </div>
+                        </article>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 border-t border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to transform your ministry?
-          </h2>
-          <p className="text-lg text-slate-400 mb-8">
-            Join churches using Ministry Motion to track discipleship, not just attendance.
-          </p>
-          <button
-            onClick={openBetaModal}
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all"
+      {/* Newsletter CTA */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative p-12 rounded-3xl bg-gradient-to-br from-violet-500/10 to-blue-500/10 border border-white/[0.08] overflow-hidden"
           >
-            Get Started Free
-          </button>
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-500/10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-500/10 rounded-full blur-[100px]" />
+
+            <div className="relative text-center max-w-2xl mx-auto">
+              <h2 className="text-3xl font-semibold mb-4">
+                Stay ahead of the curve
+              </h2>
+              <p className="text-white/50 mb-8">
+                Get weekly insights on ministry transformation, church technology, and discipleship strategies delivered to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="px-5 py-3 bg-white/[0.05] border border-white/10 rounded-full text-white placeholder:text-white/30 focus:outline-none focus:border-white/20 w-full sm:w-80"
+                />
+                <button className="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-xs text-white/30 mt-4">
+                No spam. Unsubscribe anytime.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Popular Tags */}
-      <section className="py-16 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
-            <Tag className="w-5 h-5 text-blue-400" />
-            Popular Topics
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            {tags.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => setSearchQuery(tag)}
-                className="px-4 py-2 bg-slate-800/50 text-slate-400 rounded-full text-sm hover:bg-slate-700 hover:text-white transition-all"
-              >
-                #{tag}
-              </button>
-            ))}
-          </div>
+      {/* CTA */}
+      <section className="py-24 border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-semibold tracking-tight mb-6">
+              Ready to transform your ministry?
+            </h2>
+            <p className="text-lg text-white/50 mb-10">
+              Join the early access program and experience what data-driven discipleship looks like.
+            </p>
+            <button
+              onClick={openBetaModal}
+              className="group px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+            >
+              <span className="flex items-center gap-2">
+                Request Early Access
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </button>
+          </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/[0.06] py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-white/40 text-sm">
+              © 2025 MinistryMotion. All rights reserved.
+            </div>
+            <nav className="flex items-center gap-8 text-sm text-white/40">
+              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
+              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
+              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
+              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
-  );
-}
-
-function BlogCard({ post }: { post: BlogPost }) {
-  return (
-    <Link href={`/blog/${post.slug}`}>
-      <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-blue-500/50 transition-all">
-        <div className="p-6 flex-1 flex flex-col">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs font-medium">
-              {post.category}
-            </span>
-            <span className="text-xs text-slate-500">{post.readTime}</span>
-          </div>
-
-          <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
-            {post.title}
-          </h3>
-
-          <p className="text-slate-400 text-sm mb-4 line-clamp-3 flex-1">
-            {post.excerpt}
-          </p>
-
-          <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <div className="flex items-center gap-2 text-xs text-slate-500">
-              <Calendar className="w-3 h-3" />
-              {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-              })}
-            </div>
-            <div className="flex items-center gap-1 text-blue-400 text-sm font-medium group-hover:gap-2 transition-all">
-              Read
-              <ArrowRight className="w-3 h-3" />
-            </div>
-          </div>
-        </div>
-      </article>
-    </Link>
   );
 }

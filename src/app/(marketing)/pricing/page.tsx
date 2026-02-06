@@ -2,476 +2,320 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import {
-  Check,
-  X,
-  Menu,
-  HelpCircle,
-  Users,
-  Mic2,
-  BookOpen,
-  BarChart3,
-  MessageSquare,
-  Headphones,
-  Heart,
-  Smartphone,
-  Layers,
-  Crown,
-  Zap
-} from 'lucide-react';
-import { MarketingNav } from '@/components/marketing';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Check, ArrowRight, ChevronDown } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
 
-// Pricing tiers
-const pricingTiers = [
+const tiers = [
   {
-    name: 'Free Trial',
+    name: 'Free',
     price: '$0',
-    period: '30 days',
-    description: 'Try Ministry Motion risk-free',
-    teamSize: '5 team members',
+    period: 'forever',
+    description: 'Essential tools to get started',
+    cta: 'Start Free',
     highlight: false,
-    cta: 'Start Free Trial',
-    features: {
-      'Team Members': '5',
-      'Service Planning': true,
-      'Basic Scheduling': true,
-      'Song Library': '50 songs',
-      'Community Access': true,
-      'Mobile Apps': true,
-      'PCO Integration': true,
-      'Email Support': true,
-      // Not included
-      'Assessments': false,
-      'AI Agents': false,
-      'Digital Rehearsal Rooms': false,
-      'Learning Hub Courses': false,
-      'Service Analytics': false,
-      'Integrated Giving': false,
-      'Member Management': 'Add-on',
-      'Multi-Campus': false
-    }
-  },
-  {
-    name: 'Starter',
-    price: '$99',
-    period: '/month',
-    description: 'For churches ready to track transformation',
-    teamSize: '15 team members',
-    highlight: false,
-    cta: 'Sign Up for Beta',
-    features: {
-      'Team Members': '15',
-      'Service Planning': true,
-      'Full Scheduling': true,
-      'Song Library': 'Unlimited',
-      'PCO Integration': true,
-      'Integrated Giving': '2.9% + $0.30',
-      'Basic Assessments': true,
-      'Email & Chat Support': true,
-      'Digital Rehearsal Rooms': '5 rooms',
-      'Learning Hub Courses': '3 courses',
-      'Member Management': 'Add-on',
-      // Not included
-      'AI Agents': false,
-      'Service Analytics': false,
-      'Ministry Analytics': false,
-      'Multi-Campus': false
-    }
+    members: '5 team members',
+    keyFeatures: [
+      'Service planning',
+      'Basic scheduling',
+      'Song library (50 songs)',
+      'Mobile apps',
+    ],
   },
   {
     name: 'Pro',
     price: '$249',
     period: '/month',
-    description: 'Full transformation tools for every ministry',
-    teamSize: '100 team members • 1,000 church members',
+    description: 'Full transformation toolkit',
+    cta: 'Start Free Trial',
     highlight: true,
-    cta: 'Sign Up for Beta',
-    features: {
-      'Team Members': '100',
-      'Church Members': '1,000',
-      '6 AI Agents': true,
-      'Service Analytics': true,
-      'Ministry Analytics': true,
-      'PCO Integration': true,
-      'Integrated Giving': '2.5% + $0.25',
-      'Advanced Assessments': true,
-      'Denomination Context': true,
-      'Conflict Resolution AI': true,
-      'Active Labs': 'Hands-on learning',
-      'All 18 Courses': true,
-      'Member Management': 'Add-on',
-      'Priority Support': true
-    }
+    members: '100 team members',
+    keyFeatures: [
+      'AI vocal coaching',
+      'Service analytics',
+      'All 18 learning courses',
+      'Priority support',
+    ],
   },
   {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
-    description: 'For large churches and multi-site organizations',
-    teamSize: 'Unlimited members',
-    highlight: false,
+    description: 'For large organizations',
     cta: 'Contact Sales',
-    features: {
-      'Everything in Pro': true,
-      'Realtime Streaming Analytics': true,
-      'Multi-Campus': true,
-      'Cross-Campus Analytics': true,
-      'Regional/Conference Reporting': true,
-      'PCO Integration': true,
-      'Integrated Giving': 'Custom rates',
-      'Member Management': 'Included',
-      'API Access': true,
-      'SSO Integration': true,
-      'Dedicated Account Manager': true,
-      'Custom Integrations': true
-    }
-  }
+    highlight: false,
+    members: 'Unlimited members',
+    keyFeatures: [
+      'Multi-campus support',
+      'SSO integration',
+      'Dedicated account manager',
+      'Custom integrations',
+    ],
+  },
 ];
 
-// Feature categories for the detailed comparison
-const featureCategories = [
+const detailSections = [
   {
-    name: 'Team & Planning',
-    icon: Users,
+    title: 'Team & Planning',
     features: [
-      { name: 'Team Members', free: '5', starter: '15', pro: '100', enterprise: 'Unlimited' },
-      { name: 'Church Members', free: '—', starter: '—', pro: '1,000', enterprise: 'Unlimited' },
-      { name: 'Service Planning', free: true, starter: true, pro: true, enterprise: true },
-      { name: 'Volunteer Scheduling', free: 'Basic', starter: 'Full', pro: 'Full + AI', enterprise: 'Full + AI' },
-      { name: 'PCO Integration', free: true, starter: true, pro: true, enterprise: true }
-    ]
+      { name: 'Team members', free: '5', pro: '100', enterprise: 'Unlimited' },
+      { name: 'Church members', free: '—', pro: '1,000', enterprise: 'Unlimited' },
+      { name: 'Service planning', free: true, pro: true, enterprise: true },
+      { name: 'Volunteer scheduling', free: 'Basic', pro: 'Advanced', enterprise: 'Advanced + AI' },
+    ],
   },
   {
-    name: 'AI Agents & Intelligence',
-    icon: Zap,
+    title: 'AI & Intelligence',
     features: [
-      { name: 'AI Agents', free: false, starter: false, pro: '6 unique agents', enterprise: '6+ custom' },
-      { name: 'Denomination-Specific Context', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Conflict Resolution AI', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'AI Vocal Coaching', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Context-Aware Messaging', free: false, starter: false, pro: true, enterprise: true }
-    ]
+      { name: 'AI vocal coaching', free: false, pro: true, enterprise: true },
+      { name: 'Service analytics', free: false, pro: true, enterprise: true },
+      { name: 'AI song recommendations', free: false, pro: true, enterprise: true },
+      { name: 'Custom AI agents', free: false, pro: false, enterprise: true },
+    ],
   },
   {
-    name: 'Learning & Training',
-    icon: BookOpen,
+    title: 'Learning & Development',
     features: [
-      { name: 'Learning Hub Courses', free: false, starter: '3 courses', pro: 'All 18', enterprise: 'All 18 + Custom' },
-      { name: 'Active Labs', free: false, starter: false, pro: 'Hands-on learning', enterprise: 'Custom labs' },
-      { name: 'Certifications', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Discipleship Journeys', free: false, starter: 'Basic', pro: 'Full', enterprise: 'Full + Custom' }
-    ]
+      { name: 'Learning courses', free: '3 basic', pro: 'All 18', enterprise: 'All + custom' },
+      { name: 'Certifications', free: false, pro: true, enterprise: true },
+      { name: 'Study groups', free: false, pro: true, enterprise: true },
+    ],
   },
   {
-    name: 'Analytics & Insights',
-    icon: BarChart3,
+    title: 'Administration',
     features: [
-      { name: 'Service Analytics', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Ministry Analytics', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Realtime Streaming Analytics', free: false, starter: false, pro: false, enterprise: true },
-      { name: 'Theme Alignment Scoring', free: false, starter: false, pro: true, enterprise: true },
-      { name: 'Cross-Campus Analytics', free: false, starter: false, pro: false, enterprise: true }
-    ]
+      { name: 'Multi-campus', free: false, pro: false, enterprise: true },
+      { name: 'SSO integration', free: false, pro: false, enterprise: true },
+      { name: 'API access', free: false, pro: false, enterprise: true },
+      { name: 'Custom integrations', free: false, pro: false, enterprise: true },
+    ],
   },
-  {
-    name: 'Giving & Finance',
-    icon: Heart,
-    features: [
-      { name: 'Integrated Giving', free: false, starter: '2.9% + $0.30', pro: '2.5% + $0.25', enterprise: 'Custom rates' },
-      { name: 'Recurring Donations', free: false, starter: true, pro: true, enterprise: true },
-      { name: 'Campaign Management', free: false, starter: true, pro: true, enterprise: true },
-      { name: 'Donor Analytics', free: false, starter: 'Basic', pro: 'Full', enterprise: 'Full + Custom' }
-    ]
-  },
-  {
-    name: 'Member Management',
-    icon: Users,
-    features: [
-      { name: 'Member Management Module', free: 'Add-on', starter: 'Add-on', pro: 'Add-on', enterprise: 'Included' },
-      { name: 'Member Profiles', free: 'Add-on', starter: 'Add-on', pro: 'Add-on', enterprise: true },
-      { name: 'Household Management', free: 'Add-on', starter: 'Add-on', pro: 'Add-on', enterprise: true },
-      { name: 'Check-in System', free: 'Add-on', starter: 'Add-on', pro: 'Add-on', enterprise: true }
-    ]
-  },
-  {
-    name: 'Assessments',
-    icon: BookOpen,
-    features: [
-      { name: 'Spiritual Gift Assessments', free: false, starter: true, pro: true, enterprise: true },
-      { name: 'Team Health Assessments', free: false, starter: true, pro: 'Advanced', enterprise: 'Advanced' },
-      { name: 'Leadership Assessments', free: false, starter: false, pro: true, enterprise: true }
-    ]
-  },
-  {
-    name: 'Administration',
-    icon: Layers,
-    features: [
-      { name: 'Multi-Campus', free: false, starter: false, pro: false, enterprise: true },
-      { name: 'Regional/Conference Reporting', free: false, starter: false, pro: false, enterprise: true },
-      { name: 'API Access', free: false, starter: false, pro: false, enterprise: true },
-      { name: 'SSO Integration', free: false, starter: false, pro: false, enterprise: true },
-      { name: 'Custom Integrations', free: false, starter: false, pro: false, enterprise: true }
-    ]
-  }
 ];
 
-// FAQ data
 const faqs = [
-  {
-    q: 'Can I try Ministry Motion before committing?',
-    a: 'Absolutely! All paid plans include a free 30-day trial with full access to features. No credit card required to start.'
-  },
-  {
-    q: 'What happens when I exceed my team member limit?',
-    a: 'We use soft limits. If you occasionally exceed your plan\'s team size, we won\'t cut you off. We\'ll reach out to discuss upgrading when it makes sense.'
-  },
-  {
-    q: 'Can I switch plans later?',
-    a: 'Yes, you can upgrade or downgrade at any time. Changes take effect immediately, and we\'ll prorate your billing accordingly.'
-  },
-  {
-    q: 'Do you offer discounts for annual billing?',
-    a: 'Yes! Pay annually and save 20% on any paid plan. That\'s like getting over 2 months free.'
-  },
-  {
-    q: 'What payment methods do you accept?',
-    a: 'We accept all major credit cards via Stripe. For Enterprise plans, we also offer invoicing and ACH payments.'
-  },
-  {
-    q: 'Is there a contract or commitment?',
-    a: 'No contracts, no commitments. You can cancel anytime. For annual plans, we offer prorated refunds within the first 30 days.'
-  },
-  {
-    q: 'Do you help with data migration?',
-    a: 'Yes! We provide free data migration assistance for all paid plans. Our team will help you import from Planning Center, Breeze, or any other ChMS.'
-  },
-  {
-    q: 'What\'s included in the Worship Collective?',
-    a: 'The Worship Collective is a separate premium program for individual worship leaders seeking credentialing. It\'s $49.99-$99.99/month and includes coaching cohorts, masterclasses, and certification.'
-  }
+  { q: 'Can I try it first?', a: 'Yes. Start free forever, or try Pro with a 14-day free trial. No credit card required.' },
+  { q: 'Can I change plans?', a: 'Anytime. Upgrades take effect immediately.' },
+  { q: 'Do you offer annual billing?', a: 'Yes. Pay annually and save 20%.' },
 ];
 
 export default function PricingPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly');
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const { openBetaModal } = useMarketing();
+
+  const toggleSection = (title: string) => {
+    setExpandedSections(prev =>
+      prev.includes(title) ? prev.filter(t => t !== title) : [...prev, title]
+    );
+  };
 
   const getPrice = (basePrice: string) => {
     if (basePrice === '$0' || basePrice === 'Custom') return basePrice;
     const numPrice = parseInt(basePrice.replace('$', ''));
-    if (billingPeriod === 'annual') {
-      return `$${Math.round(numPrice * 0.8)}`;
-    }
-    return basePrice;
+    return billingPeriod === 'annual' ? `$${Math.round(numPrice * 0.8)}` : basePrice;
   };
 
-  const renderFeatureValue = (value: boolean | string) => {
-    if (value === true) {
-      return <Check className="w-5 h-5 text-blue-600 mx-auto" />;
-    } else if (value === false) {
-      return <X className="w-5 h-5 text-slate-300 mx-auto" />;
-    } else {
-      return <span className="text-sm text-slate-600">{value}</span>;
-    }
+  const renderValue = (value: boolean | string) => {
+    if (value === true) return <Check className="w-4 h-4 text-emerald-400 mx-auto" />;
+    if (value === false) return <span className="text-white/20">—</span>;
+    return <span className="text-white/60 text-sm">{value}</span>;
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
-      {/* Navigation */}
-      <MarketingNav />
+    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
+      {/* Hero */}
+      <section className="relative pt-32 pb-16">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px]" />
+        </div>
 
-      {/* Hero - Tech-forward dark gradient  */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-        {/* Gradient mesh overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Simple,{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">transparent pricing</span>
-          </h1>
-          <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-4">
-            One platform for every ministry leader. Start free, upgrade when you&apos;re ready.
-          </p>
-          <p className="text-sm text-blue-200/60 max-w-xl mx-auto mb-8">
-            Tools for worship, children&apos;s ministry, small groups, outreach, and more—all with transformation tracking built in.
-          </p>
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl font-semibold tracking-tight mb-6"
+          >
+            Simple pricing
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg text-white/50 mb-10"
+          >
+            Start free. Upgrade when you're ready.
+          </motion.p>
 
           {/* Billing toggle */}
-          <div className="inline-flex items-center gap-4 p-1 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-1 p-1 rounded-full bg-white/5 border border-white/10"
+          >
             <button
               onClick={() => setBillingPeriod('monthly')}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                billingPeriod === 'monthly' ? 'bg-white text-slate-900 shadow' : 'text-white/80 hover:text-white'
+              className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
+                billingPeriod === 'monthly' ? 'bg-white text-black' : 'text-white/60 hover:text-white'
               }`}
             >
               Monthly
             </button>
             <button
               onClick={() => setBillingPeriod('annual')}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                billingPeriod === 'annual' ? 'bg-white text-slate-900 shadow' : 'text-white/80 hover:text-white'
+              className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
+                billingPeriod === 'annual' ? 'bg-white text-black' : 'text-white/60 hover:text-white'
               }`}
             >
               Annual
-              <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-cyan-400 text-slate-900 rounded-full">
-                Save 20%
+              <span className="ml-2 px-2 py-0.5 text-xs bg-emerald-500/20 text-emerald-400 rounded-full">
+                -20%
               </span>
             </button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="relative py-16 bg-gradient-to-b from-white via-slate-50/30 to-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingTiers.map((tier, i) => (
-              <div
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {tiers.map((tier, i) => (
+              <motion.div
                 key={i}
-                className={`relative bg-white rounded-2xl border p-6 ${
-                  tier.highlight ? 'border-blue-600 shadow-xl shadow-blue-100' : 'border-slate-200'
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className={`relative p-8 rounded-2xl ${
+                  tier.highlight
+                    ? 'bg-white text-black'
+                    : 'bg-white/[0.03] border border-white/[0.06]'
                 }`}
               >
                 {tier.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-violet-500 text-white text-xs font-medium rounded-full">
                     Most Popular
                   </div>
                 )}
 
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-900">{tier.name}</h3>
-                  <div className="flex items-baseline gap-1 mt-2">
-                    <span className="text-4xl font-bold text-slate-900">{getPrice(tier.price)}</span>
-                    {tier.period && <span className="text-slate-500">{tier.period}</span>}
-                  </div>
-                  {billingPeriod === 'annual' && tier.price !== '$0' && tier.price !== 'Custom' && (
-                    <p className="text-sm text-blue-600 mt-1">
-                      Billed annually ({getPrice(tier.price)}/mo)
-                    </p>
+                <h3 className={`text-xl font-semibold mb-2 ${tier.highlight ? 'text-black' : 'text-white'}`}>
+                  {tier.name}
+                </h3>
+
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className={`text-4xl font-semibold ${tier.highlight ? 'text-black' : 'text-white'}`}>
+                    {getPrice(tier.price)}
+                  </span>
+                  {tier.period && (
+                    <span className={tier.highlight ? 'text-black/50' : 'text-white/50'}>
+                      {tier.period}
+                    </span>
                   )}
-                  <p className="text-sm text-slate-500 mt-2">{tier.description}</p>
-                  <p className="text-sm font-medium text-slate-700 mt-2">{tier.teamSize}</p>
                 </div>
 
-                <Link
-                  href={tier.cta === 'Contact Sales' ? '/contact' : '/signup'}
-                  className={`block w-full py-3 text-center font-semibold rounded-lg transition-colors mb-6 ${
-                    tier.highlight
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
-                >
-                  {tier.cta}
-                </Link>
+                <p className={`text-sm mb-2 ${tier.highlight ? 'text-black/50' : 'text-white/40'}`}>
+                  {tier.members}
+                </p>
 
-                <div className="space-y-3">
-                  {Object.entries(tier.features).slice(0, 8).map(([feature, value]) => (
-                    <div key={feature} className="flex items-center gap-2">
-                      {value === true ? (
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                      ) : value === false ? (
-                        <X className="w-4 h-4 text-slate-300 flex-shrink-0" />
-                      ) : (
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                      )}
-                      <span className={`text-sm ${value === false ? 'text-slate-400' : 'text-slate-600'}`}>
-                        {typeof value === 'string' ? `${feature} ${value}` : feature}
+                <p className={`text-sm mb-6 ${tier.highlight ? 'text-black/60' : 'text-white/50'}`}>
+                  {tier.description}
+                </p>
+
+                {tier.cta === 'Contact Sales' ? (
+                  <Link
+                    href="/contact"
+                    className="block w-full py-3 text-center font-medium rounded-full transition-all duration-200 mb-6 bg-white/10 text-white hover:bg-white/15"
+                  >
+                    {tier.cta}
+                  </Link>
+                ) : (
+                  <button
+                    onClick={openBetaModal}
+                    className={`block w-full py-3 text-center font-medium rounded-full transition-all duration-200 mb-6 ${
+                      tier.highlight
+                        ? 'bg-black text-white hover:bg-black/90'
+                        : 'bg-white text-black hover:bg-white/90'
+                    }`}
+                  >
+                    {tier.cta}
+                  </button>
+                )}
+
+                <div className={`text-xs font-medium uppercase tracking-wider mb-3 ${tier.highlight ? 'text-black/40' : 'text-white/30'}`}>
+                  {tier.name === 'Free' ? 'Includes' : tier.name === 'Pro' ? 'Everything in Free, plus' : 'Everything in Pro, plus'}
+                </div>
+
+                <ul className="space-y-2">
+                  {tier.keyFeatures.map((feature, j) => (
+                    <li key={j} className="flex items-center gap-2">
+                      <Check className={`w-4 h-4 flex-shrink-0 ${tier.highlight ? 'text-black/40' : 'text-white/40'}`} />
+                      <span className={`text-sm ${tier.highlight ? 'text-black/70' : 'text-white/60'}`}>
+                        {feature}
                       </span>
-                    </div>
+                    </li>
                   ))}
-                </div>
-              </div>
+                </ul>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Worship Collective Callout */}
-      <section className="py-12 bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg">
-                <Crown className="w-7 h-7 text-white" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-xl font-bold text-slate-900">The Worship Collective</h3>
-                  <span className="px-2 py-0.5 bg-amber-200 text-amber-800 text-xs font-semibold rounded-full">Individual Premium</span>
-                </div>
-                <p className="text-slate-600 text-sm">
-                  Elite credentialing program for individual worship leaders. Coaching cohorts, masterclasses, and certifications.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="text-right">
-                <span className="text-slate-600">Starting at</span>
-                <span className="block text-2xl font-bold text-slate-900">$49.99/mo</span>
-              </div>
-              <Link
-                href="/collective"
-                className="px-6 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Detailed Comparison - Collapsible */}
+      <section className="py-16 border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold text-center mb-12">
+            Compare plans in detail
+          </h2>
 
-      {/* Detailed Feature Comparison */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Detailed Feature Comparison</h2>
-          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            See exactly what's included in each plan
-          </p>
+          <div className="space-y-2">
+            {detailSections.map((section) => (
+              <div key={section.title} className="rounded-xl bg-white/[0.02] border border-white/[0.06] overflow-hidden">
+                <button
+                  onClick={() => toggleSection(section.title)}
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.02] transition-colors"
+                >
+                  <span className="font-medium text-white">{section.title}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-white/40 transition-transform duration-200 ${
+                      expandedSections.includes(section.title) ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
 
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-            {/* Header */}
-            <div className="grid grid-cols-5 bg-slate-100 border-b border-slate-200">
-              <div className="p-4 font-semibold text-slate-700">Feature</div>
-              <div className="p-4 text-center font-semibold text-slate-700">Free</div>
-              <div className="p-4 text-center font-semibold text-slate-700">Starter</div>
-              <div className="p-4 text-center font-semibold text-blue-700 bg-blue-50">Pro</div>
-              <div className="p-4 text-center font-semibold text-slate-700">Enterprise</div>
-            </div>
+                <AnimatePresence>
+                  {expandedSections.includes(section.title) && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5">
+                        {/* Header row */}
+                        <div className="grid grid-cols-4 gap-4 pb-3 mb-3 border-b border-white/[0.06]">
+                          <div className="text-sm text-white/40">Feature</div>
+                          <div className="text-sm text-white/40 text-center">Free</div>
+                          <div className="text-sm text-white/40 text-center">Pro</div>
+                          <div className="text-sm text-white/40 text-center">Enterprise</div>
+                        </div>
 
-            {/* Feature categories */}
-            {featureCategories.map((category) => (
-              <div key={category.name}>
-                {/* Category header */}
-                <div className="grid grid-cols-5 bg-slate-50 border-b border-slate-200">
-                  <div className="p-3 flex items-center gap-2 font-semibold text-slate-900">
-                    <category.icon className="w-4 h-4 text-blue-600" />
-                    {category.name}
-                  </div>
-                  <div className="p-3"></div>
-                  <div className="p-3"></div>
-                  <div className="p-3 bg-blue-50/50"></div>
-                  <div className="p-3"></div>
-                </div>
-
-                {/* Features */}
-                {featureCategories.map((category) => (
-                  <div key={category.name}>
-                    {/* Features */}
-                    {category.features.map((feature, i) => (
-                      <div key={i} className="grid grid-cols-5 border-b border-slate-100 hover:bg-slate-50">
-                        <div className="p-3 text-sm text-slate-600 pl-10">{feature.name}</div>
-                        <div className="p-3 text-center">{renderFeatureValue(feature.free)}</div>
-                        <div className="p-3 text-center">{renderFeatureValue(feature.starter)}</div>
-                        <div className="p-3 text-center bg-blue-50/30">{renderFeatureValue(feature.pro)}</div>
-                        <div className="p-3 text-center">{renderFeatureValue(feature.enterprise)}</div>
+                        {/* Feature rows */}
+                        {section.features.map((feature, i) => (
+                          <div key={i} className="grid grid-cols-4 gap-4 py-2">
+                            <div className="text-sm text-white/70">{feature.name}</div>
+                            <div className="text-center">{renderValue(feature.free)}</div>
+                            <div className="text-center">{renderValue(feature.pro)}</div>
+                            <div className="text-center">{renderValue(feature.enterprise)}</div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -479,28 +323,37 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Frequently Asked Questions</h2>
-          <p className="text-slate-600 text-center mb-12">
-            Have questions? We've got answers.
-          </p>
+      <section className="py-16 border-t border-white/[0.06]">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 className="text-2xl font-semibold text-center mb-12">
+            Questions
+          </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
+              <div
+                key={i}
+                className="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06]"
+              >
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors"
+                  className="w-full flex items-center justify-between text-left"
                 >
-                  <span className="font-medium text-slate-900">{faq.q}</span>
-                  <HelpCircle className={`w-5 h-5 text-slate-400 transition-transform ${expandedFaq === i ? 'rotate-180' : ''}`} />
+                  <span className="font-medium text-white">{faq.q}</span>
+                  <ChevronDown className={`w-5 h-5 text-white/40 transition-transform ${expandedFaq === i ? 'rotate-180' : ''}`} />
                 </button>
-                {expandedFaq === i && (
-                  <div className="px-4 pb-4 text-slate-600">
-                    {faq.a}
-                  </div>
-                )}
+                <AnimatePresence>
+                  {expandedFaq === i && (
+                    <motion.p
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="mt-3 text-white/50 text-sm overflow-hidden"
+                    >
+                      {faq.a}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -508,41 +361,39 @@ export default function PricingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-blue-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Ministry?
+      <section className="py-32 border-t border-white/[0.06]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight mb-6">
+            Ready to get started?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
-            Join churches moving from event management to transformation tracking—with tools for every ministry leader.
+          <p className="text-lg text-white/50 mb-10">
+            Join the early access program today.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
-            >
-              Sign Up for Beta
-            </button>
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
-            >
-              Talk to Sales
-            </Link>
-          </div>
+          <button
+            onClick={openBetaModal}
+            className="group px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+          >
+            <span className="flex items-center gap-2">
+              Request Early Access
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+      <footer className="border-t border-white/[0.06] py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-white/40 text-sm">
+              © 2025 MinistryMotion. All rights reserved.
             </div>
-            <p className="text-sm text-slate-500">
-              © 2025 Ministry Motion. All rights reserved.
-            </p>
+            <nav className="flex items-center gap-8 text-sm text-white/40">
+              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
+              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
+              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
+              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
+            </nav>
           </div>
         </div>
       </footer>

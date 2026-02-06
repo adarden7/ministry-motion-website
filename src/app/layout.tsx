@@ -25,8 +25,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ministrymotion.com'),
   title: {
-    default: 'Ministry Motion - Everything Your Worship Ministry Needs',
-    template: '%s | Ministry Motion',
+    default: 'MinistryMotion - Everything Your Worship Ministry Needs',
+    template: '%s | MinistryMotion',
   },
   description:
     'The complete platform for worship ministry. Plan services, develop your team with AI vocal coaching, analyze performance, and unify communications — all in one place.',
@@ -41,16 +41,16 @@ export const metadata: Metadata = {
     'ministry platform',
   ],
   openGraph: {
-    title: 'Ministry Motion - Everything Your Worship Ministry Needs',
+    title: 'MinistryMotion - Everything Your Worship Ministry Needs',
     description:
       'Plan services, develop your team with AI, analyze performance, and unify communications. The complete worship ministry platform.',
     type: 'website',
-    siteName: 'Ministry Motion',
+    siteName: 'MinistryMotion',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ministry Motion',
+    title: 'MinistryMotion',
     description:
       'The complete platform for worship ministry. AI-powered vocal coaching, service planning, and team development.',
   },
