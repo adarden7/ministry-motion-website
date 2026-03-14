@@ -9,7 +9,7 @@ export default function HomePage() {
   const { openBetaModal } = useMarketing();
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased overflow-hidden">
+    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         {/* Ambient gradient orbs */}
@@ -50,10 +50,10 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-8"
           >
-            The platform for
+            Accelerated Discipleship.
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-              ministry transformation
+              Built for the Kingdom.
             </span>
           </motion.h1>
 
@@ -64,8 +64,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            AI-powered tools that develop your people, track spiritual growth,
-            and help your ministry thrive. Built on 25 years of church consulting expertise.
+            MinistryMotion is the only AI-native intelligence platform that combines real-time service tools with 20 autonomous agents working 24/7 to track spiritual growth, develop your people, and give you back 20 hours a week.
           </motion.p>
 
           {/* CTA */}
@@ -144,21 +143,39 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: 'AI Vocal Coaching',
-                description: 'Professional-grade feedback for every singer. Real-time pitch analysis and personalized training paths.',
+                title: 'Ministry Management & Automation',
+                description: 'Automate scheduling, align services, and monitor ministry health with 20 autonomous AI agents that understand your church\'s theology and culture.',
                 gradient: 'from-blue-500/20 to-cyan-500/20',
+                href: '/products/agent-council',
+              },
+              {
+                title: 'Personalized Discipleship Journeys',
+                description: "Track every member's spiritual growth from first visit to servant leader. Gamify engagement, prevent burnout, and always know their next step.",
+                gradient: 'from-violet-500/20 to-purple-500/20',
+                href: '/products/discipleship',
+              },
+              {
+                title: 'Worship Team Equipping',
+                description: 'Develop your musicians with real-time pitch detection, AI coaching, SATB track separation, and unified development pathways.',
+                gradient: 'from-rose-500/20 to-orange-500/20',
                 href: '/products/vocal-coaching',
               },
               {
-                title: 'Intelligent Planning',
-                description: "AI recommends songs that match your theme, fit your team's capabilities, and resonate with your congregation.",
-                gradient: 'from-violet-500/20 to-purple-500/20',
-                href: '/products/service-planning',
+                title: 'Small Group Connections',
+                description: 'Foster deeper community with tools to create, manage, and track small group attendance, curriculum, and leader development. Ensure no one falls through the cracks.',
+                gradient: 'from-emerald-500/20 to-teal-500/20',
+                href: '/products/discipleship',
               },
               {
-                title: 'Service Analytics',
-                description: 'Upload your recordings. AI analyzes what actually happened—not just what you planned.',
-                gradient: 'from-rose-500/20 to-orange-500/20',
+                title: 'Unified Communications',
+                description: 'Reach your congregation where they are with integrated SMS, email, and push notifications. Send scheduled announcements or targeted messages based on ministry involvement.',
+                gradient: 'from-amber-500/20 to-orange-500/20',
+                href: '/products/agent-council',
+              },
+              {
+                title: 'Data & ROI Analytics',
+                description: 'Get cross-church benchmarking, real-time dashboards, and predictive insights. See exactly how your ministries are performing and where your church is growing.',
+                gradient: 'from-fuchsia-500/20 to-pink-500/20',
                 href: '/products/analytics',
               },
             ].map((feature, i) => (
@@ -198,9 +215,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             {[
-              { value: '39%', label: 'of Christians lack discipleship', subtext: "We're changing that" },
-              { value: '25', label: 'years of methodology', subtext: 'Built into the platform' },
-              { value: '100+', label: 'churches waiting', subtext: 'Join the movement' },
+              { value: '39%', label: 'of Christians lack discipleship', subtext: "We identify them automatically" },
+              { value: '$16k', label: 'average annual savings', subtext: 'By consolidating 6 disconnected tools' },
+              { value: '15', label: 'specialized AI agents', subtext: 'Working around the clock for your leaders' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -234,11 +251,11 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <blockquote className="text-2xl sm:text-3xl font-medium leading-relaxed text-white/90 mb-8">
-              "The church doesn't need another database. It needs a system that actually
-              <span className="text-violet-400"> transforms people</span>."
+              &quot;The church doesn&apos;t need another file cabinet. It needs a system that actually
+              <span className="text-violet-400"> transforms people</span>.&quot;
             </blockquote>
             <p className="text-white/40">
-              Built on methodology that has helped hundreds of churches grow
+              Stop guessing if your ministries are aligned with your mission.
             </p>
           </motion.div>
         </div>
@@ -274,23 +291,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/[0.06] py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white/40 text-sm">
-              © 2025 MinistryMotion. All rights reserved.
-            </div>
-            <nav className="flex items-center gap-8 text-sm text-white/40">
-              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
-              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
-              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
-              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

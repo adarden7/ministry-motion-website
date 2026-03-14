@@ -54,168 +54,168 @@ export interface ProductContent {
 
 export const products: ProductContent[] = [
   {
-    slug: 'vocal-coaching',
-    title: 'AI Vocal Coaching',
-    tagline: 'World-class vocal training for every singer—powered by AI',
+    slug: 'agent-council',
+    title: 'The Agent Council',
+    tagline: '15 specialized AI agents automating your ministry 24/7',
     description:
-      'Ministry Motion brings professional vocal coaching to every member of your team. Real-time pitch analysis, breath control feedback, vocal health monitoring, and personalized improvement paths—all without the cost of private lessons.',
-    badges: ['Industry First', 'AI-Powered', 'No Extra Cost'],
+      'Replace your siloed 2010s software stack with the Agent Council. Ministry Motion includes 15 highly-specialized AI agents—from Succession Planners to Vocal Coaches to Pastoral Shepherds—working autonomously to analyze your data, identify risks, and accelerate spiritual growth.',
+    badges: ['Industry First', 'Fully Autonomous', 'Mission Critical'],
     benefits: [
-      { stat: '1000+', label: 'Vocal dimensions analyzed' },
-      { stat: '73%', label: 'Average improvement in 90 days' },
-      { stat: '$0', label: 'Additional cost (included in Pro)' },
+      { stat: '15', label: 'Specialized AI agents' },
+      { stat: '25+', label: 'Admin hours saved weekly' },
+      { stat: '$16k', label: 'Average annual savings' },
     ],
     features: [
       {
-        title: 'Real-Time Pitch Analysis',
+        title: 'The Shepherd',
         description:
-          'As you sing, AI analyzes your pitch accuracy across 1000+ dimensions. See exactly where you drift sharp or flat, and track improvement over time.',
-        icon: Mic2,
-      },
-      {
-        title: 'Breath Control Feedback',
-        description:
-          'Learn to control your breath for better tone and endurance. AI detects breath patterns and provides exercises tailored to your needs.',
-        icon: Sparkles,
-      },
-      {
-        title: 'Vocal Health Monitoring',
-        description:
-          'Detect vocal strain before it becomes damage. The AI monitors vocal fatigue indicators and recommends rest or technique adjustments.',
-        icon: Shield,
-      },
-      {
-        title: 'Personalized Exercise Library',
-        description:
-          'Based on your vocal profile and goals, receive custom warm-ups and exercises. Practice the right things, not generic scales.',
-        icon: Target,
-      },
-      {
-        title: 'Progress Tracking Dashboard',
-        description:
-          'See your improvement over weeks and months. Compare recordings, track metrics, and celebrate milestones.',
-        icon: TrendingUp,
-      },
-      {
-        title: 'AI Avatar Coaching',
-        description:
-          'HeyGen-powered AI coaches provide video feedback and instruction, making remote coaching feel personal.',
-        icon: Video,
-      },
-    ],
-    howItWorks: [
-      {
-        title: 'Record Your Practice',
-        description:
-          'Use the mobile app or web recorder to capture your singing. Practice with tracks or a cappella.',
-      },
-      {
-        title: 'Get Instant Feedback',
-        description:
-          'AI analyzes your recording in seconds. See pitch accuracy, tone quality, and areas for improvement.',
-      },
-      {
-        title: 'Follow Your Plan',
-        description:
-          'Receive personalized exercises based on your analysis. Practice what matters most for your development.',
-      },
-      {
-        title: 'Track Progress',
-        description:
-          'Watch your scores improve over time. Share progress with your worship leader or keep it private.',
-      },
-    ],
-    forWhom: [
-      { role: 'Background Vocalists', benefit: 'Develop confidence and consistency without expensive lessons' },
-      { role: 'Worship Leaders', benefit: 'Track your entire team\'s development in one dashboard' },
-      { role: 'New Singers', benefit: 'Get started with a structured path from beginner to confident' },
-      { role: 'Experienced Vocalists', benefit: 'Fine-tune your craft with objective, data-driven feedback' },
-    ],
-    ctaTitle: 'Start Your Vocal Journey',
-    ctaDescription:
-      'Every singer deserves professional feedback. Start developing your gift today.',
-  },
-  {
-    slug: 'service-planning',
-    title: 'AI-Powered Service Planning',
-    tagline: 'Build services that flow—with intelligent recommendations',
-    description:
-      'Ministry Motion transforms service planning from a chore to a joy. AI recommends songs based on your sermon theme, scores theological alignment, and analyzes flow. Plan services that move people.',
-    badges: ['AI-Enhanced', 'Drag & Drop', 'CCLI Integration'],
-    benefits: [
-      { stat: '4hrs', label: 'Saved weekly on planning' },
-      { stat: '100%', label: 'Theme alignment visibility' },
-      { stat: '0', label: 'Per-song fees' },
-    ],
-    features: [
-      {
-        title: 'AI Song Recommendations',
-        description:
-          'Enter your sermon theme or scripture, and AI suggests songs that align theologically and emotionally. Filter by key, tempo, and team capability.',
-        icon: Sparkles,
-      },
-      {
-        title: 'Drag-and-Drop Builder',
-        description:
-          'Build services visually. Drag songs, videos, and transitions into place. See total timing and flow at a glance.',
-        icon: Calendar,
-      },
-      {
-        title: 'Theological Alignment Scoring',
-        description:
-          'AI scores how well your song selections align with your theme. Ensure consistency across your entire service.',
-        icon: Target,
-      },
-      {
-        title: 'Arrangement Management',
-        description:
-          'Store multiple arrangements per song. Automatically suggest the right arrangement based on your team that week.',
-        icon: Music,
-      },
-      {
-        title: 'Team Capability Matching',
-        description:
-          'AI knows your team\'s vocal ranges and skill levels. Recommendations account for who\'s scheduled.',
+          'Monitors volunteer schedules, service patterns, and event attendance to automatically flag members at risk of burnout before they quit.',
         icon: Users,
       },
       {
-        title: 'CCLI Integration',
+        title: 'The Liturgist',
         description:
-          'Import from CCLI SongSelect. Track reporting automatically. Stay compliant without extra work.',
-        icon: Check,
+          'Plans your services. Input your sermon theme, and the Liturgist recommends songs based on theology, congregation familiarity, and your team\'s specific vocal ranges.',
+        icon: Target,
+      },
+      {
+        title: 'The Succession Planner',
+        description:
+          'Never have a leadership gap again. The Succession Planner constantly analyzes your spiritual gifts database to build a multi-generational bench of future leaders.',
+        icon: TrendingUp,
+      },
+      {
+        title: 'The Virtuoso Coach',
+        description:
+          'Provides real-time, professional-grade vocal coaching to every singer on your team. It analyzes breath control, pitch, and timbre automatically.',
+        icon: Mic2,
+      },
+      {
+        title: 'The Analyst',
+        description:
+          'Watches your service recordings and generates a scorecard. It tracks who sang, which songs resonated, and whether your transitions were smooth.',
+        icon: BarChart3,
+      },
+      {
+        title: 'The Matchmaker',
+        description:
+          'Uses a 768-dimensional vector database to instantly match a member\'s spiritual gifts, personality, and availability with immediate ministry needs.',
+        icon: Sparkles,
       },
     ],
     howItWorks: [
       {
-        title: 'Enter Your Theme',
+        title: 'Connect Your Data',
         description:
-          'Start with a scripture, sermon title, or theme. AI begins generating recommendations immediately.',
+          'Import your people, songs, and schedules. The Agent Council immediately gets to work analyzing your baseline.',
       },
       {
-        title: 'Build Your Service',
+        title: 'Set Your Values',
         description:
-          'Drag and drop songs, readings, and elements. AI optimizes flow and suggests transitions.',
+          'Define your church\'s specific theological values and mission statement. The agents align all recommendations to your unique DNA.',
       },
       {
-        title: 'Assign Your Team',
+        title: 'Review Insights',
         description:
-          'Schedule vocalists and musicians. AI alerts if someone is unavailable or the song is outside their range.',
+          'Log in to your daily dashboard. Instead of hunting for information, the agents present you with actionable insights and pre-drafted workflows.',
       },
       {
-        title: 'Publish and Notify',
+        title: 'Take Action',
         description:
-          'With one click, notify your team. They get their parts, tracks, and all the details they need.',
+          'Approve or modify the agents\' recommendations with a single click. Let the software handle the emails, scheduling, and follow-ups.',
       },
     ],
     forWhom: [
-      { role: 'Worship Directors', benefit: 'Plan services faster with AI-powered recommendations' },
-      { role: 'Pastors', benefit: 'Ensure theological consistency across every service' },
-      { role: 'Music Directors', benefit: 'Manage arrangements and keys across your library' },
-      { role: 'Service Planners', benefit: 'Build beautiful, flowing services with drag-and-drop ease' },
+      { role: 'Executive Pastors', benefit: 'Consolidate 6+ disconnected tools into a single, intelligent platform' },
+      { role: 'Worship Directors', benefit: 'Save 15+ hours a week on scheduling, planning, and chart management' },
+      { role: 'Volunteer Coordinators', benefit: 'Instantly find the right person for the right role without begging' },
+      { role: 'Senior Pastors', benefit: 'Get peace of mind knowing no one is slipping through the cracks' },
     ],
-    ctaTitle: 'Plan Better Services',
+    ctaTitle: 'Hire Your AI Staff',
     ctaDescription:
-      'Stop spending hours on planning. Let AI help you build services that transform.',
+      'Stop paying for legacy file cabinets. Start experiencing ministry intelligence.',
+  },
+  {
+    slug: 'discipleship',
+    title: 'Discipleship Intelligence',
+    tagline: 'Finally track the spiritual journey: Connect → Grow → Serve → Go',
+    description:
+      'Did you know 39% of Christians in your church lack discipleship? Ministry Motion is the first platform designed to track the actual spiritual journey. By abandoning the "event-attendance" model, we use data to ensure every single member is being guided toward spiritual maturity.',
+    badges: ['Data-Driven', 'Retention Focus', 'Burnout Prevention'],
+    benefits: [
+      { stat: '39%', label: 'Of Christians lack discipleship' },
+      { stat: '2.3x', label: 'More giving from volunteers' },
+      { stat: '25%', label: 'Reduction in attrition' },
+    ],
+    features: [
+      {
+        title: 'The Simple Church Pipeline',
+        description:
+          'Automatically organize your entire congregation into four distinct stages: Connect, Grow, Serve, and Go. See exactly where congestion is happening.',
+        icon: Target,
+      },
+      {
+        title: 'Burnout Prevention Radar',
+        description:
+          'The Shepherd AI constantly monitors volunteer load. If someone volunteers for 15+ hours a week for 8 consecutive weeks, leaders are alerted before they quit.',
+        icon: Shield,
+      },
+      {
+        title: 'Spiritual Gifts Vector Matching',
+        description:
+          'When a new serving opportunity arises, AI cross-references 768 dimensions of personality, gifts, and history to recommend the perfect fit.',
+        icon: Zap,
+      },
+      {
+        title: 'Mentorship Connection',
+        description:
+          'Bridge generational gaps by automatically recommending mentorship pairings based on compatible life stages and spiritual gifts.',
+        icon: Users,
+      },
+      {
+        title: 'The "Ex-Boyfriend" Filter',
+        description:
+          'Built-in theological alignment tools ensure the content your groups consume and the songs they sing have a high "God Quotient."',
+        icon: Check,
+      },
+      {
+        title: 'Emotional Wake Tracking',
+        description:
+          'Leaders leave an emotional wake. Track the subtle health indicators of a ministry team to ensure your leaders are shepherding, not just managing.',
+        icon: Sparkles,
+      },
+    ],
+    howItWorks: [
+      {
+        title: 'Initial Assessment',
+        description:
+          'Members complete a deep but engaging Spiritual Gifts Assessment (SGA) that maps their unique profile into the system.',
+      },
+      {
+        title: 'Pipeline Placement',
+        description:
+          'AI categorizes every member into their current stage of the Connect → Grow → Serve → Go framework.',
+      },
+      {
+        title: 'Automated Nudging',
+        description:
+          'When a member is ready to move to the next stage, the system prompts them and their leader with the exact next step to take.',
+      },
+      {
+        title: 'Retention Analysis',
+        description:
+          'Watch your retention numbers grow as members shift from being passive spectators to highly engaged, deeply known participants.',
+      },
+    ],
+    forWhom: [
+      { role: 'Discipleship Pastors', benefit: 'Get complete visibility into the spiritual health of your flock' },
+      { role: 'Small Group Leaders', benefit: 'Know exactly who needs encouragement and who is ready to lead' },
+      { role: 'Executive Pastors', benefit: 'Correlate deep engagement with increased organizational health and giving' },
+      { role: 'Church Members', benefit: 'Experience a church that actually knows them and cares about their growth' },
+    ],
+    ctaTitle: 'Stop Guessing. Start Discipling.',
+    ctaDescription:
+      'Ensure no member in your church slips through the cracks ever again.',
   },
   {
     slug: 'analytics',
@@ -300,86 +300,86 @@ export const products: ProductContent[] = [
       'Stop guessing about service quality. Get AI-powered insights from every service.',
   },
   {
-    slug: 'learning',
-    title: 'Learning Hub',
-    tagline: '18+ courses for every skill level—from volunteer to worship leader',
+    slug: 'vocal-coaching',
+    title: 'Vocal Sandbox & Biometrics',
+    tagline: ' Gamified, biomechanic vocal training embedded in your workflow',
     description:
-      'Ministry Motion\'s Learning Hub provides structured training paths for every role in your ministry. From vocal technique to worship theology, members grow through courses that actually prepare them for leadership.',
-    badges: ['18+ Courses', 'Certifications', 'Ministry Pathways'],
+      'Ministry Motion brings professional vocal coaching to every member of your team through the Virtuoso Agent. Real-time pitch analysis, breath control feedback, biometric health monitoring, and SATB isolated rehearsal tracks—all unified in one platform.',
+    badges: ['Real-Time Feedback', 'SATB Isolation', 'Biometric Tracking'],
     benefits: [
-      { stat: '18+', label: 'Ministry-focused courses' },
-      { stat: '94%', label: 'Course completion rate' },
-      { stat: 'Direct', label: 'Path to ministry roles' },
+      { stat: '1000+', label: 'Vocal dimensions analyzed' },
+      { stat: 'Instant', label: 'SATB part generation' },
+      { stat: '73%', label: 'Average improvement in 90 days' },
     ],
     features: [
       {
-        title: 'Structured Learning Paths',
+        title: 'The Sing-Along Player',
         description:
-          'Courses organized into pathways: Vocal Development, Worship Leadership, Audio/Visual, and Spiritual Formation.',
+          'A gamified interface (like Yousician) that tracks a singer\'s pitch, rhythm, and timing in real-time as they practice their exact Sunday setlist.',
+        icon: Mic2,
+      },
+      {
+        title: 'Instant SATB Generation',
+        description:
+          'Upload an MP3 and our AI instantly separates it into completely isolated Soprano, Alto, Tenor, and Bass rehearsal tracks.',
+        icon: Music,
+      },
+      {
+        title: 'Cepstral Peak Prominence (CPPS)',
+        description:
+          'The "Check Engine Light" for vocal cords. We analyze acoustic tissue distress to prevent vocal nodules and strain before they happen.',
+        icon: Shield,
+      },
+      {
+        title: 'The "Self-to-Other" Blend Ratio',
+        description:
+          'AI analyzes the ensemble mix and trains singers how to suppress their solo instincts to achieve a perfect, unified choir blend.',
         icon: Target,
       },
       {
-        title: 'Video Lessons & Assessments',
+        title: 'Vocal Digital Twins',
         description:
-          'Professional video content with quizzes and practical assessments. Know what you learned, not just what you watched.',
-        icon: Video,
-      },
-      {
-        title: 'Certificate Generation',
-        description:
-          'Earn certificates upon completion. Show your progress to leadership and track your development journey.',
-        icon: Check,
-      },
-      {
-        title: 'Study Groups',
-        description:
-          'Join cohorts going through courses together. Learn alongside others and build community.',
-        icon: Users,
-      },
-      {
-        title: 'Mentor Matching',
-        description:
-          'Connect with experienced leaders who can guide your development beyond the courses.',
+          'Using Generative AI to map a singer\'s exact vocal profile, allowing leaders to hear how an arrangement will sound before rehearsal even begins.',
         icon: Sparkles,
       },
       {
-        title: 'Ministry Qualification',
+        title: '5-Stage Singer Pathway',
         description:
-          'Course completion can directly qualify you for ministry roles. Your learning matters.',
+          'A rigid, proven curriculum that safely moves a singer from the foundational Choir level up to the primary Praise Team leadership.',
         icon: TrendingUp,
       },
     ],
     howItWorks: [
       {
-        title: 'Discover Your Path',
+        title: 'Assign the Setlist',
         description:
-          'Take an assessment to identify where you are and where you want to go. Get a recommended learning path.',
+          'The Worship Director publishes the setlist. The platform automatically generates custom rehearsal tracks for every singer based on their assigned vocal part.',
       },
       {
-        title: 'Complete Courses',
+        title: 'Gamified Practice',
         description:
-          'Work through video lessons at your own pace. Complete quizzes and practical assignments.',
+          'Singers open the app at home and sing into their phones. The AI grades their pitch accuracy and rhythm in real-time against the canonical arrangement.',
       },
       {
-        title: 'Earn Certificates',
+        title: 'Biometric Feedback',
         description:
-          'Upon completion, receive certificates that demonstrate your readiness for new responsibilities.',
+          'If the AI detects vocal fry, dangerous jitter, or poor breath support, it immediately prescribes localized vocal exercises to fix the issue.',
       },
       {
-        title: 'Unlock Opportunities',
+        title: 'Rehearsal Readiness',
         description:
-          'Your certifications connect to ministry roles. Leadership sees your qualifications automatically.',
+          'When Friday night rehearsal begins, the Worship Director looks at the dashboard and knows exactly who learned their parts and who is struggling.',
       },
     ],
     forWhom: [
-      { role: 'New Team Members', benefit: 'Get up to speed quickly with structured onboarding' },
-      { role: 'Aspiring Leaders', benefit: 'Build the skills needed for leadership roles' },
-      { role: 'Current Leaders', benefit: 'Continue growing and modeling lifelong learning' },
-      { role: 'Ministry Directors', benefit: 'Develop your team systematically, not randomly' },
+      { role: 'Praise Leaders', benefit: 'Arrive at rehearsal knowing your team already knows the music' },
+      { role: 'Vocalists', benefit: 'Get professional, private vocal coaching directly on your smartphone' },
+      { role: 'Audio Engineers', benefit: 'Experience perfectly blended vocals before you even touch the EQ' },
+      { role: 'Worship Directors', benefit: 'Protect your team from burnout and vocal damage with medical-grade analytics' },
     ],
-    ctaTitle: 'Start Learning Today',
+    ctaTitle: 'Transform Your Sound',
     ctaDescription:
-      'Invest in your growth. Join thousands developing their ministry skills.',
+      'Stop wasting rehearsal time plunking out parts on a piano. Deploy the Virtuoso Coach today.',
   },
 ];
 

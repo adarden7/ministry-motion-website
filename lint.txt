@@ -1,0 +1,207 @@
+﻿
+> ministry-motion-website@0.1.0 lint
+> eslint
+
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(legal)\privacy\page.tsx
+   15:28  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:32  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:34  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:39  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:44  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:47  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   66:26  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  128:67  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(legal)\terms\page.tsx
+   15:50   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:58   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:111  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   15:117  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   60:45   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+   95:111  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   95:117  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  127:39   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  127:45   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\blog\[slug]\page.tsx
+   4:21  warning  'notFound' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  11:3   warning  'Share2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  35:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\blog\[slug]\page.tsx:35:7
+  33 |     const foundPost = getPostBySlug(slug);
+  34 |     if (foundPost) {
+> 35 |       setPost(foundPost);
+     |       ^^^^^^^ Avoid calling setState() directly within an effect
+  36 |       // Get related posts by category or tags
+  37 |       const allPosts = getAllPosts();
+  38 |       const related = allPosts  react-hooks/set-state-in-effect
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\blog\page.tsx
+  13:46  warning  'BlogPost' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\collective\page.tsx
+  18:3   warning  'MessageCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  22:3   warning  'X' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  66:31  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\collective\page.tsx:66:31
+  64 |               }}
+  65 |               transition={{
+> 66 |                 duration: 5 + Math.random() * 10,
+     |                               ^^^^^^^^^^^^^ Cannot call impure function
+  67 |                 repeat: Infinity,
+  68 |                 delay: Math.random() * 5,
+  69 |               }}                      react-hooks/purity
+  68:24  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\collective\page.tsx:68:24
+  66 |                 duration: 5 + Math.random() * 10,
+  67 |                 repeat: Infinity,
+> 68 |                 delay: Math.random() * 5,
+     |                        ^^^^^^^^^^^^^ Cannot call impure function
+  69 |               }}
+  70 |               style={{
+  71 |                 left: `${Math.random() * 100}%`,  react-hooks/purity
+  71:26  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\collective\page.tsx:71:26
+  69 |               }}
+  70 |               style={{
+> 71 |                 left: `${Math.random() * 100}%`,
+     |                          ^^^^^^^^^^^^^ Cannot call impure function
+  72 |                 top: `${Math.random() * 100}%`,
+  73 |               }}
+  74 |             />                                              react-hooks/purity
+  72:25  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\collective\page.tsx:72:25
+  70 |               style={{
+  71 |                 left: `${Math.random() * 100}%`,
+> 72 |                 top: `${Math.random() * 100}%`,
+     |                         ^^^^^^^^^^^^^ Cannot call impure function
+  73 |               }}
+  74 |             />
+  75 |           ))}                                                  react-hooks/purity
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\compare\page.tsx
+  11:3  warning  'Mic2' is defined but never used           @typescript-eslint/no-unused-vars
+  12:3  warning  'Users' is defined but never used          @typescript-eslint/no-unused-vars
+  13:3  warning  'Calendar' is defined but never used       @typescript-eslint/no-unused-vars
+  14:3  warning  'BarChart3' is defined but never used      @typescript-eslint/no-unused-vars
+  15:3  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+  16:3  warning  'BookOpen' is defined but never used       @typescript-eslint/no-unused-vars
+  17:3  warning  'Heart' is defined but never used          @typescript-eslint/no-unused-vars
+  18:3  warning  'Music' is defined but never used          @typescript-eslint/no-unused-vars
+  19:3  warning  'Crown' is defined but never used          @typescript-eslint/no-unused-vars
+  21:3  warning  'Target' is defined but never used         @typescript-eslint/no-unused-vars
+  22:3  warning  'TrendingUp' is defined but never used     @typescript-eslint/no-unused-vars
+  23:3  warning  'Shield' is defined but never used         @typescript-eslint/no-unused-vars
+  24:3  warning  'Layers' is defined but never used         @typescript-eslint/no-unused-vars
+  25:3  warning  'Radio' is defined but never used          @typescript-eslint/no-unused-vars
+  26:3  warning  'Brain' is defined but never used          @typescript-eslint/no-unused-vars
+  27:3  warning  'Headphones' is defined but never used     @typescript-eslint/no-unused-vars
+  28:3  warning  'Smartphone' is defined but never used     @typescript-eslint/no-unused-vars
+  29:3  warning  'Globe' is defined but never used          @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\home\page.tsx
+  248:7  error  Parsing error: JSX element 'section' has no corresponding closing tag
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\landing\page.tsx
+   17:3   warning  'ChevronDown' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  405:76  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  447:32  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  476:61  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  476:71  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  498:66  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  835:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\pricing\page.tsx
+  148:41  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\products\[slug]\page.tsx
+   20:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\products\[slug]\page.tsx:20:7
+  18 |     const found = getProductBySlug(slug);
+  19 |     if (found) {
+> 20 |       setProduct(found);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  21 |     }
+  22 |   }, [slug]);
+  23 |  react-hooks/set-state-in-effect
+  218:26  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\products\page.tsx
+  244:34  warning  'groupIndex' is defined but never used                           @typescript-eslint/no-unused-vars
+  326:70  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\solutions\[persona]\page.tsx
+  10:3  warning  'Check' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  57:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\app\(marketing)\solutions\[persona]\page.tsx:57:7
+  55 |     const found = getSolutionBySlug(persona);
+  56 |     if (found) {
+> 57 |       setSolution(found);
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  58 |       setOtherSolutions(getAllSolutions().filter((s) => s.slug !== persona).slice(0, 3));
+  59 |     }
+  60 |   }, [persona]);  react-hooks/set-state-in-effect
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\components\magicui\shimmer-button.tsx
+   4:10  warning  'motion' is defined but never used                    @typescript-eslint/no-unused-vars
+  20:7   warning  'shimmerColor' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  22:7   warning  'shimmerDuration' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\components\marketing\BetaSignupForm.tsx
+  108:66  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  110:55  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  291:11  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\components\marketing\MarketingFooter.tsx
+  2:10  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\components\marketing\ThemeToggle.tsx
+  16:12  warning  'theme' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\lib\products-content.ts
+   9:3  warning  'BarChart3' is defined but never used  @typescript-eslint/no-unused-vars
+  10:3  warning  'BookOpen' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\src\lib\solutions-content.ts
+  23:3  warning  'Baby' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ahkee\Desktop\WW2\ministry-motion-website\tailwind.config.ts
+  118:13  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+Γ£û 72 problems (37 errors, 35 warnings)
+
+

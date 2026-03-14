@@ -380,23 +380,6 @@ export default function PricingPage() {
           </button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/[0.06] py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white/40 text-sm">
-              © 2025 MinistryMotion. All rights reserved.
-            </div>
-            <nav className="flex items-center gap-8 text-sm text-white/40">
-              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
-              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
-              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
-              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

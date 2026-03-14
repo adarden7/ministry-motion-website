@@ -13,7 +13,6 @@ import {
   Video,
   Brain,
   Shield,
-  Building2,
   Sparkles,
   Check
 } from 'lucide-react';
@@ -39,85 +38,120 @@ interface FeatureGroup {
 
 const featureGroups: FeatureGroup[] = [
   {
-    title: 'Service Planning',
-    subtitle: 'Build services that transform',
+    title: 'The Agent Council',
+    subtitle: '15 specialized AI agents working 24/7',
     gradient: 'from-blue-500 to-cyan-500',
     features: [
       {
-        title: 'Drag-and-Drop Builder',
-        description: 'Visual service flow with automatic timing and seamless transitions.',
-        icon: Calendar,
-        href: '/products/service-planning',
-        tiers: ['free', 'pro', 'enterprise'],
+        title: 'The Shepherd',
+        description: 'Monitors volunteer load and automatically flags burnout risks.',
+        icon: Users,
+        href: '/products/agent-council',
+        tiers: ['pro', 'enterprise'],
       },
       {
-        title: 'AI Song Recommendations',
-        description: 'Get song suggestions based on sermon theme, key, and team capability.',
+        title: 'The Liturgist',
+        description: 'Plans services and recommends songs based on your unique theology.',
         icon: Sparkles,
-        href: '/products/service-planning',
-        tiers: ['pro', 'enterprise'],
+        href: '/products/agent-council',
+        tiers: ['free', 'pro', 'enterprise'],
         badge: 'AI Powered',
       },
       {
-        title: 'Song Library',
-        description: 'Centralized library with chord charts, lyrics, and arrangement notes.',
-        icon: Music,
-        href: '/products/service-planning',
-        tiers: ['free', 'pro', 'enterprise'],
+        title: 'The Matchmaker',
+        description: 'Instantly correlates spiritual gifts with serving opportunities.',
+        icon: Brain,
+        href: '/products/agent-council',
+        tiers: ['pro', 'enterprise'],
       },
       {
-        title: 'CCLI Integration',
-        description: 'Automatic reporting and license management for all your songs.',
+        title: 'The Succession Planner',
+        description: 'Builds a multi-generational leadership bench continuously.',
         icon: Shield,
-        href: '/products/service-planning',
-        tiers: ['pro', 'enterprise'],
+        href: '/products/agent-council',
+        tiers: ['enterprise'],
       },
     ],
   },
   {
-    title: 'Team Development',
-    subtitle: 'Grow your people, not just your roster',
+    title: 'Discipleship Intelligence',
+    subtitle: 'Track the spiritual journey: Connect → Grow → Serve → Go',
     gradient: 'from-violet-500 to-purple-500',
     features: [
       {
-        title: 'AI Vocal Coaching',
-        description: 'Real-time pitch analysis and personalized improvement paths for every singer.',
-        icon: Mic2,
-        href: '/products/vocal-coaching',
+        title: 'Simple Church Pipeline',
+        description: 'Organize and map every member to the 4 stages of spiritual growth.',
+        icon: BookOpen,
+        href: '/products/discipleship',
+        tiers: ['free', 'pro', 'enterprise'],
+      },
+      {
+        title: 'Vector Matching',
+        description: 'AI correlates 768 dimensions of personality, gifts, and history.',
+        icon: Sparkles,
+        href: '/products/discipleship',
         tiers: ['pro', 'enterprise'],
         badge: 'Industry First',
       },
       {
-        title: 'Learning Hub',
-        description: '18+ courses from vocal technique to worship theology with certifications.',
-        icon: BookOpen,
-        href: '/products/learning',
-        tiers: ['free', 'pro', 'enterprise'],
-      },
-      {
-        title: 'Video Practice Rooms',
-        description: 'AI avatar coaching sessions that feel like a private lesson.',
-        icon: Video,
-        href: '/products/vocal-coaching',
+        title: 'Automated Nudging',
+        description: 'AI prompts members to take their absolute next best spiritual step.',
+        icon: ArrowRight,
+        href: '/products/discipleship',
         tiers: ['pro', 'enterprise'],
       },
       {
-        title: 'Volunteer Scheduling',
-        description: 'Smart scheduling that respects availability and balances team loads.',
-        icon: Users,
-        href: '/products/service-planning',
-        tiers: ['free', 'pro', 'enterprise'],
+        title: 'Retention Analysis',
+        description: 'Correlation data between discipleship activity and church retention.',
+        icon: BarChart3,
+        href: '/products/discipleship',
+        tiers: ['pro', 'enterprise'],
       },
     ],
   },
   {
-    title: 'Analytics & Insights',
-    subtitle: 'Know what actually happened',
+    title: 'Vocal Sandbox',
+    subtitle: 'Gamified, biometric vocal training',
+    gradient: 'from-emerald-500 to-teal-500',
+    features: [
+      {
+        title: 'Sing-Along Player',
+        description: 'Yousician-style real-time pitch tracking for your Sunday setlist.',
+        icon: Mic2,
+        href: '/products/vocal-coaching',
+        tiers: ['pro', 'enterprise'],
+      },
+      {
+        title: 'Instant SATB Generation',
+        description: 'AI isolates any YouTube or MP3 file into custom rehearsal tracks.',
+        icon: Music,
+        href: '/products/vocal-coaching',
+        tiers: ['pro', 'enterprise'],
+      },
+      {
+        title: 'Biometric CPPS Tracking',
+        description: 'Medical-grade vocal tracking prevents nodules and vocal strain.',
+        icon: Video,
+        href: '/products/vocal-coaching',
+        tiers: ['enterprise'],
+      },
+      {
+        title: 'Ensemble Blend Ratio',
+        description: 'AI trains singers to suppress their solo voices to achieve a pure choir blend.',
+        icon: Users,
+        href: '/products/vocal-coaching',
+        tiers: ['pro', 'enterprise'],
+      },
+    ],
+  },
+  {
+    title: 'Service Analytics',
+    subtitle: 'Know what actually happened in your services',
     gradient: 'from-rose-500 to-orange-500',
     features: [
       {
-        title: 'Service Analytics',
-        description: 'Upload recordings and AI segments, identifies songs, and scores alignment.',
+        title: 'AI Video Analysis',
+        description: 'Upload recordings. AI automatically segments and analyzes every moment.',
         icon: BarChart3,
         href: '/products/analytics',
         tiers: ['pro', 'enterprise'],
@@ -125,58 +159,23 @@ const featureGroups: FeatureGroup[] = [
       },
       {
         title: 'Voice Identification',
-        description: 'Automatically recognize who sang what and track individual growth.',
+        description: 'Automatically recognize who sang what and track their performance.',
         icon: Brain,
         href: '/products/analytics',
         tiers: ['pro', 'enterprise'],
       },
       {
-        title: 'Plan vs Actual',
-        description: 'See exactly how your service differed from what you planned.',
+        title: 'Theological Alignment Scoring',
+        description: 'See exactly how well your service aligned with your stated theme.',
         icon: Calendar,
         href: '/products/analytics',
         tiers: ['pro', 'enterprise'],
       },
       {
-        title: 'Growth Dashboards',
-        description: 'Track spiritual progression across Connect → Grow → Serve → Go.',
-        icon: BarChart3,
+        title: 'Transition Quality Analysis',
+        description: 'Identify where service flow was broken or dead-spots occurred.',
+        icon: Calendar,
         href: '/products/analytics',
-        tiers: ['pro', 'enterprise'],
-      },
-    ],
-  },
-  {
-    title: 'Administration',
-    subtitle: 'Enterprise-grade management',
-    gradient: 'from-emerald-500 to-teal-500',
-    features: [
-      {
-        title: 'Multi-Campus Support',
-        description: 'Unified view across all locations with campus-specific settings.',
-        icon: Building2,
-        href: '/products/enterprise',
-        tiers: ['enterprise'],
-      },
-      {
-        title: 'SSO Integration',
-        description: 'Connect with Okta, Azure AD, or Google Workspace.',
-        icon: Shield,
-        href: '/products/enterprise',
-        tiers: ['enterprise'],
-      },
-      {
-        title: 'API Access',
-        description: 'Full REST API for custom integrations and workflows.',
-        icon: Brain,
-        href: '/products/enterprise',
-        tiers: ['enterprise'],
-      },
-      {
-        title: 'Role-Based Permissions',
-        description: 'Granular access control for every team and feature.',
-        icon: Users,
-        href: '/products/enterprise',
         tiers: ['pro', 'enterprise'],
       },
     ],
@@ -220,7 +219,7 @@ export default function ProductsPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg text-white/50 max-w-2xl mx-auto mb-10"
           >
-            From service planning to vocal coaching, every tool designed to help your people grow.
+            From the 15-AI Agent Council to deep discipleship tracking, every tool designed to help your people grow.
           </motion.p>
 
           {/* Tier Legend */}
@@ -417,23 +416,6 @@ export default function ProductsPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/[0.06] py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white/40 text-sm">
-              © 2025 MinistryMotion. All rights reserved.
-            </div>
-            <nav className="flex items-center gap-8 text-sm text-white/40">
-              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
-              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
-              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
-              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

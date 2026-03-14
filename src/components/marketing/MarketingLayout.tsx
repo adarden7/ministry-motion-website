@@ -6,6 +6,7 @@
  */
 
 import { MarketingNav } from './MarketingNav';
+import { MarketingFooter } from './MarketingFooter';
 import { MarketingProvider, useMarketing } from '@/context/MarketingContext';
 import { BetaSignupModal } from './BetaSignupModal';
 
@@ -13,9 +14,10 @@ function MarketingLayoutContent({ children }: { children: React.ReactNode }) {
   const { isBetaModalOpen, closeBetaModal } = useMarketing();
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden w-full">
       <MarketingNav />
-      <main>{children}</main>
+      <main className="min-h-screen">{children}</main>
+      <MarketingFooter />
       <BetaSignupModal 
         isOpen={isBetaModalOpen} 
         onClose={closeBetaModal} 

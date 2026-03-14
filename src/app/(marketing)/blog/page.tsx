@@ -273,51 +273,6 @@ export default function BlogPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-24 border-t border-white/[0.06]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl font-semibold tracking-tight mb-6">
-              Ready to transform your ministry?
-            </h2>
-            <p className="text-lg text-white/50 mb-10">
-              Join the early access program and experience what data-driven discipleship looks like.
-            </p>
-            <button
-              onClick={openBetaModal}
-              className="group px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
-            >
-              <span className="flex items-center gap-2">
-                Request Early Access
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/[0.06] py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white/40 text-sm">
-              © 2025 MinistryMotion. All rights reserved.
-            </div>
-            <nav className="flex items-center gap-8 text-sm text-white/40">
-              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
-              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
-              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
-              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

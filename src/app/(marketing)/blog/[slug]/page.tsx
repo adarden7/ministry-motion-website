@@ -49,10 +49,10 @@ export default function BlogPostPage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+      <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Article not found</h1>
-          <Link href="/blog" className="text-blue-400 hover:text-blue-300">
+          <Link href="/blog" className="text-violet-400 hover:text-violet-300">
             ← Back to Blog
           </Link>
         </div>
@@ -69,10 +69,10 @@ export default function BlogPostPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
       {/* Header */}
-      <section className="relative pt-24 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/10 via-transparent to-transparent" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
@@ -91,7 +91,7 @@ export default function BlogPostPage() {
 
             {/* Category */}
             <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium">
+              <span className="px-3 py-1 bg-violet-500/20 border border-violet-500/30 text-violet-400 rounded-full text-sm font-medium">
                 {post.category}
               </span>
             </div>
@@ -138,8 +138,8 @@ export default function BlogPostPage() {
             </div>
 
             {/* Share */}
-            <div className="flex items-center gap-4 pb-8 border-b border-slate-800">
-              <span className="text-sm text-slate-500">Share:</span>
+            <div className="flex items-center gap-4 pb-8 border-b border-white/[0.06]">
+              <span className="text-sm text-white/50">Share:</span>
               <button
                 onClick={() =>
                   window.open(
@@ -180,25 +180,26 @@ export default function BlogPostPage() {
 
       {/* Content */}
       <section className="pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:text-white prose-headings:font-bold
-              prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-slate-300 prose-p:leading-relaxed
-              prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-blue-300
-              prose-strong:text-white prose-strong:font-semibold
-              prose-ul:text-slate-300 prose-ol:text-slate-300
-              prose-li:marker:text-blue-400
-              prose-blockquote:border-blue-500 prose-blockquote:bg-slate-800/50 prose-blockquote:py-1 prose-blockquote:px-6 prose-blockquote:rounded-r-lg
-              prose-code:text-blue-300 prose-code:bg-slate-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-              prose-pre:bg-slate-800/50 prose-pre:border prose-pre:border-slate-700
-              prose-table:text-slate-300 prose-th:text-white prose-th:border-slate-700 prose-td:border-slate-700
-              prose-hr:border-slate-700"
+            className="prose prose-invert prose-lg md:prose-xl max-w-none
+              prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
+              prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8
+              prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:mt-12 prose-h3:mb-6
+              prose-p:text-white/70 prose-p:leading-relaxed prose-p:mb-8 text-lg md:text-xl
+              prose-a:text-violet-400 prose-a:no-underline hover:prose-a:text-violet-300
+              prose-strong:text-white/90 prose-strong:font-semibold
+              prose-ul:text-white/70 prose-ol:text-white/70 prose-ul:mb-8 prose-ol:mb-8
+              prose-li:marker:text-violet-400 prose-li:my-2
+              prose-blockquote:border-violet-500 prose-blockquote:bg-white/[0.02] prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:text-xl prose-blockquote:italic prose-blockquote:my-10
+              prose-code:text-violet-300 prose-code:bg-white/[0.05] prose-code:px-2 prose-code:py-1 prose-code:rounded-md
+              prose-pre:bg-[#12121a] prose-pre:border prose-pre:border-white/[0.06] prose-pre:p-6 prose-pre:rounded-xl prose-pre:my-10
+              prose-img:rounded-2xl prose-img:my-12
+              prose-table:text-white/70 prose-th:text-white prose-th:border-white/[0.06] prose-td:border-white/[0.06]
+              prose-hr:border-white/[0.06] prose-hr:my-12"
           >
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </motion.article>

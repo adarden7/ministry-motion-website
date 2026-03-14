@@ -101,7 +101,7 @@ export default function ProductDetailPage() {
               {/* Benefits */}
               <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
                 <h3 className="text-lg font-medium text-white mb-6">Key Benefits</h3>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                   {product.benefits.map((benefit, i) => (
                     <div key={i} className="text-center">
                       <div className="text-3xl font-semibold text-white mb-1">
@@ -273,23 +273,6 @@ export default function ProductDetailPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-white/[0.06] py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-white/40 text-sm">
-              © 2025 MinistryMotion. All rights reserved.
-            </div>
-            <nav className="flex items-center gap-8 text-sm text-white/40">
-              <Link href="/products" className="hover:text-white/70 transition-colors">Features</Link>
-              <Link href="/pricing" className="hover:text-white/70 transition-colors">Pricing</Link>
-              <Link href="/blog" className="hover:text-white/70 transition-colors">Blog</Link>
-              <Link href="/privacy" className="hover:text-white/70 transition-colors">Privacy</Link>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
