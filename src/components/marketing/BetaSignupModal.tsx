@@ -3,12 +3,11 @@
 import { useEffect } from 'react';
 import { X, Sparkles } from 'lucide-react';
 import { BetaSignupForm } from './BetaSignupForm';
-import { LeadSource } from '@/lib/types/lead';
 
 interface BetaSignupModalProps {
   isOpen: boolean;
   onClose: () => void;
-  source?: LeadSource;
+  source?: string;
 }
 
 export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup' }: BetaSignupModalProps) {
@@ -41,14 +40,14 @@ export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      {/* Modal */}
-      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        {/* Header */}
-        <div className="relative bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 px-6 py-8 text-white">
+      {/* Modal — uses semantic tokens so it works in both light and dark mode */}
+      <div className="relative w-full max-w-lg bg-card border border-border rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        {/* Header — gradient accent strip */}
+        <div className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-6 py-8 text-primary-foreground">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <button
             onClick={onClose}
@@ -62,14 +61,14 @@ export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup
               <span className="text-sm font-medium">Limited Beta Access</span>
             </div>
             <h2 className="text-2xl font-bold mb-2">Join the Beta</h2>
-            <p className="text-blue-100">
+            <p className="text-primary-foreground/80">
               Be among the first to experience the future of worship ministry management.
             </p>
           </div>
         </div>
 
         {/* Form */}
-        <div className="p-6">
+        <div className="p-6 bg-card">
           <BetaSignupForm
             source={source}
             onSuccess={() => {

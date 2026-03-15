@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import {
   Check,
   X,
+  Menu,
   ChevronDown,
   ArrowRight,
   Mic2,
@@ -26,13 +26,9 @@ import {
   Brain,
   Headphones,
   Smartphone,
-  Globe,
-  ChevronRight,
-  Sparkles,
+  Globe
 } from 'lucide-react';
-import { useMarketing } from '@/context/MarketingContext';
-import { ShimmerButton } from '@/components/magicui/shimmer-button';
-import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text';
+import { BetaSignupModal, MarketingNav } from '@/components/marketing';
 
 // Comprehensive feature comparison data - Ministry Motion vs PCO vs Breeze
 const comparisonCategories = [
@@ -179,7 +175,7 @@ const quickComparison = [
   { category: 'Service Planning', us: '✓', pco: '✓', onechurch: '✗', description: 'Worship leaders walk into each service confident and prepared' },
   { category: 'AI Vocal Coaching', us: '✓', pco: '✗', onechurch: '✗', description: 'Your team grows in skill without expensive voice lessons' },
   { category: 'Service Video Analysis', us: '✓', pco: '✗', onechurch: '✗', description: 'Leaders review services with data, not just feelings' },
-  { category: 'Learning Management', us: '18 courses', pco: '✗', onechurch: '✗', description: 'Volunteers grow into confident, trained ministers' },
+  { category: 'Learning Management', us: 'Growing library', pco: '✗', onechurch: '✗', description: 'Volunteers grow into confident, trained ministers' },
   { category: 'Unified Communications', us: '✓', pco: '✗', onechurch: '✗', description: 'Your team stops juggling 5 different apps' },
   { category: 'Real-Time Service Insights', us: '✓', pco: '✗', onechurch: '✗', description: 'Pastors see engagement as it happens, not weeks later' },
   { category: 'Rehearsal Track Generation', us: '✓', pco: '✗', onechurch: '✗', description: 'Team members practice their parts at home confidently' },
@@ -192,7 +188,7 @@ export default function ComparePage() {
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
     new Set([comparisonCategories[0].name])
   );
-  const { openBetaModal } = useMarketing();
+  const [showBetaModal, setShowBetaModal] = useState(false);
 
   const toggleCategory = (categoryName: string) => {
     setExpandedCategories(prev => {
@@ -208,144 +204,94 @@ export default function ComparePage() {
 
   const renderValue = (value: boolean | string) => {
     if (value === true) {
-      return <Check className="w-5 h-5 text-blue-400 mx-auto" />;
+      return <Check className="w-5 h-5 text-blue-600 mx-auto" />;
     } else if (value === false) {
-      return <X className="w-5 h-5 text-slate-600 mx-auto" />;
+      return <X className="w-5 h-5 text-slate-300 mx-auto" />;
     } else {
-      return <span className="text-xs text-slate-400">{value}</span>;
+      return <span className="text-xs text-slate-500">{value}</span>;
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
+      <MarketingNav currentPage="compare" onBetaSignupClick={() => setShowBetaModal(true)} />
+
       {/* Hero - Tech-forward dark gradient */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         {/* Gradient mesh overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <AnimatedGradientText className="mb-6">
-              <span className="inline-flex items-center gap-2 text-slate-200">
-                <Sparkles className="w-4 h-4 text-blue-400" />
-                <span>Honest Comparison</span>
-                <ChevronRight className="w-4 h-4" />
-              </span>
-            </AnimatedGradientText>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-          >
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Ministry Motion vs.{' '}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">the Competition</span>
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-4xl mx-auto mb-8 p-6 bg-slate-900/50 border border-blue-500/20 rounded-2xl"
-          >
-            <p className="text-xl lg:text-2xl text-blue-100/90 font-medium">
-              Planning Center tells you <span className="text-slate-400">what was scheduled.</span>
-              <br />
-              Ministry Motion tells you <span className="text-white font-semibold">what actually happened, who&apos;s growing, and what to do next.</span>
-            </p>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-lg text-slate-400 max-w-3xl mx-auto"
-          >
-            See exactly what you get with Ministry Motion compared to Planning Center, Tithe.ly, and others.
-            We don&apos;t just match their features—we add AI-powered capabilities no one else has.
-          </motion.p>
+          </h1>
+          <p className="text-xl text-blue-100/80 max-w-3xl mx-auto mb-8">
+            See exactly what you get with Ministry Motion compared to Planning Center and One Church.
+            We don't just match their features—we add AI-powered capabilities no one else has.
+          </p>
         </div>
       </section>
 
       {/* Quick Summary */}
-      <section className="py-16 bg-slate-900 border-b border-slate-800">
+      <section className="py-16 bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
-          >
-            The Quick Version
-          </motion.h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">The Quick Version</h2>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden"
-          >
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
             <table className="w-full">
               <thead>
-                <tr className="bg-slate-800 border-b border-slate-700">
-                  <th className="text-left p-4 font-semibold text-slate-300">Capability</th>
+                <tr className="bg-slate-100 border-b border-slate-200">
+                  <th className="text-left p-4 font-semibold text-slate-700">Capability</th>
                   <th className="p-4 text-center">
-                    <span className="text-blue-400 font-semibold">Ministry Motion</span>
+                    <span className="text-blue-600 font-semibold">Ministry Motion</span>
                   </th>
                   <th className="p-4 text-center">
-                    <span className="text-slate-400 font-semibold">Planning Center</span>
+                    <span className="text-slate-600 font-semibold">Planning Center</span>
                   </th>
                   <th className="p-4 text-center">
-                    <span className="text-slate-400 font-semibold">Tithe.ly</span>
+                    <span className="text-slate-600 font-semibold">One Church</span>
                   </th>
                   <th className="p-4 text-left font-medium text-slate-500 hidden md:table-cell">Why it matters</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-700/50">
+              <tbody className="divide-y divide-slate-200">
                 {quickComparison.map((row, i) => (
-                  <tr key={i} className="hover:bg-slate-800/50">
-                    <td className="p-4 font-medium text-slate-200">{row.category}</td>
+                  <tr key={i} className="hover:bg-slate-50">
+                    <td className="p-4 font-medium text-slate-900">{row.category}</td>
                     <td className="p-4 text-center">
                       {row.us === '✓' ? (
-                        <Check className="w-5 h-5 text-blue-400 mx-auto" />
+                        <Check className="w-5 h-5 text-blue-600 mx-auto" />
                       ) : (
-                        <span className="text-sm text-blue-400 font-medium">{row.us}</span>
+                        <span className="text-sm text-blue-600 font-medium">{row.us}</span>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {row.pco === '✓' ? (
-                        <Check className="w-5 h-5 text-slate-500 mx-auto" />
+                        <Check className="w-5 h-5 text-slate-400 mx-auto" />
                       ) : row.pco === '✗' ? (
-                        <X className="w-5 h-5 text-slate-600 mx-auto" />
+                        <X className="w-5 h-5 text-slate-300 mx-auto" />
                       ) : (
                         <span className="text-xs text-slate-500">{row.pco}</span>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {row.onechurch === '✓' ? (
-                        <Check className="w-5 h-5 text-slate-500 mx-auto" />
+                        <Check className="w-5 h-5 text-slate-400 mx-auto" />
                       ) : row.onechurch === '✗' ? (
-                        <X className="w-5 h-5 text-slate-600 mx-auto" />
+                        <X className="w-5 h-5 text-slate-300 mx-auto" />
                       ) : (
                         <span className="text-xs text-slate-500">{row.onechurch}</span>
                       )}
                     </td>
-                    <td className="p-4 text-sm text-slate-400 hidden md:table-cell">{row.description}</td>
+                    <td className="p-4 text-sm text-slate-500 hidden md:table-cell">{row.description}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -421,45 +367,48 @@ export default function ComparePage() {
       </section>
 
       {/* Detailed Comparison */}
-      <section className="py-16 bg-slate-950">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-white mb-4 text-center"
-          >
-            Detailed Feature Comparison
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-slate-400 text-center mb-12 max-w-2xl mx-auto"
-          >
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Detailed Feature Comparison</h2>
+          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
             Click any category to collapse or expand. Highlighted rows are capabilities unique to Ministry Motion.
-          </motion.p>
+          </p>
+
+          {/* Pricing summary row */}
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 mb-8 text-white">
+            <div className="grid grid-cols-4 gap-4 items-center">
+              <div>
+                <p className="text-sm font-semibold text-blue-200 uppercase tracking-wide">Monthly Cost</p>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-blue-200 mb-1">Ministry Motion Pro</p>
+                <p className="text-3xl font-black">$199<span className="text-base font-normal text-blue-200">/mo</span></p>
+                <p className="text-xs text-blue-200 mt-1">Everything included</p>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-blue-200 mb-1">Planning Center (comparable)</p>
+                <p className="text-3xl font-black text-blue-300">$199+<span className="text-base font-normal text-blue-400">/mo</span></p>
+                <p className="text-xs text-blue-300 mt-1">Services only, no AI/LMS</p>
+              </div>
+              <div className="text-center">
+                <p className="text-xs text-blue-200 mb-1">6-tool stack equivalent</p>
+                <p className="text-3xl font-black text-red-300">$1,083<span className="text-base font-normal text-red-400">/mo</span></p>
+                <p className="text-xs text-red-300 mt-1">No integration, duplicate data</p>
+              </div>
+            </div>
+          </div>
 
           <div className="space-y-4">
-            {comparisonCategories.map((category, catIndex) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: catIndex * 0.05 }}
-                viewport={{ once: true }}
-                className="border border-slate-700 rounded-xl overflow-hidden"
-              >
+            {comparisonCategories.map((category) => (
+              <div key={category.name} className="border border-slate-200 rounded-xl overflow-hidden">
                 {/* Category Header */}
                 <button
                   onClick={() => toggleCategory(category.name)}
-                  className="w-full flex items-center justify-between p-4 bg-slate-800/50 hover:bg-slate-800 transition-colors"
+                  className="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors"
                 >
-                  <span className="font-semibold text-white">{category.name}</span>
+                  <span className="font-semibold text-slate-900">{category.name}</span>
                   <div className="flex items-center gap-4">
-                    <span className="text-sm text-blue-400">
+                    <span className="text-sm text-blue-600">
                       {category.features.filter(f => f.highlight).length} unique to us
                     </span>
                     <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${expandedCategories.has(category.name) ? 'rotate-180' : ''}`} />
@@ -471,26 +420,26 @@ export default function ComparePage() {
                   <div className="overflow-x-auto">
                     <table className="w-full">
                       <thead>
-                        <tr className="bg-slate-800 border-t border-slate-700">
-                          <th className="text-left p-3 text-sm font-medium text-slate-400">Feature</th>
+                        <tr className="bg-slate-100 border-t border-slate-200">
+                          <th className="text-left p-3 text-sm font-medium text-slate-600">Feature</th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-blue-400">Ministry Motion</span>
+                            <span className="text-sm font-semibold text-blue-600">Ministry Motion</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-slate-400">Planning Center</span>
+                            <span className="text-sm font-semibold text-slate-600">Planning Center</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-slate-400">Tithe.ly</span>
+                            <span className="text-sm font-semibold text-slate-600">One Church</span>
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-700/50">
+                      <tbody className="divide-y divide-slate-100">
                         {category.features.map((feature, i) => (
-                          <tr key={i} className={feature.highlight ? 'bg-blue-950/30' : 'hover:bg-slate-800/50'}>
-                            <td className="p-3 text-sm text-slate-300">
+                          <tr key={i} className={feature.highlight ? 'bg-blue-50' : 'hover:bg-slate-50'}>
+                            <td className="p-3 text-sm text-slate-700">
                               {feature.name}
                               {feature.highlight && (
-                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-blue-500/20 text-blue-400 rounded border border-blue-500/30">
+                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 rounded">
                                   Unique
                                 </span>
                               )}
@@ -504,44 +453,24 @@ export default function ComparePage() {
                     </table>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Cost Comparison */}
-      <section className="py-16 bg-slate-900">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-white mb-4 text-center"
-          >
-            Cost Comparison
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-slate-400 text-center mb-12"
-          >
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Cost Comparison</h2>
+          <p className="text-slate-600 text-center mb-12">
             What it actually costs to get comparable capabilities
-          </motion.p>
+          </p>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Competitors Stack */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-slate-800/50 rounded-2xl border border-slate-700 p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-6">Building it yourself with separate tools</h3>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-6">Building it yourself with separate tools</h3>
 
               <div className="space-y-3 mb-6">
                 {[
@@ -552,181 +481,199 @@ export default function ComparePage() {
                   { tool: 'Zoom Pro', price: '$16/mo', use: 'Rehearsals' },
                   { tool: 'Pushpay', price: '$200/mo', use: 'Giving' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-slate-700/50">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-slate-100">
                     <div>
-                      <span className="font-medium text-slate-200">{item.tool}</span>
+                      <span className="font-medium text-slate-700">{item.tool}</span>
                       <span className="text-sm text-slate-500 ml-2">({item.use})</span>
                     </div>
-                    <span className="text-slate-400">{item.price}</span>
+                    <span className="text-slate-600">{item.price}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-                <span className="font-semibold text-white">Total</span>
-                <span className="text-2xl font-bold text-slate-200">~$1,083/mo</span>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-200">
+                <span className="font-semibold text-slate-900">Total</span>
+                <span className="text-2xl font-bold text-slate-900">~$1,083/mo</span>
               </div>
 
               <p className="text-sm text-slate-500 mt-4">
                 Plus: No integration, separate logins, duplicate data entry, no AI service analysis,
                 no ministry-specific training, no unified communications
               </p>
-            </motion.div>
+            </div>
 
             {/* Ministry Motion */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="relative bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-6 text-white overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
-              <div className="relative">
-                <h3 className="text-lg font-semibold mb-6">Ministry Motion Pro</h3>
+            <div className="bg-blue-600 rounded-2xl p-6 text-white">
+              <h3 className="text-lg font-semibold mb-6">Ministry Motion Pro</h3>
 
-                <div className="space-y-3 mb-6">
-                  {[
-                    'Service planning & scheduling',
-                    'AI vocal coaching',
-                    'Digital rehearsal rooms',
-                    'Rehearsal track generation',
-                    '18+ course LMS',
-                    'Service video analysis',
-                    'Real-time insights',
-                    'Unified communications',
-                    'Community platform',
-                    'Integrated giving',
-                    'Mobile apps',
-                    'Multi-campus support'
-                  ].map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-cyan-200 flex-shrink-0" />
-                      <span className="text-blue-50">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-white/20">
-                  <span className="font-semibold">Total</span>
-                  <span className="text-3xl font-bold">$249/mo</span>
-                </div>
-
-                <div className="mt-4 p-3 bg-white/10 rounded-lg backdrop-blur">
-                  <div className="flex items-center justify-between">
-                    <span className="text-cyan-200">You save</span>
-                    <span className="text-xl font-bold text-white">$834/mo ($10,008/year)</span>
+              <div className="space-y-3 mb-6">
+                {[
+                  'Service planning & scheduling',
+                  'AI vocal coaching',
+                  'Digital rehearsal rooms',
+                  'Rehearsal track generation',
+                  '18+ course LMS',
+                  'Service video analysis',
+                  'Real-time insights',
+                  'Unified communications',
+                  'Community platform',
+                  'Integrated giving',
+                  'Mobile apps',
+                  'Multi-campus support'
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <Check className="w-5 h-5 text-teal-200 flex-shrink-0" />
+                    <span className="text-blue-50">{feature}</span>
                   </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-between pt-4 border-t border-blue-500">
+                <span className="font-semibold">Total</span>
+                <span className="text-3xl font-bold">$199/mo</span>
+              </div>
+
+              <div className="mt-4 p-3 bg-blue-700 rounded-lg">
+                <div className="flex items-center justify-between">
+                  <span className="text-teal-200">You save</span>
+                  <span className="text-xl font-bold text-white">$884/mo ($10,608/year)</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Churches Switch from PCO */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Churches Switch from Planning Center</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Three fundamental differences that matter to church leadership — not just technology teams.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                number: '01',
+                heading: 'Integration ≠ Intelligence',
+                subhead: 'PCO integrates tools. MM unifies data and adds AI.',
+                body: 'Planning Center connects your scheduling, giving, and check-ins — but each module is still a separate silo. Ministry Motion starts with a unified member record, then layers AI reasoning on top. The result: agents that can act across your entire ministry without you building workflows.'
+              },
+              {
+                number: '02',
+                heading: 'Attendance ≠ Discipleship',
+                subhead: 'PCO tracks check-ins. MM tracks spiritual growth.',
+                body: 'Knowing who showed up on Sunday is useful. Knowing where they are in the Connect → Grow → Serve → Go journey — and what they need next — is transformational. Ministry Motion measures lyrical God-directedness, engagement patterns, and progression toward ministry activation.'
+              },
+              {
+                number: '03',
+                heading: '6 Tools ≠ 1 Platform',
+                subhead: 'Replace PCO + Circle + Yousician + Coursera + Zoom + Pushpay',
+                body: 'The average church using Planning Center still pays for 5–6 other tools to cover community, vocal training, LMS, rehearsals, and giving. Ministry Motion replaces the core features of all 6 subscriptions — saving an average of $10,608/year with no integration headaches.'
+              }
+            ].map((reason, i) => (
+              <div key={i} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                <div className="text-5xl font-black text-slate-200 mb-4">{reason.number}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.heading}</h3>
+                <p className="text-sm font-semibold text-blue-600 mb-3">{reason.subhead}</p>
+                <p className="text-sm text-slate-600 leading-relaxed">{reason.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Board-ready language */}
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="font-semibold text-slate-900 mb-1">Share this comparison with your leadership team</p>
+              <p className="text-sm text-slate-600">This page is designed to be board-ready. Download the full comparison as a PDF to present at your next leadership meeting.</p>
+            </div>
+            <a
+              href="#"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-sm"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              Download Comparison PDF
+            </a>
           </div>
         </div>
       </section>
 
       {/* Migration Section */}
-      <section className="py-16 bg-slate-950">
+      <section className="py-16 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-white mb-4"
-          >
-            Switching is easier than you think
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-lg text-slate-400 mb-8"
-          >
-            We help you migrate from Planning Center, Tithe.ly, or any other ChMS.
-            Free data migration assistance included.
-          </motion.p>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Switching is easier than you think</h2>
+          <p className="text-lg text-slate-600 mb-8">
+            We help you migrate from Planning Center, One Church, or any other ChMS.
+            AI-powered data migration tools + human assistance included.
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { title: 'Export your data', description: 'Download from your current platform' },
-              { title: 'We import it', description: 'Our team handles the migration' },
+              { title: 'We import it', description: 'AI-powered import + our team assists' },
               { title: 'You\'re live', description: 'Start using Ministry Motion in days' }
             ].map((step, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
-              >
-                <div className="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center mx-auto mb-4 border border-blue-500/30">
+              <div key={i} className="bg-slate-50 rounded-xl p-6">
+                <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto mb-4">
                   {i + 1}
                 </div>
-                <h3 className="font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-sm text-slate-400">{step.description}</p>
-              </motion.div>
+                <h3 className="font-semibold text-slate-900 mb-2">{step.title}</h3>
+                <p className="text-sm text-slate-600">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to see the difference?
-            </h2>
-            <p className="text-xl text-blue-100 mb-10">
-              Join our beta program and be among the first to experience the future of church management.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <ShimmerButton
-                onClick={openBetaModal}
-                className="h-14 px-8 font-semibold text-lg"
-                shimmerColor="rgba(255,255,255,0.3)"
-                background="white"
-              >
-                <span className="text-blue-600">Sign Up for Beta</span>
-              </ShimmerButton>
-              <Link
-                href="/pricing"
-                className="h-14 px-8 bg-white/10 text-white font-semibold rounded-full border border-white/30 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2 backdrop-blur-sm"
-              >
-                View Pricing
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </motion.div>
+      <section className="py-24 bg-blue-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to see the difference?
+          </h2>
+          <p className="text-xl text-blue-100 mb-10">
+            Join our beta program and be among the first to experience the future of church management.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => setShowBetaModal(true)}
+              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+            >
+              Sign Up for Beta
+            </button>
+            <Link
+              href="/demo"
+              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+            >
+              Schedule Demo
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-950 border-t border-slate-800">
+      <footer className="py-12 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-white text-sm">MM</span>
-              </div>
-              <span className="font-semibold text-white">Ministry Motion</span>
+              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Ministry Motion. All rights reserved.
+              © 2025 Ministry Motion. All rights reserved.
             </p>
           </div>
         </div>
       </footer>
 
+      {/* Beta Signup Modal */}
+      <BetaSignupModal
+        isOpen={showBetaModal}
+        onClose={() => setShowBetaModal(false)}
+        source="website_beta_signup"
+      />
     </div>
   );
 }

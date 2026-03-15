@@ -1,32 +1,21 @@
 import type { Metadata } from 'next';
-import { MarketingLayout } from '@/components/marketing/MarketingLayout';
+import { MarketingLayout as MarketingLayoutWrapper } from '@/components/marketing/MarketingLayout';
 
 export const metadata: Metadata = {
-  title: 'MinistryMotion - Everything Your Worship Ministry Needs',
-  description:
-    'The complete platform for worship ministry. Plan services, develop your team with AI vocal coaching, analyze performance, and unify communications — all in one place.',
-  keywords: [
-    'worship team management',
-    'AI vocal coaching',
-    'church software',
-    'worship planning',
-    'service analytics',
-    'church management',
-    'volunteer scheduling',
-  ],
+  title: 'Ministry Motion - Everything Your Worship Ministry Needs',
+  description: 'The complete platform for worship ministry. Plan services, develop your team with AI vocal coaching, analyze performance, and unify communications—all in one place.',
+  keywords: ['worship team management', 'AI vocal coaching', 'church software', 'worship planning', 'service analytics', 'church management', 'volunteer scheduling'],
   openGraph: {
-    title: 'MinistryMotion - Everything Your Worship Ministry Needs',
-    description:
-      'Plan services, develop your team with AI, analyze performance, and unify communications. The complete worship ministry platform.',
+    title: 'Ministry Motion - Everything Your Worship Ministry Needs',
+    description: 'Plan services, develop your team with AI, analyze performance, and unify communications. The complete worship ministry platform.',
     type: 'website',
-    siteName: 'MinistryMotion',
   },
 };
 
-export default function MarketingLayoutWrapper({
+export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <MarketingLayout>{children}</MarketingLayout>;
+  return <MarketingLayoutWrapper>{children}</MarketingLayoutWrapper>;
 }

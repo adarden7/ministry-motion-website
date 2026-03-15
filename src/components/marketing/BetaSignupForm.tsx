@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { ChurchSize, churchSizeLabels, BetaSignupFormData, LeadSource } from '@/lib/types/lead';
+import { ChurchSize, churchSizeLabels, BetaSignupFormData } from '@/lib/types/lead';
 import { Check, Loader2, AlertCircle } from 'lucide-react';
 
 interface BetaSignupFormProps {
-  source?: LeadSource;
+  source?: string;
   onSuccess?: (leadId: string) => void;
   onClose?: () => void;
   className?: string;
@@ -42,6 +42,7 @@ export function BetaSignupForm({
     role: '',
     interests: []
   });
+  const [honeypot, setHoneypot] = useState(''); // RT-07 FIX: bot trap
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -64,6 +65,11 @@ export function BetaSignupForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // RT-07 FIX: Silently reject bot submissions
+    if (honeypot) {
+      setSuccess(true);
+      return;
+    }
     setIsSubmitting(true);
     setError(null);
 
@@ -102,17 +108,17 @@ export function BetaSignupForm({
   if (success) {
     return (
       <div className={`text-center py-8 ${className}`}>
-        <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
-          <Check className="w-8 h-8 text-blue-600" />
+        <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+          <Check className="w-8 h-8 text-primary" />
         </div>
-        <h3 className="text-xl font-bold text-slate-900 mb-2">You're on the list!</h3>
-        <p className="text-slate-600 mb-6">
+        <h3 className="text-xl font-bold text-foreground mb-2">You're on the list!</h3>
+        <p className="text-muted-foreground mb-6">
           Thank you for signing up for beta access. We'll reach out soon with your exclusive invitation.
         </p>
         {onClose && (
           <button
             onClick={onClose}
-            className="px-6 py-2 text-blue-600 font-medium hover:text-blue-700"
+            className="px-6 py-2 text-primary font-medium hover:text-primary/80 transition-colors"
           >
             Close
           </button>
@@ -121,10 +127,27 @@ export function BetaSignupForm({
     );
   }
 
+  /* Shared input class — semantic tokens for correct light/dark rendering */
+  const inputClass =
+    'w-full px-4 py-2.5 bg-background text-foreground border border-border rounded-lg ' +
+    'focus:ring-2 focus:ring-ring focus:border-primary outline-none transition-colors ' +
+    'placeholder:text-muted-foreground/60';
+
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
+      {/* RT-07 FIX: Honeypot — invisible to real users, filled by bots */}
+      <div style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
+        <input
+          type="text"
+          name="website_url"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+        />
+      </div>
       {error && (
-        <div className="flex items-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+        <div className="flex items-center gap-2 p-3 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
           {error}
         </div>
@@ -132,7 +155,7 @@ export function BetaSignupForm({
 
       <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-1">
             First Name *
           </label>
           <input
@@ -142,13 +165,13 @@ export function BetaSignupForm({
             required
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+            className={inputClass}
             placeholder="John"
           />
         </div>
 
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-1">
             Last Name *
           </label>
           <input
@@ -158,14 +181,14 @@ export function BetaSignupForm({
             required
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+            className={inputClass}
             placeholder="Smith"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
           Email Address *
         </label>
         <input
@@ -175,13 +198,13 @@ export function BetaSignupForm({
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+          className={inputClass}
           placeholder="john@yourchurch.org"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
+        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
           Phone Number *
         </label>
         <input
@@ -191,13 +214,13 @@ export function BetaSignupForm({
           required
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+          className={inputClass}
           placeholder="(555) 123-4567"
         />
       </div>
 
       <div>
-        <label htmlFor="churchName" className="block text-sm font-medium text-slate-700 mb-1">
+        <label htmlFor="churchName" className="block text-sm font-medium text-foreground mb-1">
           Church Name *
         </label>
         <input
@@ -207,14 +230,14 @@ export function BetaSignupForm({
           required
           value={formData.churchName}
           onChange={handleChange}
-          className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+          className={inputClass}
           placeholder="Grace Community Church"
         />
       </div>
 
       <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
         <div>
-          <label htmlFor="churchSize" className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="churchSize" className="block text-sm font-medium text-foreground mb-1">
             Church Size *
           </label>
           <select
@@ -223,7 +246,7 @@ export function BetaSignupForm({
             required
             value={formData.churchSize}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors bg-white"
+            className={inputClass}
           >
             {(Object.entries(churchSizeLabels) as [ChurchSize, string][]).map(([value, label]) => (
               <option key={value} value={value}>{label} members</option>
@@ -232,7 +255,7 @@ export function BetaSignupForm({
         </div>
 
         <div>
-          <label htmlFor="role" className="block text-sm font-medium text-slate-700 mb-1">
+          <label htmlFor="role" className="block text-sm font-medium text-foreground mb-1">
             Your Role
           </label>
           <input
@@ -241,7 +264,7 @@ export function BetaSignupForm({
             name="role"
             value={formData.role}
             onChange={handleChange}
-            className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+            className={inputClass}
             placeholder="Worship Pastor"
           />
         </div>
@@ -249,7 +272,7 @@ export function BetaSignupForm({
 
       {showInterests && (
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label className="block text-sm font-medium text-foreground mb-2">
             What features interest you most?
           </label>
           <div className="flex flex-wrap gap-2">
@@ -258,11 +281,10 @@ export function BetaSignupForm({
                 key={option.id}
                 type="button"
                 onClick={() => handleInterestToggle(option.id)}
-                className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
-                  formData.interests?.includes(option.id)
-                    ? 'bg-blue-100 border-blue-300 text-blue-700'
-                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
-                }`}
+                className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${formData.interests?.includes(option.id)
+                  ? 'bg-primary/20 border-primary/40 text-primary'
+                  : 'bg-muted border-border text-muted-foreground hover:border-primary/30 hover:text-foreground'
+                  }`}
               >
                 {option.label}
               </button>
@@ -274,7 +296,7 @@ export function BetaSignupForm({
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+        className="w-full py-3 px-6 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
       >
         {isSubmitting ? (
           <>
@@ -286,7 +308,7 @@ export function BetaSignupForm({
         )}
       </button>
 
-      <p className="text-xs text-slate-500 text-center">
+      <p className="text-xs text-muted-foreground text-center">
         By signing up, you agree to our Terms of Service and Privacy Policy.
         We'll never share your information.
       </p>

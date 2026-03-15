@@ -1,93 +1,90 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './ThemeToggle';
 import { useMarketing } from '@/context/MarketingContext';
+import { ChevronDown } from 'lucide-react';
 
-export function MarketingNav() {
-  const { openBetaModal } = useMarketing();
+interface MarketingNavProps {
+    /** Optional: identifies the current page for nav highlighting */
+    currentPage?: string;
+    /** Optional: callback for beta signup click (nav uses MarketingContext internally) */
+    onBetaSignupClick?: () => void;
+}
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-[100] w-full bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/[0.06]">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <span className="text-lg font-semibold text-white">MinistryMotion</span>
-          </Link>
+export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _onBetaSignupClick }: MarketingNavProps = {}) {
+    const { openBetaModal } = useMarketing();
+    const [solutionsOpen, setSolutionsOpen] = useState(false);
+    const [resourcesOpen, setResourcesOpen] = useState(false);
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <div className="relative group">
-              <Link
-                href="/products"
-                className="text-sm text-white/60 hover:text-white transition-colors duration-200 py-4 flex items-center gap-1"
-              >
-                Features
-              </Link>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="w-64 p-2 bg-[#12121a] border border-white/10 rounded-xl shadow-xl">
-                  <Link
-                    href="/products/agent-council"
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
-                  >
-                    <div className="text-sm font-medium text-white mb-0.5">The Agent Council</div>
-                    <div className="text-xs text-white/50">15 autonomous AI agents</div>
-                  </Link>
-                  <Link
-                    href="/products/discipleship"
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
-                  >
-                    <div className="text-sm font-medium text-white mb-0.5">Discipleship Intelligence</div>
-                    <div className="text-xs text-white/50">Track the spiritual journey</div>
-                  </Link>
-                  <Link
-                    href="/products/vocal-coaching"
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
-                  >
-                    <div className="text-sm font-medium text-white mb-0.5">Vocal Sandbox</div>
-                    <div className="text-xs text-white/50">Real-time biometric tracking</div>
-                  </Link>
-                  <Link
-                    href="/products/analytics"
-                    className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
-                  >
-                    <div className="text-sm font-medium text-white mb-0.5">Service Analytics</div>
-                    <div className="text-xs text-white/50">Post-service insights & scoring</div>
-                  </Link>
+    return (
+        <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+            <div className="container mx-auto flex h-14 items-center">
+                <div className="mr-4 flex flex-shrink-0">
+                    <Link href="/" className="mr-6 flex items-center space-x-2">
+                        <span className="font-bold whitespace-nowrap text-lg">MinistryMotion</span>
+                    </Link>
                 </div>
-              </div>
-            </div>
-            <Link
-              href="/pricing"
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-            >
-              Pricing
-            </Link>
-            <Link
-              href="/blog"
-              className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-            >
-              Blog
-            </Link>
-          </nav>
+                <nav className="flex items-center space-x-6 text-sm font-medium">
+                    <Link href="/products" className="transition-colors hover:text-foreground/80 text-foreground/60">Products</Link>
 
-          {/* CTA */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://app.ministrymotion.com/login"
-              className="text-sm font-medium text-white/80 hover:text-white transition-colors duration-200"
-            >
-              Sign In
-            </a>
-            <button
-              onClick={openBetaModal}
-              className="px-5 py-2.5 text-sm font-medium text-black bg-white rounded-full hover:bg-white/90 transition-colors duration-200"
-            >
-              Get Early Access
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+                    {/* Solutions dropdown */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setSolutionsOpen(true)}
+                        onMouseLeave={() => setSolutionsOpen(false)}
+                    >
+                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
+                            Solutions <ChevronDown className="h-3 w-3" />
+                        </button>
+                        {solutionsOpen && (
+                            <div className="absolute top-full left-0 mt-1 w-56 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
+                                <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
+                                <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
+                                <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
+                                <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
+                            </div>
+                        )}
+                    </div>
+
+                    <Link href="/pricing" className="transition-colors hover:text-foreground/80 text-foreground/60">Pricing</Link>
+                    <Link href="/compare" className="transition-colors hover:text-foreground/80 text-foreground/60">Compare</Link>
+
+                    {/* Resources dropdown */}
+                    <div
+                        className="relative"
+                        onMouseEnter={() => setResourcesOpen(true)}
+                        onMouseLeave={() => setResourcesOpen(false)}
+                    >
+                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
+                            Resources <ChevronDown className="h-3 w-3" />
+                        </button>
+                        {resourcesOpen && (
+                            <div className="absolute top-full left-0 mt-1 w-48 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
+                                <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
+                                <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
+                            </div>
+                        )}
+                    </div>
+                </nav>
+                <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+                    <nav className="flex items-center space-x-2">
+                        <ThemeToggle />
+                        <Link href={process.env.NODE_ENV === 'development' ? 'http://localhost:3000/login' : 'https://app.ministrymotion.com/login'}>
+                            <Button variant="ghost" size="sm">
+                                Log In
+                            </Button>
+                        </Link>
+                        <Button size="sm" onClick={() => window.location.href = process.env.NODE_ENV === 'development' ? 'http://localhost:3000/demo' : 'https://app.ministrymotion.com/demo'}>
+                            Get Started
+                        </Button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    );
 }
