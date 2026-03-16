@@ -276,6 +276,12 @@ export default function HomePage() {
               >
                 Sign Up for Beta
               </button>
+              <Link
+                href="/demo"
+                className="w-full sm:w-auto px-8 py-4 bg-slate-800/80 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-lg border border-slate-700 backdrop-blur-sm shadow-xl"
+              >
+                Request Demo
+              </Link>
             </div>
 
             <p className="text-sm text-blue-200/60">
