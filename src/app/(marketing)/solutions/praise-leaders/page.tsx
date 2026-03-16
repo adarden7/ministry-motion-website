@@ -15,7 +15,10 @@ import {
   Users,
   ArrowRight,
   Shield,
-  Layers
+  Layers,
+  Target,
+  Sparkles,
+  TrendingUp
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
 
@@ -288,6 +291,64 @@ export default function PraiseLeadersPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Deep Dive: Vocal Sandbox & Biometrics */}
+      <section className="py-20 bg-slate-900 border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-sm font-semibold text-rose-400 uppercase tracking-wider">Vocal Sandbox & Biometrics</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
+              Gamified, biomechanic vocal training embedded in your workflow
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Ministry Motion brings professional vocal coaching to every member of your team through the Virtuoso Agent. Real-time pitch analysis, breath control feedback, biometric health monitoring, and SATB isolated rehearsal tracks—all unified in one platform.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'The Sing-Along Player',
+                description: 'A gamified interface (like Yousician) that tracks a singer\'s pitch, rhythm, and timing in real-time as they practice their exact Sunday setlist.',
+                icon: Mic2,
+              },
+              {
+                title: 'Instant SATB Generation',
+                description: 'Upload an MP3 and our AI instantly separates it into completely isolated Soprano, Alto, Tenor, and Bass rehearsal tracks.',
+                icon: Music,
+              },
+              {
+                title: 'Cepstral Peak Prominence (CPPS)',
+                description: 'The "Check Engine Light" for vocal cords. We analyze acoustic tissue distress to prevent vocal nodules and strain before they happen.',
+                icon: Shield,
+              },
+              {
+                title: 'The "Self-to-Other" Blend Ratio',
+                description: 'AI analyzes the ensemble mix and trains singers how to suppress their solo instincts to achieve a perfect, unified choir blend.',
+                icon: Target,
+              },
+              {
+                title: 'Vocal Digital Twins',
+                description: 'Using Generative AI to map a singer\'s exact vocal profile, allowing leaders to hear how an arrangement will sound before rehearsal even begins.',
+                icon: Sparkles,
+              },
+              {
+                title: '5-Stage Singer Pathway',
+                description: 'A rigid, proven curriculum that safely moves a singer from the foundational Choir level up to the primary Praise Team leadership.',
+                icon: TrendingUp,
+              },
+            ].map((feature, i) => (
+              <div key={i} className="bg-background rounded-2xl border border-border p-6 hover:shadow-lg hover:border-rose-500/30 transition-all group">
+                <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+                  <feature.icon className="w-6 h-6 text-rose-500" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-rose-400 transition-colors">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

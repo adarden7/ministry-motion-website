@@ -633,14 +633,7 @@ export default function ProductsPage() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
-                  <Link
-                    href={product.href}
-                    className="inline-flex items-center gap-1 text-sm font-medium text-blue-400 hover:text-blue-300 group-hover:gap-2 transition-all"
-                  >
-                    Learn more
-                    <ChevronRight className="w-4 h-4" />
-                  </Link>
+
                 </div>
               ))}
             </div>

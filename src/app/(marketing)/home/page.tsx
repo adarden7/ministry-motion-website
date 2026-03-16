@@ -113,31 +113,36 @@ const exploreAreas = [
     title: 'For Worship Leaders',
     description: 'AI vocal coaching, rehearsal readiness tracking, service planning',
     icon: Mic2,
-    color: 'blue'
+    color: 'blue',
+    href: '/solutions/worship-directors'
   },
   {
     title: 'For Pastors',
     description: 'Values alignment, succession planning, ministry health analytics',
     icon: BookOpen,
-    color: 'emerald'
+    color: 'emerald',
+    href: '/solutions/leadership'
   },
   {
     title: 'For Ministry Directors',
     description: 'Staff Room AI advisory council, volunteer burnout monitoring',
     icon: Users,
-    color: 'amber'
+    color: 'amber',
+    href: '/solutions/ministries-directors'
   },
   {
     title: 'For Treasurers',
     description: 'Integrated giving, donor analytics, financial reporting',
     icon: Heart,
-    color: 'rose'
+    color: 'rose',
+    href: '/solutions/church-admins'
   },
   {
     title: 'For Conference Leaders',
     description: 'Multi-church reporting, regional analytics, denominational tools',
     icon: Layers,
-    color: 'violet'
+    color: 'violet',
+    href: '/solutions/leadership'
   }
 ];
 
@@ -415,11 +420,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {exploreAreas.map((area, i) => (
-              <div
+              <Link
                 key={i}
-                className="bg-background rounded-2xl border border-slate-800 p-6 hover:shadow-lg hover:border-blue-500/30 transition-all"
+                href={area.href}
+                className="bg-background rounded-2xl border border-slate-800 p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:border-blue-500/30 transition-all cursor-pointer group"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${area.color === 'blue' ? 'bg-blue-500/20' :
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${area.color === 'blue' ? 'bg-blue-500/20' :
                   area.color === 'emerald' ? 'bg-blue-500/20' :
                     area.color === 'amber' ? 'bg-amber-500/20' :
                       area.color === 'rose' ? 'bg-rose-500/20' :
@@ -432,11 +438,11 @@ export default function HomePage() {
                           'text-violet-600'
                     }`} />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-blue-400 transition-colors">
                   {area.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">{area.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
