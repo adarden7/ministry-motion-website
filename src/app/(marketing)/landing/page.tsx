@@ -242,6 +242,12 @@ export default function LandingPage() {
                 >
                   Sign Up for Beta
                 </button>
+                <Link
+                  href="/demo"
+                  className="w-full sm:w-auto px-8 py-4 bg-slate-800/80 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-lg border border-slate-700 backdrop-blur-sm shadow-xl"
+                >
+                  Request Demo
+                </Link>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-blue-200/60">
