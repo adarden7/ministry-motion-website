@@ -49,7 +49,7 @@ export default function BlogPostPage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Article not found</h1>
           <Link href="/blog" className="text-violet-400 hover:text-violet-300">
@@ -69,10 +69,10 @@ export default function BlogPostPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
+    <div className="min-h-screen bg-background text-white antialiased">
       {/* Header */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
@@ -125,7 +125,7 @@ export default function BlogPostPage() {
 
             {/* Tags */}
             <div className="flex flex-wrap items-center gap-2 mb-8">
-              <Tag className="w-4 h-4 text-slate-500" />
+              <Tag className="w-4 h-4 text-slate-400" />
               {post.tags.map((tag) => (
                 <Link
                   key={tag}
@@ -194,8 +194,8 @@ export default function BlogPostPage() {
               prose-strong:text-white/90 prose-strong:font-semibold
               prose-ul:text-white/70 prose-ol:text-white/70 prose-ul:mb-8 prose-ol:mb-8
               prose-li:marker:text-violet-400 prose-li:my-2
-              prose-blockquote:border-violet-500 prose-blockquote:bg-white/[0.02] prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:text-xl prose-blockquote:italic prose-blockquote:my-10
-              prose-code:text-violet-300 prose-code:bg-white/[0.05] prose-code:px-2 prose-code:py-1 prose-code:rounded-md
+              prose-blockquote:border-violet-500 prose-blockquote:bg-background/[0.02] prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:text-xl prose-blockquote:italic prose-blockquote:my-10
+              prose-code:text-violet-300 prose-code:bg-background/[0.05] prose-code:px-2 prose-code:py-1 prose-code:rounded-md
               prose-pre:bg-[#12121a] prose-pre:border prose-pre:border-white/[0.06] prose-pre:p-6 prose-pre:rounded-xl prose-pre:my-10
               prose-img:rounded-2xl prose-img:my-12
               prose-table:text-white/70 prose-th:text-white prose-th:border-white/[0.06] prose-td:border-white/[0.06]
@@ -231,7 +231,7 @@ export default function BlogPostPage() {
                   className="h-12 px-6 font-semibold"
                   background="linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
                 >
-                  Start Free Trial
+                  Sign Up for Beta
                 </ShimmerButton>
               </div>
             </div>

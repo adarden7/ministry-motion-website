@@ -40,42 +40,37 @@ export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
 
-      {/* Modal — uses semantic tokens so it works in both light and dark mode */}
-      <div className="relative w-full max-w-lg bg-card border border-border rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        {/* Header — gradient accent strip */}
-        <div className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-6 py-8 text-primary-foreground">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      {/* Modal — compact but full content */}
+      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] flex flex-col">
+        {/* Compact header */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700">
+          <div className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-blue-400" />
+            <div>
+              <h2 className="text-base font-bold text-white leading-tight">Join the Beta</h2>
+              <p className="text-xs text-slate-400">Limited early access — no credit card required</p>
+            </div>
+          </div>
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/20 transition-colors"
+            className="p-1.5 rounded-lg hover:bg-slate-700 transition-colors text-slate-400 hover:text-white"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
-          <div className="relative">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 mb-4">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-medium">Limited Beta Access</span>
-            </div>
-            <h2 className="text-2xl font-bold mb-2">Join the Beta</h2>
-            <p className="text-primary-foreground/80">
-              Be among the first to experience the future of worship ministry management.
-            </p>
-          </div>
         </div>
 
-        {/* Form */}
-        <div className="p-6 bg-card">
+        {/* Form — scrollable */}
+        <div className="p-5 overflow-y-auto">
           <BetaSignupForm
             source={source}
-            onSuccess={() => {
-              // Keep modal open to show success state
-            }}
+            onSuccess={() => {}}
             onClose={onClose}
             showInterests={true}
+            compact={true}
           />
         </div>
       </div>

@@ -523,18 +523,20 @@ export default function ProductsPage() {
   const [showBetaModal, setShowBetaModal] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
       <MarketingNav currentPage="products" onBetaSignupClick={() => setShowBetaModal(true)} />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/30 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-200/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Every tool your worship ministry needs
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Plan, develop, engage, and analyze—all in one integrated platform.
             No more switching between disconnected tools.
           </p>
@@ -545,7 +547,7 @@ export default function ProductsPage() {
               <a
                 key={pillar.id}
                 href={`#${pillar.id}`}
-                className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-full hover:border-blue-300 hover:text-blue-600 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground bg-background border border-slate-800 rounded-full hover:border-blue-300 hover:text-blue-600 transition-colors"
               >
                 {pillar.title}
               </a>
@@ -557,11 +559,11 @@ export default function ProductsPage() {
       {/* Product Pillars */}
       {productPillars.map((pillar, pillarIndex) => {
         const gradients = [
-          'bg-gradient-to-br from-white via-blue-50/20 to-white',
-          'bg-gradient-to-br from-violet-50/30 via-slate-50 to-indigo-50/20',
-          'bg-gradient-to-br from-white via-cyan-50/20 to-emerald-50/10',
-          'bg-gradient-to-br from-amber-50/30 via-slate-50 to-orange-50/20',
-          'bg-gradient-to-br from-white via-blue-50/20 to-slate-50'
+          'bg-slate-950',
+          'bg-slate-900',
+          'bg-slate-950',
+          'bg-slate-900',
+          'bg-slate-950'
         ];
         return (
         <section
@@ -570,21 +572,21 @@ export default function ProductsPage() {
           className={`relative py-24 overflow-hidden ${gradients[pillarIndex % gradients.length]}`}
         >
           {pillarIndex % 2 === 0 && (
-            <div className="absolute top-10 right-10 w-64 h-64 bg-blue-200/15 rounded-full blur-3xl" />
+            <div className="absolute top-10 right-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
           )}
           {pillarIndex % 2 === 1 && (
-            <div className="absolute bottom-10 left-10 w-72 h-72 bg-violet-200/15 rounded-full blur-3xl" />
+            <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
           )}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             {/* Pillar header */}
             <div className="max-w-3xl mb-16">
-              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-${pillar.color}-50 border border-${pillar.color}-200 mb-4`}>
-                <span className={`text-sm font-medium text-${pillar.color}-700`}>{pillar.title}</span>
+              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 mb-4`}>
+                <span className="text-sm font-medium text-blue-400">{pillar.title}</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
                 {pillar.subtitle}
               </h2>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-slate-300">
                 {pillar.description}
               </p>
             </div>
@@ -594,22 +596,22 @@ export default function ProductsPage() {
               {pillar.products.map((product, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:border-slate-300 transition-all group"
+                  className="bg-slate-800 border border-slate-700 rounded-2xl p-6 hover:shadow-lg hover:border-blue-600/50 transition-all group"
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                      <product.icon className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                      <product.icon className="w-6 h-6 text-blue-400" />
                     </div>
                     {product.badge && (
                       <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
                         product.badge === 'Industry First'
-                          ? 'bg-amber-100 text-amber-700'
+                          ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
                           : product.badge === 'New'
-                          ? 'bg-blue-100 text-blue-700'
+                          ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
                           : product.badge === 'Premium'
-                          ? 'bg-violet-100 text-violet-700'
-                          : 'bg-blue-100 text-blue-700'
+                          ? 'bg-violet-500/20 text-violet-400 border border-violet-500/30'
+                          : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
                       }`}>
                         {product.badge}
                       </span>
@@ -617,15 +619,15 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">{product.name}</h3>
-                  <p className="text-sm text-blue-600 font-medium mb-3">{product.tagline}</p>
-                  <p className="text-slate-600 text-sm mb-4">{product.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-1">{product.name}</h3>
+                  <p className="text-sm text-blue-400 font-medium mb-3">{product.tagline}</p>
+                  <p className="text-slate-400 text-sm mb-4">{product.description}</p>
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
                     {product.features.slice(0, 4).map((feature, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-slate-600">
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -634,7 +636,7 @@ export default function ProductsPage() {
                   {/* CTA */}
                   <Link
                     href={product.href}
-                    className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 group-hover:gap-2 transition-all"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-blue-400 hover:text-blue-300 group-hover:gap-2 transition-all"
                   >
                     Learn more
                     <ChevronRight className="w-4 h-4" />
@@ -643,28 +645,7 @@ export default function ProductsPage() {
               ))}
             </div>
 
-            {/* Demo placeholder + See It In Action CTA */}
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Demo GIF placeholder */}
-              <div className="bg-muted rounded-lg aspect-video flex items-center justify-center border border-border">
-                <span className="text-muted-foreground text-sm">Demo coming soon</span>
-              </div>
 
-              {/* See It In Action CTA */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">See It In Action</h3>
-                <p className="text-slate-600 mb-6">
-                  {pillar.solutionLabel}. Explore real workflows, features, and outcomes designed for your role.
-                </p>
-                <Link
-                  href={pillar.solutionHref}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
-                >
-                  View Solution Page
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
           </div>
         </section>
         );
@@ -716,9 +697,9 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden border-t border-slate-800">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
-        <div className="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute top-10 left-10 w-64 h-64 bg-background/5 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -730,13 +711,13 @@ export default function ProductsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setShowBetaModal(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/demo"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-lg border border-slate-700"
             >
               Schedule Demo
             </Link>
@@ -751,7 +732,7 @@ export default function ProductsPage() {
             <div className="flex items-center gap-2">
               <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
             </div>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-400">
               © 2026 Ministry Motion. All rights reserved.
             </p>
           </div>

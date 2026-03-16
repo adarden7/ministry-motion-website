@@ -34,8 +34,8 @@ function PitchVisualizer() {
     <div className="bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-sm text-emerald-400 font-mono">LIVE ANALYSIS</span>
+          <div className="w-3 h-3 rounded-full bg-blue-500 animate-pulse" />
+          <span className="text-sm text-blue-400 font-mono">LIVE ANALYSIS</span>
         </div>
         <span className="text-xs text-slate-500 font-mono">44.1kHz / 16-bit</span>
       </div>
@@ -58,12 +58,12 @@ function PitchVisualizer() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="text-4xl font-bold text-white font-mono">{currentNote}</span>
-          <span className={`text-lg font-mono ${cents >= 0 ? 'text-emerald-400' : 'text-amber-400'}`}>
+          <span className={`text-lg font-mono ${cents >= 0 ? 'text-blue-400' : 'text-amber-400'}`}>
             {cents >= 0 ? '+' : ''}{cents}¢
           </span>
         </div>
         <div className="text-right">
-          <div className="text-2xl font-bold text-emerald-400">{accuracy}%</div>
+          <div className="text-2xl font-bold text-blue-400">{accuracy}%</div>
           <div className="text-xs text-slate-500">accuracy</div>
         </div>
       </div>
@@ -98,7 +98,7 @@ function BlendRadar() {
     <div className="bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl">
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm font-semibold text-white">Ensemble Blend Score</span>
-        <span className="text-xs px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-mono">
+        <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full font-mono">
           {Math.round((scores.s + scores.a + scores.t + scores.b) / 4)}% overall
         </span>
       </div>
@@ -175,7 +175,7 @@ export default function LandingPage() {
       name: 'Ministry Matcher',
       icon: Target,
       description: 'Recommends optimal ministry placements based on spiritual gifts, skills, personality, and team needs',
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-blue-500 to-blue-600',
       demo: 'Rachel scored 92% ministry fit for Children\'s Ministry Director based on: teaching gift (high), organizational strength, 18 months volunteer experience, leadership readiness score.'
     },
     {
@@ -202,7 +202,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
 
       {/* ═══════════════════════════════════════════════════════════════════
           HERO — Lead with the impossible: live pitch visualization
@@ -225,7 +225,7 @@ export default function LandingPage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
                 See Every Voice.{' '}
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Grow Every Member.
                 </span>
               </h1>
@@ -238,23 +238,16 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
                 <button
                   onClick={openBetaModal}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
                 >
-                  Start Free Trial
+                  Sign Up for Beta
                 </button>
-                <Link
-                  href="/demo"
-                  className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all text-lg flex items-center gap-2 group"
-                >
-                  <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Watch 2-Min Demo
-                </Link>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-blue-200/60">
-                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> No credit card</span>
-                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> 30 days free</span>
-                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> PCO import</span>
+                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-blue-400" /> No credit card</span>
+                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-blue-400" /> 30 days free</span>
+                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-blue-400" /> PCO import</span>
               </div>
 
               <div className="mt-4">
@@ -281,7 +274,7 @@ export default function LandingPage() {
             {[
               { label: "I'm a Praise Leader", href: '/solutions/praise-leaders', gradient: 'from-blue-500 to-cyan-500' },
               { label: "I'm a Worship Director", href: '/solutions/worship-directors', gradient: 'from-violet-500 to-purple-500' },
-              { label: "I'm a Ministries Director", href: '/solutions/ministries-directors', gradient: 'from-emerald-500 to-teal-500' },
+              { label: "I'm a Ministries Director", href: '/solutions/ministries-directors', gradient: 'from-blue-500 to-blue-600' },
               { label: "I'm a Church Admin", href: '/solutions/church-admins', gradient: 'from-amber-500 to-orange-500' },
               { label: "I'm Church Leadership", href: '/solutions/leadership', gradient: 'from-rose-500 to-pink-500' },
             ].map((persona) => (
@@ -300,14 +293,14 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           ROI BANNER — Savings highlight
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-5 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-5 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
             <span className="text-2xl">💰</span>
             <p className="text-white font-semibold">
-              Churches save an average of <strong className="text-emerald-100 text-xl">$10,608/year</strong> by consolidating to MinistryMotion — replacing the core features of 6 subscriptions with one platform.
+              Churches save an average of <strong className="text-blue-100 text-xl">$10,608/year</strong> by consolidating to MinistryMotion — replacing the core features of 6 subscriptions with one platform.
             </p>
-            <Link href="/compare" className="flex-shrink-0 px-4 py-2 bg-white text-emerald-700 text-sm font-bold rounded-full hover:bg-emerald-50 transition-colors">
+            <Link href="/compare" className="flex-shrink-0 px-4 py-2 bg-background text-blue-300 text-sm font-bold rounded-full hover:bg-blue-500/10 transition-colors">
               See the math
             </Link>
           </div>
@@ -317,7 +310,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SOCIAL PROOF BAR — Numbers + logos
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-8 bg-slate-50 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-700">
+      <section className="py-8 bg-slate-900 dark:bg-slate-800 border-y border-slate-800 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
             {[
@@ -327,7 +320,7 @@ export default function LandingPage() {
               { number: '$10,608', label: 'Avg. Annual Savings' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl font-bold text-slate-900 dark:text-white">{stat.number}</div>
+                <div className="text-3xl font-bold text-foreground dark:text-white">{stat.number}</div>
                 <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">{stat.label}</div>
               </div>
             ))}
@@ -338,14 +331,14 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           WHAT NO COMPETITOR CAN DO — Category creation
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-background dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Category Defining</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Category Defining</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mt-2 mb-4">
               Capabilities Built for Worship Ministry
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 dark:text-slate-400 max-w-2xl mx-auto">
               This isn't a better ChMS. It's a new category of ministry intelligence platform.
             </p>
           </div>
@@ -397,12 +390,12 @@ export default function LandingPage() {
             ].map((feature, i) => (
               <div
                 key={i}
-                className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-600 transition-all hover:-translate-y-1"
+                className="group relative bg-slate-800 rounded-2xl p-8 border border-slate-800 dark:border-slate-700 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-600 transition-all hover:-translate-y-1"
               >
                 <div className="absolute -top-3 right-6">
                   <span className={`px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-r ${feature.color === 'blue' ? 'from-blue-500 to-cyan-500' :
                     feature.color === 'violet' ? 'from-violet-500 to-purple-500' :
-                      feature.color === 'emerald' ? 'from-emerald-500 to-teal-500' :
+                      feature.color === 'emerald' ? 'from-blue-500 to-blue-600' :
                         feature.color === 'rose' ? 'from-rose-500 to-pink-500' :
                           feature.color === 'amber' ? 'from-amber-500 to-yellow-500' :
                             'from-cyan-500 to-blue-500'
@@ -412,13 +405,13 @@ export default function LandingPage() {
                 </div>
                 <feature.icon className={`w-10 h-10 mb-4 ${feature.color === 'blue' ? 'text-blue-600' :
                   feature.color === 'violet' ? 'text-violet-600' :
-                    feature.color === 'emerald' ? 'text-emerald-600' :
+                    feature.color === 'emerald' ? 'text-blue-400' :
                       feature.color === 'rose' ? 'text-rose-600' :
                         feature.color === 'amber' ? 'text-amber-600' :
                           'text-cyan-600'
                   }`} />
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400">{feature.description}</p>
+                <h3 className="text-xl font-bold text-foreground dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-slate-400 dark:text-slate-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -448,8 +441,8 @@ export default function LandingPage() {
                   key={i}
                   onClick={() => setActiveAgent(i)}
                   className={`w-full text-left p-4 rounded-xl transition-all ${activeAgent === i
-                    ? 'bg-white/10 border border-white/20 shadow-lg'
-                    : 'hover:bg-white/5 border border-transparent'
+                    ? 'bg-slate-900/10 border border-white/20 shadow-lg'
+                    : 'hover:bg-slate-900/5 border border-transparent'
                     }`}
                 >
                   <div className="flex items-center gap-4">
@@ -461,7 +454,7 @@ export default function LandingPage() {
                       <div className="text-sm text-slate-400 line-clamp-1">{agent.description}</div>
                     </div>
                     {activeAgent === i && (
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                     )}
                   </div>
                 </button>
@@ -486,8 +479,8 @@ export default function LandingPage() {
               {/* Simulated agent output */}
               <div className="bg-slate-900 rounded-xl p-4 border border-slate-700">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs text-emerald-400 font-mono">Agent Processing...</span>
+                  <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                  <span className="text-xs text-blue-400 font-mono">Agent Processing...</span>
                 </div>
                 <p className="text-sm text-slate-300 font-mono leading-relaxed">
                   {agents[activeAgent].demo}
@@ -501,13 +494,13 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           PRODUCT PLATFORM — Modular like PCO but deeper
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-background dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mb-4">
               One Platform, Every Ministry Need
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 dark:text-slate-400 max-w-2xl mx-auto">
               Everything Planning Center offers plus everything they can't: vocal AI, discipleship tracking, and autonomous agents.
             </p>
           </div>
@@ -534,7 +527,7 @@ export default function LandingPage() {
               },
               {
                 category: 'Engage & Analyze',
-                gradient: 'from-emerald-500 to-teal-500',
+                gradient: 'from-blue-500 to-blue-600',
                 products: [
                   { name: 'Community Chat', desc: 'AI-moderated, denomination-aware messaging', icon: MessageSquare },
                   { name: 'Service Analytics', desc: 'YouTube analysis, engagement metrics', icon: BarChart3 },
@@ -542,18 +535,18 @@ export default function LandingPage() {
                 ]
               }
             ].map((group, i) => (
-              <div key={i} className="bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+              <div key={i} className="bg-slate-800 rounded-2xl border border-slate-800 dark:border-slate-700 overflow-hidden">
                 <div className={`h-1 bg-gradient-to-r ${group.gradient}`} />
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6">{group.category}</h3>
+                  <h3 className="text-lg font-bold text-foreground dark:text-white mb-6">{group.category}</h3>
                   <div className="space-y-4">
                     {group.products.map((product, j) => (
                       <div key={j} className="flex items-start gap-3 group cursor-pointer">
-                        <div className="w-9 h-9 rounded-lg bg-white dark:bg-slate-700 flex items-center justify-center border border-slate-200 dark:border-slate-600 group-hover:border-blue-400 transition-colors flex-shrink-0">
+                        <div className="w-9 h-9 rounded-lg bg-slate-700 flex items-center justify-center border border-slate-800 dark:border-slate-600 group-hover:border-blue-400 transition-colors flex-shrink-0">
                           <product.icon className="w-4 h-4 text-blue-600" />
                         </div>
                         <div>
-                          <div className="font-semibold text-slate-900 dark:text-white text-sm group-hover:text-blue-600 transition-colors">{product.name}</div>
+                          <div className="font-semibold text-foreground dark:text-white text-sm group-hover:text-blue-600 transition-colors">{product.name}</div>
                           <div className="text-xs text-slate-500 dark:text-slate-400">{product.desc}</div>
                         </div>
                       </div>
@@ -576,19 +569,19 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           COMPARISON — vs Planning Center
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800">
+      <section className="py-24 bg-slate-900 dark:bg-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mb-4">
               Ministry Motion vs Planning Center
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
+            <p className="text-lg text-slate-400 dark:text-slate-400">
               Keep what works. Add what's missing.
             </p>
           </div>
 
-          <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-xl">
-            <div className="grid grid-cols-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+          <div className="bg-slate-900 rounded-2xl border border-slate-800 dark:border-slate-700 overflow-hidden shadow-xl">
+            <div className="grid grid-cols-3 bg-slate-800 border-b border-slate-800 dark:border-slate-700">
               <div className="p-4 font-semibold text-slate-500 text-sm">Feature</div>
               <div className="p-4 font-semibold text-slate-500 text-sm text-center">Planning Center</div>
               <div className="p-4 font-semibold text-blue-600 text-sm text-center">Ministry Motion</div>
@@ -607,14 +600,14 @@ export default function LandingPage() {
               { feature: 'Blend Analysis Engine', pco: false, mm: true },
               { feature: 'Cross-Church Intelligence', pco: false, mm: true },
             ].map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 border-b border-slate-100 dark:border-slate-800 ${!row.pco && row.mm ? 'bg-blue-50/50 dark:bg-blue-900/10' : ''
+              <div key={i} className={`grid grid-cols-3 border-b border-slate-800 dark:border-slate-800 ${!row.pco && row.mm ? 'bg-blue-500/10/50 dark:bg-blue-900/10' : ''
                 }`}>
-                <div className="p-4 text-sm text-slate-700 dark:text-slate-300">{row.feature}</div>
+                <div className="p-4 text-sm text-slate-300 dark:text-slate-300">{row.feature}</div>
                 <div className="p-4 text-center">
                   {row.pco ? (
-                    <Check className="w-5 h-5 text-emerald-500 mx-auto" />
+                    <Check className="w-5 h-5 text-blue-500 mx-auto" />
                   ) : (
-                    <span className="text-slate-300 dark:text-slate-600">—</span>
+                    <span className="text-slate-300 dark:text-slate-400">—</span>
                   )}
                 </div>
                 <div className="p-4 text-center">
@@ -627,7 +620,7 @@ export default function LandingPage() {
           <div className="mt-8 text-center">
             <Link
               href="/compare"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold rounded-xl hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-900 text-white dark:text-foreground font-semibold rounded-xl hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors"
             >
               See Full Comparison
               <ArrowRight className="w-4 h-4" />
@@ -662,7 +655,7 @@ export default function LandingPage() {
                   { icon: Brain, label: 'AI suggests next learning path based on journey data' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-slate-900/20 flex items-center justify-center">
                       <item.icon className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-blue-50">{item.label}</span>
@@ -672,10 +665,10 @@ export default function LandingPage() {
             </div>
 
             {/* Journey visualizer */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="bg-slate-900/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="space-y-6">
                 {[
-                  { stage: 'Connect', desc: 'First visit → regular attendance', xp: '0-100 XP', pct: 100, color: 'bg-emerald-400' },
+                  { stage: 'Connect', desc: 'First visit → regular attendance', xp: '0-100 XP', pct: 100, color: 'bg-blue-500/40' },
                   { stage: 'Grow', desc: 'Small group + Bible study', xp: '100-500 XP', pct: 65, color: 'bg-blue-400' },
                   { stage: 'Serve', desc: 'Active in ministry + volunteering', xp: '500-2000 XP', pct: 40, color: 'bg-violet-400' },
                   { stage: 'Go', desc: 'Leading others + multiplying', xp: '2000+ XP', pct: 15, color: 'bg-amber-400' },
@@ -688,7 +681,7 @@ export default function LandingPage() {
                       </div>
                       <span className="text-xs font-mono text-blue-200/60">{item.xp}</span>
                     </div>
-                    <div className="h-3 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-3 bg-slate-900/10 rounded-full overflow-hidden">
                       <div className={`h-full ${item.color} rounded-full transition-all duration-1000`} style={{ width: `${item.pct}%` }} />
                     </div>
                   </div>
@@ -706,10 +699,10 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           TESTIMONIALS — Social proof
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-background dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mb-4">
               What Worship Leaders Are Saying
             </h2>
           </div>
@@ -735,19 +728,19 @@ export default function LandingPage() {
                 metric: '85% volunteer retention'
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 relative">
+              <div key={i} className="bg-slate-800 rounded-2xl p-8 border border-slate-800 dark:border-slate-700 relative">
                 <div className="flex mb-3">
                   {[1, 2, 3, 4, 5].map(s => (
                     <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-slate-300 dark:text-slate-300 mb-6 italic">"{testimonial.quote}"</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
+                    <div className="font-semibold text-foreground dark:text-white">{testimonial.name}</div>
                     <div className="text-sm text-slate-500">{testimonial.role}</div>
                   </div>
-                  <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">
                     {testimonial.metric}
                   </span>
                 </div>
@@ -760,14 +753,14 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           WHY CHURCHES SWITCH — Quotes + social proof
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800">
+      <section className="py-24 bg-slate-900 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Switch Stories</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Switch Stories</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mt-2 mb-4">
               Why Churches Switch to Ministry Motion
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-400 dark:text-slate-400 max-w-2xl mx-auto">
               Real feedback from worship teams and church leaders who made the move.
             </p>
           </div>
@@ -793,17 +786,17 @@ export default function LandingPage() {
                 tag: 'Switched from spreadsheets + WhatsApp'
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 relative flex flex-col">
+              <div key={i} className="bg-slate-900 rounded-2xl p-8 border border-slate-800 dark:border-slate-700 relative flex flex-col">
                 <div className="flex mb-3">
                   {[1, 2, 3, 4, 5].map(s => (
                     <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 mb-6 italic flex-1">"{testimonial.quote}"</p>
+                <p className="text-slate-300 dark:text-slate-300 mb-6 italic flex-1">"{testimonial.quote}"</p>
                 <div>
-                  <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
+                  <div className="font-semibold text-foreground dark:text-white">{testimonial.name}</div>
                   <div className="text-sm text-slate-500">{testimonial.role}</div>
-                  <span className="inline-block mt-2 px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded">
+                  <span className="inline-block mt-2 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
                     {testimonial.tag}
                   </span>
                 </div>
@@ -816,13 +809,13 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           PRICING PREVIEW
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-800">
+      <section className="py-24 bg-slate-900 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground dark:text-white mb-4">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
+            <p className="text-lg text-slate-400 dark:text-slate-400">
               Unlike Planning Center's per-product pricing, you get everything in one plan.
             </p>
           </div>
@@ -834,7 +827,7 @@ export default function LandingPage() {
                 price: '$0',
                 desc: 'Try Ministry Motion risk-free',
                 features: ['Up to 5 team members', 'Service planning + scheduling', 'Basic vocal assessment', 'Community chat', '50 song library'],
-                cta: 'Start Free Trial',
+                cta: 'Sign Up for Beta',
                 highlight: false
               },
               {
@@ -865,29 +858,29 @@ export default function LandingPage() {
               <div
                 key={i}
                 className={`rounded-2xl p-8 border ${plan.highlight
-                  ? 'bg-white dark:bg-slate-900 border-blue-500 shadow-xl shadow-blue-500/10 ring-2 ring-blue-500 relative'
-                  : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700'
+                  ? 'bg-slate-900 border-blue-500 shadow-xl shadow-blue-500/10 ring-2 ring-blue-500 relative'
+                  : 'bg-slate-900 border-slate-800 dark:border-slate-700'
                   }`}
               >
                 {plan.highlight && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-bold rounded-full shadow-lg">
+                    <span className="px-4 py-1.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-bold rounded-full shadow-lg">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-foreground dark:text-white mb-1">{plan.name}</h3>
                 <p className="text-sm text-slate-500 mb-4">{plan.desc}</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-slate-900 dark:text-white">{plan.price}</span>
+                  <span className="text-4xl font-bold text-foreground dark:text-white">{plan.price}</span>
                   {plan.price !== '$0' && plan.price !== 'Custom' && (
                     <span className="text-slate-500">/mo</span>
                   )}
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                      <Check className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <li key={j} className="flex items-start gap-2 text-sm text-slate-400 dark:text-slate-400">
+                      <Check className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
                       {f}
                     </li>
                   ))}
@@ -895,8 +888,8 @@ export default function LandingPage() {
                 <button
                   onClick={openBetaModal}
                   className={`w-full py-3 rounded-xl font-semibold transition-all ${plan.highlight
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg shadow-blue-500/25'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg shadow-blue-500/25'
+                    : 'bg-slate-800 dark:bg-slate-800 text-foreground dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700'
                     }`}
                 >
                   {plan.cta}
@@ -911,7 +904,7 @@ export default function LandingPage() {
           FINAL CTA
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
             Your Worship Team Deserves{' '}
@@ -923,13 +916,13 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
+              className="px-10 py-5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
             >
               Start Your Free 30-Day Trial
             </button>
             <Link
               href="/demo"
-              className="px-10 py-5 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all text-lg"
+              className="px-10 py-5 bg-background/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-slate-900/20 transition-all text-lg"
             >
               Book a Demo
             </Link>

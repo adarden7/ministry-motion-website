@@ -208,25 +208,25 @@ export default function ComparePage() {
     } else if (value === false) {
       return <X className="w-5 h-5 text-slate-300 mx-auto" />;
     } else {
-      return <span className="text-xs text-slate-500">{value}</span>;
+      return <span className="text-xs text-slate-400">{value}</span>;
     }
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
       <MarketingNav currentPage="compare" onBetaSignupClick={() => setShowBetaModal(true)} />
 
       {/* Hero - Tech-forward dark gradient */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
         {/* Gradient mesh overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Ministry Motion vs.{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">the Competition</span>
+            <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">the Competition</span>
           </h1>
           <p className="text-xl text-blue-100/80 max-w-3xl mx-auto mb-8">
             See exactly what you get with Ministry Motion compared to Planning Center and One Church.
@@ -236,31 +236,31 @@ export default function ComparePage() {
       </section>
 
       {/* Quick Summary */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      <section className="py-16 bg-background border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">The Quick Version</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-8 text-center">The Quick Version</h2>
 
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+          <div className="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
             <table className="w-full">
               <thead>
-                <tr className="bg-slate-100 border-b border-slate-200">
-                  <th className="text-left p-4 font-semibold text-slate-700">Capability</th>
+                <tr className="bg-slate-800 border-b border-slate-800">
+                  <th className="text-left p-4 font-semibold text-slate-300">Capability</th>
                   <th className="p-4 text-center">
                     <span className="text-blue-600 font-semibold">Ministry Motion</span>
                   </th>
                   <th className="p-4 text-center">
-                    <span className="text-slate-600 font-semibold">Planning Center</span>
+                    <span className="text-muted-foreground font-semibold">Planning Center</span>
                   </th>
                   <th className="p-4 text-center">
-                    <span className="text-slate-600 font-semibold">One Church</span>
+                    <span className="text-muted-foreground font-semibold">One Church</span>
                   </th>
-                  <th className="p-4 text-left font-medium text-slate-500 hidden md:table-cell">Why it matters</th>
+                  <th className="p-4 text-left font-medium text-slate-400 hidden md:table-cell">Why it matters</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200">
+              <tbody className="divide-y divide-slate-800">
                 {quickComparison.map((row, i) => (
-                  <tr key={i} className="hover:bg-slate-50">
-                    <td className="p-4 font-medium text-slate-900">{row.category}</td>
+                  <tr key={i} className="hover:bg-slate-900">
+                    <td className="p-4 font-medium text-foreground">{row.category}</td>
                     <td className="p-4 text-center">
                       {row.us === '✓' ? (
                         <Check className="w-5 h-5 text-blue-600 mx-auto" />
@@ -274,7 +274,7 @@ export default function ComparePage() {
                       ) : row.pco === '✗' ? (
                         <X className="w-5 h-5 text-slate-300 mx-auto" />
                       ) : (
-                        <span className="text-xs text-slate-500">{row.pco}</span>
+                        <span className="text-xs text-slate-400">{row.pco}</span>
                       )}
                     </td>
                     <td className="p-4 text-center">
@@ -283,10 +283,10 @@ export default function ComparePage() {
                       ) : row.onechurch === '✗' ? (
                         <X className="w-5 h-5 text-slate-300 mx-auto" />
                       ) : (
-                        <span className="text-xs text-slate-500">{row.onechurch}</span>
+                        <span className="text-xs text-slate-400">{row.onechurch}</span>
                       )}
                     </td>
-                    <td className="p-4 text-sm text-slate-500 hidden md:table-cell">{row.description}</td>
+                    <td className="p-4 text-sm text-slate-400 hidden md:table-cell">{row.description}</td>
                   </tr>
                 ))}
               </tbody>
@@ -302,7 +302,7 @@ export default function ComparePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">What Planning Center Does Well</h3>
+              <h3 className="text-lg font-semibold text-blue-400 mb-4">What Planning Center Does Well</h3>
               <ul className="space-y-3">
                 {[
                   '19 years of stability and trust',
@@ -312,7 +312,7 @@ export default function ComparePage() {
                   'Music Stand integration'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
-                    <Check className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -320,7 +320,7 @@ export default function ComparePage() {
             </div>
 
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">What One Church Does Well</h3>
+              <h3 className="text-lg font-semibold text-blue-400 mb-4">What One Church Does Well</h3>
               <ul className="space-y-3">
                 {[
                   'Modern, intuitive interface',
@@ -330,7 +330,7 @@ export default function ComparePage() {
                   'Good for growing churches'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
-                    <Check className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -338,7 +338,7 @@ export default function ComparePage() {
             </div>
 
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">Where Ministry Motion Surpasses Both</h3>
+              <h3 className="text-lg font-semibold text-blue-400 mb-4">Where Ministry Motion Surpasses Both</h3>
               <ul className="space-y-3">
                 {[
                   'AI-powered everything',
@@ -348,7 +348,7 @@ export default function ComparePage() {
                   'Discipleship journey tracking'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
-                    <Zap className="w-4 h-4 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <Zap className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -356,7 +356,7 @@ export default function ComparePage() {
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-teal-900/50 rounded-xl border border-blue-700">
+          <div className="mt-8 p-6 bg-blue-900/50 rounded-xl border border-blue-700">
             <p className="text-lg text-center text-blue-100">
               <strong className="text-white">Our positioning:</strong> PCO is excellent at organizing worship ministry. One Church is great for full-featured church management.
               Ministry Motion does both AND develops your team, analyzes your services, tracks discipleship journeys, and moves members toward
@@ -367,10 +367,10 @@ export default function ComparePage() {
       </section>
 
       {/* Detailed Comparison */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Detailed Feature Comparison</h2>
-          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Detailed Feature Comparison</h2>
+          <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Click any category to collapse or expand. Highlighted rows are capabilities unique to Ministry Motion.
           </p>
 
@@ -400,13 +400,13 @@ export default function ComparePage() {
 
           <div className="space-y-4">
             {comparisonCategories.map((category) => (
-              <div key={category.name} className="border border-slate-200 rounded-xl overflow-hidden">
+              <div key={category.name} className="border border-slate-800 rounded-xl overflow-hidden">
                 {/* Category Header */}
                 <button
                   onClick={() => toggleCategory(category.name)}
-                  className="w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors"
+                  className="w-full flex items-center justify-between p-4 bg-slate-900 hover:bg-slate-800 transition-colors"
                 >
-                  <span className="font-semibold text-slate-900">{category.name}</span>
+                  <span className="font-semibold text-foreground">{category.name}</span>
                   <div className="flex items-center gap-4">
                     <span className="text-sm text-blue-600">
                       {category.features.filter(f => f.highlight).length} unique to us
@@ -420,26 +420,26 @@ export default function ComparePage() {
                   <div className="overflow-x-auto">
                     <table className="w-full">
                       <thead>
-                        <tr className="bg-slate-100 border-t border-slate-200">
-                          <th className="text-left p-3 text-sm font-medium text-slate-600">Feature</th>
+                        <tr className="bg-slate-800 border-t border-slate-800">
+                          <th className="text-left p-3 text-sm font-medium text-muted-foreground">Feature</th>
                           <th className="p-3 text-center min-w-[120px]">
                             <span className="text-sm font-semibold text-blue-600">Ministry Motion</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-slate-600">Planning Center</span>
+                            <span className="text-sm font-semibold text-muted-foreground">Planning Center</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-slate-600">One Church</span>
+                            <span className="text-sm font-semibold text-muted-foreground">One Church</span>
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-100">
+                      <tbody className="divide-y divide-slate-800">
                         {category.features.map((feature, i) => (
-                          <tr key={i} className={feature.highlight ? 'bg-blue-50' : 'hover:bg-slate-50'}>
-                            <td className="p-3 text-sm text-slate-700">
+                          <tr key={i} className={feature.highlight ? 'bg-blue-500/10' : 'hover:bg-slate-900'}>
+                            <td className="p-3 text-sm text-slate-300">
                               {feature.name}
                               {feature.highlight && (
-                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 rounded">
+                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-blue-500/20 text-blue-300 rounded">
                                   Unique
                                 </span>
                               )}
@@ -460,17 +460,17 @@ export default function ComparePage() {
       </section>
 
       {/* Cost Comparison */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Cost Comparison</h2>
-          <p className="text-slate-600 text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-4 text-center">Cost Comparison</h2>
+          <p className="text-muted-foreground text-center mb-12">
             What it actually costs to get comparable capabilities
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Competitors Stack */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-6">
-              <h3 className="text-lg font-semibold text-slate-900 mb-6">Building it yourself with separate tools</h3>
+            <div className="bg-background rounded-2xl border border-slate-800 p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-6">Building it yourself with separate tools</h3>
 
               <div className="space-y-3 mb-6">
                 {[
@@ -481,22 +481,22 @@ export default function ComparePage() {
                   { tool: 'Zoom Pro', price: '$16/mo', use: 'Rehearsals' },
                   { tool: 'Pushpay', price: '$200/mo', use: 'Giving' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2 border-b border-slate-100">
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-slate-800/50">
                     <div>
-                      <span className="font-medium text-slate-700">{item.tool}</span>
-                      <span className="text-sm text-slate-500 ml-2">({item.use})</span>
+                      <span className="font-medium text-slate-300">{item.tool}</span>
+                      <span className="text-sm text-slate-400 ml-2">({item.use})</span>
                     </div>
-                    <span className="text-slate-600">{item.price}</span>
+                    <span className="text-muted-foreground">{item.price}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-slate-200">
-                <span className="font-semibold text-slate-900">Total</span>
-                <span className="text-2xl font-bold text-slate-900">~$1,083/mo</span>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-800">
+                <span className="font-semibold text-foreground">Total</span>
+                <span className="text-2xl font-bold text-foreground">~$1,083/mo</span>
               </div>
 
-              <p className="text-sm text-slate-500 mt-4">
+              <p className="text-sm text-slate-400 mt-4">
                 Plus: No integration, separate logins, duplicate data entry, no AI service analysis,
                 no ministry-specific training, no unified communications
               </p>
@@ -522,7 +522,7 @@ export default function ComparePage() {
                   'Multi-campus support'
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-teal-200 flex-shrink-0" />
+                    <Check className="w-5 h-5 text-blue-200 flex-shrink-0" />
                     <span className="text-blue-50">{feature}</span>
                   </div>
                 ))}
@@ -535,7 +535,7 @@ export default function ComparePage() {
 
               <div className="mt-4 p-3 bg-blue-700 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <span className="text-teal-200">You save</span>
+                  <span className="text-blue-200">You save</span>
                   <span className="text-xl font-bold text-white">$884/mo ($10,608/year)</span>
                 </div>
               </div>
@@ -545,11 +545,11 @@ export default function ComparePage() {
       </section>
 
       {/* Why Churches Switch from PCO */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-background">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Churches Switch from Planning Center</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Why Churches Switch from Planning Center</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Three fundamental differences that matter to church leadership — not just technology teams.
             </p>
           </div>
@@ -575,20 +575,20 @@ export default function ComparePage() {
                 body: 'The average church using Planning Center still pays for 5–6 other tools to cover community, vocal training, LMS, rehearsals, and giving. Ministry Motion replaces the core features of all 6 subscriptions — saving an average of $10,608/year with no integration headaches.'
               }
             ].map((reason, i) => (
-              <div key={i} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200">
+              <div key={i} className="relative bg-slate-900 rounded-2xl p-8 border border-slate-800">
                 <div className="text-5xl font-black text-slate-200 mb-4">{reason.number}</div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.heading}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">{reason.heading}</h3>
                 <p className="text-sm font-semibold text-blue-600 mb-3">{reason.subhead}</p>
-                <p className="text-sm text-slate-600 leading-relaxed">{reason.body}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{reason.body}</p>
               </div>
             ))}
           </div>
 
           {/* Board-ready language */}
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-blue-900/20 border border-blue-700/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <p className="font-semibold text-slate-900 mb-1">Share this comparison with your leadership team</p>
-              <p className="text-sm text-slate-600">This page is designed to be board-ready. Download the full comparison as a PDF to present at your next leadership meeting.</p>
+              <p className="font-semibold text-foreground mb-1">Share this comparison with your leadership team</p>
+              <p className="text-sm text-muted-foreground">This page is designed to be board-ready. Download the full comparison as a PDF to present at your next leadership meeting.</p>
             </div>
             <a
               href="#"
@@ -602,10 +602,10 @@ export default function ComparePage() {
       </section>
 
       {/* Migration Section */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Switching is easier than you think</h2>
-          <p className="text-lg text-slate-600 mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-4">Switching is easier than you think</h2>
+          <p className="text-lg text-muted-foreground mb-8">
             We help you migrate from Planning Center, One Church, or any other ChMS.
             AI-powered data migration tools + human assistance included.
           </p>
@@ -616,12 +616,12 @@ export default function ComparePage() {
               { title: 'We import it', description: 'AI-powered import + our team assists' },
               { title: 'You\'re live', description: 'Start using Ministry Motion in days' }
             ].map((step, i) => (
-              <div key={i} className="bg-slate-50 rounded-xl p-6">
-                <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto mb-4">
+              <div key={i} className="bg-slate-900 rounded-xl p-6">
+                <div className="w-10 h-10 rounded-full bg-blue-500/20 text-blue-300 font-bold flex items-center justify-center mx-auto mb-4">
                   {i + 1}
                 </div>
-                <h3 className="font-semibold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-sm text-slate-600">{step.description}</p>
+                <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             ))}
           </div>
@@ -640,13 +640,13 @@ export default function ComparePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setShowBetaModal(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900/10 text-white font-semibold rounded-lg hover:bg-slate-900/20 text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/demo"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-blue-800 text-lg"
             >
               Schedule Demo
             </Link>
@@ -661,7 +661,7 @@ export default function ComparePage() {
             <div className="flex items-center gap-2">
               <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
             </div>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-slate-400">
               © 2025 Ministry Motion. All rights reserved.
             </p>
           </div>

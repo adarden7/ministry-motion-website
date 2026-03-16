@@ -154,7 +154,7 @@ export default function ChurchAdminsPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               One Platform.{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 Zero Reconciliation.
               </span>
             </h1>
@@ -167,13 +167,13 @@ export default function ChurchAdminsPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
               >
-                Start Free Trial
+                Sign Up for Beta
               </button>
               <Link
                 href="/pricing"
-                className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg"
+                className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg"
               >
                 View Pricing
               </Link>
@@ -211,11 +211,11 @@ export default function ChurchAdminsPage() {
             </div>
             <div className="text-2xl text-slate-500 font-light">vs.</div>
             <div>
-              <div className="text-3xl font-bold text-emerald-400">$199/mo</div>
+              <div className="text-3xl font-bold text-blue-400">$199/mo</div>
               <div className="text-slate-400 text-sm">Ministry Motion Pro</div>
             </div>
-            <div className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
-              <div className="text-emerald-400 font-bold text-xl">${totalCost - 199}/mo potential savings</div>
+            <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-xl">
+              <div className="text-blue-400 font-bold text-xl">${totalCost - 199}/mo potential savings</div>
               <div className="text-slate-400 text-xs">Results vary by church size and configuration</div>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function ChurchAdminsPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Top 5 Use Cases</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Top 5 Use Cases</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
               Everything a Church Admin Needs in One Place
             </h2>
@@ -247,14 +247,14 @@ export default function ChurchAdminsPage() {
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
                           uc.color === 'blue'
-                            ? 'bg-blue-100 dark:bg-blue-900/30'
+                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
                             : uc.color === 'emerald'
-                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
+                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
                             : uc.color === 'violet'
-                            ? 'bg-violet-100 dark:bg-violet-900/30'
+                            ? 'bg-violet-500/20 dark:bg-violet-900/30'
                             : uc.color === 'amber'
-                            ? 'bg-amber-100 dark:bg-amber-900/30'
-                            : 'bg-rose-100 dark:bg-rose-900/30'
+                            ? 'bg-amber-500/20 dark:bg-amber-900/30'
+                            : 'bg-rose-500/20 dark:bg-rose-900/30'
                         }`}
                       >
                         <Icon
@@ -262,7 +262,7 @@ export default function ChurchAdminsPage() {
                             uc.color === 'blue'
                               ? 'text-blue-600'
                               : uc.color === 'emerald'
-                              ? 'text-emerald-600'
+                              ? 'text-blue-400'
                               : uc.color === 'violet'
                               ? 'text-violet-600'
                               : uc.color === 'amber'
@@ -292,7 +292,7 @@ export default function ChurchAdminsPage() {
                           uc.color === 'blue'
                             ? 'text-blue-600'
                             : uc.color === 'emerald'
-                            ? 'text-emerald-600'
+                            ? 'text-blue-400'
                             : uc.color === 'violet'
                             ? 'text-violet-600'
                             : uc.color === 'amber'
@@ -316,7 +316,7 @@ export default function ChurchAdminsPage() {
       <section className="py-20 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Early Feedback</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Early Feedback</span>
             <h2 className="text-2xl font-bold text-foreground mt-2">What Church Admins Are Saying</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -351,13 +351,13 @@ export default function ChurchAdminsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/pricing"
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg flex items-center justify-center gap-2"
             >
               See Pricing <ArrowRight className="w-4 h-4" />
             </Link>

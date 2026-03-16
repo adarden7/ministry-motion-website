@@ -35,7 +35,7 @@ export default function ProductDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -82,7 +82,7 @@ export default function ProductDetailPage() {
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={openBetaModal}
-                    className="group px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                    className="group px-8 py-4 bg-background text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                   >
                     <span className="flex items-center gap-2">
                       Request Early Access
@@ -91,7 +91,7 @@ export default function ProductDetailPage() {
                   </button>
                   <Link
                     href="/pricing"
-                    className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-white/5 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-background/5 hover:text-white transition-all duration-300"
                   >
                     See Pricing
                   </Link>
@@ -99,7 +99,7 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Benefits */}
-              <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+              <div className="p-8 rounded-2xl bg-background/[0.03] border border-white/[0.06]">
                 <h3 className="text-lg font-medium text-white mb-6">Key Benefits</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                   {product.benefits.map((benefit, i) => (
@@ -143,7 +143,7 @@ export default function ProductDetailPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/[0.06]"
+                className="p-6 rounded-xl bg-background/[0.02] border border-white/[0.06]"
               >
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-violet-500/20 flex items-center justify-center mb-4">
                   <feature.icon className="w-5 h-5 text-white/60" />
@@ -174,7 +174,7 @@ export default function ProductDetailPage() {
               How it works
             </h2>
             <p className="text-white/50">
-              Get started in minutes, see results in days.
+              Sign up in minutes, see results in days.
             </p>
           </motion.div>
 
@@ -188,7 +188,7 @@ export default function ProductDetailPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-6"
               >
-                <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-white/60 font-medium">
+                <div className="w-10 h-10 rounded-full bg-background/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-white/60 font-medium">
                   {i + 1}
                 </div>
                 <div className="pt-1">
@@ -227,7 +227,7 @@ export default function ProductDetailPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/[0.06]"
+                className="p-6 rounded-xl bg-background/[0.02] border border-white/[0.06]"
               >
                 <h3 className="font-medium text-white mb-2">{item.role}</h3>
                 <p className="text-sm text-white/50">{item.benefit}</p>
@@ -255,7 +255,7 @@ export default function ProductDetailPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="group px-8 py-4 bg-white text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                className="group px-8 py-4 bg-background text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
               >
                 <span className="flex items-center gap-2">
                   Request Early Access
@@ -264,7 +264,7 @@ export default function ProductDetailPage() {
               </button>
               <Link
                 href="/products"
-                className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-white/5 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-background/5 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Explore Other Features
                 <ArrowRight className="w-4 h-4" />

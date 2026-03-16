@@ -56,7 +56,7 @@ function MilestoneCard({
   return (
     <div className="space-y-3">
       <div className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+        <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
         <div>
           <p className="font-medium text-foreground text-sm">{title}</p>
           <p className="text-muted-foreground text-xs mt-0.5">{description}</p>
@@ -113,7 +113,7 @@ export default function ChurchLeadershipJourneyPage() {
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/10 border border-white/20 backdrop-blur-sm mb-6">
             <Crown className="w-4 h-4 text-rose-300" />
             <span className="text-sm font-medium text-rose-200">Senior Pastor Journey</span>
           </div>
@@ -172,7 +172,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Executive View"
             icon={Zap}
-            color="bg-rose-50 border-rose-200 text-rose-700"
+            color="bg-rose-500/15 border-rose-500/30 text-rose-300"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">A dashboard built for pastoral leadership</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -255,7 +255,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — Board Shifts Strategy"
             icon={Target}
-            color="bg-emerald-50 border-emerald-200 text-emerald-700"
+            color="bg-blue-500/15 border-blue-500/30 text-blue-300"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Data drives discipleship budget decisions</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -288,7 +288,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Transformational Leadership"
             icon={TrendingUp}
-            color="bg-amber-50 border-amber-200 text-amber-700"
+            color="bg-amber-500/15 border-amber-500/30 text-amber-300"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Proving spiritual ROI becomes standard board reporting</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -324,7 +324,7 @@ export default function ChurchLeadershipJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-200 text-rose-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-900/20 border border-rose-700/30 text-rose-700 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Pastor James's 3-Month Results</span>
             </div>
@@ -354,10 +354,10 @@ export default function ChurchLeadershipJourneyPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {[
-                { stage: 'Connect', pct: '100%', color: 'bg-blue-200' },
+                { stage: 'Connect', pct: '100%', color: 'bg-blue-500/20' },
                 { stage: 'Grow', pct: '65%', color: 'bg-violet-200' },
-                { stage: 'Serve', pct: '40%', color: 'bg-emerald-200' },
-                { stage: 'Go', pct: '15%', color: 'bg-amber-200' },
+                { stage: 'Serve', pct: '40%', color: 'bg-blue-500/20' },
+                { stage: 'Go', pct: '15%', color: 'bg-amber-500/20' },
               ].map((item) => (
                 <div key={item.stage} className="text-center">
                   <div className="text-lg font-bold text-foreground">{item.pct}</div>
@@ -370,7 +370,7 @@ export default function ChurchLeadershipJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-rose-500/20 flex items-center justify-center flex-shrink-0">
                 <Crown className="w-5 h-5 text-rose-600" />
               </div>
               <div>
@@ -400,7 +400,7 @@ export default function ChurchLeadershipJourneyPage() {
               <a
                 key={link.href}
                 href={link.href}
-                className="flex flex-col items-center p-4 bg-muted rounded-xl border border-border hover:border-rose-300 hover:bg-rose-50/30 transition-all text-center"
+                className="flex flex-col items-center p-4 bg-muted rounded-xl border border-border hover:border-rose-300 hover:bg-rose-500/10/30 transition-all text-center"
               >
                 <span className="text-sm font-semibold text-foreground">{link.label}</span>
                 <span className="text-xs text-muted-foreground mt-0.5">{link.sub}</span>
@@ -421,14 +421,14 @@ export default function ChurchLeadershipJourneyPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-white text-rose-700 hover:bg-rose-50 font-semibold px-8 py-3"
+                className="bg-slate-900/10 text-white hover:bg-slate-900/20 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 variant="outline"
-                className="border-white/40 text-white hover:bg-white/10 px-8 py-3"
+                className="border-white/40 text-white hover:bg-slate-900/10 px-8 py-3"
                 asChild
               >
                 <a href="/pricing">View Pricing</a>

@@ -127,14 +127,14 @@ export function BetaSignupForm({
     );
   }
 
-  /* Shared input class — semantic tokens for correct light/dark rendering */
+  /* Shared input class */
   const inputClass =
-    'w-full px-4 py-2.5 bg-background text-foreground border border-border rounded-lg ' +
-    'focus:ring-2 focus:ring-ring focus:border-primary outline-none transition-colors ' +
-    'placeholder:text-muted-foreground/60';
+    `w-full px-3 ${compact ? 'py-1.5 text-sm' : 'py-2.5'} bg-slate-800 text-white border border-slate-600 rounded-lg ` +
+    'focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors ' +
+    'placeholder:text-slate-500';
 
   return (
-    <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
+    <form onSubmit={handleSubmit} className={`${compact ? 'space-y-3' : 'space-y-4'} ${className}`}>
       {/* RT-07 FIX: Honeypot — invisible to real users, filled by bots */}
       <div style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
         <input
@@ -153,9 +153,9 @@ export function BetaSignupForm({
         </div>
       )}
 
-      <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
+      <div className={compact ? 'grid grid-cols-2 gap-3' : 'grid grid-cols-2 gap-4'}>
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-1">
+          <label htmlFor="firstName" className="block text-xs font-medium text-slate-300 mb-1">
             First Name *
           </label>
           <input
@@ -171,7 +171,7 @@ export function BetaSignupForm({
         </div>
 
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-1">
+          <label htmlFor="lastName" className="block text-xs font-medium text-slate-300 mb-1">
             Last Name *
           </label>
           <input
@@ -188,7 +188,7 @@ export function BetaSignupForm({
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1">
+        <label htmlFor="email" className="block text-xs font-medium text-slate-300 mb-1">
           Email Address *
         </label>
         <input
@@ -204,7 +204,7 @@ export function BetaSignupForm({
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1">
+        <label htmlFor="phone" className="block text-xs font-medium text-slate-300 mb-1">
           Phone Number *
         </label>
         <input
@@ -220,7 +220,7 @@ export function BetaSignupForm({
       </div>
 
       <div>
-        <label htmlFor="churchName" className="block text-sm font-medium text-foreground mb-1">
+        <label htmlFor="churchName" className="block text-xs font-medium text-slate-300 mb-1">
           Church Name *
         </label>
         <input
@@ -235,9 +235,9 @@ export function BetaSignupForm({
         />
       </div>
 
-      <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
+      <div className="grid grid-cols-2 gap-3">
         <div>
-          <label htmlFor="churchSize" className="block text-sm font-medium text-foreground mb-1">
+          <label htmlFor="churchSize" className="block text-xs font-medium text-slate-300 mb-1">
             Church Size *
           </label>
           <select
@@ -255,36 +255,52 @@ export function BetaSignupForm({
         </div>
 
         <div>
-          <label htmlFor="role" className="block text-sm font-medium text-foreground mb-1">
+          <label htmlFor="role" className="block text-xs font-medium text-slate-300 mb-1">
             Your Role
           </label>
-          <input
-            type="text"
+          <select
             id="role"
             name="role"
             value={formData.role}
             onChange={handleChange}
             className={inputClass}
-            placeholder="Worship Pastor"
-          />
+          >
+            <option value="">Select your role...</option>
+            <option value="Worship Pastor">Worship Pastor</option>
+            <option value="Worship Director">Worship Director</option>
+            <option value="Praise Leader">Praise Leader</option>
+            <option value="Minister of Music">Minister of Music</option>
+            <option value="Executive Pastor">Executive Pastor</option>
+            <option value="Lead Pastor">Lead Pastor</option>
+            <option value="Ministries Director">Ministries Director</option>
+            <option value="Church Administrator">Church Administrator</option>
+            <option value="Vocalist">Vocalist</option>
+            <option value="Musician">Musician</option>
+            <option value="Sound/Tech">Sound / Tech Director</option>
+            <option value="Youth Worship Leader">Youth Worship Leader</option>
+            <option value="Children's Ministry Director">Children's Ministry Director</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
       </div>
 
       {showInterests && (
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
-            What features interest you most?
+          <label className="block text-xs font-medium text-slate-300 mb-1.5">
+            Features you're interested in
           </label>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 gap-1.5">
             {interestOptions.map(option => (
               <button
                 key={option.id}
                 type="button"
                 onClick={() => handleInterestToggle(option.id)}
-                className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${formData.interests?.includes(option.id)
-                  ? 'bg-primary/20 border-primary/40 text-primary'
-                  : 'bg-muted border-border text-muted-foreground hover:border-primary/30 hover:text-foreground'
-                  }`}
+                className={`px-2.5 py-1 text-xs rounded-md border transition-colors text-left ${
+                  formData.interests?.includes(option.id)
+                    ? 'bg-blue-500/20 border-blue-500/40 text-blue-300'
+                    : 'bg-slate-800 border-slate-600 text-slate-400 hover:border-blue-500/30 hover:text-slate-200'
+                }`}
               >
                 {option.label}
               </button>

@@ -38,9 +38,9 @@ const personaColors: Record<string, string> = {
   'worship-leaders': 'from-blue-500 to-cyan-500',
   'pastors': 'from-violet-500 to-purple-500',
   'vocalists': 'from-rose-500 to-pink-500',
-  'administrators': 'from-emerald-500 to-teal-500',
+  'administrators': 'from-blue-500 to-blue-600',
   'childrens-ministry': 'from-pink-500 to-rose-400',
-  'small-groups': 'from-teal-500 to-cyan-400',
+  'small-groups': 'from-blue-600 to-cyan-400',
   'denominations': 'from-amber-500 to-orange-500',
 };
 
@@ -79,7 +79,7 @@ export default function SolutionPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero */}
       <section className="relative pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
 
@@ -119,14 +119,14 @@ export default function SolutionPage() {
                 <div className="flex flex-wrap gap-4">
                   <ShimmerButton
                     onClick={openBetaModal}
-                    className="h-14 px-8 text-lg font-semibold"
-                    background={`linear-gradient(135deg, ${colorClass.includes('blue') ? '#3b82f6' : colorClass.includes('violet') ? '#8b5cf6' : colorClass.includes('rose') ? '#f43f5e' : colorClass.includes('emerald') ? '#10b981' : '#f59e0b'} 0%, ${colorClass.includes('cyan') ? '#06b6d4' : colorClass.includes('purple') ? '#a855f7' : colorClass.includes('pink') ? '#ec4899' : colorClass.includes('teal') ? '#14b8a6' : '#f97316'} 100%)`}
+                    className="h-14 px-8 text-lg font-semibold shadow-lg shadow-blue-500/25"
+                    background="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
                   >
-                    Start Free Trial
+                    Sign Up for Beta
                   </ShimmerButton>
                   <Link
                     href="/pricing"
-                    className="h-14 px-8 bg-white/5 text-white font-semibold rounded-full border border-white/20 hover:bg-white/10 transition-all text-lg flex items-center justify-center gap-2"
+                    className="h-14 px-8 bg-slate-900/5 text-white font-semibold rounded-full border border-white/20 hover:bg-slate-900/10 transition-all text-lg flex items-center justify-center gap-2"
                   >
                     See Pricing
                   </Link>
@@ -296,14 +296,14 @@ export default function SolutionPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <ShimmerButton
                 onClick={openBetaModal}
-                className="h-14 px-8 text-lg font-semibold"
-                background="linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
+                className="h-14 px-8 text-lg font-semibold shadow-lg shadow-blue-500/25"
+                background="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
               >
-                Start Free Trial
+                Sign Up for Beta
               </ShimmerButton>
               <Link
                 href="/compare"
-                className="h-14 px-8 bg-white/5 text-white font-semibold rounded-full border border-white/20 hover:bg-white/10 transition-all text-lg flex items-center justify-center gap-2"
+                className="h-14 px-8 bg-slate-900/5 text-white font-semibold rounded-full border border-white/20 hover:bg-slate-900/10 transition-all text-lg flex items-center justify-center gap-2"
               >
                 Compare to Competitors
                 <ArrowRight className="w-5 h-5" />

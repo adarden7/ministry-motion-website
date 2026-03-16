@@ -13,7 +13,7 @@ function MarketingLayoutContent({ children }: { children: React.ReactNode }) {
   const { isBetaModalOpen, closeBetaModal } = useMarketing();
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="dark min-h-screen bg-slate-950 text-white">
       <MarketingNav />
       <main>{children}</main>
       <BetaSignupModal 

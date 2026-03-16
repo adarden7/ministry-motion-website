@@ -32,9 +32,9 @@ const personaColors: Record<string, string> = {
   'worship-leaders': 'from-blue-500 to-cyan-500',
   'pastors': 'from-violet-500 to-purple-500',
   'vocalists': 'from-rose-500 to-pink-500',
-  'administrators': 'from-emerald-500 to-teal-500',
+  'administrators': 'from-blue-500 to-blue-600',
   'childrens-ministry': 'from-pink-500 to-rose-400',
-  'small-groups': 'from-teal-500 to-cyan-400',
+  'small-groups': 'from-blue-600 to-cyan-400',
   'denominations': 'from-amber-500 to-orange-500',
 };
 
@@ -46,7 +46,7 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
 
@@ -216,7 +216,7 @@ export default function SolutionsPage() {
               className="h-14 px-8 text-lg font-semibold"
               background="linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
             >
-              Start Free Trial
+              Sign Up for Beta
             </ShimmerButton>
           </motion.div>
         </div>

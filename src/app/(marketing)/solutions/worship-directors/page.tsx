@@ -130,21 +130,21 @@ export default function WorshipDirectorsPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-6">
-              <Layers className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300">Solutions for Worship Directors</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
+              <Layers className="w-4 h-4 text-blue-400" />
+              <span className="text-sm font-medium text-blue-300">Solutions for Worship Directors</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Direct With{' '}
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 Data, Not Guesswork
               </span>
             </h1>
@@ -158,13 +158,13 @@ export default function WorshipDirectorsPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all text-lg shadow-lg shadow-emerald-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
               >
-                Start Free Trial
+                Sign Up for Beta
               </button>
               <Link
                 href="/pricing"
-                className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg"
+                className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg"
               >
                 View Pricing
               </Link>
@@ -188,7 +188,7 @@ export default function WorshipDirectorsPage() {
               { value: 'Live', label: 'Real-time vocal analysis during service' },
             ].map((item, i) => (
               <div key={i}>
-                <div className="text-2xl font-bold text-emerald-400">{item.value}</div>
+                <div className="text-2xl font-bold text-blue-400">{item.value}</div>
                 <div className="text-xs text-slate-400 mt-1">{item.label}</div>
               </div>
             ))}
@@ -200,7 +200,7 @@ export default function WorshipDirectorsPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-emerald-600 uppercase tracking-wider">Top 5 Use Cases</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Top 5 Use Cases</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
               Built for How Worship Directors Actually Work
             </h2>
@@ -222,14 +222,14 @@ export default function WorshipDirectorsPage() {
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
                           uc.color === 'blue'
-                            ? 'bg-blue-100 dark:bg-blue-900/30'
+                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
                             : uc.color === 'emerald'
-                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
+                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
                             : uc.color === 'violet'
-                            ? 'bg-violet-100 dark:bg-violet-900/30'
+                            ? 'bg-violet-500/20 dark:bg-violet-900/30'
                             : uc.color === 'amber'
-                            ? 'bg-amber-100 dark:bg-amber-900/30'
-                            : 'bg-rose-100 dark:bg-rose-900/30'
+                            ? 'bg-amber-500/20 dark:bg-amber-900/30'
+                            : 'bg-rose-500/20 dark:bg-rose-900/30'
                         }`}
                       >
                         <Icon
@@ -237,7 +237,7 @@ export default function WorshipDirectorsPage() {
                             uc.color === 'blue'
                               ? 'text-blue-600'
                               : uc.color === 'emerald'
-                              ? 'text-emerald-600'
+                              ? 'text-blue-400'
                               : uc.color === 'violet'
                               ? 'text-violet-600'
                               : uc.color === 'amber'
@@ -253,7 +253,7 @@ export default function WorshipDirectorsPage() {
                     <ul className="space-y-3">
                       {uc.bullets.map((b, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                          <Check className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                           <span className="text-foreground text-sm">{b}</span>
                         </li>
                       ))}
@@ -268,7 +268,7 @@ export default function WorshipDirectorsPage() {
                           uc.color === 'blue'
                             ? 'text-blue-600'
                             : uc.color === 'emerald'
-                            ? 'text-emerald-600'
+                            ? 'text-blue-400'
                             : uc.color === 'violet'
                             ? 'text-violet-600'
                             : uc.color === 'amber'
@@ -292,7 +292,7 @@ export default function WorshipDirectorsPage() {
       <section className="py-20 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-emerald-600 uppercase tracking-wider">Early Feedback</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Early Feedback</span>
             <h2 className="text-2xl font-bold text-foreground mt-2">What Worship Directors Are Saying</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -327,13 +327,13 @@ export default function WorshipDirectorsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/pricing"
-              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg flex items-center justify-center gap-2"
             >
               See Pricing <ArrowRight className="w-4 h-4" />
             </Link>
