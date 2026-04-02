@@ -282,7 +282,7 @@ export default function HomePage() {
                 Sign Up for Beta
               </button>
               <Link
-                href="/login"
+                href="https://app.ministrymotion.com/login"
                 className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
               >
                 Login to App <ArrowRight className="w-4 h-4" />
@@ -761,7 +761,7 @@ export default function HomePage() {
                 <li><Link href="/products" className="hover:text-white">Products</Link></li>
                 <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
                 <li><Link href="/compare" className="hover:text-white">Compare</Link></li>
-                <li><Link href="/login" className="hover:text-white">Log In</Link></li>
+                <li><Link href="https://app.ministrymotion.com/login" className="hover:text-white">Log In</Link></li>
               </ul>
             </div>
 
