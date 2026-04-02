@@ -8,6 +8,22 @@ const nextConfig: NextConfig = {
     ],
   },
   trailingSlash: false,
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'app.ministrymotion.com',
+            },
+          ],
+          destination: 'https://worshipwise-studio-1089767403917.us-east1.run.app/:path*',
+        },
+      ],
+    };
+  },
 };
 
 export default nextConfig;
