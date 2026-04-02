@@ -1,4 +1,6 @@
 import * as admin from 'firebase-admin';
+import * as fs from 'fs';
+import * as path from 'path';
 
 // Initialize Firebase Admin lazily to avoid issues during build / hot-reload
 export function getAdminDb() {
@@ -13,7 +15,8 @@ export function getAdminDb() {
       let serviceAccount;
       if (serviceAccountStr.startsWith('./') || serviceAccountStr.startsWith('../') || serviceAccountStr.startsWith('/')) {
         // Local path
-        serviceAccount = require('../../' + serviceAccountStr.replace('./', ''));
+        const fileContent = fs.readFileSync(path.resolve(process.cwd(), serviceAccountStr.replace('./', '')), 'utf8');
+        serviceAccount = JSON.parse(fileContent);
       } else {
         // Stringified JSON
         serviceAccount = JSON.parse(serviceAccountStr);
