@@ -23,6 +23,9 @@ export function getAdminDb() {
         credential: admin.credential.cert(serviceAccount)
       });
       console.log('[Firebase] Admin initialized successfully.');
+      
+      // Fix the "Cannot use undefined as a Firestore value" error globally
+      admin.firestore().settings({ ignoreUndefinedProperties: true });
     } catch (error) {
       console.error('[Firebase] Admin initialization failed:', error);
       throw error;
