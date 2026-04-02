@@ -1,0 +1,1094 @@
+{
+  "soprano": [
+    {
+      "note": "C5",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.95,
+      "role": "melody",
+      "pitchCorrected": true
+    }
+  ],
+  "alto": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.9,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "tenor": [
+    {
+      "note": "E4",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.85,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "bass": [
+    {
+      "note": "C3",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.95,
+      "role": "foundation",
+      "pitchCorrected": true
+    }
+  ],
+  "chord": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "overall": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 9,
+      "lyric": "In",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 9,
+      "duration": 9,
+      "lyric": "Christ",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 18,
+      "duration": 9,
+      "lyric": "alone",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 27,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 36,
+      "duration": 9,
+      "lyric": "hope",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 45,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 54,
+      "duration": 9,
+      "lyric": "found",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 63,
+      "duration": 9,
+      "lyric": "he",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 72,
+      "duration": 9,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 81,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 90,
+      "duration": 9,
+      "lyric": "light",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 99,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 108,
+      "duration": 9,
+      "lyric": "strength",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 117,
+      "duration": 9,
+      "lyric": "my",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 126,
+      "duration": 9,
+      "lyric": "song",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 135,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 144,
+      "duration": 9,
+      "lyric": "cornerstone",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 153,
+      "duration": 9,
+      "lyric": "this",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 162,
+      "duration": 9,
+      "lyric": "solid",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 171,
+      "duration": 9,
+      "lyric": "ground",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ]
+}

@@ -14,7 +14,54 @@ import {
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
 
-
+// Placeholder case study cards
+const placeholderCaseStudies = [
+  {
+    churchName: 'Grace Community Church',
+    location: 'Southeast United States',
+    size: '850 members',
+    denomination: 'Non-denominational',
+    type: 'Early Beta Church',
+    metrics: [
+      { label: 'Church Health Score improvement', value: '+34%', icon: BarChart3 },
+      { label: 'Volunteer engagement increase', value: '+47%', icon: Users },
+      { label: 'Monthly SaaS cost reduction', value: '-$680/mo', icon: TrendingUp },
+    ],
+    highlight:
+      'Consolidated from 5 separate tools to Ministry Motion Pro within 60 days of joining the beta program.',
+    status: 'coming-soon' as const,
+  },
+  {
+    churchName: 'Cornerstone Worship Center',
+    location: 'Midwest United States',
+    size: '350 members · Active worship team of 28',
+    denomination: 'Baptist',
+    type: 'Worship-Focused Church',
+    metrics: [
+      { label: 'Team preparation rate improvement', value: '+61%', icon: Star },
+      { label: 'Average rehearsal efficiency gain', value: '+40%', icon: Clock },
+      { label: 'God Quotient score on AI-reviewed sets', value: '92 avg', icon: Heart },
+    ],
+    highlight:
+      'Adopted AI rehearsal track generation and Sing-Along practice tracking for their 28-member worship team.',
+    status: 'coming-soon' as const,
+  },
+  {
+    churchName: 'New Life Fellowship',
+    location: 'Pacific Northwest United States',
+    size: '1,200 members · Multi-site (3 campuses)',
+    denomination: 'Assemblies of God',
+    type: 'Multi-Site Enterprise Church',
+    metrics: [
+      { label: 'Members advanced in discipleship pipeline', value: '312', icon: TrendingUp },
+      { label: 'Leadership pipeline gap reduction', value: '-8 roles', icon: Users },
+      { label: 'Cross-campus data reconciliation time', value: 'Eliminated', icon: BarChart3 },
+    ],
+    highlight:
+      'Used cross-church BigQuery analytics and the Succession Planner Agent to unify three campuses under one platform.',
+    status: 'coming-soon' as const,
+  },
+];
 
 // Key metrics categories for what we measure
 const metricCategories = [
@@ -77,7 +124,7 @@ export default function CaseStudiesPage() {
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
               Real Churches.{' '}
-              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                 Measurable Impact.
               </span>
             </h1>
@@ -97,7 +144,83 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* Metrics Section Header Follows */}      {/* What We Measure Section */}
+      {/* Coming Soon Case Study Cards */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-foreground mb-3">Beta Church Results in Progress</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              These churches joined our beta program early. Their full case studies—with verified data,
+              direct quotes, and before/after analysis—will publish as their results mature.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {placeholderCaseStudies.map((cs, i) => (
+              <div
+                key={i}
+                className="bg-background rounded-2xl border border-border p-6 flex flex-col relative overflow-hidden"
+              >
+                {/* Coming Soon overlay badge */}
+                <div className="absolute top-4 right-4">
+                  <span className="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 text-xs font-medium rounded-md">
+                    In Progress
+                  </span>
+                </div>
+
+                {/* Church info */}
+                <div className="mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-muted flex items-center justify-center mb-4">
+                    <Building2 className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{cs.churchName}</h3>
+                  <p className="text-muted-foreground text-sm">{cs.location}</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <span className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-md">{cs.size}</span>
+                    <span className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-md">{cs.denomination}</span>
+                  </div>
+                </div>
+
+                {/* Type badge */}
+                <div className="mb-4">
+                  <span className="px-2 py-1 bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 text-xs font-medium rounded-md">
+                    {cs.type}
+                  </span>
+                </div>
+
+                {/* Metrics */}
+                <div className="space-y-3 mb-6">
+                  {cs.metrics.map((metric, j) => {
+                    const MetricIcon = metric.icon;
+                    return (
+                      <div key={j} className="flex items-center gap-3 bg-muted rounded-xl p-3">
+                        <MetricIcon className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                        <div className="flex-1">
+                          <div className="text-xs text-muted-foreground">{metric.label}</div>
+                        </div>
+                        <div className="font-bold text-foreground text-sm">{metric.value}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Highlight */}
+                <p className="text-muted-foreground text-sm italic leading-relaxed mb-6 flex-1">
+                  "{cs.highlight}"
+                </p>
+
+                {/* CTA */}
+                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <Clock className="w-4 h-4" />
+                  <span>Full case study publishing Q3 2026</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Measure Section */}
       <section className="py-20 bg-muted/30 border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -112,12 +235,12 @@ export default function CaseStudiesPage() {
             {metricCategories.map((cat, i) => {
               const Icon = cat.icon;
               const colorMap: Record<string, string> = {
-                blue: 'bg-blue-500/20 text-blue-300',
-                amber: 'bg-amber-500/20 text-amber-300',
-                emerald: 'bg-blue-500/20 text-blue-300',
-                violet: 'bg-violet-500/20 text-violet-300',
-                rose: 'bg-rose-500/20 text-rose-300',
-                cyan: 'bg-cyan-500/20 text-cyan-300',
+                blue: 'bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400',
+                amber: 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400',
+                emerald: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400',
+                violet: 'bg-violet-100 text-violet-600 dark:bg-violet-900/30 dark:text-violet-400',
+                rose: 'bg-rose-100 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400',
+                cyan: 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30 dark:text-cyan-400',
               };
               return (
                 <div key={i} className="bg-background rounded-2xl border border-border p-6 flex items-start gap-4">
@@ -138,9 +261,9 @@ export default function CaseStudiesPage() {
       {/* Become a Case Study CTA */}
       <section className="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6">
-            <CheckCircle className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-300">Become a Case Study Church</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+            <CheckCircle className="w-4 h-4 text-emerald-400" />
+            <span className="text-sm text-emerald-300">Become a Case Study Church</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -152,7 +275,7 @@ export default function CaseStudiesPage() {
             receive permanent platform discounts and co-marketing opportunities.
           </p>
 
-          <div className="bg-slate-900/5 border border-white/10 rounded-2xl p-8 mb-10 max-w-2xl mx-auto">
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-10 max-w-2xl mx-auto">
             <h3 className="text-white font-semibold mb-4 text-left">Case Study Partner Benefits</h3>
             <ul className="space-y-3 text-left">
               {[
@@ -164,7 +287,7 @@ export default function CaseStudiesPage() {
                 'Featured in denomination-specific resource distribution',
               ].map((benefit, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-300 text-sm">{benefit}</span>
                 </li>
               ))}
@@ -174,13 +297,13 @@ export default function CaseStudiesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg"
             >
               Join Beta as Case Study Partner
             </button>
             <Link
               href="/pricing"
-              className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
             >
               View Pricing <ArrowRight className="w-4 h-4" />
             </Link>

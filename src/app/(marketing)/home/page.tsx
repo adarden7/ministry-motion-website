@@ -111,21 +111,21 @@ const discipleshipStats = [
 const exploreAreas = [
   {
     title: 'For Worship Leaders',
-    description: 'AI vocal coaching, rehearsal readiness tracking, service planning',
+    description: 'AI vocal coaching, rehearsal tracks, service planning',
     icon: Mic2,
     color: 'blue',
-    href: '/solutions/worship-directors'
+    href: '/solutions/praise-leaders'
   },
   {
     title: 'For Pastors',
-    description: 'Values alignment, succession planning, ministry health analytics',
+    description: 'Discipleship tracking, engagement analytics, member care',
     icon: BookOpen,
     color: 'emerald',
     href: '/solutions/leadership'
   },
   {
     title: 'For Ministry Directors',
-    description: 'Staff Room AI advisory council, volunteer burnout monitoring',
+    description: 'Team scheduling, training courses, volunteer management',
     icon: Users,
     color: 'amber',
     href: '/solutions/ministries-directors'
@@ -142,7 +142,7 @@ const exploreAreas = [
     description: 'Multi-church reporting, regional analytics, denominational tools',
     icon: Layers,
     color: 'violet',
-    href: '/solutions/leadership'
+    href: '/solutions/church-admins'
   }
 ];
 
@@ -160,11 +160,11 @@ const productCategories = {
         badge: 'AI-Enhanced'
       },
       {
-        name: 'Rehearsal Readiness',
-        description: 'Track individual practice mastery before the live service',
-        icon: Target,
+        name: 'Team Scheduling',
+        description: 'Auto-schedule volunteers based on availability and skills',
+        icon: Users,
         href: '/products',
-        badge: 'New'
+        badge: null
       },
       {
         name: 'Unified Calendar',
@@ -187,16 +187,16 @@ const productCategories = {
         badge: 'AI-Powered'
       },
       {
-        name: 'The Staff Room',
-        description: '20+ specialized AI agents acting as your advisory council for succession planning and more',
-        icon: Brain,
+        name: 'Learning Hub',
+        description: 'Growing library of worship training courses, from theology to vocal technique',
+        icon: BookOpen,
         href: '/products',
-        badge: 'AI-Powered'
+        badge: null
       },
       {
         name: 'Discipleship Journeys',
         description: 'Configurable pathways from visitor to servant leader',
-        icon: Users,
+        icon: Target,
         href: '/products',
         badge: null
       }
@@ -207,11 +207,11 @@ const productCategories = {
     description: 'Build community',
     products: [
       {
-        name: 'Bio-Insights Engine',
-        description: 'Wearable integration bridging physical health data with vocal performance (Worship Collective tier)',
-        icon: Heart,
+        name: 'Community',
+        description: 'Spaces, discussions, and member profiles with ministry context',
+        icon: Users,
         href: '/products',
-        badge: 'Premium'
+        badge: null
       },
       {
         name: 'Unified Communications',
@@ -221,9 +221,9 @@ const productCategories = {
         badge: 'New'
       },
       {
-        name: 'Community',
-        description: 'Spaces, discussions, and member profiles with ministry context',
-        icon: Users,
+        name: 'Integrated Giving',
+        description: 'Generosity embedded in the discipleship journey',
+        icon: Heart,
         href: '/products',
         badge: null
       }
@@ -248,9 +248,9 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased">
+    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
       {/* Hero Section - Kingdom Building Focus */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-500/15 via-transparent to-transparent" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
@@ -259,14 +259,14 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 border border-white/20 backdrop-blur-sm mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-8">
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-sm font-medium text-blue-200">Built for the Church, Powered by AI</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Accelerate Kingdom Work.{' '}
-              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">Deepen Discipleship.</span>
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">Deepen Discipleship.</span>
             </h1>
 
             <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -274,18 +274,18 @@ export default function HomePage() {
               Pre-configured for worship, children's ministry, deacons, outreach, and more—with AI that accelerates spiritual growth.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/25"
               >
                 Sign Up for Beta
               </button>
               <Link
-                href="/demo"
-                className="w-full sm:w-auto px-8 py-4 bg-slate-800/80 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all text-lg border border-slate-700 backdrop-blur-sm shadow-xl"
+                href="/login"
+                className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
               >
-                Request Demo
+                Login to App <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -297,14 +297,14 @@ export default function HomePage() {
       </section>
 
       {/* The Discipleship Crisis - Education Section */}
-      <section id="resources" className="py-20 bg-slate-900 border-b border-slate-800">
+      <section id="resources" className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">The Challenge</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">The Challenge</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               The Discipleship Gap is Real
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Most churches want to make disciples. Few have the tools to track, measure, and accelerate the journey.
             </p>
           </div>
@@ -312,29 +312,29 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             {discipleshipStats.map((item, i) => (
               <div key={i} className="text-center">
-                <div className="text-5xl font-bold text-blue-400 mb-2">{item.stat}</div>
-                <p className="text-slate-300 font-medium mb-1">{item.label}</p>
-                <p className="text-xs text-slate-400">{item.source}</p>
+                <div className="text-5xl font-bold text-blue-600 mb-2">{item.stat}</div>
+                <p className="text-slate-700 font-medium mb-1">{item.label}</p>
+                <p className="text-xs text-slate-500">{item.source}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-sm text-slate-400 italic">Sources: Barna Research, LifeWay Research, Pew Research</p>
+            <p className="text-sm text-slate-500 italic">Sources: Barna Research, LifeWay Research, Pew Research</p>
           </div>
         </div>
       </section>
 
       {/* Built for Church Structures - Key Differentiator */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Unlike Generic Platforms</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-6">
+              <span className="text-sm font-semibold text-emerald-600 uppercase tracking-wider">Unlike Generic Platforms</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 Pre-Built for How Churches Actually Work
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-slate-600 mb-8">
                 Circle and other community platforms make you build everything from scratch.
                 Ministry Motion comes with your ministry structures, roles, and responsibilities already configured.
                 Just customize and go.
@@ -349,19 +349,19 @@ export default function HomePage() {
                   'Connect → Grow → Serve → Go discipleship pathways'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-blue-400" />
+                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-emerald-600" />
                     </div>
-                    <span className="text-slate-300">{item}</span>
+                    <span className="text-slate-700">{item}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-amber-500/10 rounded-xl border border-amber-500/30">
+              <div className="flex items-center gap-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
                 <Crown className="w-8 h-8 text-amber-600" />
                 <div>
-                  <p className="font-semibold text-foreground">Pro Feature</p>
-                  <p className="text-sm text-muted-foreground">Edit and customize all role templates for your church</p>
+                  <p className="font-semibold text-slate-900">Pro Feature</p>
+                  <p className="text-sm text-slate-600">Edit and customize all role templates for your church</p>
                 </div>
               </div>
             </div>
@@ -370,30 +370,30 @@ export default function HomePage() {
               {ministryStructures.map((ministry, i) => (
                 <div
                   key={i}
-                  className={`p-5 rounded-xl border ${i === 0 ? 'bg-blue-500/10 border-blue-500/20' :
-                    i === 1 ? 'bg-blue-500/10 border-blue-500/20' :
-                      i === 2 ? 'bg-amber-500/10 border-amber-500/20' :
-                        i === 3 ? 'bg-rose-500/10 border-rose-500/20' :
-                          i === 4 ? 'bg-violet-500/10 border-violet-500/20' :
-                            'bg-cyan-500/10 border-cyan-500/20'
+                  className={`p-5 rounded-xl border ${i === 0 ? 'bg-blue-50 border-blue-200' :
+                    i === 1 ? 'bg-emerald-50 border-emerald-200' :
+                      i === 2 ? 'bg-amber-50 border-amber-200' :
+                        i === 3 ? 'bg-rose-50 border-rose-200' :
+                          i === 4 ? 'bg-violet-50 border-violet-200' :
+                            'bg-cyan-50 border-cyan-200'
                     }`}
                 >
                   <ministry.icon className={`w-6 h-6 mb-3 ${i === 0 ? 'text-blue-600' :
-                    i === 1 ? 'text-blue-400' :
+                    i === 1 ? 'text-emerald-600' :
                       i === 2 ? 'text-amber-600' :
                         i === 3 ? 'text-rose-600' :
                           i === 4 ? 'text-violet-600' :
                             'text-cyan-600'
                     }`} />
-                  <h3 className="font-semibold text-foreground mb-2">{ministry.name}</h3>
+                  <h3 className="font-semibold text-slate-900 mb-2">{ministry.name}</h3>
                   <div className="flex flex-wrap gap-1">
                     {ministry.roles.slice(0, 3).map((role, j) => (
-                      <span key={j} className="px-2 py-0.5 bg-background/80 text-xs text-muted-foreground rounded">
+                      <span key={j} className="px-2 py-0.5 bg-white/80 text-xs text-slate-600 rounded">
                         {role}
                       </span>
                     ))}
                     {ministry.roles.length > 3 && (
-                      <span className="px-2 py-0.5 text-xs text-slate-400">
+                      <span className="px-2 py-0.5 text-xs text-slate-500">
                         +{ministry.roles.length - 3} more
                       </span>
                     )}
@@ -406,14 +406,14 @@ export default function HomePage() {
       </section>
 
       {/* Explore by Role - Navigation Section */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Find Your Path</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Find Your Path</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               See How Ministry Motion Helps Your Role
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Every role has unique needs. Explore features tailored to your ministry area.
             </p>
           </div>
@@ -421,27 +421,27 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {exploreAreas.map((area, i) => (
               <Link
+                href={area.href || '#'}
                 key={i}
-                href={area.href}
-                className="bg-background rounded-2xl border border-slate-800 p-6 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:border-blue-500/30 transition-all cursor-pointer group"
+                className="group bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all block cursor-pointer"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${area.color === 'blue' ? 'bg-blue-500/20' :
-                  area.color === 'emerald' ? 'bg-blue-500/20' :
-                    area.color === 'amber' ? 'bg-amber-500/20' :
-                      area.color === 'rose' ? 'bg-rose-500/20' :
-                        'bg-violet-500/20'
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${area.color === 'blue' ? 'bg-blue-100 group-hover:bg-blue-200' :
+                  area.color === 'emerald' ? 'bg-emerald-100 group-hover:bg-emerald-200' :
+                    area.color === 'amber' ? 'bg-amber-100 group-hover:bg-amber-200' :
+                      area.color === 'rose' ? 'bg-rose-100 group-hover:bg-rose-200' :
+                        'bg-violet-100 group-hover:bg-violet-200'
                   }`}>
                   <area.icon className={`w-6 h-6 ${area.color === 'blue' ? 'text-blue-600' :
-                    area.color === 'emerald' ? 'text-blue-400' :
+                    area.color === 'emerald' ? 'text-emerald-600' :
                       area.color === 'amber' ? 'text-amber-600' :
                         area.color === 'rose' ? 'text-rose-600' :
                           'text-violet-600'
                     }`} />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
                   {area.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{area.description}</p>
+                <p className="text-slate-600 text-sm group-hover:text-slate-700">{area.description}</p>
               </Link>
             ))}
           </div>
@@ -449,51 +449,51 @@ export default function HomePage() {
       </section>
 
       {/* AI-Powered Everything */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 bg-slate-900 rounded-2xl p-8 border border-slate-800">
+            <div className="order-2 lg:order-1 bg-slate-50 rounded-2xl p-8 border border-slate-200">
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-background rounded-xl border border-slate-800">
-                  <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200">
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
                     <Music className="w-5 h-5 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-medium text-foreground">Rehearsal Track Generated</div>
-                    <div className="text-xs text-slate-400">"Way Maker" - SATB parts ready in 30 seconds</div>
+                    <div className="text-sm font-medium text-slate-900">Rehearsal Track Generated</div>
+                    <div className="text-xs text-slate-500">"Way Maker" - SATB parts ready in 30 seconds</div>
                   </div>
-                  <Check className="w-5 h-5 text-blue-400" />
+                  <Check className="w-5 h-5 text-emerald-600" />
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-background rounded-xl border border-slate-800">
-                  <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200">
+                  <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center">
                     <Video className="w-5 h-5 text-amber-600" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-medium text-foreground">Service Analyzed</div>
-                    <div className="text-xs text-slate-400">Theme alignment: 94% · 3 improvement suggestions</div>
+                    <div className="text-sm font-medium text-slate-900">Service Analyzed</div>
+                    <div className="text-xs text-slate-500">Theme alignment: 94% · 3 improvement suggestions</div>
                   </div>
-                  <Check className="w-5 h-5 text-blue-400" />
+                  <Check className="w-5 h-5 text-emerald-600" />
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-background rounded-xl border border-slate-800">
-                  <div className="w-10 h-10 rounded-lg bg-rose-500/20 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-rose-600" />
+                <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200">
+                  <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-rose-600" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-medium text-foreground">Succession Planner Alert</div>
-                    <div className="text-xs text-slate-400">Worship Director position at risk, 2 successors identified</div>
+                    <div className="text-sm font-medium text-slate-900">Engagement Alert</div>
+                    <div className="text-xs text-slate-500">3 members showing signs of drifting</div>
                   </div>
                   <ArrowRight className="w-5 h-5 text-blue-600" />
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-blue-500/10 rounded-xl border border-blue-500/20">
+                <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
                   <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
                     <Brain className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-medium text-foreground">AI Recommendation</div>
-                    <div className="text-xs text-slate-400">Sarah ready for children's ministry leadership course</div>
+                    <div className="text-sm font-medium text-slate-900">AI Recommendation</div>
+                    <div className="text-xs text-slate-500">Sarah ready for children's ministry leadership course</div>
                   </div>
                   <Sparkles className="w-5 h-5 text-blue-600" />
                 </div>
@@ -501,31 +501,31 @@ export default function HomePage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">20 AI Agents</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-6">
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">20 AI Agents</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 AI That Works for Ministry,{' '}
                 <span className="text-blue-600">Not Just Automation</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-slate-600 mb-8">
                 Traditional church software makes you build workflows for everything.
                 Our AI agents understand ministry context—they work in the background so you can focus on people.
               </p>
 
               <div className="space-y-4">
                 {[
-                  { agent: 'Virtuoso Coach AI', desc: 'Real-time feedback on pitch, tone, and breath' },
-                  { agent: 'Succession Planner', desc: 'Monitors the leadership pipeline and flags risks' },
-                  { agent: 'Position Matcher', desc: 'Recommends roles based on gifts, skills, and readiness' },
-                  { agent: 'Shepherd', desc: 'Analyzes engagement and helps with pastoral care' },
-                  { agent: 'Liturgist', desc: 'Scores service theme alignment and transitions' },
-                  { agent: 'Bio-Insight Engine', desc: 'Correlates wearable health data with performance' }
+                  { agent: 'Vocal Coach AI', desc: 'Real-time feedback on pitch, tone, and breath' },
+                  { agent: 'Service Analyzer', desc: 'Scores theme alignment and transitions' },
+                  { agent: 'Engagement Predictor', desc: 'Identifies members at risk of drifting' },
+                  { agent: 'Ministry Matcher', desc: 'Recommends roles based on gifts and growth' },
+                  { agent: 'Conflict Resolver', desc: 'Helps navigate difficult conversations' },
+                  { agent: 'Denomination Context', desc: 'Understands your tradition and terminology' }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 bg-slate-900 rounded-lg">
+                  <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                     <Zap className="w-5 h-5 text-blue-600" />
                     <div>
-                      <span className="font-medium text-foreground">{item.agent}</span>
-                      <span className="text-slate-400 mx-2">·</span>
-                      <span className="text-muted-foreground text-sm">{item.desc}</span>
+                      <span className="font-medium text-slate-900">{item.agent}</span>
+                      <span className="text-slate-500 mx-2">·</span>
+                      <span className="text-slate-600 text-sm">{item.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -554,14 +554,14 @@ export default function HomePage() {
               </p>
               <button
                 onClick={openBetaModal}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900/10 text-white font-semibold rounded-lg hover:bg-slate-900/20 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Get Early Access
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="bg-background/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-white font-semibold mb-6">The Discipleship Journey</h3>
               <div className="space-y-4">
                 {[
@@ -578,9 +578,9 @@ export default function HomePage() {
                       </div>
                       <span className="text-white font-bold">{item.pct}</span>
                     </div>
-                    <div className="h-2 bg-background/20 rounded-full">
+                    <div className="h-2 bg-white/20 rounded-full">
                       <div
-                        className="h-2 bg-background rounded-full transition-all"
+                        className="h-2 bg-white rounded-full transition-all"
                         style={{ width: item.pct }}
                       />
                     </div>
@@ -612,31 +612,31 @@ export default function HomePage() {
             </div>
             <button
               onClick={openBetaModal}
-              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/25"
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Sign Up with PCO Integration 
+              Get Started with PCO Integration
             </button>
           </div>
         </div>
       </section>
 
       {/* Quick Product Overview */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
               Everything Your Ministry Needs
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               One platform for planning, training, communicating, and analyzing.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(productCategories).map(([key, category]) => (
-              <div key={key} className="bg-slate-900 rounded-2xl border border-slate-800 p-6 hover:shadow-md transition-shadow">
-                <h3 className="text-lg font-bold text-foreground mb-1">{category.title}</h3>
-                <p className="text-sm text-slate-400 mb-4">{category.description}</p>
+              <div key={key} className="bg-slate-50 rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-bold text-slate-900 mb-1">{category.title}</h3>
+                <p className="text-sm text-slate-500 mb-4">{category.description}</p>
                 <div className="space-y-3">
                   {category.products.map((product, i) => (
                     <Link
@@ -644,14 +644,14 @@ export default function HomePage() {
                       href={product.href}
                       className="flex items-center gap-3 group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-background flex items-center justify-center group-hover:bg-blue-500/10 transition-colors border border-slate-800">
+                      <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center group-hover:bg-blue-50 transition-colors border border-slate-200">
                         <product.icon className="w-4 h-4 text-blue-600" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium text-foreground group-hover:text-blue-600">{product.name}</span>
+                          <span className="text-sm font-medium text-slate-900 group-hover:text-blue-600">{product.name}</span>
                           {product.badge && (
-                            <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-blue-500/20 text-blue-300 rounded">
+                            <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 rounded">
                               {product.badge}
                             </span>
                           )}
@@ -674,7 +674,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-16 bg-slate-900 border-y border-slate-800">
+      <section className="py-16 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
@@ -684,11 +684,11 @@ export default function HomePage() {
               { icon: Globe, title: 'Global Ready', description: 'Stripe, Paystack, Flutterwave' }
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-background flex items-center justify-center mb-4 border border-slate-800">
-                  <item.icon className="w-6 h-6 text-muted-foreground" />
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 border border-slate-200">
+                  <item.icon className="w-6 h-6 text-slate-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                <p className="text-sm text-slate-400">{item.description}</p>
+                <h3 className="font-semibold text-slate-900 mb-1">{item.title}</h3>
+                <p className="text-sm text-slate-500">{item.description}</p>
               </div>
             ))}
           </div>
@@ -696,7 +696,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
         <div className="absolute top-10 left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-indigo-500/15 rounded-full blur-3xl" />
@@ -711,7 +711,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900/10 text-white font-semibold rounded-lg hover:bg-slate-900/20 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all text-lg"
             >
               Sign Up for Beta
             </button>
@@ -793,28 +793,28 @@ export default function HomePage() {
 
               <div>
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-blue-400" />
+                  <Globe className="w-5 h-5 text-emerald-400" />
                   Compliance
                 </h4>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-blue-500" />
+                    <Check className="w-4 h-4 text-emerald-500" />
                     Built on SOC 2 certified infrastructure (GCP)
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-blue-500" />
+                    <Check className="w-4 h-4 text-emerald-500" />
                     ISO 27001 (via GCP)
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-blue-500" />
+                    <Check className="w-4 h-4 text-emerald-500" />
                     GDPR Compliant
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-blue-500" />
+                    <Check className="w-4 h-4 text-emerald-500" />
                     CCPA Compliant
                   </li>
                   <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-blue-500" />
+                    <Check className="w-4 h-4 text-emerald-500" />
                     PCI-DSS (payments)
                   </li>
                 </ul>
@@ -861,12 +861,12 @@ export default function HomePage() {
         <div className="border-t border-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-500">
                 © 2026 Ministry Motion. All rights reserved.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-400">
+              <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500">
                 <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-                <span className="text-slate-300">•</span>
+                <span className="text-slate-700">•</span>
                 <Link href="/terms" className="hover:text-white">Terms of Service</Link>
               </div>
             </div>

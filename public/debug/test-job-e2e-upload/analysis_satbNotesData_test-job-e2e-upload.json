@@ -1,0 +1,30 @@
+{
+  "soprano": [
+    {
+      "note": "D5",
+      "time": 0,
+      "duration": 1
+    }
+  ],
+  "alto": [
+    {
+      "note": "A4",
+      "time": 0,
+      "duration": 1
+    }
+  ],
+  "tenor": [
+    {
+      "note": "F#4",
+      "time": 0,
+      "duration": 1
+    }
+  ],
+  "bass": [
+    {
+      "note": "D3",
+      "time": 0,
+      "duration": 1
+    }
+  ]
+}

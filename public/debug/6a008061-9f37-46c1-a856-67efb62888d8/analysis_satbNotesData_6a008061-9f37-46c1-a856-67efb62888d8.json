@@ -1,0 +1,4330 @@
+{
+  "soprano": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 2,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 4,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 6,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 8,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 10,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 12,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 14,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 16,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 18,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 20,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 22,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 24,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 26,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 28,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 30,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 32,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 34,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 36,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 38,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 40,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 42,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 44,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 46,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 48,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 50,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 52,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 54,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 56,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 58,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 60,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 62,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 64,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 66,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 68,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 70,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 72,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 74,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 76,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 78,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 80,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 82,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 84,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 86,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 88,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 90,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 92,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 94,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 96,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 98,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 100,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 102,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 104,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 106,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 108,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 110,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 112,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 114,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 116,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 118,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 120,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 122,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 124,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 126,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 128,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 130,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 132,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 134,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 136,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 138,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 140,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 142,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 144,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 146,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 148,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 150,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 152,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 154,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 156,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 158,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 160,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 162,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 164,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 166,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 168,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 170,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 172,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 174,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 176,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 178,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 180,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 182,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 184,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 186,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 188,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 190,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 192,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 194,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 196,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 198,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 200,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 202,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 204,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 206,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 208,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 210,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 212,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 214,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 216,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 218,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 220,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 222,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 224,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 226,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 228,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 230,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 232,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B4",
+      "time": 234,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C5",
+      "time": 236,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D5",
+      "time": 238,
+      "duration": 2,
+      "confidence": 0.85,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    }
+  ],
+  "alto": [
+    {
+      "note": "D4",
+      "time": 0,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 2,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 4,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 6,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 8,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 10,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 12,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 14,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 16,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 18,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 20,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 22,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 24,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 26,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 28,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 30,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 32,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 34,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 36,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 38,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 40,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 42,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 44,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 46,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 48,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 50,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 52,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 54,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 56,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 58,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 60,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 62,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 64,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 66,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 68,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 70,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 72,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 74,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 76,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 78,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 80,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 82,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 84,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 86,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 88,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 90,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 92,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 94,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 96,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 98,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 100,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 102,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 104,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 106,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 108,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 110,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 112,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 114,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 116,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 118,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 120,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 122,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 124,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 126,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 128,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 130,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 132,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 134,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 136,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 138,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 140,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 142,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 144,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 146,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 148,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 150,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 152,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 154,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 156,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 158,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 160,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 162,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 164,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 166,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 168,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 170,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 172,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 174,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 176,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 178,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 180,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 182,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 184,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 186,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 188,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 190,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 192,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 194,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 196,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 198,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 200,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 202,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 204,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 206,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 208,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 210,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 212,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 214,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 216,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 218,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 220,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 222,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 224,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 226,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 228,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 230,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 232,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F4",
+      "time": 234,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G4",
+      "time": 236,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A4",
+      "time": 238,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    }
+  ],
+  "tenor": [
+    {
+      "note": "A3",
+      "time": 0,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 2,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 4,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 6,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 8,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 10,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 12,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 14,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 16,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 18,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 20,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 22,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 24,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 26,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 28,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 30,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 32,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 34,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 36,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 38,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 40,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 42,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 44,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 46,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 48,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 50,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 52,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 54,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 56,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 58,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 60,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 62,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 64,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 66,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 68,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 70,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 72,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 74,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 76,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 78,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 80,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 82,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 84,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 86,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 88,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 90,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 92,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 94,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 96,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 98,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 100,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 102,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 104,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 106,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 108,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 110,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 112,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 114,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 116,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 118,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 120,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 122,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 124,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 126,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 128,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 130,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 132,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 134,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 136,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 138,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 140,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 142,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 144,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 146,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 148,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 150,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 152,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 154,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 156,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 158,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 160,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 162,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 164,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 166,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 168,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 170,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 172,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 174,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 176,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 178,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 180,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 182,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 184,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 186,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 188,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 190,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 192,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 194,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 196,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 198,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 200,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 202,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 204,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 206,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 208,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 210,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 212,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 214,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 216,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 218,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 220,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 222,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 224,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 226,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 228,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 230,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "B3",
+      "time": 232,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "C4",
+      "time": 234,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D4",
+      "time": 236,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E4",
+      "time": 238,
+      "duration": 2,
+      "confidence": 0.75,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    }
+  ],
+  "bass": [
+    {
+      "note": "D3",
+      "time": 0,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 2,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 4,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 6,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 8,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 10,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 12,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 14,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 16,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 18,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 20,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 22,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 24,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 26,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 28,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 30,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 32,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 34,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 36,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 38,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 40,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 42,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 44,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 46,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 48,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 50,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 52,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 54,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 56,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 58,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 60,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 62,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 64,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 66,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 68,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 70,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 72,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 74,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 76,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 78,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 80,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 82,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 84,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 86,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 88,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 90,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 92,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 94,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 96,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 98,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 100,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 102,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 104,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 106,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 108,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 110,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 112,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 114,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 116,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 118,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 120,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 122,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 124,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 126,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 128,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 130,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 132,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 134,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 136,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 138,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 140,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 142,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 144,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 146,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 148,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 150,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 152,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 154,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 156,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 158,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 160,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 162,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 164,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 166,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 168,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 170,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 172,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 174,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 176,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 178,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 180,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 182,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 184,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 186,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 188,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 190,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 192,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "am",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 194,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "found",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 196,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 198,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "blind",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 200,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "but",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 202,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "now",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 204,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 206,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "see",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 208,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "Amazing",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 210,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "grace",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 212,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "how",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 214,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sweet",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 216,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "the",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 218,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "sound",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 220,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "that",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 222,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "saved",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 224,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "a",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 226,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "wretch",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 228,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "like",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "D3",
+      "time": 230,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "me",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "E3",
+      "time": 232,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "I",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "F3",
+      "time": 234,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "once",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "G3",
+      "time": 236,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "was",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    },
+    {
+      "note": "A3",
+      "time": 238,
+      "duration": 2,
+      "confidence": 0.9,
+      "lyric": "lost",
+      "pitchCorrected": true,
+      "isolatedFromBackground": true
+    }
+  ]
+}

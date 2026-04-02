@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Rehearsal Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .connected { background: #d4edda; color: #155724; }
+        .disconnected { background: #f8d7da; color: #721c24; }
+        .info { background: #d1ecf1; color: #0c5460; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #log {
+            background: #f5f5f5;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .log-entry {
+            margin: 2px 0;
+            padding: 2px;
+        }
+        .log-sent { color: blue; }
+        .log-received { color: green; }
+        .log-error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>WebRTC Rehearsal System Test</h1>
+    
+    <div id="status" class="status disconnected">
+        Status: Disconnected
+    </div>
+
+    <div>
+        <label>Room ID: <input type="text" id="roomId" value="test-room-123" /></label><br/>
+        <label>User ID: <input type="text" id="userId" value="user-1" /></label><br/>
+        <label>Name: <input type="text" id="userName" value="Test User" /></label><br/>
+        <label>Voice Part: 
+            <select id="voicePart">
+                <option value="soprano">Soprano</option>
+                <option value="alto">Alto</option>
+                <option value="tenor" selected>Tenor</option>
+                <option value="bass">Bass</option>
+            </select>
+        </label><br/>
+        <label>Role: 
+            <select id="role">
+                <option value="singer" selected>Singer</option>
+                <option value="conductor">Conductor</option>
+            </select>
+        </label>
+    </div>
+
+    <div style="margin: 20px 0;">
+        <button onclick="connect()">Connect</button>
+        <button onclick="disconnect()">Disconnect</button>
+        <button onclick="joinRoom()">Join Room</button>
+        <button onclick="sendChat()">Send Chat</button>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+
+    <h3>Connection Log</h3>
+    <div id="log"></div>
+
+    <script>
+        let ws = null;
+        let connected = false;
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus(status, isConnected) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = `Status: ${status}`;
+            statusDiv.className = `status ${isConnected ? 'connected' : 'disconnected'}`;
+            connected = isConnected;
+        }
+
+        function connect() {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                log('Already connected', 'error');
+                return;
+            }
+
+            const wsUrl = 'ws://localhost:3001';
+            log(`Connecting to ${wsUrl}...`, 'info');
+            updateStatus('Connecting...', false);
+
+            ws = new WebSocket(wsUrl);
+
+            ws.onopen = () => {
+                log('✓ Connected to signaling server', 'received');
+                updateStatus('Connected', true);
+            };
+
+            ws.onmessage = (event) => {
+                try {
+                    const message = JSON.parse(event.data);
+                    log(`← Received: ${message.type}`, 'received');
+                    console.log('Message:', message);
+
+                    // Handle different message types
+                    switch (message.type) {
+                        case 'participants':
+                            log(`  Participants in room: ${message.participants.length}`, 'info');
+                            message.participants.forEach(p => {
+                                log(`    - ${p.name} (${p.voicePart})`, 'info');
+                            });
+                            break;
+                        case 'participant-joined':
+                            log(`  ${message.data.name} joined the room`, 'info');
+                            break;
+                        case 'participant-left':
+                            log(`  User ${message.data.userId} left the room`, 'info');
+                            break;
+                        case 'chat':
+                            log(`  Chat from ${message.fromUserId}: ${message.data.text}`, 'info');
+                            break;
+                    }
+                } catch (error) {
+                    log(`Error parsing message: ${error.message}`, 'error');
+                }
+            };
+
+            ws.onerror = (error) => {
+                log(`✗ WebSocket error: ${error}`, 'error');
+                updateStatus('Error', false);
+            };
+
+            ws.onclose = () => {
+                log('✗ Disconnected from signaling server', 'error');
+                updateStatus('Disconnected', false);
+            };
+        }
+
+        function disconnect() {
+            if (!ws) {
+                log('Not connected', 'error');
+                return;
+            }
+
+            // Send leave message first
+            const roomId = document.getElementById('roomId').value;
+            const userId = document.getElementById('userId').value;
+
+            send({
+                type: 'leave',
+                roomId,
+                fromUserId: userId,
+                data: {},
+                timestamp: Date.now()
+            });
+
+            ws.close();
+            ws = null;
+            log('Disconnected', 'info');
+            updateStatus('Disconnected', false);
+        }
+
+        function joinRoom() {
+            if (!connected) {
+                log('Not connected to server', 'error');
+                return;
+            }
+
+            const roomId = document.getElementById('roomId').value;
+            const userId = document.getElementById('userId').value;
+            const userName = document.getElementById('userName').value;
+            const voicePart = document.getElementById('voicePart').value;
+            const role = document.getElementById('role').value;
+
+            const message = {
+                type: 'join',
+                roomId,
+                fromUserId: userId,
+                data: {
+                    name: userName,
+                    voicePart,
+                    role
+                },
+                timestamp: Date.now()
+            };
+
+            send(message);
+            log(`Joining room: ${roomId}`, 'sent');
+        }
+
+        function sendChat() {
+            if (!connected) {
+                log('Not connected to server', 'error');
+                return;
+            }
+
+            const roomId = document.getElementById('roomId').value;
+            const userId = document.getElementById('userId').value;
+            const text = prompt('Enter chat message:');
+
+            if (!text) return;
+
+            const message = {
+                type: 'chat',
+                roomId,
+                fromUserId: userId,
+                data: { text },
+                timestamp: Date.now()
+            };
+
+            send(message);
+            log(`Sent chat: ${text}`, 'sent');
+        }
+
+        function send(message) {
+            if (!ws || ws.readyState !== WebSocket.OPEN) {
+                log('Cannot send: not connected', 'error');
+                return;
+            }
+
+            ws.send(JSON.stringify(message));
+            log(`→ Sent: ${message.type}`, 'sent');
+        }
+
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+        }
+
+        // Auto-connect on load
+        window.onload = () => {
+            log('Page loaded. Click "Connect" to start.', 'info');
+        };
+    </script>
+</body>
+</html>

@@ -54,7 +54,7 @@ function MilestoneCard({
   return (
     <div className="space-y-3">
       <div className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+        <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
         <div>
           <p className="font-medium text-foreground text-sm">{title}</p>
           <p className="text-muted-foreground text-xs mt-0.5">{description}</p>
@@ -89,31 +89,31 @@ export default function MinistriesDirectorJourneyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-blue-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-600/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-teal-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/10 border border-white/20 backdrop-blur-sm mb-6">
-            <Users className="w-4 h-4 text-blue-300" />
-            <span className="text-sm font-medium text-blue-200">Ministries Director Journey</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
+            <Users className="w-4 h-4 text-emerald-300" />
+            <span className="text-sm font-medium text-emerald-200">Ministries Director Journey</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             Angela's Journey:<br />
-            <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
               From Spreadsheet Chaos to Coordinated Ministry
             </span>
           </h1>
 
-          <p className="text-lg text-blue-100/80 mb-6 max-w-2xl">
+          <p className="text-lg text-emerald-100/80 mb-6 max-w-2xl">
             Angela Rodriguez, General Ministries Director at New Hope Baptist (600 members),
             was managing 6 ministries across disconnected tools. See how the platform unified
             her entire operation in 90 days.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-blue-200">
+          <div className="flex flex-wrap gap-4 text-sm text-emerald-200">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>600 members</span>
@@ -154,7 +154,7 @@ export default function MinistriesDirectorJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Ministry Setup"
             icon={Zap}
-            color="bg-blue-500/15 border-blue-500/30 text-blue-300"
+            color="bg-emerald-50 border-emerald-200 text-emerald-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Six ministries configured in one afternoon</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -192,7 +192,7 @@ export default function MinistriesDirectorJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — Data Flowing In"
             icon={Brain}
-            color="bg-blue-50 border-blue-200 text-blue-700"
+            color="bg-teal-50 border-teal-200 text-teal-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Intelligence emerges quickly</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -230,7 +230,7 @@ export default function MinistriesDirectorJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — Patterns Visible"
             icon={Target}
-            color="bg-blue-500/15 border-blue-500/30 text-blue-300"
+            color="bg-blue-50 border-blue-200 text-blue-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Problems surfaces before they become crises</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -268,7 +268,7 @@ export default function MinistriesDirectorJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Tangible Outcomes"
             icon={TrendingUp}
-            color="bg-amber-500/15 border-amber-500/30 text-amber-300"
+            color="bg-amber-50 border-amber-200 text-amber-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The data proves the case for investment</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -304,7 +304,7 @@ export default function MinistriesDirectorJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/20 border border-blue-700/30 text-blue-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Angela's 3-Month Results</span>
             </div>
@@ -320,8 +320,8 @@ export default function MinistriesDirectorJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <Users className="w-5 h-5 text-blue-400" />
+              <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                <Users className="w-5 h-5 text-emerald-600" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Angela Rodriguez, General Ministries Director</p>
@@ -337,31 +337,31 @@ export default function MinistriesDirectorJourneyPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-blue-600 via-blue-600 to-cyan-700 rounded-2xl text-white relative overflow-hidden">
+        <section className="text-center py-12 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 rounded-2xl text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="relative">
             <h2 className="text-2xl font-bold mb-3">Start Your Journey</h2>
-            <p className="text-blue-100 mb-6 max-w-md mx-auto">
+            <p className="text-emerald-100 mb-6 max-w-md mx-auto">
               Coordinate all your ministries from one platform.
               AI facilitates and guides — humans always in the loop.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-slate-900/10 text-white hover:bg-slate-900/20 font-semibold px-8 py-3"
+                className="bg-white text-emerald-700 hover:bg-emerald-50 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 variant="outline"
-                className="border-white/40 text-white hover:bg-slate-900/10 px-8 py-3"
+                className="border-white/40 text-white hover:bg-white/10 px-8 py-3"
                 asChild
               >
                 <a href="/journeys/church-admin">See Church Admin Journey</a>
               </Button>
             </div>
-            <p className="text-blue-200/70 text-xs mt-4">
+            <p className="text-emerald-200/70 text-xs mt-4">
               PCO integration included · 30-day free trial · No credit card required
             </p>
           </div>

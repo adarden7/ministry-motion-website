@@ -1,0 +1,50 @@
+{
+  "soprano": [
+    {
+      "note": "C5",
+      "time": 0,
+      "duration": 1
+    },
+    {
+      "note": "E5",
+      "time": 1,
+      "duration": 1
+    }
+  ],
+  "alto": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 1
+    },
+    {
+      "note": "C5",
+      "time": 1,
+      "duration": 1
+    }
+  ],
+  "tenor": [
+    {
+      "note": "E4",
+      "time": 0,
+      "duration": 1
+    },
+    {
+      "note": "G4",
+      "time": 1,
+      "duration": 1
+    }
+  ],
+  "bass": [
+    {
+      "note": "C3",
+      "time": 0,
+      "duration": 1
+    },
+    {
+      "note": "E3",
+      "time": 1,
+      "duration": 1
+    }
+  ]
+}

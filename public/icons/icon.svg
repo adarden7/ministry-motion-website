@@ -1,19 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#7c3aed"/>
-      <stop offset="100%" style="stop-color:#5b21b6"/>
-    </linearGradient>
-  </defs>
-  <!-- Background -->
-  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
-  <!-- W Letter -->
-  <path d="M128 144 L176 368 L256 240 L336 368 L384 144 L344 144 L312 288 L256 192 L200 288 L168 144 Z"
-        fill="white"
-        stroke="white"
-        stroke-width="8"
-        stroke-linejoin="round"/>
-  <!-- Subtle music note accent -->
-  <circle cx="400" cy="400" r="24" fill="rgba(255,255,255,0.3)"/>
-  <rect x="396" y="340" width="8" height="60" rx="4" fill="rgba(255,255,255,0.3)"/>
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Three upward arrows representing growth/motion -->
+  <!-- Yellow/Orange arrow (left) -->
+  <path d="M20 100 L35 60 L50 100 L42 100 L42 120 L28 120 L28 100 Z" fill="#FFA500"/>
+  
+  <!-- Purple/Blue arrow (middle) -->
+  <path d="M55 90 L70 45 L85 90 L77 90 L77 120 L63 120 L63 90 Z" fill="#7C3AED"/>
+  
+  <!-- Red/Pink arrow (right) -->
+  <path d="M90 80 L105 30 L120 80 L112 80 L112 120 L98 120 L98 80 Z" fill="#EF4444"/>
 </svg>

@@ -55,7 +55,7 @@ function MilestoneCard({
   return (
     <div className="space-y-3">
       <div className="flex items-start gap-2">
-        <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+        <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
         <div>
           <p className="font-medium text-foreground text-sm">{title}</p>
           <p className="text-muted-foreground text-xs mt-0.5">{description}</p>
@@ -96,7 +96,7 @@ export default function ChurchAdminJourneyPage() {
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-orange-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/10 border border-white/20 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
             <Shield className="w-4 h-4 text-amber-300" />
             <span className="text-sm font-medium text-amber-200">Church Admin Journey</span>
           </div>
@@ -155,7 +155,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Administrative Setup"
             icon={Zap}
-            color="bg-amber-500/15 border-amber-500/30 text-amber-300"
+            color="bg-amber-50 border-amber-200 text-amber-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">All the infrastructure, configured on day one</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -193,7 +193,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — First Efficiency Wins"
             icon={Clock}
-            color="bg-blue-500/15 border-blue-500/30 text-blue-300"
+            color="bg-blue-50 border-blue-200 text-blue-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The first signs of what's possible</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -226,7 +226,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — The Business Case Is Made"
             icon={FileText}
-            color="bg-blue-500/15 border-blue-500/30 text-blue-300"
+            color="bg-emerald-50 border-emerald-200 text-emerald-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The board approves the consolidation plan</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -264,7 +264,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Full Consolidation"
             icon={TrendingUp}
-            color="bg-violet-500/15 border-violet-500/30 text-violet-300"
+            color="bg-violet-50 border-violet-200 text-violet-700"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Six tools become one — and the savings are real</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -300,7 +300,7 @@ export default function ChurchAdminJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-900/20 border border-amber-700/30 text-amber-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-700 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">David's 3-Month Results</span>
             </div>
@@ -316,7 +316,7 @@ export default function ChurchAdminJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
                 <Shield className="w-5 h-5 text-amber-600" />
               </div>
               <div>
@@ -344,14 +344,14 @@ export default function ChurchAdminJourneyPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-slate-900/10 text-white hover:bg-slate-900/20 font-semibold px-8 py-3"
+                className="bg-white text-amber-700 hover:bg-amber-50 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button
                 variant="outline"
-                className="border-white/40 text-white hover:bg-slate-900/10 px-8 py-3"
+                className="border-white/40 text-white hover:bg-white/10 px-8 py-3"
                 asChild
               >
                 <a href="/journeys/church-leadership">See Senior Pastor Journey</a>

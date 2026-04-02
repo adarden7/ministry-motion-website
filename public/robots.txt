@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /super-admin/
+Disallow: /admin/
+Disallow: /debug/
+Disallow: /test-
+
+Sitemap: https://ministrymotion.com/sitemap.xml

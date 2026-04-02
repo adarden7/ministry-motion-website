@@ -1,13 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './ThemeToggle';
 import { useMarketing } from '@/context/MarketingContext';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface MarketingNavProps {
+    /** Optional: identifies the current page for nav highlighting */
     currentPage?: string;
+    /** Optional: callback for beta signup click (nav uses MarketingContext internally) */
     onBetaSignupClick?: () => void;
 }
 
@@ -15,55 +18,35 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
     const { openBetaModal } = useMarketing();
     const [solutionsOpen, setSolutionsOpen] = useState(false);
     const [resourcesOpen, setResourcesOpen] = useState(false);
-    const solutionsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-    const resourcesTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-    function openSolutions() {
-        if (solutionsTimer.current) clearTimeout(solutionsTimer.current);
-        setSolutionsOpen(true);
-    }
-    function closeSolutions() {
-        solutionsTimer.current = setTimeout(() => setSolutionsOpen(false), 180);
-    }
-    function openResources() {
-        if (resourcesTimer.current) clearTimeout(resourcesTimer.current);
-        setResourcesOpen(true);
-    }
-    function closeResources() {
-        resourcesTimer.current = setTimeout(() => setResourcesOpen(false), 180);
-    }
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
-            <div className="container mx-auto flex h-14 items-center">
+            <div className="container mx-auto flex h-14 items-center px-4">
                 <div className="mr-4 flex flex-shrink-0">
                     <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <span className="font-bold whitespace-nowrap text-lg">MinistryMotion</span>
+                        <span className="font-bold whitespace-nowrap text-lg text-white">MinistryMotion</span>
                     </Link>
                 </div>
-                <nav className="flex items-center space-x-6 text-sm font-medium">
+                <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
                     <Link href="/products" className="transition-colors hover:text-foreground/80 text-foreground/60">Products</Link>
 
                     {/* Solutions dropdown */}
                     <div
                         className="relative"
-                        onMouseEnter={openSolutions}
-                        onMouseLeave={closeSolutions}
+                        onMouseEnter={() => setSolutionsOpen(true)}
+                        onMouseLeave={() => setSolutionsOpen(false)}
                     >
-                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60 py-4">
+                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
                             Solutions <ChevronDown className="h-3 w-3" />
                         </button>
                         {solutionsOpen && (
-                            <div
-                                className="absolute top-full left-0 w-56 rounded-md border border-white/10 bg-slate-950 py-1 shadow-xl"
-                                onMouseEnter={openSolutions}
-                                onMouseLeave={closeSolutions}
-                            >
-                                <Link href="/solutions/praise-leaders" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
-                                <Link href="/solutions/worship-directors" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
-                                <Link href="/solutions/ministries-directors" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
-                                <Link href="/solutions/church-admins" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
-                                <Link href="/solutions/leadership" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
+                            <div className="absolute top-full left-0 mt-1 w-56 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
+                                <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
+                                <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
+                                <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
+                                <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
                             </div>
                         )}
                     </div>
@@ -74,48 +57,58 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                     {/* Resources dropdown */}
                     <div
                         className="relative"
-                        onMouseEnter={openResources}
-                        onMouseLeave={closeResources}
+                        onMouseEnter={() => setResourcesOpen(true)}
+                        onMouseLeave={() => setResourcesOpen(false)}
                     >
-                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60 py-4">
+                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
                             Resources <ChevronDown className="h-3 w-3" />
                         </button>
                         {resourcesOpen && (
-                            <div
-                                className="absolute top-full left-0 w-48 rounded-md border border-white/10 bg-slate-950 py-1 shadow-xl"
-                                onMouseEnter={openResources}
-                                onMouseLeave={closeResources}
-                            >
-                                <Link href="/blog" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
-                                <Link href="/resources" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
-                                <Link href="/case-studies" className="block px-4 py-2.5 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
+                            <div className="absolute top-full left-0 mt-1 w-48 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
+                                <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
+                                <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
                             </div>
                         )}
                     </div>
                 </nav>
-                <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-                    <nav className="flex items-center space-x-2">
-                        <button
-                            onClick={openBetaModal}
-                            className="text-sm text-foreground/60 hover:text-foreground/80 transition-colors px-3 py-1"
-                        >
-                            Contact
+                <div className="flex flex-1 items-center justify-end space-x-2">
+                    <div className="md:hidden flex items-center pr-2">
+                        <ThemeToggle />
+                        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="ml-4 text-white p-1">
+                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
-                        <Link href={process.env.NODE_ENV === 'development' ? 'http://localhost:3000/login' : 'https://app.ministrymotion.com/login'}>
+                    </div>
+                    <nav className="hidden md:flex items-center space-x-2">
+                        <ThemeToggle />
+                        <Link href="https://app.ministrymotion.com/login">
                             <Button variant="ghost" size="sm">
                                 Log In
                             </Button>
                         </Link>
-                        <Button
-                            size="sm"
-                            onClick={openBetaModal}
-                            className="bg-blue-600 hover:bg-blue-700 text-white"
-                        >
-                            Sign Up for Beta
+                        <Button size="sm" onClick={openBetaModal}>
+                            Get Started
                         </Button>
                     </nav>
                 </div>
             </div>
+
+            {/* Mobile Menu */}
+            {mobileMenuOpen && (
+                <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-md px-6 py-6 flex flex-col space-y-5 shadow-2xl">
+                    <Link href="/products" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+                    <Link href="/solutions/praise-leaders" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+                    <Link href="/pricing" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+                    <Link href="/compare" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Compare</Link>
+                    <Link href="/resources" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Resources</Link>
+                    <div className="pt-6 border-t border-white/10 flex flex-col space-y-3">
+                        <Link href="https://app.ministrymotion.com/login" onClick={() => setMobileMenuOpen(false)} className="w-full">
+                            <Button variant="outline" className="w-full justify-center">Log In</Button>
+                        </Link>
+                        <Button className="w-full justify-center" onClick={() => { setMobileMenuOpen(false); openBetaModal(); }}>Get Started</Button>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }

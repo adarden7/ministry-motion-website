@@ -170,7 +170,7 @@ export default function WorshipCollectivePage() {
                         <span className="text-rose-100/70">{metric.label}</span>
                         <span className="text-rose-400 font-medium">{metric.value}%</span>
                       </div>
-                      <div className="h-2 bg-slate-900/5 rounded-full overflow-hidden">
+                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
                         <div
                           className="h-full bg-gradient-to-r from-rose-400 to-pink-500 rounded-full"
                           style={{ width: `${metric.value}%` }}
@@ -439,7 +439,7 @@ export default function WorshipCollectivePage() {
                         <span className="text-rose-100/60">{metric.style}</span>
                         <span className="text-rose-400">You: {metric.your}% · Reference: {metric.ref}%</span>
                       </div>
-                      <div className="h-2 bg-slate-900/5 rounded-full overflow-hidden relative">
+                      <div className="h-2 bg-white/5 rounded-full overflow-hidden relative">
                         <div className="h-full bg-rose-900/60 rounded-full" style={{ width: `${metric.ref}%` }} />
                         <div className="h-full bg-gradient-to-r from-rose-400 to-pink-500 rounded-full absolute top-0" style={{ width: `${metric.your}%` }} />
                       </div>
@@ -495,12 +495,12 @@ export default function WorshipCollectivePage() {
                   <div key={i} className="bg-rose-500/5 rounded-xl p-3 text-center border border-rose-500/10">
                     <p className="text-lg font-bold text-rose-100">{metric.value}</p>
                     <p className="text-xs text-rose-400/80">{metric.label}</p>
-                    <p className="text-xs text-blue-400 mt-1">{metric.status}</p>
+                    <p className="text-xs text-emerald-400 mt-1">{metric.status}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-sm text-blue-100/80">
+              <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-100/80">
                 Based on opt-in wellness insights: your recovery metrics detect patterns associated with peak vocal performance. This is a strong rehearsal day.
               </div>
             </div>

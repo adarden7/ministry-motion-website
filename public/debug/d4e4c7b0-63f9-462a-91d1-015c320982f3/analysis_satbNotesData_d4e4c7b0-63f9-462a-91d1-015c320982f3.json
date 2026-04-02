@@ -1,0 +1,867 @@
+{
+  "soprano": [
+    {
+      "note": "C5",
+      "time": 0,
+      "duration": 9.473684210526315,
+      "lyric": "How",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 9.473684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "deep",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 18.94736842105263,
+      "duration": 9.473684210526315,
+      "lyric": "the",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 28.421052631578945,
+      "duration": 9.473684210526315,
+      "lyric": "Father's",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 37.89473684210526,
+      "duration": 9.473684210526315,
+      "lyric": "love",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 47.368421052631575,
+      "duration": 9.473684210526315,
+      "lyric": "for",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 56.84210526315789,
+      "duration": 9.473684210526315,
+      "lyric": "us",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 66.3157894736842,
+      "duration": 9.473684210526315,
+      "lyric": "how",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 75.78947368421052,
+      "duration": 9.473684210526315,
+      "lyric": "vast",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 85.26315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "beyond",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 94.73684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "all",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 104.21052631578947,
+      "duration": 9.473684210526315,
+      "lyric": "measure",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 113.68421052631578,
+      "duration": 9.473684210526315,
+      "lyric": "that",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 123.1578947368421,
+      "duration": 9.473684210526315,
+      "lyric": "he",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 132.6315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "should",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 142.10526315789474,
+      "duration": 9.473684210526315,
+      "lyric": "give",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 151.57894736842104,
+      "duration": 9.473684210526315,
+      "lyric": "his",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 161.05263157894734,
+      "duration": 9.473684210526315,
+      "lyric": "only",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 170.52631578947367,
+      "duration": 9.473684210526315,
+      "lyric": "son",
+      "confidence": 0.9,
+      "role": "melody",
+      "pitchCorrected": true
+    }
+  ],
+  "alto": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 9.473684210526315,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 9.473684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "deep",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 18.94736842105263,
+      "duration": 9.473684210526315,
+      "lyric": "the",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 28.421052631578945,
+      "duration": 9.473684210526315,
+      "lyric": "Father's",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 37.89473684210526,
+      "duration": 9.473684210526315,
+      "lyric": "love",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 47.368421052631575,
+      "duration": 9.473684210526315,
+      "lyric": "for",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 56.84210526315789,
+      "duration": 9.473684210526315,
+      "lyric": "us",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 66.3157894736842,
+      "duration": 9.473684210526315,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 75.78947368421052,
+      "duration": 9.473684210526315,
+      "lyric": "vast",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 85.26315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "beyond",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 94.73684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 104.21052631578947,
+      "duration": 9.473684210526315,
+      "lyric": "measure",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 113.68421052631578,
+      "duration": 9.473684210526315,
+      "lyric": "that",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 123.1578947368421,
+      "duration": 9.473684210526315,
+      "lyric": "he",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 132.6315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "should",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 142.10526315789474,
+      "duration": 9.473684210526315,
+      "lyric": "give",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 151.57894736842104,
+      "duration": 9.473684210526315,
+      "lyric": "his",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 161.05263157894734,
+      "duration": 9.473684210526315,
+      "lyric": "only",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 170.52631578947367,
+      "duration": 9.473684210526315,
+      "lyric": "son",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "tenor": [
+    {
+      "note": "E4",
+      "time": 0,
+      "duration": 9.473684210526315,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 9.473684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "deep",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 18.94736842105263,
+      "duration": 9.473684210526315,
+      "lyric": "the",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 28.421052631578945,
+      "duration": 9.473684210526315,
+      "lyric": "Father's",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 37.89473684210526,
+      "duration": 9.473684210526315,
+      "lyric": "love",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 47.368421052631575,
+      "duration": 9.473684210526315,
+      "lyric": "for",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 56.84210526315789,
+      "duration": 9.473684210526315,
+      "lyric": "us",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 66.3157894736842,
+      "duration": 9.473684210526315,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 75.78947368421052,
+      "duration": 9.473684210526315,
+      "lyric": "vast",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 85.26315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "beyond",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 94.73684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 104.21052631578947,
+      "duration": 9.473684210526315,
+      "lyric": "measure",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 113.68421052631578,
+      "duration": 9.473684210526315,
+      "lyric": "that",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 123.1578947368421,
+      "duration": 9.473684210526315,
+      "lyric": "he",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 132.6315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "should",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 142.10526315789474,
+      "duration": 9.473684210526315,
+      "lyric": "give",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 151.57894736842104,
+      "duration": 9.473684210526315,
+      "lyric": "his",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 161.05263157894734,
+      "duration": 9.473684210526315,
+      "lyric": "only",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 170.52631578947367,
+      "duration": 9.473684210526315,
+      "lyric": "son",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "bass": [
+    {
+      "note": "C3",
+      "time": 0,
+      "duration": 9.473684210526315,
+      "lyric": "How",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 9.473684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "deep",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 18.94736842105263,
+      "duration": 9.473684210526315,
+      "lyric": "the",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 28.421052631578945,
+      "duration": 9.473684210526315,
+      "lyric": "Father's",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 37.89473684210526,
+      "duration": 9.473684210526315,
+      "lyric": "love",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 47.368421052631575,
+      "duration": 9.473684210526315,
+      "lyric": "for",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 56.84210526315789,
+      "duration": 9.473684210526315,
+      "lyric": "us",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 66.3157894736842,
+      "duration": 9.473684210526315,
+      "lyric": "how",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 75.78947368421052,
+      "duration": 9.473684210526315,
+      "lyric": "vast",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 85.26315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "beyond",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 94.73684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "all",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 104.21052631578947,
+      "duration": 9.473684210526315,
+      "lyric": "measure",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 113.68421052631578,
+      "duration": 9.473684210526315,
+      "lyric": "that",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 123.1578947368421,
+      "duration": 9.473684210526315,
+      "lyric": "he",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 132.6315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "should",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 142.10526315789474,
+      "duration": 9.473684210526315,
+      "lyric": "give",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 151.57894736842104,
+      "duration": 9.473684210526315,
+      "lyric": "his",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 161.05263157894734,
+      "duration": 9.473684210526315,
+      "lyric": "only",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 170.52631578947367,
+      "duration": 9.473684210526315,
+      "lyric": "son",
+      "confidence": 0.9,
+      "role": "foundation",
+      "pitchCorrected": true
+    }
+  ],
+  "example": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 9.473684210526315,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 9.473684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "deep",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 18.94736842105263,
+      "duration": 9.473684210526315,
+      "lyric": "the",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 28.421052631578945,
+      "duration": 9.473684210526315,
+      "lyric": "Father's",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 37.89473684210526,
+      "duration": 9.473684210526315,
+      "lyric": "love",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 47.368421052631575,
+      "duration": 9.473684210526315,
+      "lyric": "for",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 56.84210526315789,
+      "duration": 9.473684210526315,
+      "lyric": "us",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 66.3157894736842,
+      "duration": 9.473684210526315,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 75.78947368421052,
+      "duration": 9.473684210526315,
+      "lyric": "vast",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 85.26315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "beyond",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 94.73684210526315,
+      "duration": 9.473684210526315,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 104.21052631578947,
+      "duration": 9.473684210526315,
+      "lyric": "measure",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 113.68421052631578,
+      "duration": 9.473684210526315,
+      "lyric": "that",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 123.1578947368421,
+      "duration": 9.473684210526315,
+      "lyric": "he",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 132.6315789473684,
+      "duration": 9.473684210526315,
+      "lyric": "should",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 142.10526315789474,
+      "duration": 9.473684210526315,
+      "lyric": "give",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 151.57894736842104,
+      "duration": 9.473684210526315,
+      "lyric": "his",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 161.05263157894734,
+      "duration": 9.473684210526315,
+      "lyric": "only",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 170.52631578947367,
+      "duration": 9.473684210526315,
+      "lyric": "son",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ]
+}

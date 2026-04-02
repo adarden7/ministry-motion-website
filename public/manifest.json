@@ -1,0 +1,21 @@
+{
+  "name": "WorshipWise - Ministry Community Platform",
+  "short_name": "WorshipWise",
+  "description": "Connect, grow, and serve together in your ministry community. Training, events, messaging, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["social", "education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

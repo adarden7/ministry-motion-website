@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Service Worker</title>
+</head>
+<body>
+  <h1>Updating Service Worker...</h1>
+  <p id="status">Please wait...</p>
+  <script>
+    async function updateServiceWorker() {
+      const status = document.getElementById('status');
+      
+      try {
+        // Unregister all service workers
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        
+        if (registrations.length === 0) {
+          status.textContent = 'No service workers found. Redirecting...';
+          setTimeout(() => window.location.href = '/', 1000);
+          return;
+        }
+        
+        status.textContent = `Found ${registrations.length} service worker(s). Unregistering...`;
+        
+        for (const registration of registrations) {
+          await registration.unregister();
+        }
+        
+        status.textContent = 'Service workers unregistered. Clearing caches...';
+        
+        // Clear all caches
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames.map(name => caches.delete(name)));
+        
+        status.textContent = 'Caches cleared. Reloading page...';
+        
+        // Wait a moment then reload
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1000);
+        
+      } catch (error) {
+        status.textContent = 'Error: ' + error.message;
+        console.error('Error updating service worker:', error);
+      }
+    }
+    
+    updateServiceWorker();
+  </script>
+</body>
+</html>

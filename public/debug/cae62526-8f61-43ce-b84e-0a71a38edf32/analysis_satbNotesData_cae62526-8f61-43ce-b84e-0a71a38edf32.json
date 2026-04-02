@@ -1,0 +1,874 @@
+{
+  "soprano": [
+    {
+      "note": "C5",
+      "time": 0,
+      "duration": 7.5,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 7.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 15,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 22.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 30,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 37.5,
+      "duration": 7.5,
+      "lyric": "sing",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 45,
+      "duration": 7.5,
+      "lyric": "with",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 52.5,
+      "duration": 7.5,
+      "lyric": "me",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 60,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 67.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 75,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 82.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 90,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 97.5,
+      "duration": 7.5,
+      "lyric": "and",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 105,
+      "duration": 7.5,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 112.5,
+      "duration": 7.5,
+      "lyric": "will",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 120,
+      "duration": 7.5,
+      "lyric": "see",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 127.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 135,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 142.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 150,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A5",
+      "time": 157.5,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B5",
+      "time": 165,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C6",
+      "time": 172.5,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "alto": [
+    {
+      "note": "G4",
+      "time": 0,
+      "duration": 7.5,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 7.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 15,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 22.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 30,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 37.5,
+      "duration": 7.5,
+      "lyric": "sing",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 45,
+      "duration": 7.5,
+      "lyric": "with",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 52.5,
+      "duration": 7.5,
+      "lyric": "me",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 60,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 67.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 75,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 82.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 90,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 97.5,
+      "duration": 7.5,
+      "lyric": "and",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 105,
+      "duration": 7.5,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 112.5,
+      "duration": 7.5,
+      "lyric": "will",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 120,
+      "duration": 7.5,
+      "lyric": "see",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 127.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 135,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 142.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 150,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 157.5,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F5",
+      "time": 165,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G5",
+      "time": 172.5,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "tenor": [
+    {
+      "note": "E4",
+      "time": 0,
+      "duration": 7.5,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 7.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 15,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 22.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 30,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 37.5,
+      "duration": 7.5,
+      "lyric": "sing",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 45,
+      "duration": 7.5,
+      "lyric": "with",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 52.5,
+      "duration": 7.5,
+      "lyric": "me",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 60,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 67.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 75,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 82.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 90,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 97.5,
+      "duration": 7.5,
+      "lyric": "and",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 105,
+      "duration": 7.5,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 112.5,
+      "duration": 7.5,
+      "lyric": "will",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E4",
+      "time": 120,
+      "duration": 7.5,
+      "lyric": "see",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F4",
+      "time": 127.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G4",
+      "time": 135,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A4",
+      "time": 142.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B4",
+      "time": 150,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C5",
+      "time": 157.5,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D5",
+      "time": 165,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E5",
+      "time": 172.5,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ],
+  "bass": [
+    {
+      "note": "C3",
+      "time": 0,
+      "duration": 7.5,
+      "lyric": "How",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 7.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 15,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 22.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 30,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 37.5,
+      "duration": 7.5,
+      "lyric": "sing",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 45,
+      "duration": 7.5,
+      "lyric": "with",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 52.5,
+      "duration": 7.5,
+      "lyric": "me",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 60,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 67.5,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 75,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 82.5,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 90,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 97.5,
+      "duration": 7.5,
+      "lyric": "and",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 105,
+      "duration": 7.5,
+      "lyric": "all",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 112.5,
+      "duration": 7.5,
+      "lyric": "will",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C3",
+      "time": 120,
+      "duration": 7.5,
+      "lyric": "see",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "D3",
+      "time": 127.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "E3",
+      "time": 135,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "F3",
+      "time": 142.5,
+      "duration": 7.5,
+      "lyric": "how",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "G3",
+      "time": 150,
+      "duration": 7.5,
+      "lyric": "great",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "A3",
+      "time": 157.5,
+      "duration": 7.5,
+      "lyric": "is",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "B3",
+      "time": 165,
+      "duration": 7.5,
+      "lyric": "our",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    },
+    {
+      "note": "C4",
+      "time": 172.5,
+      "duration": 7.5,
+      "lyric": "God",
+      "confidence": 0.8,
+      "role": "harmony",
+      "pitchCorrected": true
+    }
+  ]
+}

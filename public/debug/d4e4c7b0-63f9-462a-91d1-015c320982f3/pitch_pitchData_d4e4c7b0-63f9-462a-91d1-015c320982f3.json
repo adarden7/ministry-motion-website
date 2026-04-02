@@ -1,0 +1,302 @@
+[
+  {
+    "note": "C4",
+    "time": 0,
+    "duration": 0.5,
+    "confidence": 0.9
+  },
+  {
+    "note": "C5",
+    "time": 0.01,
+    "duration": 0.5,
+    "confidence": 0.54
+  },
+  {
+    "note": "G4",
+    "time": 0.02,
+    "duration": 0.5,
+    "confidence": 0.36000000000000004
+  },
+  {
+    "note": "D4",
+    "time": 0.5,
+    "duration": 0.5,
+    "confidence": 0.85
+  },
+  {
+    "note": "D5",
+    "time": 0.51,
+    "duration": 0.5,
+    "confidence": 0.51
+  },
+  {
+    "note": "A4",
+    "time": 0.52,
+    "duration": 0.5,
+    "confidence": 0.34
+  },
+  {
+    "note": "E4",
+    "time": 1,
+    "duration": 1,
+    "confidence": 0.92
+  },
+  {
+    "note": "E5",
+    "time": 1.01,
+    "duration": 1,
+    "confidence": 0.552
+  },
+  {
+    "note": "B4",
+    "time": 1.02,
+    "duration": 1,
+    "confidence": 0.36800000000000005
+  },
+  {
+    "note": "F4",
+    "time": 2,
+    "duration": 0.5,
+    "confidence": 0.88
+  },
+  {
+    "note": "F5",
+    "time": 2.01,
+    "duration": 0.5,
+    "confidence": 0.528
+  },
+  {
+    "note": "C5",
+    "time": 2.02,
+    "duration": 0.5,
+    "confidence": 0.35200000000000004
+  },
+  {
+    "note": "G4",
+    "time": 2.5,
+    "duration": 1.5,
+    "confidence": 0.94
+  },
+  {
+    "note": "G5",
+    "time": 2.51,
+    "duration": 1.5,
+    "confidence": 0.564
+  },
+  {
+    "note": "D5",
+    "time": 2.52,
+    "duration": 1.5,
+    "confidence": 0.376
+  },
+  {
+    "note": "A4",
+    "time": 4,
+    "duration": 1,
+    "confidence": 0.96
+  },
+  {
+    "note": "A5",
+    "time": 4.01,
+    "duration": 1,
+    "confidence": 0.576
+  },
+  {
+    "note": "E5",
+    "time": 4.02,
+    "duration": 1,
+    "confidence": 0.384
+  },
+  {
+    "note": "G4",
+    "time": 5,
+    "duration": 0.5,
+    "confidence": 0.89
+  },
+  {
+    "note": "G5",
+    "time": 5.01,
+    "duration": 0.5,
+    "confidence": 0.534
+  },
+  {
+    "note": "D5",
+    "time": 5.02,
+    "duration": 0.5,
+    "confidence": 0.35600000000000004
+  },
+  {
+    "note": "F4",
+    "time": 5.5,
+    "duration": 0.5,
+    "confidence": 0.87
+  },
+  {
+    "note": "F5",
+    "time": 5.51,
+    "duration": 0.5,
+    "confidence": 0.522
+  },
+  {
+    "note": "C5",
+    "time": 5.52,
+    "duration": 0.5,
+    "confidence": 0.34800000000000003
+  },
+  {
+    "note": "E4",
+    "time": 6,
+    "duration": 1,
+    "confidence": 0.91
+  },
+  {
+    "note": "E5",
+    "time": 6.01,
+    "duration": 1,
+    "confidence": 0.546
+  },
+  {
+    "note": "B4",
+    "time": 6.02,
+    "duration": 1,
+    "confidence": 0.36400000000000005
+  },
+  {
+    "note": "D4",
+    "time": 7,
+    "duration": 0.5,
+    "confidence": 0.83
+  },
+  {
+    "note": "D5",
+    "time": 7.01,
+    "duration": 0.5,
+    "confidence": 0.49799999999999994
+  },
+  {
+    "note": "A4",
+    "time": 7.02,
+    "duration": 0.5,
+    "confidence": 0.332
+  },
+  {
+    "note": "C4",
+    "time": 7.5,
+    "duration": 1.5,
+    "confidence": 0.95
+  },
+  {
+    "note": "C5",
+    "time": 7.51,
+    "duration": 1.5,
+    "confidence": 0.57
+  },
+  {
+    "note": "G4",
+    "time": 7.52,
+    "duration": 1.5,
+    "confidence": 0.38
+  },
+  {
+    "note": "F4",
+    "time": 9,
+    "duration": 0.75,
+    "confidence": 0.86
+  },
+  {
+    "note": "F5",
+    "time": 9.01,
+    "duration": 0.75,
+    "confidence": 0.516
+  },
+  {
+    "note": "C5",
+    "time": 9.02,
+    "duration": 0.75,
+    "confidence": 0.34400000000000003
+  },
+  {
+    "note": "A4",
+    "time": 9.75,
+    "duration": 0.75,
+    "confidence": 0.93
+  },
+  {
+    "note": "A5",
+    "time": 9.76,
+    "duration": 0.75,
+    "confidence": 0.558
+  },
+  {
+    "note": "E5",
+    "time": 9.77,
+    "duration": 0.75,
+    "confidence": 0.37200000000000005
+  },
+  {
+    "note": "C5",
+    "time": 10.5,
+    "duration": 1,
+    "confidence": 0.97
+  },
+  {
+    "note": "C6",
+    "time": 10.51,
+    "duration": 1,
+    "confidence": 0.582
+  },
+  {
+    "note": "G5",
+    "time": 10.52,
+    "duration": 1,
+    "confidence": 0.388
+  },
+  {
+    "note": "B4",
+    "time": 11.5,
+    "duration": 0.5,
+    "confidence": 0.84
+  },
+  {
+    "note": "B5",
+    "time": 11.51,
+    "duration": 0.5,
+    "confidence": 0.504
+  },
+  {
+    "note": "F#5",
+    "time": 11.52,
+    "duration": 0.5,
+    "confidence": 0.336
+  },
+  {
+    "note": "A4",
+    "time": 12,
+    "duration": 1,
+    "confidence": 0.92
+  },
+  {
+    "note": "A5",
+    "time": 12.01,
+    "duration": 1,
+    "confidence": 0.552
+  },
+  {
+    "note": "E5",
+    "time": 12.02,
+    "duration": 1,
+    "confidence": 0.36800000000000005
+  },
+  {
+    "note": "G4",
+    "time": 13,
+    "duration": 2,
+    "confidence": 0.98
+  },
+  {
+    "note": "G5",
+    "time": 13.01,
+    "duration": 2,
+    "confidence": 0.588
+  }
+]

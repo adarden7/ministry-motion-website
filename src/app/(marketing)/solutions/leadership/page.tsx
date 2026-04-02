@@ -131,7 +131,7 @@ export default function LeadershipPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -162,7 +162,7 @@ export default function LeadershipPage() {
               </button>
               <Link
                 href="/pricing"
-                className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg"
+                className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg"
               >
                 View Pricing
               </Link>
@@ -220,20 +220,20 @@ export default function LeadershipPage() {
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
                           uc.color === 'emerald'
-                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
+                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
                             : uc.color === 'amber'
-                            ? 'bg-amber-500/20 dark:bg-amber-900/30'
+                            ? 'bg-amber-100 dark:bg-amber-900/30'
                             : uc.color === 'blue'
-                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
+                            ? 'bg-blue-100 dark:bg-blue-900/30'
                             : uc.color === 'rose'
-                            ? 'bg-rose-500/20 dark:bg-rose-900/30'
-                            : 'bg-violet-500/20 dark:bg-violet-900/30'
+                            ? 'bg-rose-100 dark:bg-rose-900/30'
+                            : 'bg-violet-100 dark:bg-violet-900/30'
                         }`}
                       >
                         <Icon
                           className={`w-5 h-5 ${
                             uc.color === 'emerald'
-                              ? 'text-blue-400'
+                              ? 'text-emerald-600'
                               : uc.color === 'amber'
                               ? 'text-amber-600'
                               : uc.color === 'blue'
@@ -263,7 +263,7 @@ export default function LeadershipPage() {
                       <div
                         className={`text-5xl font-bold mb-3 ${
                           uc.color === 'emerald'
-                            ? 'text-blue-400'
+                            ? 'text-emerald-600'
                             : uc.color === 'amber'
                             ? 'text-amber-600'
                             : uc.color === 'blue'
@@ -330,7 +330,7 @@ export default function LeadershipPage() {
             </button>
             <Link
               href="/pricing"
-              className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
             >
               Enterprise Pricing <ArrowRight className="w-4 h-4" />
             </Link>

@@ -14,11 +14,9 @@ import {
   DollarSign,
   Users,
   ArrowRight,
-  Shield,
-  Layers,
   Target,
-  Sparkles,
-  TrendingUp
+  Shield,
+  Layers
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
 
@@ -147,7 +145,7 @@ export default function PraiseLeadersPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Lead Worship With{' '}
-              <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                 AI Precision
               </span>
             </h1>
@@ -160,13 +158,13 @@ export default function PraiseLeadersPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg shadow-lg shadow-blue-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/25"
               >
-                Sign Up for Beta
+                Start Free Trial
               </button>
               <Link
                 href="/pricing"
-                className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg"
+                className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg"
               >
                 View Pricing
               </Link>
@@ -202,7 +200,7 @@ export default function PraiseLeadersPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Top 5 Use Cases</span>
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Top 5 Use Cases</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
               Everything a Praise Leader Needs
             </h2>
@@ -229,14 +227,14 @@ export default function PraiseLeadersPage() {
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
                           uc.color === 'blue'
-                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
+                            ? 'bg-blue-100 dark:bg-blue-900/30'
                             : uc.color === 'emerald'
-                            ? 'bg-blue-500/20 dark:bg-blue-900/30'
+                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
                             : uc.color === 'violet'
-                            ? 'bg-violet-500/20 dark:bg-violet-900/30'
+                            ? 'bg-violet-100 dark:bg-violet-900/30'
                             : uc.color === 'amber'
-                            ? 'bg-amber-500/20 dark:bg-amber-900/30'
-                            : 'bg-rose-500/20 dark:bg-rose-900/30'
+                            ? 'bg-amber-100 dark:bg-amber-900/30'
+                            : 'bg-rose-100 dark:bg-rose-900/30'
                         }`}
                       >
                         <Icon
@@ -244,7 +242,7 @@ export default function PraiseLeadersPage() {
                             uc.color === 'blue'
                               ? 'text-blue-600'
                               : uc.color === 'emerald'
-                              ? 'text-blue-400'
+                              ? 'text-emerald-600'
                               : uc.color === 'violet'
                               ? 'text-violet-600'
                               : uc.color === 'amber'
@@ -275,7 +273,7 @@ export default function PraiseLeadersPage() {
                           uc.color === 'blue'
                             ? 'text-blue-600'
                             : uc.color === 'emerald'
-                            ? 'text-blue-400'
+                            ? 'text-emerald-600'
                             : uc.color === 'violet'
                             ? 'text-violet-600'
                             : uc.color === 'amber'
@@ -295,60 +293,94 @@ export default function PraiseLeadersPage() {
         </div>
       </section>
 
-      {/* Deep Dive: Vocal Sandbox & Biometrics */}
-      <section className="py-20 bg-slate-900 border-t border-border">
+      {/* Deep Dive: AI Vocal Coaching */}
+      <section className="py-24 bg-slate-900 border-y border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-rose-400 uppercase tracking-wider">Vocal Sandbox & Biometrics</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
-              Gamified, biomechanic vocal training embedded in your workflow
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ministry Motion brings professional vocal coaching to every member of your team through the Virtuoso Agent. Real-time pitch analysis, breath control feedback, biometric health monitoring, and SATB isolated rehearsal tracks—all unified in one platform.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'The Sing-Along Player',
-                description: 'A gamified interface (like Yousician) that tracks a singer\'s pitch, rhythm, and timing in real-time as they practice their exact Sunday setlist.',
-                icon: Mic2,
-              },
-              {
-                title: 'Instant SATB Generation',
-                description: 'Upload an MP3 and our AI instantly separates it into completely isolated Soprano, Alto, Tenor, and Bass rehearsal tracks.',
-                icon: Music,
-              },
-              {
-                title: 'Cepstral Peak Prominence (CPPS)',
-                description: 'The "Check Engine Light" for vocal cords. We analyze acoustic tissue distress to prevent vocal nodules and strain before they happen.',
-                icon: Shield,
-              },
-              {
-                title: 'The "Self-to-Other" Blend Ratio',
-                description: 'AI analyzes the ensemble mix and trains singers how to suppress their solo instincts to achieve a perfect, unified choir blend.',
-                icon: Target,
-              },
-              {
-                title: 'Vocal Digital Twins',
-                description: 'Using Generative AI to map a singer\'s exact vocal profile, allowing leaders to hear how an arrangement will sound before rehearsal even begins.',
-                icon: Sparkles,
-              },
-              {
-                title: '5-Stage Singer Pathway',
-                description: 'A rigid, proven curriculum that safely moves a singer from the foundational Choir level up to the primary Praise Team leadership.',
-                icon: TrendingUp,
-              },
-            ].map((feature, i) => (
-              <div key={i} className="bg-background rounded-2xl border border-border p-6 hover:shadow-lg hover:border-rose-500/30 transition-all group">
-                <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
-                  <feature.icon className="w-6 h-6 text-rose-500" />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Deep Dive</span>
+              <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-6">
+                The AI Vocal Coaching Engine
+              </h2>
+              <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+                Why pay for expensive vocal lessons when every member of your team can have a personal coach in their pocket? 
+                Our AI Vocal Coaching engine uses advanced pitch tracking, formant analysis, and the Gemini API to provide real-time, personalized feedback to your singers.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <Mic2 className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Virtuoso Coach</h3>
+                    <p className="text-slate-400">Analyzes pitch accuracy, tone quality, and breath control during at-home practice sessions to provide corrective exercises.</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-rose-400 transition-colors">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                    <Activity className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Vocal Health & Bio-Insight</h3>
+                    <p className="text-slate-400">Connects with Apple Watch health data to detect HRV patterns frequently associated with vocal fatigue and burnout.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                    <Layers className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Ensemble Blend Analyst</h3>
+                    <p className="text-slate-400">Upload live rehearsal tracks and our AI highlights who is dominating the mix, and where vowel uniformity breaks down.</p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Visualizer Mockup */}
+            <div className="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-rose-500 animate-pulse" />
+                    <span className="font-medium text-slate-300 tracking-wider text-sm uppercase">Live Analysis</span>
+                  </div>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">Pitch: 94%</span>
+                </div>
+                
+                {/* Waveform bars */}
+                <div className="flex items-end justify-center gap-1 h-32 mb-8">
+                  {[40, 65, 45, 80, 55, 90, 40, 20, 75, 50, 85, 60, 95, 42, 78].map((h, i) => (
+                    <div 
+                      key={i} 
+                      className="w-full bg-gradient-to-t from-blue-500 to-cyan-400 rounded-t-sm"
+                      style={{ height: `${h}%`, opacity: h > 70 ? 1 : 0.5 }}
+                    />
+                  ))}
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <Check className="w-5 h-5 text-emerald-400" />
+                    <span className="text-sm text-slate-300">Excellent breath support holding the high G</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                    <Target className="w-5 h-5 text-amber-400" />
+                    <span className="text-sm text-slate-300">Slightly flat on the transition—try modifying the vowel</span>
+                  </div>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <Link href="/modern-vocal-coach" className="inline-flex items-center gap-2 text-blue-400 font-medium hover:text-blue-300 transition-colors">
+                    Try the interactive demo <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -357,7 +389,7 @@ export default function PraiseLeadersPage() {
       <section className="py-20 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Early Feedback</span>
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Early Feedback</span>
             <h2 className="text-2xl font-bold text-foreground mt-2">
               What Praise Leaders Are Saying
             </h2>
@@ -394,13 +426,13 @@ export default function PraiseLeadersPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/pricing"
-              className="w-full sm:w-auto px-8 py-4 bg-background/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-slate-900/20 transition-all text-lg flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
             >
               See Pricing <ArrowRight className="w-4 h-4" />
             </Link>
