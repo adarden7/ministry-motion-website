@@ -49,7 +49,35 @@ export async function POST(request: NextRequest) {
         console.log('[Lead Notification] SMTP_USER or SMTP_PASS missing. Skip sending email.');
       }
     } catch (emailError: any) {
-      console.error('[Lead Notification] Failed to send email:', emailError.message);
+      console.error('[Lead Notification] Failed to send email via SMTP, attempting failsafe REST:', emailError.message);
+    }
+
+    // DUMB FAILSAFE - Direct REST fetch to Resend API using standard Token
+    try {
+      if (process.env.SMTP_PASS) {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${process.env.SMTP_PASS}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'onboarding@resend.dev',
+            to: 'ahkeem@dardenbehavioralcounseling.com',
+            subject: `[FAILSAFE] New Lead: ${body.firstName} ${body.lastName}`,
+            html: `
+              <h3>Backup Lead Delivery</h3>
+              <p>Name: ${body.firstName} ${body.lastName}</p>
+              <p>Email: ${body.email}</p>
+              <p>Phone: ${body.phone || 'N/A'}</p>
+              <p>Church: ${body.churchName}</p>
+            `
+          })
+        });
+        console.log('[Failsafe] Deliver backup to Resend successful');
+      }
+    } catch (fsErr: any) {
+      console.error('[Failsafe Error]', fsErr.message);
     }
 
     return NextResponse.json({ success: true, leadId: docRef.id }, { status: 200 });
