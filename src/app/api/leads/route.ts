@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
         });
 
         await transporter.sendMail({
-          from: `"Ministry Motion" <${process.env.SMTP_USER}>`,
+          from: `"Ministry Motion" <hello@ministrymotion.com>`,
           to: process.env.LEAD_NOTIFICATION_EMAIL || process.env.SMTP_USER,
           subject: `New Lead: ${body.firstName} ${body.lastName} - ${body.churchName}`,
           html: `
