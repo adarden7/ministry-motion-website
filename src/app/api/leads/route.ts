@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     const db = getAdminDb();
-    const leadsRef = db.collection('beta_leads');
+    const leadsRef = db.collection('leads');
     
     const docRef = await leadsRef.add({
       ...body,
