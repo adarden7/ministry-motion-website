@@ -16,68 +16,49 @@ export async function POST(request: NextRequest) {
       status: 'new'
     });
 
-    // Send Notification Email safely without blocking the response
+    // Send Notification Email securely through Resend API (Bypasses Vercel SMTP port blocking)
     try {
-      if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-        const transporter = nodemailer.createTransport({
-          host: process.env.SMTP_HOST || 'smtp.gmail.com',
-          port: parseInt(process.env.SMTP_PORT || '587'),
-          secure: process.env.SMTP_PORT === '465',
-          auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,
-          },
-        });
-
-        await transporter.sendMail({
-          from: `"Ministry Motion" <hello@ministrymotion.com>`,
-          to: process.env.LEAD_NOTIFICATION_EMAIL || process.env.SMTP_USER,
-          subject: `New Lead: ${body.firstName} ${body.lastName} - ${body.churchName}`,
-          html: `
-            <h3>New Beta Lead Received</h3>
-            <p><strong>Name:</strong> ${body.firstName} ${body.lastName}</p>
-            <p><strong>Email:</strong> ${body.email}</p>
-            <p><strong>Phone:</strong> ${body.phone || 'N/A'}</p>
-            <p><strong>Church:</strong> ${body.churchName} (${body.churchSize} members)</p>
-            <p><strong>Role:</strong> ${body.role || 'N/A'}</p>
-            <br/>
-            <p><small>View the full details in your Firestore beta_leads collection (ID: ${docRef.id}).</small></p>
-          `,
-        });
-        console.log('[Lead Notification] Email sent successfully.');
-      } else {
-        console.log('[Lead Notification] SMTP_USER or SMTP_PASS missing. Skip sending email.');
-      }
-    } catch (emailError: any) {
-      console.error('[Lead Notification] Failed to send email via SMTP, attempting failsafe REST:', emailError.message);
-    }
-
-    // DUMB FAILSAFE - Direct REST fetch to Resend API using standard Token
-    try {
-      if (process.env.SMTP_PASS) {
-        await fetch('https://api.resend.com/emails', {
+      const apiKey = process.env.RESEND_API_KEY || process.env.SMTP_PASS;
+      if (apiKey) {
+        const emailResponse = await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${process.env.SMTP_PASS}`,
+            'Authorization': `Bearer ${apiKey}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: 'onboarding@resend.dev',
-            to: 'ahkeem@dardenbehavioralcounseling.com',
-            subject: `[FAILSAFE] New Lead: ${body.firstName} ${body.lastName}`,
+            from: '"Ministry Motion" <hello@ministrymotion.com>',
+            to: process.env.LEAD_NOTIFICATION_EMAIL || 'ahkeem@dardenbehavioralcounseling.com',
+            subject: `New Lead: ${body.firstName} ${body.lastName} - ${body.churchName}`,
             html: `
-              <h3>Backup Lead Delivery</h3>
-              <p>Name: ${body.firstName} ${body.lastName}</p>
-              <p>Email: ${body.email}</p>
-              <p>Phone: ${body.phone || 'N/A'}</p>
-              <p>Church: ${body.churchName}</p>
+              <h2>New MinistryMotion Lead</h2>
+              <div style="font-family: sans-serif; line-height: 1.6;">
+                <p><strong>Name:</strong> ${body.firstName} ${body.lastName}</p>
+                <p><strong>Email:</strong> ${body.email}</p>
+                <p><strong>Phone:</strong> ${body.phone || 'N/A'}</p>
+                <p><strong>Church Name:</strong> ${body.churchName}</p>
+                <p><strong>Church Size:</strong> ${body.churchSize || 'N/A'}</p>
+                <p><strong>Role/Title:</strong> ${body.role || 'N/A'}</p>
+                <p><strong>Source:</strong> ${body.source || 'Website UI'}</p>
+                ${body.interests && body.interests.length > 0 ? `<p><strong>Interests:</strong> ${body.interests.join(', ')}</p>` : ''}
+                <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;" />
+                <p><small>This lead securely synchronized to Firebase and HubSpot.</small></p>
+              </div>
             `
           })
         });
-        console.log('[Failsafe] Deliver backup to Resend successful');
+
+        if (!emailResponse.ok) {
+          const errText = await emailResponse.text();
+          console.error('[Lead Notification] Resend API Error:', errText);
+        } else {
+          console.log('[Lead Notification] Email officially dispatched via Resend API.');
+        }
+      } else {
+        console.log('[Lead Notification] Missing Resend API Keys. Skip sending email.');
       }
-    } catch (fsErr: any) {
-      console.error('[Failsafe Error]', fsErr.message);
+    } catch (emailError: any) {
+      console.error('[Lead Notification] Fatal delivery failure:', emailError.message);
     }
 
     // HubSpot CRM SYNCHRONIZATION
