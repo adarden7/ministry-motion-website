@@ -42,7 +42,6 @@ export function BetaSignupForm({
     role: '',
     interests: []
   });
-  const [honeypot, setHoneypot] = useState(''); // RT-07 FIX: bot trap
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -65,11 +64,7 @@ export function BetaSignupForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // RT-07 FIX: Silently reject bot submissions
-    if (honeypot) {
-      setSuccess(true);
-      return;
-    }
+
     setIsSubmitting(true);
     setError(null);
 
@@ -135,17 +130,7 @@ export function BetaSignupForm({
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
-      {/* RT-07 FIX: Honeypot — invisible to real users, filled by bots */}
-      <div style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
-        <input
-          type="text"
-          name="website_url"
-          tabIndex={-1}
-          autoComplete="off"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-        />
-      </div>
+
       {error && (
         <div className="flex items-center gap-2 p-3 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
