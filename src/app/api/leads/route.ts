@@ -80,6 +80,52 @@ export async function POST(request: NextRequest) {
       console.error('[Failsafe Error]', fsErr.message);
     }
 
+    // HubSpot CRM SYNCHRONIZATION
+    if (process.env.HUBSPOT_ACCESS_TOKEN) {
+      try {
+        const hubspotPayload = {
+          properties: {
+            email: body.email,
+            firstname: body.firstName,
+            lastname: body.lastName,
+            phone: body.phone || '',
+            company: body.churchName,
+            jobtitle: body.role || '',
+            hs_lead_status: 'NEW',
+            church_size: body.churchSize || '' // Assuming there might be a custom property, or it just passes it implicitly
+          }
+        };
+
+        const hsResponse = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(hubspotPayload)
+        });
+
+        if (!hsResponse.ok) {
+          const hsErrorText = await hsResponse.text();
+          console.error('[HubSpot Sync] Failed to create contact:', hsErrorText);
+        } else {
+          const hsData = await hsResponse.json();
+          console.log('[HubSpot Sync] Successfully created contact. ID:', hsData.id);
+          
+          // Optionally update the Firebase lead with the hubspot ID async
+          leadsRef.doc(docRef.id).update({
+            hubspotContactId: hsData.id,
+            hubspotSyncedAt: new Date().toISOString()
+          }).catch(dbErr => console.error('[HubSpot Sync] Failed to tag Firebase document', dbErr.message));
+        }
+
+      } catch (hubspotErr: any) {
+        console.error('[HubSpot Sync] Fatal error synchronizing lead:', hubspotErr.message);
+      }
+    } else {
+      console.log('[HubSpot Sync] HUBSPOT_ACCESS_TOKEN missing. Skipping CRM sync.');
+    }
+
     return NextResponse.json({ success: true, leadId: docRef.id }, { status: 200 });
   } catch (error: any) {
     console.error('[Lead Submission Fatal]', error);
