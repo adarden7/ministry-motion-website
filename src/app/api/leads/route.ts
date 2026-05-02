@@ -54,6 +54,48 @@ export async function POST(request: NextRequest) {
         } else {
           console.log('[Lead Notification] Email officially dispatched via Resend API.');
         }
+
+        // Send Confirmation Email to the Lead
+        const confirmResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: '"Ministry Motion" <hello@ministrymotion.com>',
+            to: body.email,
+            subject: 'Welcome to Ministry Motion Beta!',
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
+                <div style="background: #1a1a2e; padding: 32px; border-radius: 12px 12px 0 0; text-align: center;">
+                  <h1 style="margin: 0; color: #fff; font-size: 28px;">Welcome to Ministry Motion!</h1>
+                  <p style="margin: 8px 0 0; color: #a5b4fc; font-size: 16px;">Your beta request is confirmed.</p>
+                </div>
+                <div style="padding: 40px 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
+                  <h3 style="margin-top: 0; font-size: 18px; color: #1e293b;">Hi ${body.firstName},</h3>
+                  <p style="font-size: 16px; line-height: 1.6; color: #475569;">
+                    Thank you for signing up for the Ministry Motion early access beta! We're thrilled to have you onboard.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; color: #475569;">
+                    We're currently processing beta requests and rolling out access in waves. Keep an eye on your inbox, as we'll be reaching out very soon with your exclusive invitation and next steps to log in!
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; color: #475569; margin-top: 32px;">
+                    Blessings,<br/>
+                    <strong>The Ministry Motion Team</strong>
+                  </p>
+                </div>
+              </div>
+            `
+          })
+        });
+
+        if (!confirmResponse.ok) {
+          console.error('[Beta Confirmation] Failed to send email to lead:', await confirmResponse.text());
+        } else {
+          console.log('[Beta Confirmation] Email dispatched to lead successfully.');
+        }
+
       } else {
         console.log('[Lead Notification] Missing Resend API Keys. Skip sending email.');
       }
