@@ -52,7 +52,8 @@ const guides = [
     icon: Mic2,
     pages: '32 pages',
     audience: 'Worship Directors, Praise Leaders',
-    cta: 'Download PDF',
+    cta: 'Read Guide',
+    href: '/resources/complete-guide-ai-worship-ministry',
     comingSoon: false,
   },
   {
@@ -63,7 +64,8 @@ const guides = [
     icon: BookOpen,
     pages: '24 pages',
     audience: 'Church Admins, Executive Pastors',
-    cta: 'Download PDF',
+    cta: 'Read Guide',
+    href: '/resources/denominational-setup-guide',
     comingSoon: false,
   },
   {
@@ -74,8 +76,9 @@ const guides = [
     icon: Users,
     pages: '18 pages',
     audience: 'Ministry Directors, Volunteer Coordinators',
-    cta: 'Download PDF',
-    comingSoon: true,
+    cta: 'Read Guide',
+    href: '/resources/volunteer-health-playbook',
+    comingSoon: false,
   },
   {
     type: 'Guide' as ResourceType,
@@ -85,8 +88,9 @@ const guides = [
     icon: BarChart3,
     pages: '20 pages',
     audience: 'Senior Pastors, Elders, Finance Committees',
-    cta: 'Download PDF',
-    comingSoon: true,
+    cta: 'Read Guide',
+    href: '/resources/church-health-reporting',
+    comingSoon: false,
   },
 ];
 
@@ -99,6 +103,7 @@ const tools = [
       'Enter your current tool subscriptions, team size, and hours spent on administrative tasks. Get a customized analysis of potential savings from consolidating to Ministry Motion.',
     icon: Calculator,
     cta: 'Open Calculator',
+    href: '/resources/roi-calculator',
     comingSoon: false,
   },
   {
@@ -107,7 +112,8 @@ const tools = [
     description:
       'A 47-point checklist for migrating from Planning Center Online to Ministry Motion without data loss. Covers member records, service plans, song libraries, volunteer rosters, and giving history.',
     icon: RefreshCw,
-    cta: 'Download Checklist',
+    cta: 'Open Checklist',
+    href: '/resources/pco-migration-checklist',
     comingSoon: false,
   },
   {
@@ -117,7 +123,8 @@ const tools = [
       'Is your team ready to adopt AI vocal coaching and service analysis? This 25-question assessment scores your team across technical readiness, cultural openness, and data maturity.',
     icon: FileText,
     cta: 'Take Assessment',
-    comingSoon: true,
+    href: '/resources/readiness-assessment',
+    comingSoon: false,
   },
   {
     type: 'Tool' as ResourceType,
@@ -125,7 +132,8 @@ const tools = [
     description:
       'A downloadable spreadsheet template that helps you document every church software subscription, its cost, core use case, and which Ministry Motion features it overlaps with.',
     icon: BarChart3,
-    cta: 'Download Template',
+    cta: 'Open Template',
+    href: '/resources/ministry-subscription-stack-audit',
     comingSoon: false,
   },
 ];
@@ -140,8 +148,8 @@ const webinars = [
     icon: Video,
     duration: '45 min',
     presenter: 'Ministry Motion Team',
-    date: 'Recorded — watch anytime',
-    comingSoon: false,
+    date: 'Recording in production',
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -151,8 +159,8 @@ const webinars = [
     icon: Video,
     duration: '60 min',
     presenter: 'Panel: Senior Pastors + MM Team',
-    date: 'Recorded — watch anytime',
-    comingSoon: false,
+    date: 'Recording in production',
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -163,7 +171,7 @@ const webinars = [
     duration: '75 min',
     presenter: 'Ministry Motion Product Team',
     date: 'Live sessions monthly',
-    comingSoon: false,
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -185,6 +193,7 @@ function ResourceCard({
   icon: Icon,
   cta,
   comingSoon,
+  href,
   meta,
 }: {
   type: ResourceType;
@@ -193,6 +202,7 @@ function ResourceCard({
   icon: typeof Download;
   cta: string;
   comingSoon: boolean;
+  href?: string;
   meta?: string[];
 }) {
   return (
@@ -214,15 +224,18 @@ function ResourceCard({
           ))}
         </div>
       )}
-      {comingSoon ? (
+      {comingSoon || !href ? (
         <span className="inline-block px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg text-center">
           Coming Soon
         </span>
       ) : (
-        <button className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
-          {type === 'Webinar' ? <Play className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+        <Link
+          href={href}
+          className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          {type === 'Webinar' ? <Play className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
           {cta}
-        </button>
+        </Link>
       )}
     </div>
   );
@@ -285,6 +298,7 @@ export default function ResourcesPage() {
                 description={g.description}
                 icon={g.icon}
                 cta={g.cta}
+                href={g.href}
                 comingSoon={g.comingSoon}
                 meta={[g.pages, g.audience]}
               />
@@ -320,6 +334,7 @@ export default function ResourcesPage() {
                 description={t.description}
                 icon={t.icon}
                 cta={t.cta}
+                href={t.href}
                 comingSoon={t.comingSoon}
               />
             ))}
