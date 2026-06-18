@@ -91,17 +91,17 @@ export function StatGrid({ stats }: { stats: KeyStat[] }) {
   if (!stats?.length) return null;
   return (
     <div className="not-prose my-2">
-      <p className="text-xs font-semibold uppercase tracking-wider text-violet-400 mb-4">By the numbers</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-400 mb-4">By the numbers</p>
       <div className={`grid gap-4 ${stats.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
         {stats.slice(0, 4).map((s, i) => (
           <div
             key={i}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-center"
+            className="rounded-2xl border border-border bg-muted/40 p-5 text-center"
           >
-            <div className="text-4xl font-bold bg-gradient-to-br from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <div className="text-4xl font-bold bg-gradient-to-br from-violet-600 to-fuchsia-600 dark:from-violet-400 dark:to-fuchsia-400 bg-clip-text text-transparent">
               {s.value}
             </div>
-            <div className="mt-2 text-sm text-slate-400 leading-snug">{s.label}</div>
+            <div className="mt-2 text-sm text-muted-foreground leading-snug">{s.label}</div>
           </div>
         ))}
       </div>
@@ -116,10 +116,10 @@ function BarChart({ chart }: { chart: ChartData }) {
       {chart.data.map((d, i) => (
         <div key={i}>
           <div className="flex items-center justify-between mb-1.5 text-sm">
-            <span className="text-slate-300">{d.label}</span>
-            <span className="font-semibold text-white">{d.display ?? d.value.toLocaleString()}</span>
+            <span className="text-muted-foreground">{d.label}</span>
+            <span className="font-semibold text-foreground">{d.display ?? d.value.toLocaleString()}</span>
           </div>
-          <div className="h-3 w-full rounded-full bg-white/5 overflow-hidden">
+          <div className="h-3 w-full rounded-full bg-muted overflow-hidden">
             <div
               className="h-full rounded-full"
               style={{
@@ -150,17 +150,17 @@ function DonutChart({ chart }: { chart: ChartData }) {
         className="relative w-36 h-36 rounded-full flex-shrink-0"
         style={{ background: `conic-gradient(${segments.join(', ')})` }}
       >
-        <div className="absolute inset-[18%] rounded-full bg-slate-950" />
+        <div className="absolute inset-[18%] rounded-full bg-background" />
       </div>
       <ul className="space-y-2 text-sm">
         {chart.data.map((d, i) => (
-          <li key={i} className="flex items-center gap-2 text-slate-300">
+          <li key={i} className="flex items-center gap-2 text-muted-foreground">
             <span
               className="w-3 h-3 rounded-sm flex-shrink-0"
               style={{ background: chartPalette[i % chartPalette.length] }}
             />
-            <span className="font-semibold text-white">{d.display ?? `${Math.round((d.value / total) * 100)}%`}</span>
-            <span className="text-slate-400">{d.label}</span>
+            <span className="font-semibold text-foreground">{d.display ?? `${Math.round((d.value / total) * 100)}%`}</span>
+            <span className="text-muted-foreground">{d.label}</span>
           </li>
         ))}
       </ul>
@@ -173,11 +173,11 @@ export function Callout({ children }: { children: ReactNode }) {
   return (
     <aside className="not-prose my-8 rounded-2xl border border-violet-500/30 bg-violet-500/[0.07] p-5 flex gap-4">
       <div className="w-9 h-9 rounded-lg bg-violet-500/20 flex items-center justify-center flex-shrink-0">
-        <Sparkles className="w-4 h-4 text-violet-300" />
+        <Sparkles className="w-4 h-4 text-violet-600 dark:text-violet-300" />
       </div>
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-violet-300 mb-1">Key insight</p>
-        <p className="text-slate-200 leading-relaxed">{children}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-300 mb-1">Key insight</p>
+        <p className="text-foreground leading-relaxed">{children}</p>
       </div>
     </aside>
   );
@@ -187,8 +187,8 @@ export function Callout({ children }: { children: ReactNode }) {
 export function ChartFigure({ chart }: { chart: ChartData }) {
   if (!chart?.data?.length) return null;
   return (
-    <figure className="not-prose my-10 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-      <figcaption className="text-sm font-semibold text-white mb-5">{chart.title}</figcaption>
+    <figure className="not-prose my-10 rounded-2xl border border-border bg-muted/30 p-6">
+      <figcaption className="text-sm font-semibold text-foreground mb-5">{chart.title}</figcaption>
       {chart.type === 'donut' ? <DonutChart chart={chart} /> : <BarChart chart={chart} />}
     </figure>
   );

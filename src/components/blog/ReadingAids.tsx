@@ -59,8 +59,8 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav aria-label="Table of contents" className="text-sm">
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-4">On this page</p>
-      <ul className="space-y-2 border-l border-white/10">
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">On this page</p>
+      <ul className="space-y-2 border-l border-border">
         {headings.map((h) => {
           const active = h.id === activeId;
           return (
@@ -72,8 +72,8 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
                   h.level === 3 ? 'pl-7' : 'pl-4'
                 } ${
                   active
-                    ? 'border-violet-500 text-violet-300 font-medium'
-                    : 'border-transparent text-slate-400 hover:text-slate-200'
+                    ? 'border-violet-500 text-violet-600 dark:text-violet-300 font-medium'
+                    : 'border-transparent text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {h.text}
