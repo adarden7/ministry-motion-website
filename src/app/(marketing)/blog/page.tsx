@@ -2,236 +2,20 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import {
-  BookOpen,
-  Clock,
-  ArrowRight,
-  TrendingUp,
-  Lightbulb,
-  BarChart3,
-  Layers,
-} from 'lucide-react';
+import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
+import { getAllPosts } from '@/lib/blog-content';
 
-// Blog article categories
-type Category = 'All' | 'Thought Leadership' | 'How-To Guides' | 'Comparison & ROI' | 'Deep Dives';
+// Single source of truth: real published articles from blog-content.ts.
+const blogPosts = getAllPosts();
 
-const categories: Category[] = [
-  'All',
-  'Thought Leadership',
-  'How-To Guides',
-  'Comparison & ROI',
-  'Deep Dives',
-];
-
-const categoryConfig: Record<string, { color: string; icon: typeof BookOpen }> = {
-  'Thought Leadership': { color: 'violet', icon: TrendingUp },
-  'How-To Guides': { color: 'fuchsia', icon: Lightbulb },
-  'Comparison & ROI': { color: 'amber', icon: BarChart3 },
-  'Deep Dives': { color: 'indigo', icon: Layers },
-};
-
-// 20 blog posts across 4 pillars
-const blogPosts = [
-  // Pillar 1: Thought Leadership (01–05)
-  {
-    id: '01',
-    slug: 'why-discipleship-data-matters-more-than-attendance',
-    title: 'Why Discipleship Data Matters More Than Attendance Numbers',
-    excerpt:
-      'Sunday head counts tell you who showed up. Discipleship data tells you who is growing. Here is why churches that measure progression—not presence—are seeing stronger long-term retention and giving.',
-    category: 'Thought Leadership',
-    readTime: '6 min read',
-  },
-  {
-    id: '02',
-    slug: 'the-worship-team-as-discipleship-engine',
-    title: 'The Worship Team as a Discipleship Engine',
-    excerpt:
-      'Most churches treat the worship team as a production crew. The churches seeing the most growth treat it as a primary discipleship environment. The difference in approach changes everything.',
-    category: 'Thought Leadership',
-    readTime: '8 min read',
-  },
-  {
-    id: '03',
-    slug: 'ai-in-ministry-five-legitimate-applications',
-    title: 'AI in Ministry: 5 Legitimate Applications (And 3 to Avoid)',
-    excerpt:
-      'Not all AI applications in ministry are created equal. We break down the five areas where AI genuinely helps church staff, and three hyped uses that create more problems than they solve.',
-    category: 'Thought Leadership',
-    readTime: '7 min read',
-  },
-  {
-    id: '04',
-    slug: 'volunteer-burnout-the-hidden-discipleship-crisis',
-    title: "Volunteer Burnout: The Hidden Discipleship Crisis No One Is Measuring",
-    excerpt:
-      'Churches track giving and attendance obsessively. Almost none systematically monitor volunteer health. The result: their most committed servants leave quietly—and no one sees it coming.',
-    category: 'Thought Leadership',
-    readTime: '9 min read',
-  },
-  {
-    id: '05',
-    slug: 'from-connect-to-go-rethinking-the-discipleship-pipeline',
-    title: 'From Connect to Go: Rethinking the Discipleship Pipeline for the Modern Church',
-    excerpt:
-      'The Connect→Grow→Serve→Go framework has been around for decades. What has changed is our ability to measure every transition in real time. Here is what that measurement reveals.',
-    category: 'Thought Leadership',
-    readTime: '10 min read',
-  },
-
-  // Pillar 2: How-To Guides (06–10)
-  {
-    id: '06',
-    slug: 'how-to-generate-satb-rehearsal-tracks-in-30-seconds',
-    title: 'How to Generate SATB Rehearsal Tracks in 30 Seconds',
-    excerpt:
-      'A step-by-step guide to uploading your worship set and generating fully separated Soprano, Alto, Tenor, and Bass practice tracks—ready for your team before Wednesday.',
-    category: 'How-To Guides',
-    readTime: '4 min read',
-  },
-  {
-    id: '07',
-    slug: 'how-to-run-a-30-day-automated-service-prep-timeline',
-    title: 'How to Run a 30-Day Automated Service Prep Timeline',
-    excerpt:
-      'Set your service date once. Let the platform handle the 7-milestone countdown—from song selection through tech rehearsal to post-service scorecard delivery.',
-    category: 'How-To Guides',
-    readTime: '5 min read',
-  },
-  {
-    id: '08',
-    slug: 'how-to-use-the-position-matcher-agent-for-volunteer-placement',
-    title: 'How to Use the Position Matcher Agent for Volunteer Placement',
-    excerpt:
-      'A walkthrough of the spiritual gifts assessment → vector matching → leader confirmation workflow that places volunteers in roles aligned with their gifts in minutes, not hours.',
-    category: 'How-To Guides',
-    readTime: '6 min read',
-  },
-  {
-    id: '09',
-    slug: 'how-to-set-up-planning-center-integration',
-    title: 'How to Set Up Planning Center Integration',
-    excerpt:
-      'Connect Ministry Motion to Planning Center Online in under 10 minutes and import your members, services, and rosters—without manual exports, CSV files, or data reconciliation.',
-    category: 'How-To Guides',
-    readTime: '5 min read',
-  },
-  {
-    id: '10',
-    slug: 'how-to-read-your-church-health-radar-chart',
-    title: 'How to Read Your Church Health Radar Chart',
-    excerpt:
-      'The 5-dimension radar chart is more informative than a single score. This guide explains what each dimension means, what ideal looks like, and how to act on the gaps.',
-    category: 'How-To Guides',
-    readTime: '7 min read',
-  },
-
-  // Pillar 3: Comparison & ROI (11–15)
-  {
-    id: '11',
-    slug: 'ministry-motion-vs-planning-center-which-is-right',
-    title: 'Ministry Motion vs. Planning Center: Which Is Right for Your Church?',
-    excerpt:
-      'Planning Center is the industry standard for service planning. Ministry Motion adds AI coaching, member analytics, and learning management. This head-to-head helps you decide if you need one, the other, or both.',
-    category: 'Comparison & ROI',
-    readTime: '8 min read',
-  },
-  {
-    id: '12',
-    slug: 'calculating-roi-on-church-software',
-    title: 'How to Calculate ROI on Church Software (A Framework for Finance Committees)',
-    excerpt:
-      'Finance committees need more than feature lists. This framework helps you quantify the time saved, retention improved, and giving increased from ministry platform investments.',
-    category: 'Comparison & ROI',
-    readTime: '9 min read',
-  },
-  {
-    id: '13',
-    slug: 'replacing-6-subscriptions-with-one-platform',
-    title: "Replacing 6 Subscriptions With 1: A Real-World Cost Analysis",
-    excerpt:
-      'PCO, Circle, Yousician, Coursera, Zoom, and Pushpay can cost over $1,000/month combined. We walk through which core features Ministry Motion Pro replaces and where the savings are real.',
-    category: 'Comparison & ROI',
-    readTime: '6 min read',
-  },
-  {
-    id: '14',
-    slug: 'ai-vocal-coaching-vs-human-coach-cost-comparison',
-    title: 'AI Vocal Coaching vs. Human Vocal Coach: A Cost and Outcome Comparison',
-    excerpt:
-      'A human vocal coach costs $60–120/hour. AI vocal coaching in Ministry Motion costs $0.10 in processing per rehearsal track. We compare outcomes, consistency, and appropriate use cases for each.',
-    category: 'Comparison & ROI',
-    readTime: '7 min read',
-  },
-  {
-    id: '15',
-    slug: 'discipleship-investment-and-giving-the-research',
-    title: 'Discipleship Investment and Giving: What 12 Studies Actually Say',
-    excerpt:
-      'The claim that engaged members give more is widely repeated. Here we examine the actual research base, what the studies measured, and what confidence intervals allow us to responsibly claim.',
-    category: 'Comparison & ROI',
-    readTime: '11 min read',
-  },
-
-  // Pillar 4: Deep Dives (16–20)
-  {
-    id: '16',
-    slug: 'how-satb-ai-separation-actually-works',
-    title: 'How AI SATB Voice Separation Actually Works (Technical Deep Dive)',
-    excerpt:
-      'A technical breakdown of the source separation pipeline behind Ministry Motion rehearsal tracks—from audio ingestion through frequency domain separation to part recombination with blend mix.',
-    category: 'Deep Dives',
-    readTime: '12 min read',
-  },
-  {
-    id: '17',
-    slug: 'the-architecture-of-the-unifiedmember-system',
-    title: "The Architecture of Ministry Motion's UnifiedMember System",
-    excerpt:
-      'How we built a single member record that serves 20 specialized AI agents, all ministry dashboards, PCO integration, and real-time journey pipeline tracking—without data fragmentation.',
-    category: 'Deep Dives',
-    readTime: '14 min read',
-  },
-  {
-    id: '18',
-    slug: 'how-the-advancement-arbiter-calculates-journey-readiness',
-    title: 'How the Advancement Arbiter Calculates Journey Readiness',
-    excerpt:
-      'A deep dive into the signals, weights, and thresholds the Advancement Arbiter uses to determine when a member is ready to advance from Connect to Grow, Grow to Serve, or Serve to Go.',
-    category: 'Deep Dives',
-    readTime: '10 min read',
-  },
-  {
-    id: '19',
-    slug: 'wearable-hrv-data-in-ministry-what-it-actually-measures',
-    title: 'Wearable HRV Data in Ministry: What It Actually Measures and What It Does Not',
-    excerpt:
-      'Apple Watch and Galaxy Watch HRV data can surface patterns associated with physiological stress. This deep dive explains what the data means, what it cannot diagnose, and how Ministry Motion uses it responsibly.',
-    category: 'Deep Dives',
-    readTime: '13 min read',
-  },
-  {
-    id: '20',
-    slug: 'building-the-god-quotient-scoring-theology-at-scale',
-    title: 'Building the God Quotient: Scoring Theological Depth at Scale',
-    excerpt:
-      'How we built a scoring system that evaluates lyrical theological weight, scriptural alignment, and thematic consistency across an entire service set—without reducing theology to a number.',
-    category: 'Deep Dives',
-    readTime: '15 min read',
-  },
-];
+// Categories are derived from the actual articles so every filter + card
+// links to a real post (no 404s).
+const categories: string[] = ['All', ...Array.from(new Set(blogPosts.map((p) => p.category)))];
 
 function CategoryBadge({ category }: { category: string }) {
-  const config = categoryConfig[category] || { color: 'blue', icon: BookOpen };
-  const colorMap: Record<string, string> = {
-    violet: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
-    fuchsia: 'bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300',
-    amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
-    indigo: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
-  };
   return (
-    <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${colorMap[config.color] || colorMap['blue']}`}>
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300">
       {category}
     </span>
   );
@@ -239,27 +23,11 @@ function CategoryBadge({ category }: { category: string }) {
 
 export default function BlogPage() {
   const { openBetaModal } = useMarketing();
-  const [activeCategory, setActiveCategory] = useState<Category>('All');
+  const [activeCategory, setActiveCategory] = useState<string>('All');
 
   const filtered = activeCategory === 'All'
     ? blogPosts
     : blogPosts.filter((p) => p.category === activeCategory);
-
-  const categoryColorMap: Record<string, string> = {
-    'All': 'bg-foreground text-background',
-    'Thought Leadership': 'bg-violet-600 text-white',
-    'How-To Guides': 'bg-fuchsia-600 text-white',
-    'Comparison & ROI': 'bg-amber-600 text-white',
-    'Deep Dives': 'bg-violet-600 text-white',
-  };
-
-  const categoryInactiveMap: Record<string, string> = {
-    'All': 'bg-muted text-muted-foreground hover:bg-muted/80',
-    'Thought Leadership': 'bg-muted text-muted-foreground hover:bg-violet-50 hover:text-violet-700 dark:hover:bg-violet-900/20 dark:hover:text-violet-300',
-    'How-To Guides': 'bg-muted text-muted-foreground hover:bg-fuchsia-50 hover:text-fuchsia-700 dark:hover:bg-fuchsia-900/20 dark:hover:text-fuchsia-300',
-    'Comparison & ROI': 'bg-muted text-muted-foreground hover:bg-amber-50 hover:text-amber-700 dark:hover:bg-amber-900/20 dark:hover:text-amber-300',
-    'Deep Dives': 'bg-muted text-muted-foreground hover:bg-violet-50 hover:text-violet-700 dark:hover:bg-violet-900/20 dark:hover:text-violet-300',
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
@@ -300,8 +68,8 @@ export default function BlogPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   activeCategory === cat
-                    ? categoryColorMap[cat] || 'bg-foreground text-background'
-                    : categoryInactiveMap[cat] || 'bg-muted text-muted-foreground hover:bg-muted/80'
+                    ? 'bg-violet-600 text-white'
+                    : 'bg-muted text-muted-foreground hover:bg-violet-50 hover:text-violet-700 dark:hover:bg-violet-900/20 dark:hover:text-violet-300'
                 }`}
               >
                 {cat}
@@ -330,7 +98,7 @@ export default function BlogPage() {
                     <Clock className="w-3 h-3" />
                     {filtered[0].readTime}
                   </span>
-                  <span className="text-xs text-muted-foreground font-mono">{filtered[0].id}</span>
+                  <span className="text-xs text-muted-foreground">{filtered[0].author}</span>
                 </div>
                 <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-violet-600 transition-colors">
                   {filtered[0].title}
@@ -347,7 +115,7 @@ export default function BlogPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.slice(1).map((post) => (
               <Link
-                key={post.id}
+                key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group bg-background rounded-2xl border border-border p-6 hover:shadow-lg hover:border-violet-300 dark:hover:border-violet-700 transition-all flex flex-col"
               >

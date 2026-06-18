@@ -12,11 +12,6 @@ export function MarketingFooter() {
             <p className="max-w-sm mb-6 leading-relaxed">
               The AI-native ministry intelligence platform. Replace disconnected tools with 15 specialized AI agents working 24/7 to develop your people and track spiritual growth.
             </p>
-            <div className="flex items-center gap-4">
-              <button className="text-muted-foreground hover:text-violet-400 transition-colors">Twitter</button>
-              <button className="text-muted-foreground hover:text-violet-400 transition-colors">LinkedIn</button>
-              <button className="text-muted-foreground hover:text-violet-400 transition-colors">YouTube</button>
-            </div>
           </div>
 
           <div>
@@ -34,9 +29,9 @@ export function MarketingFooter() {
             <h4 className="text-foreground font-medium mb-4">Resources</h4>
             <ul className="space-y-3">
               <li><Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-              <li><Link href="/community" className="hover:text-foreground transition-colors">Community</Link></li>
-              <li><Link href="/support" className="hover:text-foreground transition-colors">Help Center</Link></li>
-              <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact Sales</Link></li>
+              <li><Link href="/collective" className="hover:text-foreground transition-colors">Community</Link></li>
+              <li><Link href="/resources" className="hover:text-foreground transition-colors">Resources</Link></li>
+              <li><Link href="/pricing" className="hover:text-foreground transition-colors">Contact Sales</Link></li>
             </ul>
           </div>
 
