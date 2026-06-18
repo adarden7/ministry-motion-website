@@ -28,8 +28,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'discipleship-crisis-39-percent-not-discipled',
     title: 'The Discipleship Crisis: 39% of Christians Aren\'t Being Discipled',
-    subtitle: 'Lifeway Research exposes a systemic gap in spiritual mentoring that no attendance tracker can fix.',
-    excerpt: 'Lifeway Research reveals a staggering gap in church discipleship. Here\'s what the data shows and how technology can help close the gap.',
+    subtitle: 'Barna Group research exposes a systemic gap in spiritual mentoring that no attendance tracker can fix.',
+    excerpt: 'Barna Group research reveals a staggering gap in church discipleship. Here\'s what the data shows and how technology can help close the gap.',
     author: 'Ministry Motion Team',
     publishedAt: '2025-02-03',
     readTime: '7 min read',
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 ## The Hidden Crisis in Our Churches
 
-According to Lifeway Research, **39% of Christians report they are not being actively discipled** by anyone in their church community. This isn\'t a minor gap—it\'s a crisis that affects the spiritual growth of millions.
+According to Barna Group research, **39% of Christians report they are not being actively discipled** by anyone in their church community. This isn\'t a minor gap—it\'s a crisis that affects the spiritual growth of millions.
 
 ~~~chart
 {"title":"What church software tracks vs. what discipleship needs","type":"donut","data":[{"label":"Being actively discipled","value":61,"display":"61%"},{"label":"Not being discipled","value":39,"display":"39%"}]}

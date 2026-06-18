@@ -99,8 +99,8 @@ export async function POST(request: NextRequest) {
       } else {
         console.log('[Lead Notification] Missing Resend API Keys. Skip sending email.');
       }
-    } catch (emailError: any) {
-      console.error('[Lead Notification] Fatal delivery failure:', emailError.message);
+    } catch (emailError) {
+      console.error('[Lead Notification] Fatal delivery failure:', emailError instanceof Error ? emailError.message : String(emailError));
     }
 
     // HubSpot CRM SYNCHRONIZATION
@@ -142,18 +142,18 @@ export async function POST(request: NextRequest) {
           }).catch(dbErr => console.error('[HubSpot Sync] Failed to tag Firebase document', dbErr.message));
         }
 
-      } catch (hubspotErr: any) {
-        console.error('[HubSpot Sync] Fatal error synchronizing lead:', hubspotErr.message);
+      } catch (hubspotErr) {
+        console.error('[HubSpot Sync] Fatal error synchronizing lead:', hubspotErr instanceof Error ? hubspotErr.message : String(hubspotErr));
       }
     } else {
       console.log('[HubSpot Sync] HUBSPOT_ACCESS_TOKEN missing. Skipping CRM sync.');
     }
 
     return NextResponse.json({ success: true, leadId: docRef.id }, { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error('[Lead Submission Fatal]', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to save lead to the database: ' + error.message },
+      { success: false, error: 'Failed to save lead to the database: ' + (error instanceof Error ? error.message : String(error)) },
       { status: 500 }
     );
   }
