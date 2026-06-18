@@ -35,23 +35,20 @@ export const blogPosts: BlogPost[] = [
     readTime: '7 min read',
     category: 'Research',
     tags: ['discipleship', 'research', 'church growth', 'data'],
+    coverImage: '/blog/discipleship-crisis-39-percent-not-discipled.png',
     keyStats: [
       { value: '39%', label: 'of Christians not being actively discipled' },
       { value: '4 in 10', label: 'church members with no intentional mentoring relationship' },
       { value: '3×', label: 'more giving from engaged vs. occasional members' },
     ],
-    chartData: {
-      title: 'What church software tracks vs. what discipleship needs',
-      type: 'donut',
-      data: [
-        { label: 'Being actively discipled', value: 61, display: '61%' },
-        { label: 'Not being discipled', value: 39, display: '39%' },
-      ],
-    },
     content: `
 ## The Hidden Crisis in Our Churches
 
-According to Lifeway Research, **39% of Christians report they are not being actively discipled** by anyone in their church community. This isn't a minor gap—it's a crisis that affects the spiritual growth of millions.
+According to Lifeway Research, **39% of Christians report they are not being actively discipled** by anyone in their church community. This isn\'t a minor gap—it\'s a crisis that affects the spiritual growth of millions.
+
+~~~chart
+{"title":"What church software tracks vs. what discipleship needs","type":"donut","data":[{"label":"Being actively discipled","value":61,"display":"61%"},{"label":"Not being discipled","value":39,"display":"39%"}]}
+~~~
 
 > **Nearly 4 in 10 church members have no one intentionally walking alongside them in their faith journey.**
 
@@ -120,7 +117,11 @@ If you can't answer these questions, you're likely part of the 39% problem—not
 
 Closing the discipleship gap requires moving from event-based thinking to journey-based thinking. It requires tools that track spiritual progression, not just seat-filling.
 
-The 39% don't need another program. They need someone to notice them, guide them, and celebrate their growth. Technology can help make that possible at scale.
+~~~callout
+Discipleship is not a program problem — it is a visibility problem; churches cannot fix what they cannot see.
+~~~
+
+The 39% don\'t need another program. They need someone to notice them, guide them, and celebrate their growth. Technology can help make that possible at scale.
 
 ---
 
@@ -137,20 +138,13 @@ The 39% don't need another program. They need someone to notice them, guide them
     readTime: '6 min read',
     category: 'Research',
     tags: ['giving', 'engagement', 'stewardship', 'research'],
+    coverImage: '/blog/engaged-members-give-3x-more.png',
     keyStats: [
       { value: '3×', label: 'more given by engaged vs. occasional members (Vanco)' },
       { value: '$40K', label: 'annual giving increase from moving 20 members to engaged' },
       { value: '$3,000', label: 'average annual giving from an engaged member' },
       { value: '$1,000', label: 'average annual giving from an occasional attender' },
     ],
-    chartData: {
-      title: 'Annual giving: 200-member church scenario',
-      type: 'bar',
-      data: [
-        { label: '50% engaged today', value: 400000, display: '$400K' },
-        { label: 'Move 20 to engaged', value: 440000, display: '$440K' },
-      ],
-    },
     content: `
 ## The Engagement-Giving Connection
 
@@ -177,7 +171,11 @@ Consider the math: If your average occasional attender gives $1,000 annually, an
 | 50% engaged today | 100 × $3,000 = $300,000 | 100 × $1,000 = $100,000 | **$400,000** |
 | Move 20 to engaged | 120 × $3,000 = $360,000 | 80 × $1,000 = $80,000 | **$440,000** |
 
-That's a **$40,000 increase** by helping 20 people become more connected—not by asking for more money, but by investing in their discipleship.
+~~~chart
+{"title":"Annual giving: 200-member church scenario","type":"bar","data":[{"label":"50% engaged today","value":400000,"display":"$400K"},{"label":"Move 20 to engaged","value":440000,"display":"$440K"}]}
+~~~
+
+That\'s a **$40,000 increase** by helping 20 people become more connected—not by asking for more money, but by investing in their discipleship.
 
 > **A $40,000 giving increase from helping 20 people feel more connected—not by asking for more money, but by investing in their discipleship.**
 
@@ -226,9 +224,13 @@ When churches frame giving this way:
 
 ### The Real Return on Discipleship
 
-The 3x giving factor isn't really about money. It's about what happens when people feel connected, valued, and growing.
+The 3x giving factor isn\'t really about money. It\'s about what happens when people feel connected, valued, and growing.
 
-Engaged members don't just give more financially. They:
+~~~callout
+Investing in discipleship is the most cost-effective stewardship strategy a church can run — no campaign required.
+~~~
+
+Engaged members don\'t just give more financially. They:
 - Invite friends
 - Volunteer more hours
 - Stay longer at the church
@@ -251,25 +253,22 @@ Giving is one metric of a much larger transformation.
     readTime: '8 min read',
     category: 'Research',
     tags: ['retention', 'connection', 'community', 'research'],
+    coverImage: '/blog/43-percent-leave-feeling-disconnected.png',
     keyStats: [
       { value: '43%', label: 'of church leavers cite feeling disconnected' },
       { value: '4', label: 'predictable warning signs before a silent exit' },
       { value: '90 days', label: 'window to connect new members before drift sets in' },
     ],
-    chartData: {
-      title: 'Why people leave their church',
-      type: 'donut',
-      data: [
-        { label: 'Felt disconnected', value: 43, display: '43%' },
-        { label: 'Other reasons', value: 57, display: '57%' },
-      ],
-    },
     content: `
 ## The Disconnection Epidemic
 
 When researchers ask people why they left their church, **43% cite feeling disconnected** from the congregation. Not doctrinal disagreements. Not scandals. Not better opportunities elsewhere.
 
-Simply: they didn't feel like they belonged.
+Simply: they didn\'t feel like they belonged.
+
+~~~chart
+{"title":"Why people leave their church","type":"donut","data":[{"label":"Felt disconnected","value":43,"display":"43%"},{"label":"Other reasons","value":57,"display":"57%"}]}
+~~~
 
 > **The 43% aren\'t angry—they\'re invisible. They fade away because no one noticed them drifting.**
 
@@ -349,10 +348,14 @@ When a system alerts a pastor that "Sarah hasn't been to worship in 4 weeks and 
 
 ### Prevention vs. Recovery
 
-It's much easier (and more effective) to maintain connection than to rebuild it:
+It\'s much easier (and more effective) to maintain connection than to rebuild it:
 
 - **Prevention**: Weekly attender misses twice → friendly check-in → back on track
-- **Recovery**: Former member hasn't attended in 6 months → awkward outreach → probably not returning
+- **Recovery**: Former member hasn\'t attended in 6 months → awkward outreach → probably not returning
+
+~~~callout
+By the time a member sends their last email or fills their last seat, the church has already lost them — early detection is the only lever that works.
+~~~
 
 Churches with proactive systems report dramatically higher retention rates because they catch drift early.
 
@@ -387,22 +390,13 @@ The question isn't whether your church cares about connection. It's whether you 
     readTime: '5 min read',
     category: 'Technology',
     tags: ['AI', 'technology', 'innovation', 'church leadership'],
+    coverImage: '/blog/87-percent-leaders-open-to-ai.png',
     keyStats: [
       { value: '87%', label: 'of ministry leaders open to AI (Ministry Tech Survey)' },
       { value: '93%', label: 'interested in AI for reducing administrative burden' },
       { value: '89%', label: 'interested in AI for improving member care' },
       { value: '13%', label: 'not yet open — primarily citing human connection concerns' },
     ],
-    chartData: {
-      title: 'Ministry leader interest in AI by use case',
-      type: 'bar',
-      data: [
-        { label: 'Reduce admin burden', value: 93, display: '93%' },
-        { label: 'Improve member care', value: 89, display: '89%' },
-        { label: 'Enhance worship prep', value: 82, display: '82%' },
-        { label: 'Support skill development', value: 78, display: '78%' },
-      ],
-    },
     content: `
 ## The AI Openness Surprise
 
@@ -420,6 +414,10 @@ The survey broke down openness by use case. Leaders are most interested in AI th
 | Improves member care | 89% |
 | Enhances worship preparation | 82% |
 | Supports skill development | 78% |
+
+~~~chart
+{"title":"Ministry leader interest in AI by use case","type":"bar","data":[{"label":"Reduce admin burden","value":93,"display":"93%"},{"label":"Improve member care","value":89,"display":"89%"},{"label":"Enhance worship prep","value":82,"display":"82%"},{"label":"Support skill development","value":78,"display":"78%"}]}
+~~~
 
 > **87% of ministry leaders are open to AI—not to replace pastoral care, but to make it possible at scale.**
 
@@ -480,7 +478,11 @@ Our AI integration focuses on the high-openness, appropriate-use areas:
 
 ### The "First to Market" Advantage
 
-Here's what's remarkable: most church management systems have none of this. They're still focused on databases and calendars.
+Here\'s what\'s remarkable: most church management systems have none of this. They\'re still focused on databases and calendars.
+
+~~~callout
+The church leaders who embrace AI now — for the right reasons — will develop their people faster than any generation of ministry leaders before them.
+~~~
 
 Ministry Motion is building what the 87% are waiting for—AI that solves real ministry problems without crossing ethical lines.
 
@@ -517,6 +519,7 @@ The platforms that answer that question well will define the next generation of 
     readTime: '6 min read',
     category: 'Comparison',
     tags: ['planning center', 'comparison', 'church software', 'features'],
+    coverImage: '/blog/planning-center-vs-ministry-motion.png',
     keyStats: [
       { value: '92%', label: 'pitch accuracy detected by AI in a real service scenario' },
       { value: '4%', label: 'vocal improvement tracked month-over-month per singer' },
@@ -572,7 +575,11 @@ Ministry Motion is built around **journeys**: discipleship pathways, spiritual p
 | Did they give? | Is giving part of their discipleship? |
 | What was planned? | What actually happened? |
 
-### Features Planning Center Doesn't Have
+~~~callout
+Knowing who showed up is operations; knowing who is growing is ministry — and only one of those builds a lasting church.
+~~~
+
+### Features Planning Center Doesn\'t Have
 
 Based on the 14 Pillars of Ministry Motion:
 
@@ -662,6 +669,7 @@ That's what Ministry Motion is building.
     readTime: '12 min read',
     category: 'Vision',
     tags: ['kingdom building', 'discipleship', 'church crisis', 'leadership', 'millennials', 'gen z'],
+    coverImage: '/blog/kingdom-building-part-1-crisis.png',
     keyStats: [
       { value: '39%', label: 'of Christians not being actively discipled by anyone' },
       { value: '10–15 yrs', label: 'leadership handoff compressed into a few years' },
@@ -759,9 +767,13 @@ Here's the bitter irony: while we've left discipleship analog, others are using 
 
 > *"The children of this world are in their generation wiser than the children of light."* — Luke 16:8
 
-While AI is being deployed for exploitation and manipulation, those building the Kingdom have largely stayed on the sidelines. It's as if we're bringing 100 fish to the Master when technology could help us bring 5,000.
+While AI is being deployed for exploitation and manipulation, those building the Kingdom have largely stayed on the sidelines. It\'s as if we\'re bringing 100 fish to the Master when technology could help us bring 5,000.
 
-**The tools exist.** We're just not using them for transformation.
+~~~callout
+Every tool used for manipulation could instead be redirected toward transformation — the Kingdom has never had more leverage, and has rarely used less of it.
+~~~
+
+**The tools exist.** We\'re just not using them for transformation.
 
 ### What Would It Look Like?
 
@@ -809,6 +821,7 @@ In Part 2, we'll explore exactly how technology can bridge this gap—not by rep
     readTime: '14 min read',
     category: 'Vision',
     tags: ['kingdom building', 'ministry platform', 'AI', 'discipleship', 'church technology'],
+    coverImage: '/blog/kingdom-building-part-2-platform.png',
     keyStats: [
       { value: '25 yrs', label: 'of church consulting research behind the platform' },
       { value: '6', label: 'universal challenges every ministry faces (coordination through multiplication)' },
@@ -983,6 +996,10 @@ This is a **tapestry of ministry in motion**, not a collection of disconnected t
 
 One of our core convictions: **every participant deserves a discipler.**
 
+~~~callout
+A discipleship platform that does not insist every person has a discipler is just a fancier attendance tracker.
+~~~
+
 The "#2 insistence" means every person in the system should have someone invested in their spiritual growth. Not as an optional extra. As a requirement.
 
 The platform supports this by:
@@ -1033,21 +1050,13 @@ In Part 3, we'll look at what happens when churches actually implement this visi
     readTime: '11 min read',
     category: 'Vision',
     tags: ['kingdom building', 'transformation', 'discipleship', 'testimony', 'church growth'],
+    coverImage: '/blog/kingdom-building-part-3-transformation.png',
     keyStats: [
       { value: '94%', label: 'course completion rate for the new training curriculum' },
       { value: '40%', label: 'longer ministry service from participants who complete the new training' },
       { value: '60%', label: 'completion rate of the old curriculum — with no retention benefit' },
       { value: '43%', label: 'of leavers who cite disconnection — a preventable number' },
     ],
-    chartData: {
-      title: 'Training curriculum: completion & retention impact',
-      type: 'bar',
-      data: [
-        { label: 'New curriculum — completion', value: 94, display: '94%' },
-        { label: 'Old curriculum — completion', value: 60, display: '60%' },
-        { label: 'Longer service (new curriculum)', value: 40, display: '+40%' },
-      ],
-    },
     content: `
 ## The Light That Can't Be Hidden
 
@@ -1083,6 +1092,10 @@ Now consider the worship director, the children's ministry leader, the health mi
 |---|---|---|
 | New training course | 94% | +40% longer |
 | Old curriculum | 60% | No difference |
+
+~~~chart
+{"title":"Training curriculum: completion & retention impact","type":"bar","data":[{"label":"New curriculum — completion","value":94,"display":"94%"},{"label":"Old curriculum — completion","value":60,"display":"60%"},{"label":"Longer service (new curriculum)","value":40,"display":"+40%"}]}
+~~~
 
 > **The new training course has a 94% completion rate and participants who complete it serve 40% longer. The data tells you what to invest in.**
 
@@ -1147,7 +1160,11 @@ Churches using transformation-focused platforms see:
 - **Better morale**: Leaders have tools that work
 - **Kingdom multiplication**: Disciples make disciples
 
-But the metric that matters most isn't on any dashboard: **lives genuinely changed by Christ.**
+~~~callout
+When a new believer becomes a discipler within one year, the church has not just grown by one — it has multiplied.
+~~~
+
+But the metric that matters most isn\'t on any dashboard: **lives genuinely changed by Christ.**
 
 ### The Call
 

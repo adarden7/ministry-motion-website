@@ -2,6 +2,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Components } from 'react-markdown';
 import type { Heading } from './headings';
+import { nodeToText } from './headings';
+import { ChartFigure, Callout, type ChartData } from './ArticleVisuals';
 
 const proseClasses = `prose prose-invert max-w-none
   prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
@@ -72,6 +74,32 @@ export function ArticleBody({ content, headings }: { content: string; headings: 
         {alt && <figcaption className="mt-3 text-center text-sm text-slate-500">{alt}</figcaption>}
       </figure>
     ),
+    // Unwrap <pre> so fenced "chart"/"callout" blocks aren't wrapped in a code box.
+    pre: ({ children }) => <>{children}</>,
+    code: ({ className, children }) => {
+      const lang = /language-(\w+)/.exec(className ?? '')?.[1];
+      const raw = nodeToText(children).trim();
+      if (lang === 'chart') {
+        try {
+          return <ChartFigure chart={JSON.parse(raw) as ChartData} />;
+        } catch {
+          return null;
+        }
+      }
+      if (lang === 'callout') {
+        return <Callout>{raw}</Callout>;
+      }
+      if (lang) {
+        // Real fenced code block.
+        return (
+          <pre className="not-prose my-8 overflow-x-auto rounded-xl border border-white/10 bg-slate-900 p-5 text-sm">
+            <code className={className}>{children}</code>
+          </pre>
+        );
+      }
+      // Inline code.
+      return <code className={className}>{children}</code>;
+    },
   };
 
   return (

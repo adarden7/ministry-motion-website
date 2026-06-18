@@ -1,9 +1,11 @@
+import type { ReactNode } from 'react';
 import {
   BookOpen,
   FlaskConical,
   Cpu,
   Scale,
   Compass,
+  Sparkles,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -156,6 +158,21 @@ function DonutChart({ chart }: { chart: ChartData }) {
         ))}
       </ul>
     </div>
+  );
+}
+
+/** Inline "Key insight" callout box. */
+export function Callout({ children }: { children: ReactNode }) {
+  return (
+    <aside className="not-prose my-8 rounded-2xl border border-violet-500/30 bg-violet-500/[0.07] p-5 flex gap-4">
+      <div className="w-9 h-9 rounded-lg bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+        <Sparkles className="w-4 h-4 text-violet-300" />
+      </div>
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-wider text-violet-300 mb-1">Key insight</p>
+        <p className="text-slate-200 leading-relaxed">{children}</p>
+      </div>
+    </aside>
   );
 }
 
