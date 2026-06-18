@@ -21,10 +21,11 @@ import {
   ClipboardList,
   type LucideIcon,
 } from 'lucide-react';
-import { getResourceBySlug, type ResourceContent, type ResourceIconKey } from '@/lib/resources';
+import { getResourceBySlug, resourceContent, type ResourceContent, type ResourceIconKey } from '@/lib/resources';
 import { checklistToCsv, templateToCsv, downloadText, printHtml } from '@/lib/resources/download';
 import { useMarketing } from '@/context/MarketingContext';
 import { ArticleBody } from '@/components/blog/ArticleBody';
+import { ArticleShell, RailCard } from '@/components/blog/ArticleShell';
 import { extractHeadings } from '@/components/blog/headings';
 
 const iconMap: Record<ResourceIconKey, LucideIcon> = {
@@ -134,6 +135,8 @@ export function ResourceDetailClient({ slug }: { slug: string }) {
   const Icon = iconMap[resource.iconKey] ?? FileText;
   const hasChecklist = !!resource.checklist?.length;
   const hasTemplate = !!resource.template?.length;
+  const headings = extractHeadings(resource.body);
+  const related = resourceContent.filter((r) => r.slug !== resource.slug).slice(0, 4);
 
   const handlePrint = () => {
     const html = articleRef.current?.innerHTML ?? '';
@@ -213,17 +216,53 @@ export function ResourceDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Body */}
-      <section className="py-16 bg-background">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={articleRef}>
-            <ArticleBody content={resource.body} headings={extractHeadings(resource.body)} />
-          </div>
-
-          {hasChecklist && <InteractiveChecklist resource={resource} />}
-          {hasTemplate && <TemplatePreview resource={resource} />}
+      {/* Body + TOC + related rail */}
+      <ArticleShell
+        headings={headings}
+        rail={
+          <>
+            {related.length > 0 && (
+              <RailCard title="More resources">
+                <ul className="space-y-3">
+                  {related.map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        href={`/resources/${r.slug}`}
+                        className="text-sm font-medium text-foreground hover:text-violet-500 dark:hover:text-violet-400 transition-colors line-clamp-2"
+                      >
+                        {r.title}
+                      </Link>
+                      <span className="mt-0.5 block text-xs text-muted-foreground">{r.kind}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/resources"
+                  className="mt-3 inline-block text-xs font-medium text-violet-600 dark:text-violet-400 hover:underline"
+                >
+                  All resources →
+                </Link>
+              </RailCard>
+            )}
+            <RailCard title="Get started">
+              <p className="text-sm text-muted-foreground mb-3">Put this into practice with Ministry Motion.</p>
+              <button
+                onClick={openBetaModal}
+                className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
+              >
+                Join the beta
+              </button>
+            </RailCard>
+          </>
+        }
+      >
+        <div ref={articleRef}>
+          <ArticleBody content={resource.body} headings={headings} />
         </div>
-      </section>
+
+        {hasChecklist && <InteractiveChecklist resource={resource} />}
+        {hasTemplate && <TemplatePreview resource={resource} />}
+      </ArticleShell>
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
