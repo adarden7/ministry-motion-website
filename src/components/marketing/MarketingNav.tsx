@@ -35,11 +35,11 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
     useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current); }, []);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
+        <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-border bg-background/90 backdrop-blur-md">
             <div className="container mx-auto flex h-14 items-center px-4">
                 <div className="mr-4 flex flex-shrink-0">
                     <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <span className="font-bold whitespace-nowrap text-lg text-white">MinistryMotion</span>
+                        <span className="font-bold whitespace-nowrap text-lg text-foreground">MinistryMotion</span>
                     </Link>
                 </div>
                 <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -65,12 +65,12 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                         </button>
                         {solutionsOpen && (
                             <div className="absolute top-full left-0 pt-2 w-56">
-                                <div className="rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
-                                    <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
-                                    <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
-                                    <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
-                                    <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
-                                    <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
+                                <div className="rounded-md border border-border bg-popover/95 backdrop-blur-md py-1 shadow-xl">
+                                    <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Praise Leaders</Link>
+                                    <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Worship Directors</Link>
+                                    <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Ministries Directors</Link>
+                                    <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Church Admins</Link>
+                                    <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Church Leadership</Link>
                                 </div>
                             </div>
                         )}
@@ -99,10 +99,10 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                         </button>
                         {resourcesOpen && (
                             <div className="absolute top-full left-0 pt-2 w-48">
-                                <div className="rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
-                                    <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
-                                    <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
-                                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
+                                <div className="rounded-md border border-border bg-popover/95 backdrop-blur-md py-1 shadow-xl">
+                                    <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Blog</Link>
+                                    <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Guides &amp; Tools</Link>
+                                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-accent">Case Studies</Link>
                                 </div>
                             </div>
                         )}
@@ -115,7 +115,7 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                             aria-expanded={mobileMenuOpen}
-                            className="ml-4 text-white p-1"
+                            className="ml-4 text-foreground p-1"
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden /> : <Menu className="w-6 h-6" aria-hidden />}
                         </button>
@@ -136,13 +136,13 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-md px-6 py-6 flex flex-col space-y-5 shadow-2xl">
-                    <Link href="/products" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-                    <Link href="/solutions/praise-leaders" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-                    <Link href="/pricing" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-                    <Link href="/compare" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Compare</Link>
-                    <Link href="/resources" className="text-white hover:text-white/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Resources</Link>
-                    <div className="pt-6 border-t border-white/10 flex flex-col space-y-3">
+                <div className="md:hidden border-t border-border bg-popover/95 backdrop-blur-md px-6 py-6 flex flex-col space-y-5 shadow-2xl">
+                    <Link href="/products" className="text-foreground hover:text-foreground/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+                    <Link href="/solutions/praise-leaders" className="text-foreground hover:text-foreground/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+                    <Link href="/pricing" className="text-foreground hover:text-foreground/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+                    <Link href="/compare" className="text-foreground hover:text-foreground/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Compare</Link>
+                    <Link href="/resources" className="text-foreground hover:text-foreground/80 font-medium" onClick={() => setMobileMenuOpen(false)}>Resources</Link>
+                    <div className="pt-6 border-t border-border flex flex-col space-y-3">
                         <Link href="https://app.ministrymotion.com/login" onClick={() => setMobileMenuOpen(false)} className="w-full">
                             <Button variant="outline" className="w-full justify-center">Log In</Button>
                         </Link>
