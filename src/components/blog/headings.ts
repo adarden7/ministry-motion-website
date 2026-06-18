@@ -38,7 +38,7 @@ export function extractHeadings(markdown: string): Heading[] {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (line.startsWith('```')) {
+    if (line.startsWith('```') || line.startsWith('~~~')) {
       inFence = !inFence;
       continue;
     }

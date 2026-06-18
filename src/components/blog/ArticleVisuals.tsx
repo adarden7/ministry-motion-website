@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 import {
   BookOpen,
   FlaskConical,
@@ -52,8 +53,14 @@ export function CoverHero({
   if (coverImage) {
     return (
       <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden border border-white/10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={coverImage} alt={title} className="w-full h-full object-cover" />
+        <Image
+          src={coverImage}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, 768px"
+          className="object-cover"
+          priority
+        />
       </div>
     );
   }
@@ -67,7 +74,7 @@ export function CoverHero({
       {/* faint grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:48px_48px]" />
       {/* watermark icon */}
-      <Icon className="absolute -right-6 -bottom-6 w-56 h-56 text-white/[0.06]" strokeWidth={1} />
+      <Icon aria-hidden className="absolute -right-6 -bottom-6 w-56 h-56 text-white/[0.06]" strokeWidth={1} />
       <div className="relative h-full flex flex-col justify-end p-8">
         <span className="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-violet-200 text-xs font-medium mb-3">
           <Icon className="w-3.5 h-3.5" />

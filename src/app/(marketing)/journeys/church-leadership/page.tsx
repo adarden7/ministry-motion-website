@@ -435,7 +435,7 @@ export default function ChurchLeadershipJourneyPage() {
               </Button>
             </div>
             <p className="text-violet-200/70 text-xs mt-4">
-              PCO integration included · 30-day free trial · No credit card required
+              PCO import (beta) · 30-day free trial · No credit card required
             </p>
           </div>
         </section>

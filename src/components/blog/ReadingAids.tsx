@@ -22,7 +22,7 @@ export function ReadingProgress() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-transparent">
+    <div aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 h-1 bg-transparent">
       <div
         className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 transition-[width] duration-150"
         style={{ width: `${progress}%` }}
@@ -67,6 +67,7 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
             <li key={h.id}>
               <a
                 href={`#${h.id}`}
+                aria-current={active ? 'true' : undefined}
                 className={`block border-l-2 -ml-px py-0.5 transition-colors ${
                   h.level === 3 ? 'pl-7' : 'pl-4'
                 } ${

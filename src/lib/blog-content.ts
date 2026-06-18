@@ -141,9 +141,9 @@ The 39% don\'t need another program. They need someone to notice them, guide the
     coverImage: '/blog/engaged-members-give-3x-more.png',
     keyStats: [
       { value: '3×', label: 'more given by engaged vs. occasional members (Vanco)' },
-      { value: '$40K', label: 'annual giving increase from moving 20 members to engaged' },
-      { value: '$3,000', label: 'average annual giving from an engaged member' },
-      { value: '$1,000', label: 'average annual giving from an occasional attender' },
+      { value: '$40K', label: 'potential annual lift (illustrative 200-member scenario)' },
+      { value: '$3,000', label: 'engaged-member giving assumed in the illustrative scenario' },
+      { value: '$1,000', label: 'occasional-attender giving assumed in the illustrative scenario' },
     ],
     content: `
 ## The Engagement-Giving Connection
@@ -392,7 +392,7 @@ The question isn't whether your church cares about connection. It's whether you 
     tags: ['AI', 'technology', 'innovation', 'church leadership'],
     coverImage: '/blog/87-percent-leaders-open-to-ai.png',
     keyStats: [
-      { value: '87%', label: 'of ministry leaders open to AI (Ministry Tech Survey)' },
+      { value: '87%', label: 'of ministry leaders open to AI' },
       { value: '93%', label: 'interested in AI for reducing administrative burden' },
       { value: '89%', label: 'interested in AI for improving member care' },
       { value: '13%', label: 'not yet open — primarily citing human connection concerns' },
@@ -416,7 +416,7 @@ The survey broke down openness by use case. Leaders are most interested in AI th
 | Supports skill development | 78% |
 
 ~~~chart
-{"title":"Ministry leader interest in AI by use case","type":"bar","data":[{"label":"Reduce admin burden","value":93,"display":"93%"},{"label":"Improve member care","value":89,"display":"89%"},{"label":"Enhance worship prep","value":82,"display":"82%"},{"label":"Support skill development","value":78,"display":"78%"}]}
+{"title":"Reported ministry leader interest in AI by use case","type":"bar","data":[{"label":"Reduce admin burden","value":93,"display":"93%"},{"label":"Improve member care","value":89,"display":"89%"},{"label":"Enhance worship prep","value":82,"display":"82%"},{"label":"Support skill development","value":78,"display":"78%"}]}
 ~~~
 
 > **87% of ministry leaders are open to AI—not to replace pastoral care, but to make it possible at scale.**
@@ -521,9 +521,9 @@ The platforms that answer that question well will define the next generation of 
     tags: ['planning center', 'comparison', 'church software', 'features'],
     coverImage: '/blog/planning-center-vs-ministry-motion.png',
     keyStats: [
-      { value: '92%', label: 'pitch accuracy detected by AI in a real service scenario' },
-      { value: '4%', label: 'vocal improvement tracked month-over-month per singer' },
-      { value: '90s', label: 'service overrun detected vs. plan — invisible to scheduling software' },
+      { value: '92%', label: 'pitch accuracy in the illustrative scenario (not a benchmark)' },
+      { value: '4%', label: 'vocal improvement in the illustrative scenario (not a benchmark)' },
+      { value: '90s', label: 'service overrun in the illustrative scenario — invisible to scheduling software' },
     ],
     content: `
 ## Planning Center Does Scheduling Well
@@ -1052,9 +1052,6 @@ In Part 3, we'll look at what happens when churches actually implement this visi
     tags: ['kingdom building', 'transformation', 'discipleship', 'testimony', 'church growth'],
     coverImage: '/blog/kingdom-building-part-3-transformation.png',
     keyStats: [
-      { value: '94%', label: 'course completion rate for the new training curriculum' },
-      { value: '40%', label: 'longer ministry service from participants who complete the new training' },
-      { value: '60%', label: 'completion rate of the old curriculum — with no retention benefit' },
       { value: '43%', label: 'of leavers who cite disconnection — a preventable number' },
     ],
     content: `
@@ -1086,18 +1083,7 @@ Now consider the worship director, the children's ministry leader, the health mi
 
 **Morning check-in**: Your dashboard shows you who's on track, who's stuck, and who's ready for their next step. You see that Maria hasn't attended rehearsal in three weeks—time for a personal call.
 
-**Ministry meeting**: You review actual data about what's working. The new training course has a 94% completion rate and participants who complete it serve 40% longer. The old curriculum? 60% completion, no retention difference. The data tells you what to invest in.
-
-| Curriculum | Completion rate | Service retention |
-|---|---|---|
-| New training course | 94% | +40% longer |
-| Old curriculum | 60% | No difference |
-
-~~~chart
-{"title":"Training curriculum: completion & retention impact","type":"bar","data":[{"label":"New curriculum — completion","value":94,"display":"94%"},{"label":"Old curriculum — completion","value":60,"display":"60%"},{"label":"Longer service (new curriculum)","value":40,"display":"+40%"}]}
-~~~
-
-> **The new training course has a 94% completion rate and participants who complete it serve 40% longer. The data tells you what to invest in.**
+**Ministry meeting**: You review actual data about what\'s working — completion rates, participation trends, and which programs move people from participant to leader. The data tells you what to invest in.
 
 **Recruitment**: Instead of generic announcements, you know exactly who has the right gifts, the right availability, and the right readiness level for open positions. You make personal asks to specific people.
 

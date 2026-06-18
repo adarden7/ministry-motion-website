@@ -40,7 +40,7 @@ const useCases = [
     description:
       "Every ministry, every interaction, every spiritual gift assessment, and every giving record lives on one member profile. Administrators never reconcile data between disconnected tools—the UnifiedMember architecture ensures every system is reading from the same source.",
     bullets: [
-      'Single member record used by all 20 specialized AI agents and all ministry dashboards',
+      'Single member record used by all 15 specialized AI agents and all ministry dashboards',
       'Demographics, journey stage, engagement score, and giving history in one profile',
       'No manual data reconciliation between worship planning and member management',
       'Automatic sync when any system updates a member record',
@@ -180,7 +180,7 @@ export default function ChurchAdminsPage() {
             </div>
 
             <p className="text-sm text-slate-500 mt-4">
-              30-day free trial · PCO integration included · No credit card required
+              30-day free trial · PCO import (beta) · No credit card required
             </p>
           </div>
         </div>
