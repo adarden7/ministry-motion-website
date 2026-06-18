@@ -185,7 +185,7 @@ export default function PraiseLeadersPage() {
               { value: '$0.10', label: 'AI processing costs per rehearsal track' },
               { value: '30s', label: 'Average SATB track generation time' },
               { value: '5', label: 'Vocal development tiers' },
-              { value: '8+', label: 'AI agents working for your team' },
+              { value: '15', label: 'AI agents working for your team' },
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-2xl font-bold text-violet-400">{item.value}</div>
@@ -363,7 +363,7 @@ export default function PraiseLeadersPage() {
                 </div>
                 
                 <div className="mt-8 text-center">
-                  <Link href="/modern-vocal-coach" className="inline-flex items-center gap-2 text-violet-400 font-medium hover:text-violet-300 transition-colors">
+                  <Link href="/products/vocal-coaching" className="inline-flex items-center gap-2 text-violet-400 font-medium hover:text-violet-300 transition-colors">
                     Try the interactive demo <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>

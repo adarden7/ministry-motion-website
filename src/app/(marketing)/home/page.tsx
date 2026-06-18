@@ -290,7 +290,7 @@ export default function HomePage() {
             </div>
 
             <p className="text-sm text-violet-200/60">
-              PCO integration included · 30-day free trial · No credit card required
+              PCO import (beta) · 30-day free trial · No credit card required
             </p>
           </div>
         </div>
@@ -501,7 +501,7 @@ export default function HomePage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">20 AI Agents</span>
+              <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">15 AI Agents</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 AI That Works for Ministry,{' '}
                 <span className="text-violet-600">Not Just Automation</span>

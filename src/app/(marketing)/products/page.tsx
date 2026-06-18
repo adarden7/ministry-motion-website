@@ -53,7 +53,7 @@ const productPillars = [
           'CCLI integration'
         ],
         badge: 'AI-Enhanced',
-        href: '/products/service-planning'
+        href: '/products/agent-council'
       },
       {
         name: 'Team Scheduling',
@@ -68,7 +68,7 @@ const productPillars = [
           'Conflict detection'
         ],
         badge: null,
-        href: '/products/scheduling'
+        href: '/products/agent-council'
       },
       {
         name: 'Unified Calendar',
@@ -83,7 +83,7 @@ const productPillars = [
           'Mobile access'
         ],
         badge: null,
-        href: '/products/calendar'
+        href: '/products/agent-council'
       },
       {
         name: 'Song Library',
@@ -98,7 +98,7 @@ const productPillars = [
           'Team favorites'
         ],
         badge: null,
-        href: '/products/song-library'
+        href: '/products/agent-council'
       }
     ]
   },
@@ -139,7 +139,7 @@ const productPillars = [
           'Course integration'
         ],
         badge: 'Hands-On',
-        href: '/products/labs'
+        href: '/products/discipleship'
       },
       {
         name: 'Digital Rehearsal Rooms',
@@ -154,7 +154,7 @@ const productPillars = [
           'Multi-device support'
         ],
         badge: 'Industry First',
-        href: '/products/rehearsal-rooms'
+        href: '/products/vocal-coaching'
       },
       {
         name: 'Rehearsal Track Builder',
@@ -169,7 +169,7 @@ const productPillars = [
           'Quality validation'
         ],
         badge: 'Industry First',
-        href: '/products/track-builder'
+        href: '/products/vocal-coaching'
       },
       {
         name: 'Learning Hub',
@@ -184,7 +184,7 @@ const productPillars = [
           'Mentor matching'
         ],
         badge: null,
-        href: '/products/learning'
+        href: '/products/discipleship'
       },
       {
         name: 'Discipleship Journeys',
@@ -199,7 +199,7 @@ const productPillars = [
           'Ministry activation'
         ],
         badge: null,
-        href: '/products/journeys'
+        href: '/products/discipleship'
       },
       {
         name: 'Worship Collective',
@@ -240,7 +240,7 @@ const productPillars = [
           'Unified inbox'
         ],
         badge: 'New',
-        href: '/products/communications'
+        href: '/products/agent-council'
       },
       {
         name: 'Community Platform',
@@ -255,7 +255,7 @@ const productPillars = [
           'Spiritual gifts display'
         ],
         badge: null,
-        href: '/products/community'
+        href: '/products/discipleship'
       },
       {
         name: 'Integrated Giving',
@@ -270,7 +270,7 @@ const productPillars = [
           'Tax receipts'
         ],
         badge: null,
-        href: '/products/giving'
+        href: '/products/discipleship'
       },
       {
         name: 'Mobile Apps',
@@ -285,7 +285,7 @@ const productPillars = [
           'Service alerts'
         ],
         badge: null,
-        href: '/products/mobile'
+        href: '/products/agent-council'
       }
     ]
   },
@@ -326,7 +326,7 @@ const productPillars = [
           'Stakeholder notifications'
         ],
         badge: 'Industry First',
-        href: '/products/realtime'
+        href: '/products/analytics'
       },
       {
         name: 'Performance Tracking',
@@ -341,7 +341,7 @@ const productPillars = [
           'Goal achievement'
         ],
         badge: null,
-        href: '/products/tracking'
+        href: '/products/analytics'
       },
       {
         name: 'Plan vs. Actual',
@@ -356,7 +356,7 @@ const productPillars = [
           'Historical trends'
         ],
         badge: null,
-        href: '/products/variance'
+        href: '/products/analytics'
       },
       {
         name: 'Vocal Health Monitoring',
@@ -371,14 +371,14 @@ const productPillars = [
           'Team health dashboards'
         ],
         badge: 'Industry First',
-        href: '/products/vocal-health'
+        href: '/products/vocal-coaching'
       }
     ]
   },
   {
     id: 'ai-intelligence',
     title: 'AI Intelligence',
-    subtitle: '8+ autonomous agents that understand ministry',
+    subtitle: '15 specialized AI agents that understand ministry',
     description: 'Not chatbots. Not templates. Autonomous AI agents that understand your church\'s theology, culture, and people — working 24/7 to improve outcomes.',
     color: 'rose',
     solutionHref: '/solutions/leadership',
@@ -412,7 +412,7 @@ const productPillars = [
           'Mentorship pairing'
         ],
         badge: '3 Agents',
-        href: '/products/ministry-agents'
+        href: '/products/agent-council'
       },
       {
         name: 'Worship Planning Agents',
@@ -427,7 +427,7 @@ const productPillars = [
           'Longitudinal trend analysis'
         ],
         badge: '3 Agents',
-        href: '/products/worship-agents'
+        href: '/products/agent-council'
       },
       {
         name: 'Artist Profiling Pipeline',
@@ -442,7 +442,7 @@ const productPillars = [
           'Complete artist profile synthesis'
         ],
         badge: '5 Agents',
-        href: '/products/artist-profiling'
+        href: '/products/agent-council'
       }
     ]
   },
@@ -468,7 +468,7 @@ const productPillars = [
           'Simple Church tracking'
         ],
         badge: null,
-        href: '/products/people'
+        href: '/products/discipleship'
       },
       {
         name: 'Multi-Campus',
@@ -483,7 +483,7 @@ const productPillars = [
           'Shared resources'
         ],
         badge: null,
-        href: '/products/multi-campus'
+        href: '/products/agent-council'
       },
       {
         name: 'Task Management',
@@ -498,7 +498,7 @@ const productPillars = [
           'Activity reporting'
         ],
         badge: null,
-        href: '/products/tasks'
+        href: '/products/agent-council'
       },
       {
         name: 'Roles & Permissions',
@@ -513,7 +513,7 @@ const productPillars = [
           'SSO support (Enterprise)'
         ],
         badge: null,
-        href: '/products/permissions'
+        href: '/products/agent-council'
       }
     ]
   }
@@ -694,7 +694,7 @@ export default function ProductsPage() {
               },
               {
                 title: 'AI Everywhere',
-                description: '20 specialized AI agents share context across vocal coaching, service analysis, ministry matching, and team development.',
+                description: '15 specialized AI agents share context across vocal coaching, service analysis, ministry matching, and team development.',
                 icon: Brain
               },
               {
@@ -734,12 +734,12 @@ export default function ProductsPage() {
             >
               Sign Up for Beta
             </button>
-            <Link
-              href="/demo"
+            <button
+              onClick={() => setShowBetaModal(true)}
               className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Schedule Demo
-            </Link>
+            </button>
           </div>
         </div>
       </section>

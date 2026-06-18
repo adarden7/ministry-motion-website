@@ -40,8 +40,8 @@ export function ArticleBody({ content, headings }: { content: string; headings: 
       </h3>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="not-prose my-10 border-l-4 border-violet-500 pl-6 pr-2 py-1">
-        <p className="text-xl md:text-2xl font-medium leading-snug text-white/90">{children}</p>
+      <blockquote className="not-prose my-10 border-l-4 border-violet-500 pl-6 pr-2 py-1 text-xl md:text-2xl font-medium leading-snug text-white/90 [&>p]:m-0">
+        {children}
       </blockquote>
     ),
     a: ({ href, children }) => {

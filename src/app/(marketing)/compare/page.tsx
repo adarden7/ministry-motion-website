@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 import {
   Check,
@@ -642,12 +641,12 @@ export default function ComparePage() {
             >
               Sign Up for Beta
             </button>
-            <Link
-              href="/demo"
+            <button
+              onClick={() => setShowBetaModal(true)}
               className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Schedule Demo
-            </Link>
+            </button>
           </div>
         </div>
       </section>

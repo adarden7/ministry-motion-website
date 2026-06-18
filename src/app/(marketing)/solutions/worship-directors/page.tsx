@@ -28,7 +28,7 @@ const useCases = [
     title: "Upload Sunday's Video → Monday Scorecard",
     subtitle: 'Auto-segment, identify songs, score singers, and calculate God Quotient',
     description:
-      "Upload your Sunday service recording Monday morning and receive a complete performance scorecard by lunchtime. The AI auto-segments the service, identifies every song, individually scores each singer's pitch and blend, and produces a God Quotient score reflecting lyrical and theological weight.",
+      "Upload your Sunday service recording Monday morning and receive a complete performance scorecard the same day. The AI auto-segments the service, identifies every song, individually scores each singer's pitch and blend, and produces a God Quotient score reflecting lyrical and theological weight.",
     bullets: [
       'Auto-segments video into song blocks, transitions, and speaking moments',
       'Song recognition against your library with CCLI metadata enrichment',
@@ -60,7 +60,7 @@ const useCases = [
     icon: Brain,
     color: 'violet',
     title: 'AI Advisory Council – Staff Room',
-    subtitle: '8+ agents with round-table mode for collaborative recommendations',
+    subtitle: '15 agents with round-table mode for collaborative recommendations',
     description:
       'The Staff Room brings your AI agent council together in a round-table format. Ask a question and receive coordinated answers from the Liturgist (song theology), Virtuoso Coach (vocal development), Shepherd (member care), and more—all in one conversation.',
     bullets: [
@@ -69,7 +69,7 @@ const useCases = [
       'Shepherd Agent: volunteer health and burnout-risk patterns',
       'Negotiator Agent: conflict resolution recommendations',
     ],
-    stat: '8+',
+    stat: '15',
     statLabel: 'AI agents available in the Staff Room council',
   },
   {
@@ -81,10 +81,10 @@ const useCases = [
     description:
       'On our roadmap: stream audio directly into the platform during rehearsal or live service for real-time analysis. The vocal health ring will display team-wide vocal fatigue indicators, and OBS integration will allow stream overlays for production teams.',
     bullets: [
-      'Real-time pitch accuracy scoring per vocalist during live performance',
-      'Vocal health ring: aggregated fatigue and strain indicators across the team',
-      'OBS Studio integration: stream performance overlays to your broadcast',
-      'Post-session instant replay with annotated performance timeline',
+      'Real-time pitch accuracy scoring per vocalist during live performance (planned)',
+      'Vocal health ring showing aggregated fatigue and strain indicators across the team (planned)',
+      'OBS Studio integration to stream performance overlays to your broadcast (planned)',
+      'Post-session instant replay with annotated performance timeline (planned)',
     ],
     stat: 'Live',
     statLabel: 'real-time analysis during rehearsal and service',
@@ -183,7 +183,7 @@ export default function WorshipDirectorsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: 'Same-day', label: 'Sunday video to scorecard turnaround' },
-              { value: '8+', label: 'AI agents in the advisory council' },
+              { value: '15', label: 'AI agents in the advisory council' },
               { value: '30-day', label: 'Automated service prep timeline' },
               { value: 'Soon', label: 'Real-time vocal analysis during service' },
             ].map((item, i) => (

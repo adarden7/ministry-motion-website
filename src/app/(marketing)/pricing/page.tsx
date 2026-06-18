@@ -85,13 +85,13 @@ const pricingTiers = [
     price: '$199',
     annualPrice: '$159',
     period: '/mo',
-    description: 'Full AI experience with 20 autonomous agents',
+    description: 'Full AI experience with 15 autonomous agents',
     teamSize: '50 team members',
     highlight: true,
     cta: 'Sign Up for Beta',
     features: {
       'Team Members': '50',
-      '20 AI Agents': true,
+      '15 AI Agents': true,
       'Service Analytics': true,
       'Ministry Analytics': true,
       'PCO Integration': true,
@@ -147,7 +147,7 @@ const featureCategories = [
     name: 'AI Agents & Intelligence',
     icon: Zap,
     features: [
-      { name: 'AI Agents', free: false, small: false, pro: '20 AI agents', enterprise: '20+ custom' },
+      { name: 'AI Agents', free: false, small: false, pro: '15 AI agents', enterprise: '15+ custom' },
       { name: 'Denomination-Specific Context', free: false, small: false, pro: true, enterprise: true },
       { name: 'Conflict Resolution AI', free: false, small: false, pro: true, enterprise: true },
       { name: 'AI Vocal Coaching', free: false, small: false, pro: true, enterprise: true },
@@ -362,8 +362,8 @@ export default function PricingPage() {
                   <p className="text-sm font-medium text-slate-700 mt-2">{tier.teamSize}</p>
                 </div>
 
-                <Link
-                  href={tier.cta === 'Contact Sales' ? '/contact' : '/signup'}
+                <button
+                  onClick={openBetaModal}
                   className={`block w-full py-3 text-center font-semibold rounded-lg transition-colors mb-6 ${
                     tier.highlight
                       ? 'bg-violet-600 text-white hover:bg-violet-700'
@@ -371,7 +371,7 @@ export default function PricingPage() {
                   }`}
                 >
                   {tier.cta}
-                </Link>
+                </button>
 
                 <div className="space-y-3">
                   {Object.entries(tier.features).slice(0, 8).map(([feature, value]) => (
@@ -528,12 +528,12 @@ export default function PricingPage() {
             >
               Sign Up for Beta
             </button>
-            <Link
-              href="/contact"
+            <button
+              onClick={openBetaModal}
               className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Talk to Sales
-            </Link>
+            </button>
           </div>
         </div>
       </section>

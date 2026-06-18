@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
 import { useMarketing } from '@/context/MarketingContext';
@@ -32,6 +32,8 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
         closeTimer.current = setTimeout(() => set(false), 180);
     };
 
+    useEffect(() => () => { if (closeTimer.current) clearTimeout(closeTimer.current); }, []);
+
     return (
         <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
             <div className="container mx-auto flex h-14 items-center px-4">
@@ -41,16 +43,25 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                     </Link>
                 </div>
                 <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <Link href="/products" className="transition-colors hover:text-foreground/80 text-foreground/60">Products</Link>
+                    <Link href="/products" className="transition-colors hover:text-foreground text-foreground/80">Products</Link>
 
                     {/* Solutions dropdown */}
                     <div
                         className="relative"
                         onMouseEnter={() => openMenu(setSolutionsOpen)}
                         onMouseLeave={() => scheduleClose(setSolutionsOpen)}
+                        onFocus={() => openMenu(setSolutionsOpen)}
+                        onBlur={() => scheduleClose(setSolutionsOpen)}
+                        onKeyDown={(e) => { if (e.key === 'Escape') setSolutionsOpen(false); }}
                     >
-                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
-                            Solutions <ChevronDown className="h-3 w-3" />
+                        <button
+                            type="button"
+                            aria-haspopup="true"
+                            aria-expanded={solutionsOpen}
+                            onClick={() => setSolutionsOpen((v) => !v)}
+                            className="flex items-center gap-1 transition-colors hover:text-foreground text-foreground/80"
+                        >
+                            Solutions <ChevronDown className="h-3 w-3" aria-hidden />
                         </button>
                         {solutionsOpen && (
                             <div className="absolute top-full left-0 pt-2 w-56">
@@ -65,17 +76,26 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                         )}
                     </div>
 
-                    <Link href="/pricing" className="transition-colors hover:text-foreground/80 text-foreground/60">Pricing</Link>
-                    <Link href="/compare" className="transition-colors hover:text-foreground/80 text-foreground/60">Compare</Link>
+                    <Link href="/pricing" className="transition-colors hover:text-foreground text-foreground/80">Pricing</Link>
+                    <Link href="/compare" className="transition-colors hover:text-foreground text-foreground/80">Compare</Link>
 
                     {/* Resources dropdown */}
                     <div
                         className="relative"
                         onMouseEnter={() => openMenu(setResourcesOpen)}
                         onMouseLeave={() => scheduleClose(setResourcesOpen)}
+                        onFocus={() => openMenu(setResourcesOpen)}
+                        onBlur={() => scheduleClose(setResourcesOpen)}
+                        onKeyDown={(e) => { if (e.key === 'Escape') setResourcesOpen(false); }}
                     >
-                        <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
-                            Resources <ChevronDown className="h-3 w-3" />
+                        <button
+                            type="button"
+                            aria-haspopup="true"
+                            aria-expanded={resourcesOpen}
+                            onClick={() => setResourcesOpen((v) => !v)}
+                            className="flex items-center gap-1 transition-colors hover:text-foreground text-foreground/80"
+                        >
+                            Resources <ChevronDown className="h-3 w-3" aria-hidden />
                         </button>
                         {resourcesOpen && (
                             <div className="absolute top-full left-0 pt-2 w-48">
@@ -91,8 +111,13 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                 <div className="flex flex-1 items-center justify-end space-x-2">
                     <div className="md:hidden flex items-center pr-2">
                         <ThemeToggle />
-                        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="ml-4 text-white p-1">
-                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        <button
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                            aria-expanded={mobileMenuOpen}
+                            className="ml-4 text-white p-1"
+                        >
+                            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden /> : <Menu className="w-6 h-6" aria-hidden />}
                         </button>
                     </div>
                     <nav className="hidden md:flex items-center space-x-2">

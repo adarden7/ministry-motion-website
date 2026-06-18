@@ -242,13 +242,13 @@ export default function LandingPage() {
                 >
                   Start Free Trial
                 </button>
-                <Link
-                  href="/demo"
+                <button
+                  onClick={openBetaModal}
                   className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all text-lg flex items-center gap-2 group"
                 >
                   <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   Watch 2-Min Demo
-                </Link>
+                </button>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-violet-200/60">
@@ -322,7 +322,7 @@ export default function LandingPage() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
             {[
               { number: '200+', label: 'Features Built for Ministry' },
-              { number: '8+', label: 'AI Agents' },
+              { number: '15', label: 'AI Agents' },
               { number: '24', label: 'Ministry Containers' },
               { number: '$10,608', label: 'Avg. Annual Savings' },
             ].map((stat, i) => (
@@ -375,7 +375,7 @@ export default function LandingPage() {
               },
               {
                 icon: Brain,
-                title: '20 AI Agents',
+                title: '15 AI Agents',
                 description: 'From vocal coaching to engagement prediction to ministry matching — autonomous agents that understand theology and denomination context.',
                 badge: 'AI-Native',
                 color: 'rose'
@@ -433,7 +433,7 @@ export default function LandingPage() {
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-violet-400 uppercase tracking-wider">Autonomous Intelligence</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
-              20 AI Agents Working While You Sleep
+              15 AI Agents Working While You Sleep
             </h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Not chatbots. Not templates. Autonomous agents that understand your church's theology, culture, and people.
@@ -849,7 +849,7 @@ export default function LandingPage() {
                 name: 'Pro',
                 price: '$199',
                 desc: 'Full AI experience for active churches',
-                features: ['Up to 100 team members', '20 AI Agents', 'All 18+ courses + Interactive Labs', 'Advanced analytics', 'Service video analysis', 'Discipleship journey engine'],
+                features: ['Up to 100 team members', '15 AI Agents', 'All 18+ courses + Interactive Labs', 'Advanced analytics', 'Service video analysis', 'Discipleship journey engine'],
                 cta: 'Sign Up for Beta',
                 highlight: true
               },
@@ -927,12 +927,12 @@ export default function LandingPage() {
             >
               Start Your Free 30-Day Trial
             </button>
-            <Link
-              href="/demo"
+            <button
+              onClick={openBetaModal}
               className="px-10 py-5 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all text-lg"
             >
               Book a Demo
-            </Link>
+            </button>
           </div>
           <p className="text-sm text-violet-200/40 mt-6">
             No credit card required · Free Planning Center import · Set up in under an hour
@@ -950,7 +950,7 @@ export default function LandingPage() {
                 <span className="text-lg font-bold">Ministry Motion</span>
               </div>
               <p className="text-sm text-slate-400 mb-6 max-w-xs">
-                The AI-native worship platform. Built for the church, powered by 20 specialized AI agents.
+                The AI-native worship platform. Built for the church, powered by 15 specialized AI agents.
               </p>
             </div>
 
@@ -958,19 +958,19 @@ export default function LandingPage() {
               <h4 className="font-semibold mb-4 text-sm">Products</h4>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><Link href="/products/vocal-coaching" className="hover:text-white">AI Vocal Coaching</Link></li>
-                <li><Link href="/products/service-planning" className="hover:text-white">Service Planning</Link></li>
+                <li><Link href="/products/agent-council" className="hover:text-white">Service Planning</Link></li>
                 <li><Link href="/products/analytics" className="hover:text-white">Service Analytics</Link></li>
-                <li><Link href="/products/journeys" className="hover:text-white">Discipleship Journeys</Link></li>
-                <li><Link href="/products/communications" className="hover:text-white">Communications</Link></li>
+                <li><Link href="/products/discipleship" className="hover:text-white">Discipleship Journeys</Link></li>
+                <li><Link href="/products/agent-council" className="hover:text-white">Communications</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-sm">Solutions</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><Link href="/solutions/worship-leaders" className="hover:text-white">For Worship Leaders</Link></li>
-                <li><Link href="/solutions/pastors" className="hover:text-white">For Pastors</Link></li>
-                <li><Link href="/solutions/ministry-directors" className="hover:text-white">For Ministry Directors</Link></li>
+                <li><Link href="/solutions/praise-leaders" className="hover:text-white">For Worship Leaders</Link></li>
+                <li><Link href="/solutions/leadership" className="hover:text-white">For Pastors</Link></li>
+                <li><Link href="/solutions/ministries-directors" className="hover:text-white">For Ministry Directors</Link></li>
                 <li><Link href="/compare" className="hover:text-white">vs Planning Center</Link></li>
                 <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
               </ul>
@@ -979,9 +979,9 @@ export default function LandingPage() {
             <div>
               <h4 className="font-semibold mb-4 text-sm">Company</h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><Link href="/about" className="hover:text-white">About</Link></li>
+                <li><Link href="/" className="hover:text-white">About</Link></li>
                 <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                <li><Link href="/security" className="hover:text-white">Security</Link></li>
+                <li><Link href="/privacy" className="hover:text-white">Security</Link></li>
                 <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
                 <li><Link href="/terms" className="hover:text-white">Terms</Link></li>
               </ul>
