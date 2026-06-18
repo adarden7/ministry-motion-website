@@ -10,7 +10,6 @@ import {
   Twitter,
   Linkedin,
   Link2,
-  ChevronRight,
   BookOpen,
 } from 'lucide-react';
 import { useState, useMemo } from 'react';
@@ -18,7 +17,8 @@ import { getPostBySlug, getAllPosts } from '@/lib/blog-content';
 import { useMarketing } from '@/context/MarketingContext';
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 import { extractHeadings } from '@/components/blog/headings';
-import { ReadingProgress, TableOfContents } from '@/components/blog/ReadingAids';
+import { ReadingProgress } from '@/components/blog/ReadingAids';
+import { ArticleShell, RailCard } from '@/components/blog/ArticleShell';
 import { CoverHero, StatGrid } from '@/components/blog/ArticleVisuals';
 import { ArticleBody } from '@/components/blog/ArticleBody';
 
@@ -138,41 +138,63 @@ export function BlogPostClient({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {/* Body + TOC */}
-      <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-[220px_minmax(0,720px)] lg:gap-12 lg:justify-center">
-            <aside className="hidden lg:block">
-              <div className="sticky top-24">
-                <TableOfContents headings={headings} />
-              </div>
-            </aside>
+      {/* Body + TOC + related rail */}
+      <ArticleShell
+        headings={headings}
+        rail={
+          <>
+            {relatedPosts.length > 0 && (
+              <RailCard title="Related articles">
+                <ul className="space-y-3">
+                  {relatedPosts.map((p) => (
+                    <li key={p.slug}>
+                      <Link
+                        href={`/blog/${p.slug}`}
+                        className="text-sm font-medium text-foreground hover:text-violet-500 dark:hover:text-violet-400 transition-colors line-clamp-2"
+                      >
+                        {p.title}
+                      </Link>
+                      <span className="mt-0.5 block text-xs text-muted-foreground">{p.readTime}</span>
+                    </li>
+                  ))}
+                </ul>
+              </RailCard>
+            )}
+            <RailCard title="Get started">
+              <p className="text-sm text-muted-foreground mb-3">See these insights working in your church.</p>
+              <button
+                onClick={openBetaModal}
+                className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
+              >
+                Join the beta
+              </button>
+            </RailCard>
+          </>
+        }
+      >
+        <article>
+          {post.keyStats && post.keyStats.length > 0 && (
+            <div className="mb-10">
+              <StatGrid stats={post.keyStats} />
+            </div>
+          )}
+          <ArticleBody content={post.content} headings={headings} />
 
-            <article>
-              {post.keyStats && post.keyStats.length > 0 && (
-                <div className="mb-10">
-                  <StatGrid stats={post.keyStats} />
-                </div>
-              )}
-              <ArticleBody content={post.content} headings={headings} />
-
-              {/* Tags */}
-              <div className="flex flex-wrap items-center gap-2 mt-12 pt-8 border-t border-border">
-                <Tag className="w-4 h-4 text-muted-foreground" />
-                {post.tags.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/blog?tag=${tag}`}
-                    className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs hover:bg-muted/70 hover:text-foreground transition-colors"
-                  >
-                    #{tag}
-                  </Link>
-                ))}
-              </div>
-            </article>
+          {/* Tags */}
+          <div className="flex flex-wrap items-center gap-2 mt-12 pt-8 border-t border-border">
+            <Tag className="w-4 h-4 text-muted-foreground" />
+            {post.tags.map((tag) => (
+              <Link
+                key={tag}
+                href={`/blog?tag=${tag}`}
+                className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs hover:bg-muted/70 hover:text-foreground transition-colors"
+              >
+                #{tag}
+              </Link>
+            ))}
           </div>
-        </div>
-      </section>
+        </article>
+      </ArticleShell>
 
       {/* Author CTA */}
       <section className="py-16 border-t border-border">
@@ -204,38 +226,6 @@ export function BlogPostClient({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
-
-      {/* Related Posts */}
-      {relatedPosts.length > 0 && (
-        <section className="py-16 border-t border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-foreground mb-8">Related Articles</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {relatedPosts.map((relatedPost) => (
-                <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
-                  <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-muted/50 border border-border hover:border-violet-500/50 transition-all">
-                    <div className="p-6 flex-1 flex flex-col">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
-                          {relatedPost.category}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors line-clamp-2">
-                        {relatedPost.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-4 line-clamp-2 flex-1">{relatedPost.excerpt}</p>
-                      <div className="flex items-center gap-1 text-violet-400 text-sm font-medium group-hover:gap-2 transition-all">
-                        Read Article
-                        <ChevronRight className="w-4 h-4" />
-                      </div>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* All Posts CTA */}
       <section className="py-16 border-t border-border">
