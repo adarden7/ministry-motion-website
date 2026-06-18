@@ -25,9 +25,9 @@ import { useMarketing } from '@/context/MarketingContext';
 const pricingTiers = [
   {
     name: 'Free',
-    price: '$0',
-    annualPrice: '$0',
-    period: '30 days free',
+    price: 'Free',
+    annualPrice: 'Free',
+    period: 'for 30 days',
     description: 'Try Ministry Motion risk-free. No credit card required.',
     teamSize: '5 team members',
     highlight: false,

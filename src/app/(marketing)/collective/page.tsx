@@ -326,8 +326,8 @@ export default function WorshipCollectivePage() {
                         <Crown className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-white">Dr. Marcus Williams</div>
-                        <div className="text-sm text-violet-400">Master Vocal Coach · Cohort Mentor</div>
+                        <div className="font-semibold text-white">Your Cohort Mentor</div>
+                        <div className="text-sm text-violet-400">Master Vocal Coach · Assigned 1:1</div>
                       </div>
                     </div>
                   </div>
@@ -977,9 +977,9 @@ export default function WorshipCollectivePage() {
 
             <div className="flex items-center gap-8 text-sm text-white/60">
               <Link href="/landing" className="hover:text-white transition-colors">Ministry Motion</Link>
-              <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
-              <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-              <Link href="#" className="hover:text-white transition-colors">Contact</Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+              <Link href="/pricing" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
 

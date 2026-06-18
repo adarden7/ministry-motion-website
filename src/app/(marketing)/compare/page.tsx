@@ -588,13 +588,13 @@ export default function ComparePage() {
               <p className="font-semibold text-slate-900 mb-1">Share this comparison with your leadership team</p>
               <p className="text-sm text-slate-600">This page is designed to be board-ready. Download the full comparison as a PDF to present at your next leadership meeting.</p>
             </div>
-            <a
-              href="#"
+            <button
+              onClick={() => window.print()}
               className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-violet-600 text-white font-semibold rounded-xl hover:bg-violet-700 transition-colors text-sm"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
               Download Comparison PDF
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -660,7 +660,7 @@ export default function ComparePage() {
               <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-slate-500">
-              © 2025 Ministry Motion. All rights reserved.
+              © 2026 Ministry Motion. All rights reserved.
             </p>
           </div>
         </div>
