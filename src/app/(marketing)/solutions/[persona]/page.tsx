@@ -35,12 +35,12 @@ const personaIcons: Record<string, typeof Mic2> = {
 };
 
 const personaColors: Record<string, string> = {
-  'worship-leaders': 'from-blue-500 to-cyan-500',
+  'worship-leaders': 'from-violet-600 to-fuchsia-600',
   'pastors': 'from-violet-500 to-purple-500',
   'vocalists': 'from-rose-500 to-pink-500',
-  'administrators': 'from-blue-500 to-blue-600',
+  'administrators': 'from-violet-600 to-violet-700',
   'childrens-ministry': 'from-pink-500 to-rose-400',
-  'small-groups': 'from-blue-600 to-cyan-400',
+  'small-groups': 'from-violet-600 to-fuchsia-500',
   'denominations': 'from-amber-500 to-orange-500',
 };
 
@@ -64,7 +64,7 @@ export default function SolutionPage() {
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-4">Solution not found</h1>
-          <Link href="/solutions" className="text-blue-400 hover:text-blue-300">
+          <Link href="/solutions" className="text-violet-400 hover:text-violet-300">
             ← Back to Solutions
           </Link>
         </div>
@@ -73,14 +73,14 @@ export default function SolutionPage() {
   }
 
   const HeroIcon = personaIcons[solution.slug] || Users;
-  const colorClass = personaColors[solution.slug] || 'from-blue-500 to-cyan-500';
+  const colorClass = personaColors[solution.slug] || 'from-violet-600 to-fuchsia-600';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero */}
       <section className="relative pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -102,7 +102,7 @@ export default function SolutionPage() {
               <div>
                 <AnimatedGradientText className="mb-6">
                   <span className="inline-flex items-center gap-2 text-slate-200">
-                    <Sparkles className="w-4 h-4 text-blue-400" />
+                    <Sparkles className="w-4 h-4 text-violet-400" />
                     <span>{solution.heroTagline}</span>
                     <ChevronRight className="w-4 h-4" />
                   </span>
@@ -119,8 +119,8 @@ export default function SolutionPage() {
                 <div className="flex flex-wrap gap-4">
                   <ShimmerButton
                     onClick={openBetaModal}
-                    className="h-14 px-8 text-lg font-semibold shadow-lg shadow-blue-500/25"
-                    background="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
+                    className="h-14 px-8 text-lg font-semibold shadow-lg shadow-violet-500/25"
+                    background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
                   >
                     Sign Up for Beta
                   </ShimmerButton>
@@ -228,7 +228,7 @@ export default function SolutionPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-blue-500/50 transition-all"
+                className="group p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-violet-500/50 transition-all"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorClass} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -256,7 +256,7 @@ export default function SolutionPage() {
               viewport={{ once: true }}
               className="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50"
             >
-              <Quote className="absolute top-8 left-8 w-12 h-12 text-blue-500/20" />
+              <Quote className="absolute top-8 left-8 w-12 h-12 text-violet-500/20" />
               <div className="relative">
                 <blockquote className="text-2xl md:text-3xl font-medium text-white mb-8 leading-relaxed">
                   &ldquo;{solution.testimonial.quote}&rdquo;
@@ -296,8 +296,8 @@ export default function SolutionPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <ShimmerButton
                 onClick={openBetaModal}
-                className="h-14 px-8 text-lg font-semibold shadow-lg shadow-blue-500/25"
-                background="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
+                className="h-14 px-8 text-lg font-semibold shadow-lg shadow-violet-500/25"
+                background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
               >
                 Sign Up for Beta
               </ShimmerButton>
@@ -329,7 +329,7 @@ export default function SolutionPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {otherSolutions.map((other, i) => {
               const OtherIcon = personaIcons[other.slug] || Users;
-              const otherColor = personaColors[other.slug] || 'from-blue-500 to-cyan-500';
+              const otherColor = personaColors[other.slug] || 'from-violet-600 to-fuchsia-600';
 
               return (
                 <motion.div
@@ -340,11 +340,11 @@ export default function SolutionPage() {
                   viewport={{ once: true }}
                 >
                   <Link href={`/solutions/${other.slug}`}>
-                    <div className="group p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-blue-500/50 transition-all">
+                    <div className="group p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 hover:border-violet-500/50 transition-all">
                       <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${otherColor} flex items-center justify-center mb-4`}>
                         <OtherIcon className="w-5 h-5 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-violet-400 transition-colors">
                         {other.title}
                       </h3>
                       <p className="text-sm text-slate-400 line-clamp-2">

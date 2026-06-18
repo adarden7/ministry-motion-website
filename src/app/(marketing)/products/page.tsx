@@ -527,9 +527,9 @@ export default function ProductsPage() {
       <MarketingNav currentPage="products" onBetaSignupClick={() => setShowBetaModal(true)} />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/30 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-200/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 bg-gradient-to-br from-violet-50/50 via-white to-fuchsia-50/30 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-200/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-200/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
             Every tool your worship ministry needs
@@ -545,7 +545,7 @@ export default function ProductsPage() {
               <a
                 key={pillar.id}
                 href={`#${pillar.id}`}
-                className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-full hover:border-blue-300 hover:text-blue-600 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-full hover:border-violet-300 hover:text-violet-600 transition-colors"
               >
                 {pillar.title}
               </a>
@@ -557,11 +557,11 @@ export default function ProductsPage() {
       {/* Product Pillars */}
       {productPillars.map((pillar, pillarIndex) => {
         const gradients = [
-          'bg-gradient-to-br from-white via-blue-50/20 to-white',
-          'bg-gradient-to-br from-violet-50/30 via-slate-50 to-indigo-50/20',
-          'bg-gradient-to-br from-white via-cyan-50/20 to-emerald-50/10',
+          'bg-gradient-to-br from-white via-violet-50/20 to-white',
+          'bg-gradient-to-br from-violet-50/30 via-slate-50 to-fuchsia-50/20',
+          'bg-gradient-to-br from-white via-violet-50/15 to-fuchsia-50/10',
           'bg-gradient-to-br from-amber-50/30 via-slate-50 to-orange-50/20',
-          'bg-gradient-to-br from-white via-blue-50/20 to-slate-50'
+          'bg-gradient-to-br from-white via-violet-50/20 to-slate-50'
         ];
         return (
         <section
@@ -570,7 +570,7 @@ export default function ProductsPage() {
           className={`relative py-24 overflow-hidden ${gradients[pillarIndex % gradients.length]}`}
         >
           {pillarIndex % 2 === 0 && (
-            <div className="absolute top-10 right-10 w-64 h-64 bg-blue-200/15 rounded-full blur-3xl" />
+            <div className="absolute top-10 right-10 w-64 h-64 bg-violet-200/15 rounded-full blur-3xl" />
           )}
           {pillarIndex % 2 === 1 && (
             <div className="absolute bottom-10 left-10 w-72 h-72 bg-violet-200/15 rounded-full blur-3xl" />
@@ -578,8 +578,8 @@ export default function ProductsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             {/* Pillar header */}
             <div className="max-w-3xl mb-16">
-              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-${pillar.color}-50 border border-${pillar.color}-200 mb-4`}>
-                <span className={`text-sm font-medium text-${pillar.color}-700`}>{pillar.title}</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 mb-4">
+                <span className="text-sm font-medium text-violet-700">{pillar.title}</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
                 {pillar.subtitle}
@@ -598,18 +598,18 @@ export default function ProductsPage() {
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                      <product.icon className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors">
+                      <product.icon className="w-6 h-6 text-violet-600" />
                     </div>
                     {product.badge && (
                       <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
                         product.badge === 'Industry First'
                           ? 'bg-amber-100 text-amber-700'
                           : product.badge === 'New'
-                          ? 'bg-blue-100 text-blue-700'
+                          ? 'bg-violet-100 text-violet-700'
                           : product.badge === 'Premium'
                           ? 'bg-violet-100 text-violet-700'
-                          : 'bg-blue-100 text-blue-700'
+                          : 'bg-violet-100 text-violet-700'
                       }`}>
                         {product.badge}
                       </span>
@@ -618,14 +618,14 @@ export default function ProductsPage() {
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-slate-900 mb-1">{product.name}</h3>
-                  <p className="text-sm text-blue-600 font-medium mb-3">{product.tagline}</p>
+                  <p className="text-sm text-violet-600 font-medium mb-3">{product.tagline}</p>
                   <p className="text-slate-600 text-sm mb-4">{product.description}</p>
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
                     {product.features.slice(0, 4).map((feature, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-slate-600">
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-violet-600 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -634,7 +634,7 @@ export default function ProductsPage() {
                   {/* CTA */}
                   <Link
                     href={product.href}
-                    className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-700 group-hover:gap-2 transition-all"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-violet-600 hover:text-violet-700 group-hover:gap-2 transition-all"
                   >
                     Learn more
                     <ChevronRight className="w-4 h-4" />
@@ -658,7 +658,7 @@ export default function ProductsPage() {
                 </p>
                 <Link
                   href={pillar.solutionHref}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 text-white font-semibold rounded-xl hover:bg-violet-700 transition-colors"
                 >
                   View Solution Page
                   <ChevronRight className="w-4 h-4" />
@@ -672,8 +672,8 @@ export default function ProductsPage() {
 
       {/* Integration Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-fuchsia-500/10 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -704,7 +704,7 @@ export default function ProductsPage() {
               }
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-xl bg-violet-600 flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -716,27 +716,27 @@ export default function ProductsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-br from-violet-600 via-violet-500 to-fuchsia-600 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
         <div className="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-fuchsia-400/10 rounded-full blur-3xl" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to see it in action?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-violet-100 mb-10">
             Join our exclusive beta program and be the first to try these features.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setShowBetaModal(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/demo"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Schedule Demo
             </Link>

@@ -5,7 +5,6 @@ import { useState } from 'react';
 import {
   Check,
   X,
-  Menu,
   HelpCircle,
   Users,
   Mic2,
@@ -267,9 +266,9 @@ export default function PricingPage() {
 
   const renderFeatureValue = (value: boolean | string) => {
     if (value === true) {
-      return <Check className="w-5 h-5 text-blue-600 mx-auto" />;
+      return <Check className="w-5 h-5 text-green-600 mx-auto" />;
     } else if (value === false) {
-      return <X className="w-5 h-5 text-slate-300 mx-auto" />;
+      return <X className="w-5 h-5 text-red-400 mx-auto" />;
     } else {
       return <span className="text-sm text-slate-600">{value}</span>;
     }
@@ -281,18 +280,18 @@ export default function PricingPage() {
       <MarketingNav />
 
       {/* Hero - Tech-forward dark gradient  */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
         {/* Gradient mesh overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-500/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Simple,{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">transparent pricing</span>
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">transparent pricing</span>
           </h1>
-          <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
             Start free, upgrade when you're ready. No hidden fees, no surprises.
           </p>
 
@@ -320,7 +319,7 @@ export default function PricingPage() {
               <p className="text-xs text-emerald-300 font-medium">Save 20% with annual billing</p>
             )}
             {billingPeriod === 'monthly' && (
-              <p className="text-xs text-cyan-300 font-medium">Switch to annual to save 20%</p>
+              <p className="text-xs text-violet-300 font-medium">Switch to annual to save 20%</p>
             )}
           </div>
         </div>
@@ -334,11 +333,11 @@ export default function PricingPage() {
               <div
                 key={i}
                 className={`relative bg-white rounded-2xl border p-6 ${
-                  tier.highlight ? 'border-blue-600 shadow-xl shadow-blue-100' : 'border-slate-200'
+                  tier.highlight ? 'border-violet-600 shadow-xl shadow-violet-100' : 'border-slate-200'
                 }`}
               >
                 {tier.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-violet-600 text-white text-xs font-bold rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -350,7 +349,7 @@ export default function PricingPage() {
                     {tier.period && <span className="text-slate-500">{tier.period}</span>}
                   </div>
                   {billingPeriod === 'monthly' && tier.annualPrice !== '$0' && tier.annualPrice !== 'Custom' && tier.price !== tier.annualPrice && (
-                    <p className="text-sm text-blue-600 mt-1">
+                    <p className="text-sm text-violet-600 mt-1">
                       Save 20% — {tier.annualPrice}/mo billed annually
                     </p>
                   )}
@@ -367,7 +366,7 @@ export default function PricingPage() {
                   href={tier.cta === 'Contact Sales' ? '/contact' : '/signup'}
                   className={`block w-full py-3 text-center font-semibold rounded-lg transition-colors mb-6 ${
                     tier.highlight
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      ? 'bg-violet-600 text-white hover:bg-violet-700'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                   }`}
                 >
@@ -378,11 +377,11 @@ export default function PricingPage() {
                   {Object.entries(tier.features).slice(0, 8).map(([feature, value]) => (
                     <div key={feature} className="flex items-center gap-2">
                       {value === true ? (
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                       ) : value === false ? (
-                        <X className="w-4 h-4 text-slate-300 flex-shrink-0" />
+                        <X className="w-4 h-4 text-red-400 flex-shrink-0" />
                       ) : (
-                        <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                       )}
                       <span className={`text-sm ${value === false ? 'text-slate-400' : 'text-slate-600'}`}>
                         {typeof value === 'string' ? `${feature} ${value}` : feature}
@@ -444,7 +443,7 @@ export default function PricingPage() {
               <div className="p-4 font-semibold text-slate-700">Feature</div>
               <div className="p-4 text-center font-semibold text-slate-700">Free</div>
               <div className="p-4 text-center font-semibold text-slate-700">Small Church</div>
-              <div className="p-4 text-center font-semibold text-blue-700 bg-blue-50">Pro</div>
+              <div className="p-4 text-center font-semibold text-violet-700 bg-violet-50">Pro</div>
               <div className="p-4 text-center font-semibold text-slate-700">Enterprise</div>
             </div>
 
@@ -454,12 +453,12 @@ export default function PricingPage() {
                 {/* Category header */}
                 <div className="grid grid-cols-5 bg-slate-50 border-b border-slate-200">
                   <div className="p-3 flex items-center gap-2 font-semibold text-slate-900">
-                    <category.icon className="w-4 h-4 text-blue-600" />
+                    <category.icon className="w-4 h-4 text-violet-600" />
                     {category.name}
                   </div>
                   <div className="p-3"></div>
                   <div className="p-3"></div>
-                  <div className="p-3 bg-blue-50/50"></div>
+                  <div className="p-3 bg-violet-50/50"></div>
                   <div className="p-3"></div>
                 </div>
 
@@ -472,7 +471,7 @@ export default function PricingPage() {
                         <div className="p-3 text-sm text-slate-600 pl-10">{feature.name}</div>
                         <div className="p-3 text-center">{renderFeatureValue(feature.free)}</div>
                         <div className="p-3 text-center">{renderFeatureValue(feature.small)}</div>
-                        <div className="p-3 text-center bg-blue-50/30">{renderFeatureValue(feature.pro)}</div>
+                        <div className="p-3 text-center bg-violet-50/30">{renderFeatureValue(feature.pro)}</div>
                         <div className="p-3 text-center">{renderFeatureValue(feature.enterprise)}</div>
                       </div>
                     ))}
@@ -514,24 +513,24 @@ export default function PricingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-blue-600">
+      <section className="py-24 bg-gradient-to-r from-violet-600 to-fuchsia-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to get started?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-violet-100 mb-10">
             Join our beta program and be among the first to experience the future of church management.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Talk to Sales
             </Link>

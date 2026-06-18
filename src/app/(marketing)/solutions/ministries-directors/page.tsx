@@ -131,7 +131,7 @@ export default function MinistriesDirectorsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -156,7 +156,7 @@ export default function MinistriesDirectorsPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all text-lg shadow-lg shadow-violet-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
                 Start Free Trial
               </button>
@@ -219,28 +219,20 @@ export default function MinistriesDirectorsPage() {
                       <span className="text-sm font-mono text-muted-foreground">{uc.number}</span>
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                          uc.color === 'violet'
-                            ? 'bg-violet-100 dark:bg-violet-900/30'
-                            : uc.color === 'rose'
+                          uc.color === 'rose'
                             ? 'bg-rose-100 dark:bg-rose-900/30'
-                            : uc.color === 'blue'
-                            ? 'bg-blue-100 dark:bg-blue-900/30'
-                            : uc.color === 'emerald'
-                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
-                            : 'bg-amber-100 dark:bg-amber-900/30'
+                            : uc.color === 'amber'
+                            ? 'bg-amber-100 dark:bg-amber-900/30'
+                            : 'bg-violet-100 dark:bg-violet-900/30'
                         }`}
                       >
                         <Icon
                           className={`w-5 h-5 ${
-                            uc.color === 'violet'
-                              ? 'text-violet-600'
-                              : uc.color === 'rose'
+                            uc.color === 'rose'
                               ? 'text-rose-600'
-                              : uc.color === 'blue'
-                              ? 'text-blue-600'
-                              : uc.color === 'emerald'
-                              ? 'text-emerald-600'
-                              : 'text-amber-600'
+                              : uc.color === 'amber'
+                              ? 'text-amber-600'
+                              : 'text-violet-600'
                           }`}
                         />
                       </div>
@@ -262,15 +254,11 @@ export default function MinistriesDirectorsPage() {
                     <div className="bg-muted rounded-2xl border border-border p-10 text-center w-full max-w-sm">
                       <div
                         className={`text-6xl font-bold mb-3 ${
-                          uc.color === 'violet'
-                            ? 'text-violet-600'
-                            : uc.color === 'rose'
+                          uc.color === 'rose'
                             ? 'text-rose-600'
-                            : uc.color === 'blue'
-                            ? 'text-blue-600'
-                            : uc.color === 'emerald'
-                            ? 'text-emerald-600'
-                            : 'text-amber-600'
+                            : uc.color === 'amber'
+                            ? 'text-amber-600'
+                            : 'text-violet-600'
                         }`}
                       >
                         {uc.stat}
@@ -324,7 +312,7 @@ export default function MinistriesDirectorsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
               Sign Up for Beta
             </button>

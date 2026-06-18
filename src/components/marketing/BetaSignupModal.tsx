@@ -47,7 +47,7 @@ export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup
       {/* Modal — uses semantic tokens so it works in both light and dark mode */}
       <div className="relative w-full max-w-lg max-h-[90vh] flex flex-col bg-card border border-border rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header — gradient accent strip */}
-        <div className="relative shrink-0 bg-gradient-to-br from-primary via-primary/90 to-primary/70 px-6 py-6 sm:py-8 text-primary-foreground">
+        <div className="relative shrink-0 bg-gradient-to-br from-violet-600 to-fuchsia-600 px-6 py-6 sm:py-8 text-white">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <button
             onClick={onClose}
@@ -61,7 +61,7 @@ export function BetaSignupModal({ isOpen, onClose, source = 'website_beta_signup
               <span className="text-sm font-medium">Limited Beta Access</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold mb-2">Join the Beta</h2>
-            <p className="text-sm sm:text-base text-primary-foreground/80">
+            <p className="text-sm sm:text-base text-white/80">
               Be among the first to experience the future of worship ministry management.
             </p>
           </div>

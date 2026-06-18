@@ -22,7 +22,7 @@ type ResourceType = 'Guide' | 'Tool' | 'Webinar' | 'Checklist';
 
 const typeConfig: Record<ResourceType, { color: string; label: string }> = {
   Guide: { color: 'blue', label: 'Guide' },
-  Tool: { color: 'emerald', label: 'Tool' },
+  Tool: { color: 'violet', label: 'Tool' },
   Webinar: { color: 'violet', label: 'Webinar' },
   Checklist: { color: 'amber', label: 'Checklist' },
 };
@@ -30,8 +30,7 @@ const typeConfig: Record<ResourceType, { color: string; label: string }> = {
 function TypeBadge({ type }: { type: ResourceType }) {
   const config = typeConfig[type];
   const colorMap: Record<string, string> = {
-    blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-    emerald: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
+    blue: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
     violet: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
     amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
   };
@@ -98,9 +97,9 @@ const guides = [
 const tools = [
   {
     type: 'Tool' as ResourceType,
-    title: 'Church Tech ROI Calculator',
+    title: 'Church Giving ROI Calculator',
     description:
-      'Enter your current tool subscriptions, team size, and hours spent on administrative tasks. Get a customized analysis of potential savings from consolidating to Ministry Motion.',
+      'See the biggest return of all: the giving lift from moving members through the visitor → disciple → leader pipeline — and how few changed lives it takes to pay for the entire platform.',
     icon: Calculator,
     cta: 'Open Calculator',
     href: '/resources/roi-calculator',
@@ -231,7 +230,7 @@ function ResourceCard({
       ) : (
         <Link
           href={href}
-          className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center justify-center gap-2 px-4 py-2 bg-violet-600 text-white text-sm font-medium rounded-lg hover:bg-violet-700 transition-colors"
         >
           {type === 'Webinar' ? <Play className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
           {cta}
@@ -248,20 +247,20 @@ export default function ResourcesPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-6">
-              <BookOpen className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300">Ministry Motion Resources</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+              <BookOpen className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-300">Ministry Motion Resources</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
               Tools and Guides to{' '}
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-400 bg-clip-text text-transparent">
                 Accelerate Ministry
               </span>
             </h1>
@@ -279,8 +278,8 @@ export default function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                <BookOpen className="w-4 h-4 text-blue-600" />
+              <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                <BookOpen className="w-4 h-4 text-violet-600" />
               </div>
               <h2 className="text-2xl font-bold text-foreground">Guides</h2>
             </div>
@@ -315,8 +314,8 @@ export default function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                <Calculator className="w-4 h-4 text-emerald-600" />
+              <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                <Calculator className="w-4 h-4 text-violet-600" />
               </div>
               <h2 className="text-2xl font-bold text-foreground">Tools & Checklists</h2>
             </div>
@@ -390,7 +389,7 @@ export default function ResourcesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
               Join Beta Program
             </button>

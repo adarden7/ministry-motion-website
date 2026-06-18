@@ -5,9 +5,7 @@ import { useState } from 'react';
 import {
   Check,
   X,
-  Menu,
   ChevronDown,
-  ArrowRight,
   Mic2,
   Users,
   Calendar,
@@ -204,9 +202,9 @@ export default function ComparePage() {
 
   const renderValue = (value: boolean | string) => {
     if (value === true) {
-      return <Check className="w-5 h-5 text-blue-600 mx-auto" />;
+      return <Check className="w-5 h-5 text-green-600 mx-auto" />;
     } else if (value === false) {
-      return <X className="w-5 h-5 text-slate-300 mx-auto" />;
+      return <X className="w-5 h-5 text-red-400 mx-auto" />;
     } else {
       return <span className="text-xs text-slate-500">{value}</span>;
     }
@@ -217,18 +215,18 @@ export default function ComparePage() {
       <MarketingNav currentPage="compare" onBetaSignupClick={() => setShowBetaModal(true)} />
 
       {/* Hero - Tech-forward dark gradient */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
         {/* Gradient mesh overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-500/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Ministry Motion vs.{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">the Competition</span>
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">the Competition</span>
           </h1>
-          <p className="text-xl text-blue-100/80 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             See exactly what you get with Ministry Motion compared to Planning Center and One Church.
             We don't just match their features—we add AI-powered capabilities no one else has.
           </p>
@@ -246,7 +244,7 @@ export default function ComparePage() {
                 <tr className="bg-slate-100 border-b border-slate-200">
                   <th className="text-left p-4 font-semibold text-slate-700">Capability</th>
                   <th className="p-4 text-center">
-                    <span className="text-blue-600 font-semibold">Ministry Motion</span>
+                    <span className="text-violet-600 font-semibold">Ministry Motion</span>
                   </th>
                   <th className="p-4 text-center">
                     <span className="text-slate-600 font-semibold">Planning Center</span>
@@ -263,16 +261,16 @@ export default function ComparePage() {
                     <td className="p-4 font-medium text-slate-900">{row.category}</td>
                     <td className="p-4 text-center">
                       {row.us === '✓' ? (
-                        <Check className="w-5 h-5 text-blue-600 mx-auto" />
+                        <Check className="w-5 h-5 text-green-600 mx-auto" />
                       ) : (
-                        <span className="text-sm text-blue-600 font-medium">{row.us}</span>
+                        <span className="text-sm text-violet-600 font-medium">{row.us}</span>
                       )}
                     </td>
                     <td className="p-4 text-center">
                       {row.pco === '✓' ? (
                         <Check className="w-5 h-5 text-slate-400 mx-auto" />
                       ) : row.pco === '✗' ? (
-                        <X className="w-5 h-5 text-slate-300 mx-auto" />
+                        <X className="w-5 h-5 text-red-400 mx-auto" />
                       ) : (
                         <span className="text-xs text-slate-500">{row.pco}</span>
                       )}
@@ -281,7 +279,7 @@ export default function ComparePage() {
                       {row.onechurch === '✓' ? (
                         <Check className="w-5 h-5 text-slate-400 mx-auto" />
                       ) : row.onechurch === '✗' ? (
-                        <X className="w-5 h-5 text-slate-300 mx-auto" />
+                        <X className="w-5 h-5 text-red-400 mx-auto" />
                       ) : (
                         <span className="text-xs text-slate-500">{row.onechurch}</span>
                       )}
@@ -302,7 +300,7 @@ export default function ComparePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">What Planning Center Does Well</h3>
+              <h3 className="text-lg font-semibold text-violet-400 mb-4">What Planning Center Does Well</h3>
               <ul className="space-y-3">
                 {[
                   '19 years of stability and trust',
@@ -320,7 +318,7 @@ export default function ComparePage() {
             </div>
 
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">What One Church Does Well</h3>
+              <h3 className="text-lg font-semibold text-violet-400 mb-4">What One Church Does Well</h3>
               <ul className="space-y-3">
                 {[
                   'Modern, intuitive interface',
@@ -338,7 +336,7 @@ export default function ComparePage() {
             </div>
 
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">Where Ministry Motion Surpasses Both</h3>
+              <h3 className="text-lg font-semibold text-violet-400 mb-4">Where Ministry Motion Surpasses Both</h3>
               <ul className="space-y-3">
                 {[
                   'AI-powered everything',
@@ -348,7 +346,7 @@ export default function ComparePage() {
                   'Discipleship journey tracking'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
-                    <Zap className="w-4 h-4 text-teal-400 flex-shrink-0 mt-0.5" />
+                    <Zap className="w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -356,8 +354,8 @@ export default function ComparePage() {
             </div>
           </div>
 
-          <div className="mt-8 p-6 bg-teal-900/50 rounded-xl border border-blue-700">
-            <p className="text-lg text-center text-blue-100">
+          <div className="mt-8 p-6 bg-violet-900/50 rounded-xl border border-violet-700">
+            <p className="text-lg text-center text-slate-200">
               <strong className="text-white">Our positioning:</strong> PCO is excellent at organizing worship ministry. One Church is great for full-featured church management.
               Ministry Motion does both AND develops your team, analyzes your services, tracks discipleship journeys, and moves members toward
               spiritual maturity—all with AI that works for you instead of workflows you have to build.
@@ -375,23 +373,23 @@ export default function ComparePage() {
           </p>
 
           {/* Pricing summary row */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-6 mb-8 text-white">
+          <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl p-6 mb-8 text-white">
             <div className="grid grid-cols-4 gap-4 items-center">
               <div>
-                <p className="text-sm font-semibold text-blue-200 uppercase tracking-wide">Monthly Cost</p>
+                <p className="text-sm font-semibold text-violet-200 uppercase tracking-wide">Monthly Cost</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-blue-200 mb-1">Ministry Motion Pro</p>
-                <p className="text-3xl font-black">$199<span className="text-base font-normal text-blue-200">/mo</span></p>
-                <p className="text-xs text-blue-200 mt-1">Everything included</p>
+                <p className="text-xs text-violet-200 mb-1">Ministry Motion Pro</p>
+                <p className="text-3xl font-black">$199<span className="text-base font-normal text-violet-200">/mo</span></p>
+                <p className="text-xs text-violet-200 mt-1">Everything included</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-blue-200 mb-1">Planning Center (comparable)</p>
-                <p className="text-3xl font-black text-blue-300">$199+<span className="text-base font-normal text-blue-400">/mo</span></p>
-                <p className="text-xs text-blue-300 mt-1">Services only, no AI/LMS</p>
+                <p className="text-xs text-violet-200 mb-1">Planning Center (comparable)</p>
+                <p className="text-3xl font-black text-violet-300">$199+<span className="text-base font-normal text-violet-400">/mo</span></p>
+                <p className="text-xs text-violet-300 mt-1">Services only, no AI/LMS</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-blue-200 mb-1">6-tool stack equivalent</p>
+                <p className="text-xs text-violet-200 mb-1">6-tool stack equivalent</p>
                 <p className="text-3xl font-black text-red-300">$1,083<span className="text-base font-normal text-red-400">/mo</span></p>
                 <p className="text-xs text-red-300 mt-1">No integration, duplicate data</p>
               </div>
@@ -408,7 +406,7 @@ export default function ComparePage() {
                 >
                   <span className="font-semibold text-slate-900">{category.name}</span>
                   <div className="flex items-center gap-4">
-                    <span className="text-sm text-blue-600">
+                    <span className="text-sm text-violet-600">
                       {category.features.filter(f => f.highlight).length} unique to us
                     </span>
                     <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${expandedCategories.has(category.name) ? 'rotate-180' : ''}`} />
@@ -423,7 +421,7 @@ export default function ComparePage() {
                         <tr className="bg-slate-100 border-t border-slate-200">
                           <th className="text-left p-3 text-sm font-medium text-slate-600">Feature</th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-blue-600">Ministry Motion</span>
+                            <span className="text-sm font-semibold text-violet-600">Ministry Motion</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
                             <span className="text-sm font-semibold text-slate-600">Planning Center</span>
@@ -435,11 +433,11 @@ export default function ComparePage() {
                       </thead>
                       <tbody className="divide-y divide-slate-100">
                         {category.features.map((feature, i) => (
-                          <tr key={i} className={feature.highlight ? 'bg-blue-50' : 'hover:bg-slate-50'}>
+                          <tr key={i} className={feature.highlight ? 'bg-violet-50' : 'hover:bg-slate-50'}>
                             <td className="p-3 text-sm text-slate-700">
                               {feature.name}
                               {feature.highlight && (
-                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 rounded">
+                                <span className="ml-2 px-1.5 py-0.5 text-[10px] font-semibold bg-violet-100 text-violet-700 rounded">
                                   Unique
                                 </span>
                               )}
@@ -503,7 +501,7 @@ export default function ComparePage() {
             </div>
 
             {/* Ministry Motion */}
-            <div className="bg-blue-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl p-6 text-white">
               <h3 className="text-lg font-semibold mb-6">Ministry Motion Pro</h3>
 
               <div className="space-y-3 mb-6">
@@ -522,20 +520,20 @@ export default function ComparePage() {
                   'Multi-campus support'
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <Check className="w-5 h-5 text-teal-200 flex-shrink-0" />
-                    <span className="text-blue-50">{feature}</span>
+                    <Check className="w-5 h-5 text-fuchsia-200 flex-shrink-0" />
+                    <span className="text-violet-50">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-4 border-t border-blue-500">
+              <div className="flex items-center justify-between pt-4 border-t border-violet-500">
                 <span className="font-semibold">Total</span>
                 <span className="text-3xl font-bold">$199/mo</span>
               </div>
 
-              <div className="mt-4 p-3 bg-blue-700 rounded-lg">
+              <div className="mt-4 p-3 bg-violet-700 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <span className="text-teal-200">You save</span>
+                  <span className="text-fuchsia-200">You save</span>
                   <span className="text-xl font-bold text-white">$884/mo ($10,608/year)</span>
                 </div>
               </div>
@@ -578,21 +576,21 @@ export default function ComparePage() {
               <div key={i} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <div className="text-5xl font-black text-slate-200 mb-4">{reason.number}</div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.heading}</h3>
-                <p className="text-sm font-semibold text-blue-600 mb-3">{reason.subhead}</p>
+                <p className="text-sm font-semibold text-violet-600 mb-3">{reason.subhead}</p>
                 <p className="text-sm text-slate-600 leading-relaxed">{reason.body}</p>
               </div>
             ))}
           </div>
 
           {/* Board-ready language */}
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-violet-50 border border-violet-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <p className="font-semibold text-slate-900 mb-1">Share this comparison with your leadership team</p>
               <p className="text-sm text-slate-600">This page is designed to be board-ready. Download the full comparison as a PDF to present at your next leadership meeting.</p>
             </div>
             <a
               href="#"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-sm"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-3 bg-violet-600 text-white font-semibold rounded-xl hover:bg-violet-700 transition-colors text-sm"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
               Download Comparison PDF
@@ -617,7 +615,7 @@ export default function ComparePage() {
               { title: 'You\'re live', description: 'Start using Ministry Motion in days' }
             ].map((step, i) => (
               <div key={i} className="bg-slate-50 rounded-xl p-6">
-                <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto mb-4">
+                <div className="w-10 h-10 rounded-full bg-violet-100 text-violet-600 font-bold flex items-center justify-center mx-auto mb-4">
                   {i + 1}
                 </div>
                 <h3 className="font-semibold text-slate-900 mb-2">{step.title}</h3>
@@ -629,24 +627,24 @@ export default function ComparePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-blue-600">
+      <section className="py-24 bg-gradient-to-r from-violet-600 to-fuchsia-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to see the difference?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-violet-100 mb-10">
             Join our beta program and be among the first to experience the future of church management.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setShowBetaModal(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 text-lg"
             >
               Sign Up for Beta
             </button>
             <Link
               href="/demo"
-              className="w-full sm:w-auto px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg border border-blue-500 hover:bg-teal-800 text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
             >
               Schedule Demo
             </Link>

@@ -90,31 +90,31 @@ export default function ChurchAdminJourneyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-amber-900 to-orange-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-orange-500/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
-            <Shield className="w-4 h-4 text-amber-300" />
-            <span className="text-sm font-medium text-amber-200">Church Admin Journey</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+            <Shield className="w-4 h-4 text-violet-400" />
+            <span className="text-sm font-medium text-violet-300">Church Admin Journey</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             David's Journey:<br />
-            <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               From 6 Tools to 1 — and $10,608 Saved
             </span>
           </h1>
 
-          <p className="text-lg text-amber-100/80 mb-6 max-w-2xl">
+          <p className="text-lg text-violet-100/80 mb-6 max-w-2xl">
             David Kim, Church Administrator at Harvest Community (250 members), was managing
             data across 6 separate tools and spending 4 hours every month on board reports.
             See how 90 days changed the entire administrative operation.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-amber-200">
+          <div className="flex flex-wrap gap-4 text-sm text-violet-300">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>250 members</span>
@@ -155,7 +155,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Administrative Setup"
             icon={Zap}
-            color="bg-amber-50 border-amber-200 text-amber-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">All the infrastructure, configured on day one</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -193,7 +193,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — First Efficiency Wins"
             icon={Clock}
-            color="bg-blue-50 border-blue-200 text-blue-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The first signs of what's possible</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -226,7 +226,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — The Business Case Is Made"
             icon={FileText}
-            color="bg-emerald-50 border-emerald-200 text-emerald-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The board approves the consolidation plan</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -264,7 +264,7 @@ export default function ChurchAdminJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Full Consolidation"
             icon={TrendingUp}
-            color="bg-violet-50 border-violet-200 text-violet-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Six tools become one — and the savings are real</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -300,7 +300,7 @@ export default function ChurchAdminJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">David's 3-Month Results</span>
             </div>
@@ -316,8 +316,8 @@ export default function ChurchAdminJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
-                <Shield className="w-5 h-5 text-amber-600" />
+              <div className="w-10 h-10 rounded-full bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-5 h-5 text-violet-400" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">David Kim, Church Administrator</p>
@@ -333,18 +333,18 @@ export default function ChurchAdminJourneyPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-amber-600 via-orange-600 to-yellow-600 rounded-2xl text-white relative overflow-hidden">
+        <section className="text-center py-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="relative">
             <h2 className="text-2xl font-bold mb-3">Start Your Journey</h2>
-            <p className="text-amber-100 mb-6 max-w-md mx-auto">
+            <p className="text-violet-100 mb-6 max-w-md mx-auto">
               Consolidate your tech stack and reclaim your administrative hours.
               AI facilitates and guides — humans always in the loop.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-white text-amber-700 hover:bg-amber-50 font-semibold px-8 py-3"
+                className="bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -357,7 +357,7 @@ export default function ChurchAdminJourneyPage() {
                 <a href="/journeys/church-leadership">See Senior Pastor Journey</a>
               </Button>
             </div>
-            <p className="text-amber-200/70 text-xs mt-4">
+            <p className="text-violet-200/70 text-xs mt-4">
               PCO integration included · 30-day free trial · No credit card required
             </p>
           </div>

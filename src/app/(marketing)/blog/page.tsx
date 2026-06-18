@@ -10,7 +10,6 @@ import {
   Lightbulb,
   BarChart3,
   Layers,
-  Search
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
 
@@ -26,10 +25,10 @@ const categories: Category[] = [
 ];
 
 const categoryConfig: Record<string, { color: string; icon: typeof BookOpen }> = {
-  'Thought Leadership': { color: 'blue', icon: TrendingUp },
-  'How-To Guides': { color: 'emerald', icon: Lightbulb },
+  'Thought Leadership': { color: 'violet', icon: TrendingUp },
+  'How-To Guides': { color: 'fuchsia', icon: Lightbulb },
   'Comparison & ROI': { color: 'amber', icon: BarChart3 },
-  'Deep Dives': { color: 'violet', icon: Layers },
+  'Deep Dives': { color: 'indigo', icon: Layers },
 };
 
 // 20 blog posts across 4 pillars
@@ -226,10 +225,10 @@ const blogPosts = [
 function CategoryBadge({ category }: { category: string }) {
   const config = categoryConfig[category] || { color: 'blue', icon: BookOpen };
   const colorMap: Record<string, string> = {
-    blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-    emerald: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
-    amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
     violet: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
+    fuchsia: 'bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-300',
+    amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
+    indigo: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
   };
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium ${colorMap[config.color] || colorMap['blue']}`}>
@@ -248,16 +247,16 @@ export default function BlogPage() {
 
   const categoryColorMap: Record<string, string> = {
     'All': 'bg-foreground text-background',
-    'Thought Leadership': 'bg-blue-600 text-white',
-    'How-To Guides': 'bg-emerald-600 text-white',
+    'Thought Leadership': 'bg-violet-600 text-white',
+    'How-To Guides': 'bg-fuchsia-600 text-white',
     'Comparison & ROI': 'bg-amber-600 text-white',
     'Deep Dives': 'bg-violet-600 text-white',
   };
 
   const categoryInactiveMap: Record<string, string> = {
     'All': 'bg-muted text-muted-foreground hover:bg-muted/80',
-    'Thought Leadership': 'bg-muted text-muted-foreground hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-900/20 dark:hover:text-blue-300',
-    'How-To Guides': 'bg-muted text-muted-foreground hover:bg-emerald-50 hover:text-emerald-700 dark:hover:bg-emerald-900/20 dark:hover:text-emerald-300',
+    'Thought Leadership': 'bg-muted text-muted-foreground hover:bg-violet-50 hover:text-violet-700 dark:hover:bg-violet-900/20 dark:hover:text-violet-300',
+    'How-To Guides': 'bg-muted text-muted-foreground hover:bg-fuchsia-50 hover:text-fuchsia-700 dark:hover:bg-fuchsia-900/20 dark:hover:text-fuchsia-300',
     'Comparison & ROI': 'bg-muted text-muted-foreground hover:bg-amber-50 hover:text-amber-700 dark:hover:bg-amber-900/20 dark:hover:text-amber-300',
     'Deep Dives': 'bg-muted text-muted-foreground hover:bg-violet-50 hover:text-violet-700 dark:hover:bg-violet-900/20 dark:hover:text-violet-300',
   };
@@ -266,19 +265,19 @@ export default function BlogPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
-              <BookOpen className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Ministry Motion Blog</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+              <BookOpen className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-300">Ministry Motion Blog</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
               Insights for{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                 Ministry Leaders
               </span>
             </h1>
@@ -323,7 +322,7 @@ export default function BlogPage() {
             <div className="mb-12">
               <Link
                 href={`/blog/${filtered[0].slug}`}
-                className="group block bg-muted rounded-2xl border border-border p-8 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 transition-all"
+                className="group block bg-muted rounded-2xl border border-border p-8 hover:shadow-lg hover:border-violet-300 dark:hover:border-violet-700 transition-all"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CategoryBadge category={filtered[0].category} />
@@ -333,11 +332,11 @@ export default function BlogPage() {
                   </span>
                   <span className="text-xs text-muted-foreground font-mono">{filtered[0].id}</span>
                 </div>
-                <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-blue-600 transition-colors">
+                <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-violet-600 transition-colors">
                   {filtered[0].title}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">{filtered[0].excerpt}</p>
-                <div className="flex items-center gap-2 text-blue-600 text-sm font-medium">
+                <div className="flex items-center gap-2 text-violet-600 text-sm font-medium">
                   Read article <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -350,7 +349,7 @@ export default function BlogPage() {
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group bg-background rounded-2xl border border-border p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 transition-all flex flex-col"
+                className="group bg-background rounded-2xl border border-border p-6 hover:shadow-lg hover:border-violet-300 dark:hover:border-violet-700 transition-all flex flex-col"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <CategoryBadge category={post.category} />
@@ -359,13 +358,13 @@ export default function BlogPage() {
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-blue-600 transition-colors leading-snug flex-1">
+                <h3 className="text-base font-bold text-foreground mb-2 group-hover:text-violet-600 transition-colors leading-snug flex-1">
                   {post.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center gap-1 text-blue-600 text-sm font-medium mt-auto">
+                <div className="flex items-center gap-1 text-violet-600 text-sm font-medium mt-auto">
                   Read <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </div>
               </Link>
@@ -392,7 +391,7 @@ export default function BlogPage() {
           </p>
           <button
             onClick={openBetaModal}
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg"
+            className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
           >
             Join Beta & Get Updates
           </button>

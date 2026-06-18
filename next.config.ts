@@ -9,6 +9,37 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: false,
   async rewrites() {
+    // Value-proposition microsite domains. The branded domain stays in the
+    // address bar while serving the matching persona page. Only the root path
+    // is mapped so deep links (e.g. /pricing) still resolve normally on each
+    // domain. ministrymotion.com is handled by the root redirect to /home.
+    const personaDomains: { hosts: string[]; destination: string }[] = [
+      {
+        hosts: ['worshipdirectorstudio.com', 'www.worshipdirectorstudio.com'],
+        destination: '/solutions/worship-directors',
+      },
+      {
+        hosts: ['praiseleaderstudio.com', 'www.praiseleaderstudio.com'],
+        destination: '/solutions/praise-leaders',
+      },
+      {
+        hosts: ['praiseleaderstudio.ai', 'www.praiseleaderstudio.ai'],
+        destination: '/solutions/praise-leaders',
+      },
+      {
+        hosts: ['musicministrystudio.com', 'www.musicministrystudio.com'],
+        destination: '/solutions/worship-directors',
+      },
+    ];
+
+    const personaRewrites = personaDomains.flatMap(({ hosts, destination }) =>
+      hosts.map((host) => ({
+        source: '/',
+        has: [{ type: 'host' as const, value: host }],
+        destination,
+      }))
+    );
+
     return {
       beforeFiles: [
         {
@@ -21,6 +52,7 @@ const nextConfig: NextConfig = {
           ],
           destination: 'https://worshipwise-studio-1089767403917.us-east1.run.app/:path*',
         },
+        ...personaRewrites,
       ],
     };
   },

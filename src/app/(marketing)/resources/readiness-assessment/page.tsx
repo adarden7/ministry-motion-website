@@ -59,8 +59,8 @@ const questions: Question[] = [
 const scaleLabels = ['Strongly disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly agree'];
 
 function tierFor(pct: number): { label: string; color: string; summary: string } {
-  if (pct >= 80) return { label: 'Launch-Ready', color: 'emerald', summary: 'Your team is well positioned to adopt AI-powered ministry tools quickly and see results fast.' };
-  if (pct >= 60) return { label: 'Ready', color: 'teal', summary: 'You have a strong foundation. A focused onboarding plan will get you moving with confidence.' };
+  if (pct >= 80) return { label: 'Launch-Ready', color: 'violet', summary: 'Your team is well positioned to adopt AI-powered ministry tools quickly and see results fast.' };
+  if (pct >= 60) return { label: 'Ready', color: 'fuchsia', summary: 'You have a strong foundation. A focused onboarding plan will get you moving with confidence.' };
   if (pct >= 40) return { label: 'Emerging', color: 'amber', summary: 'The pieces are coming together. Shore up a couple of gaps and you will be ready to adopt.' };
   return { label: 'Foundation-Building', color: 'rose', summary: 'Start with the fundamentals below before layering AI on top — it will pay off later.' };
 }
@@ -132,7 +132,7 @@ export default function ReadinessAssessmentPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-12 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Link
             href="/resources"
@@ -142,10 +142,10 @@ export default function ReadinessAssessmentPage() {
             All Resources
           </Link>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <ClipboardList className="w-5 h-5 text-emerald-400" />
+            <div className="w-11 h-11 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+              <ClipboardList className="w-5 h-5 text-violet-400" />
             </div>
-            <span className="inline-block px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/15 text-emerald-300">
+            <span className="inline-block px-2.5 py-1 rounded-md text-xs font-medium bg-violet-500/15 text-violet-300">
               Assessment
             </span>
           </div>
@@ -172,7 +172,7 @@ export default function ReadinessAssessmentPage() {
             </div>
             <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all"
+                className="h-full bg-gradient-to-r from-violet-600 to-fuchsia-600 transition-all"
                 style={{ width: `${(answeredCount / questions.length) * 100}%` }}
               />
             </div>
@@ -186,8 +186,8 @@ export default function ReadinessAssessmentPage() {
             return (
               <div key={dim.key} className="mb-10">
                 <div className="flex items-center gap-3 mb-1">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                    <DimIcon className="w-4 h-4 text-emerald-600" />
+                  <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                    <DimIcon className="w-4 h-4 text-violet-600" />
                   </div>
                   <h2 className="text-xl font-bold text-foreground">{dim.label}</h2>
                 </div>
@@ -209,8 +209,8 @@ export default function ReadinessAssessmentPage() {
                               onClick={() => setAnswers((a) => ({ ...a, [i]: value }))}
                               className={`flex flex-col items-center gap-1.5 py-2 px-1 rounded-lg border text-center transition-colors ${
                                 selected
-                                  ? 'bg-emerald-500 border-emerald-500 text-white'
-                                  : 'bg-background border-border hover:border-emerald-400 text-muted-foreground'
+                                  ? 'bg-violet-600 border-violet-600 text-white'
+                                  : 'bg-background border-border hover:border-violet-400 text-muted-foreground'
                               }`}
                             >
                               <span className="text-sm font-bold">{value}</span>
@@ -230,7 +230,7 @@ export default function ReadinessAssessmentPage() {
             <button
               onClick={handleSubmit}
               disabled={!allAnswered}
-              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {allAnswered ? 'See my readiness score' : `Answer all ${questions.length} questions`}
             </button>
@@ -252,10 +252,10 @@ export default function ReadinessAssessmentPage() {
                 <p className="text-6xl font-bold text-white mb-2">{scores.overall}%</p>
                 <span
                   className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ${
-                    tier.color === 'emerald'
-                      ? 'bg-emerald-500/20 text-emerald-300'
-                      : tier.color === 'teal'
-                        ? 'bg-teal-500/20 text-teal-300'
+                    tier.color === 'violet'
+                      ? 'bg-violet-500/20 text-violet-300'
+                      : tier.color === 'fuchsia'
+                        ? 'bg-fuchsia-500/20 text-fuchsia-300'
                         : tier.color === 'amber'
                           ? 'bg-amber-500/20 text-amber-300'
                           : 'bg-rose-500/20 text-rose-300'
@@ -275,14 +275,14 @@ export default function ReadinessAssessmentPage() {
                     <div key={dim.key} className="bg-background rounded-xl border border-border p-5">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <DimIcon className="w-4 h-4 text-emerald-600" />
+                          <DimIcon className="w-4 h-4 text-violet-600" />
                           <span className="font-semibold text-foreground">{dim.label}</span>
                         </div>
                         <span className="font-bold text-foreground">{pct}%</span>
                       </div>
                       <div className="h-2 w-full rounded-full bg-muted overflow-hidden mb-3">
                         <div
-                          className="h-full bg-gradient-to-r from-emerald-500 to-teal-500"
+                          className="h-full bg-gradient-to-r from-violet-600 to-fuchsia-600"
                           style={{ width: `${pct}%` }}
                         />
                       </div>
@@ -292,15 +292,15 @@ export default function ReadinessAssessmentPage() {
                 })}
               </div>
 
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl p-8 text-center text-white">
+              <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl p-8 text-center text-white">
                 <h3 className="text-2xl font-bold mb-3">Want a personalized rollout plan?</h3>
-                <p className="text-emerald-50/90 mb-6 max-w-lg mx-auto">
+                <p className="text-violet-50/90 mb-6 max-w-lg mx-auto">
                   Join the beta and our team will walk through your results and build a step-by-step adoption
                   plan for your worship team.
                 </p>
                 <button
                   onClick={openBetaModal}
-                  className="px-8 py-3.5 bg-white text-emerald-700 font-semibold rounded-lg hover:bg-emerald-50 transition-all"
+                  className="px-8 py-3.5 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 transition-all"
                 >
                   Join Beta Program
                 </button>

@@ -89,20 +89,20 @@ export default function WorshipDirectorJourneyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-violet-900 to-indigo-900">
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-indigo-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
-            <Music className="w-4 h-4 text-violet-300" />
-            <span className="text-sm font-medium text-violet-200">Worship Director Journey</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+            <Music className="w-4 h-4 text-violet-400" />
+            <span className="text-sm font-medium text-violet-300">Worship Director Journey</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             Mike's Journey:<br />
-            <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               From Reactive to Strategic Leadership
             </span>
           </h1>
@@ -113,7 +113,7 @@ export default function WorshipDirectorJourneyPage() {
             changed his entire leadership approach.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-violet-200">
+          <div className="flex flex-wrap gap-4 text-sm text-violet-300">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>400 members</span>
@@ -154,7 +154,7 @@ export default function WorshipDirectorJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Director Onboarding"
             icon={Zap}
-            color="bg-violet-50 border-violet-200 text-violet-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">A platform built for directors, not just worship leaders</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -192,7 +192,7 @@ export default function WorshipDirectorJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — First Insights"
             icon={BarChart3}
-            color="bg-blue-50 border-blue-200 text-blue-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Data replaces instinct with evidence</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -230,7 +230,7 @@ export default function WorshipDirectorJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — Systems Running"
             icon={Layers}
-            color="bg-emerald-50 border-emerald-200 text-emerald-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The platform is doing the operational work</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -268,7 +268,7 @@ export default function WorshipDirectorJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Strategic Impact"
             icon={TrendingUp}
-            color="bg-amber-50 border-amber-200 text-amber-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The board is asking for more data</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -304,7 +304,7 @@ export default function WorshipDirectorJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Mike's 3-Month Results</span>
             </div>
@@ -320,8 +320,8 @@ export default function WorshipDirectorJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center flex-shrink-0">
-                <Music className="w-5 h-5 text-violet-600" />
+              <div className="w-10 h-10 rounded-full bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                <Music className="w-5 h-5 text-violet-400" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Mike Stevens, Worship Director</p>
@@ -337,7 +337,7 @@ export default function WorshipDirectorJourneyPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 rounded-2xl text-white relative overflow-hidden">
+        <section className="text-center py-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="relative">
             <h2 className="text-2xl font-bold mb-3">Start Your Journey</h2>

@@ -44,11 +44,11 @@ const proseClasses = `prose prose-invert prose-lg max-w-none
   prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-3
   prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
   prose-p:text-white/70 prose-p:leading-relaxed prose-p:mb-6
-  prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:text-emerald-300
+  prose-a:text-violet-400 prose-a:no-underline hover:prose-a:text-violet-300
   prose-strong:text-white prose-strong:font-semibold
   prose-ul:text-white/70 prose-ol:text-white/70 prose-ul:mb-6 prose-ol:mb-6
-  prose-li:marker:text-emerald-400 prose-li:my-1.5
-  prose-blockquote:border-emerald-500 prose-blockquote:bg-white/[0.02] prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:not-italic
+  prose-li:marker:text-violet-400 prose-li:my-1.5
+  prose-blockquote:border-violet-500 prose-blockquote:bg-white/[0.02] prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:not-italic
   prose-table:text-white/70 prose-th:text-white prose-th:bg-white/[0.04] prose-th:border-white/10 prose-td:border-white/10 prose-table:text-sm
   prose-hr:border-white/10 prose-hr:my-10`;
 
@@ -68,7 +68,7 @@ function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
       </div>
       <div className="h-2 w-full rounded-full bg-white/10 mb-8 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all"
+          className="h-full bg-gradient-to-r from-violet-600 to-fuchsia-600 transition-all"
           style={{ width: `${total ? (completed / total) * 100 : 0}%` }}
         />
       </div>
@@ -89,8 +89,8 @@ function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
                       <span
                         className={`mt-0.5 w-5 h-5 rounded-md border flex items-center justify-center flex-shrink-0 transition-colors ${
                           checked
-                            ? 'bg-emerald-500 border-emerald-500'
-                            : 'border-white/30 group-hover:border-emerald-400'
+                            ? 'bg-violet-600 border-violet-600'
+                            : 'border-white/30 group-hover:border-violet-400'
                         }`}
                       >
                         {checked && <Check className="w-3.5 h-3.5 text-white" />}
@@ -179,8 +179,8 @@ export default function ResourceDetailPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-12 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Link
             href="/resources"
@@ -191,10 +191,10 @@ export default function ResourceDetailPage() {
           </Link>
 
           <div className="flex items-center gap-3 mb-5">
-            <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-              <Icon className="w-5 h-5 text-emerald-400" />
+            <div className="w-11 h-11 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+              <Icon className="w-5 h-5 text-violet-400" />
             </div>
-            <span className="inline-block px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/15 text-emerald-300">
+            <span className="inline-block px-2.5 py-1 rounded-md text-xs font-medium bg-violet-500/15 text-violet-300">
               {resource.kind}
             </span>
           </div>
@@ -222,7 +222,7 @@ export default function ResourceDetailPage() {
           <div className="flex flex-wrap gap-3">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-medium rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all"
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-medium rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
             >
               <Printer className="w-4 h-4" /> Download PDF
             </button>
@@ -263,7 +263,7 @@ export default function ResourceDetailPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all"
+              className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
             >
               Join Beta Program
             </button>

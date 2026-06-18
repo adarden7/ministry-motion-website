@@ -92,30 +92,30 @@ export default function PraiseLeaderJourneyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-indigo-500/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
-            <Mic2 className="w-4 h-4 text-blue-300" />
-            <span className="text-sm font-medium text-blue-200">Praise Leader Journey</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+            <Mic2 className="w-4 h-4 text-violet-400" />
+            <span className="text-sm font-medium text-violet-300">Praise Leader Journey</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             Subrina's Journey:<br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               From Sunday Prep Chaos to Worship Excellence
             </span>
           </h1>
 
-          <p className="text-lg text-blue-100/80 mb-6 max-w-2xl">
+          <p className="text-lg text-violet-100/80 mb-6 max-w-2xl">
             Subrina Callwood, Praise Leader at Cornerstone Community Church (150 members),
             used to spend her Saturdays scrambling. See how Day 1 to Month 3 changed everything.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-blue-200">
+          <div className="flex flex-wrap gap-4 text-sm text-violet-300">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>150 members</span>
@@ -156,7 +156,7 @@ export default function PraiseLeaderJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — First Login"
             icon={Zap}
-            color="bg-blue-50 border-blue-200 text-blue-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Setup in minutes, not weeks</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -189,7 +189,7 @@ export default function PraiseLeaderJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — First Service Cycle"
             icon={Calendar}
-            color="bg-emerald-50 border-emerald-200 text-emerald-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Real feedback from a real service</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -227,7 +227,7 @@ export default function PraiseLeaderJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — Team in Rhythm"
             icon={Users}
-            color="bg-violet-50 border-violet-200 text-violet-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The whole team is using it</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -265,7 +265,7 @@ export default function PraiseLeaderJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Measurable Growth"
             icon={TrendingUp}
-            color="bg-amber-50 border-amber-200 text-amber-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The numbers tell the story</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -301,7 +301,7 @@ export default function PraiseLeaderJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Subrina's 3-Month Results</span>
             </div>
@@ -317,8 +317,8 @@ export default function PraiseLeaderJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                <Mic2 className="w-5 h-5 text-blue-600" />
+              <div className="w-10 h-10 rounded-full bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                <Mic2 className="w-5 h-5 text-violet-400" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Subrina Callwood, Praise Leader</p>
@@ -334,18 +334,18 @@ export default function PraiseLeaderJourneyPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 rounded-2xl text-white relative overflow-hidden">
+        <section className="text-center py-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="relative">
             <h2 className="text-2xl font-bold mb-3">Start Your Journey</h2>
-            <p className="text-blue-100 mb-6 max-w-md mx-auto">
+            <p className="text-violet-100 mb-6 max-w-md mx-auto">
               Join praise leaders like Subrina who are leading with data,
               not guesswork. AI facilitates and guides — humans always in the loop.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 py-3"
+                className="bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -358,7 +358,7 @@ export default function PraiseLeaderJourneyPage() {
                 <a href="/journeys/worship-director">See Worship Director Journey</a>
               </Button>
             </div>
-            <p className="text-blue-200/70 text-xs mt-4">
+            <p className="text-violet-200/70 text-xs mt-4">
               PCO integration included · 30-day free trial · No credit card required
             </p>
           </div>
