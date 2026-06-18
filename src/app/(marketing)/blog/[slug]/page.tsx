@@ -20,7 +20,7 @@ import { useMarketing } from '@/context/MarketingContext';
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 import { extractHeadings } from '@/components/blog/headings';
 import { ReadingProgress, TableOfContents } from '@/components/blog/ReadingAids';
-import { CoverHero, StatGrid, ChartFigure } from '@/components/blog/ArticleVisuals';
+import { CoverHero, StatGrid } from '@/components/blog/ArticleVisuals';
 import { ArticleBody } from '@/components/blog/ArticleBody';
 
 export default function BlogPostPage() {
@@ -165,7 +165,6 @@ export default function BlogPostPage() {
                   <StatGrid stats={post.keyStats} />
                 </div>
               )}
-              {post.chartData && <ChartFigure chart={post.chartData} />}
               <ArticleBody content={post.content} headings={headings} />
 
               {/* Tags */}
