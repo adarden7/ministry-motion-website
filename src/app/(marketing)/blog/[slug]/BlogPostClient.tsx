@@ -51,7 +51,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
   };
 
   return (
-    <div className="min-h-screen bg-background text-white antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
       <ReadingProgress />
 
       {/* Header */}
@@ -59,7 +59,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <Link href="/blog" className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-8 transition-colors">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
@@ -70,19 +70,19 @@ export function BlogPostClient({ slug }: { slug: string }) {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">{post.title}</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">{post.title}</h1>
 
             {post.subtitle && (
-              <p className="text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl">{post.subtitle}</p>
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl">{post.subtitle}</p>
             )}
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400 mb-6">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground mb-6">
               <div className="flex items-center gap-2">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center text-white text-xs font-bold">
                   MM
                 </div>
-                <span className="text-slate-300 font-medium">{post.author}</span>
+                <span className="text-foreground font-medium">{post.author}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -96,7 +96,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
 
             {/* Share */}
             <div className="flex items-center gap-3 pb-8">
-              <span className="text-sm text-white/50">Share:</span>
+              <span className="text-sm text-muted-foreground">Share:</span>
               <button
                 aria-label="Share on Twitter"
                 onClick={() =>
@@ -105,7 +105,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
                     '_blank'
                   )
                 }
-                className="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+                className="p-2 bg-muted rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/70 transition-colors"
               >
                 <Twitter className="w-4 h-4" />
               </button>
@@ -114,14 +114,14 @@ export function BlogPostClient({ slug }: { slug: string }) {
                 onClick={() =>
                   window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank')
                 }
-                className="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+                className="p-2 bg-muted rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/70 transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
               </button>
               <button
                 aria-label="Copy link"
                 onClick={handleCopyLink}
-                className="p-2 bg-slate-800 rounded-full text-slate-400 hover:text-white hover:bg-slate-700 transition-colors relative"
+                className="p-2 bg-muted rounded-full text-muted-foreground hover:text-foreground hover:bg-muted/70 transition-colors relative"
               >
                 <Link2 className="w-4 h-4" />
                 {copied && (
@@ -157,13 +157,13 @@ export function BlogPostClient({ slug }: { slug: string }) {
               <ArticleBody content={post.content} headings={headings} />
 
               {/* Tags */}
-              <div className="flex flex-wrap items-center gap-2 mt-12 pt-8 border-t border-white/10">
-                <Tag className="w-4 h-4 text-slate-400" />
+              <div className="flex flex-wrap items-center gap-2 mt-12 pt-8 border-t border-border">
+                <Tag className="w-4 h-4 text-muted-foreground" />
                 {post.tags.map((tag) => (
                   <Link
                     key={tag}
                     href={`/blog?tag=${tag}`}
-                    className="px-3 py-1 bg-slate-800 text-slate-400 rounded-full text-xs hover:bg-slate-700 hover:text-white transition-colors"
+                    className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs hover:bg-muted/70 hover:text-foreground transition-colors"
                   >
                     #{tag}
                   </Link>
@@ -175,9 +175,9 @@ export function BlogPostClient({ slug }: { slug: string }) {
       </section>
 
       {/* Author CTA */}
-      <section className="py-16 border-t border-slate-800">
+      <section className="py-16 border-t border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 lg:p-12 border border-slate-700/50">
+          <div className="bg-card rounded-3xl p-8 lg:p-12 border border-border">
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-shrink-0">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center">
@@ -185,8 +185,8 @@ export function BlogPostClient({ slug }: { slug: string }) {
                 </div>
               </div>
               <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-xl font-bold text-white mb-2">Want to see these insights in action?</h3>
-                <p className="text-slate-400 mb-4">
+                <h3 className="text-xl font-bold text-foreground mb-2">Want to see these insights in action?</h3>
+                <p className="text-muted-foreground mb-4">
                   Ministry Motion turns this research into practical tools for your church. Track discipleship,
                   prevent disconnection, and grow your ministry.
                 </p>
@@ -207,23 +207,23 @@ export function BlogPostClient({ slug }: { slug: string }) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 border-t border-slate-800">
+        <section className="py-16 border-t border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-white mb-8">Related Articles</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-8">Related Articles</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
-                  <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-violet-500/50 transition-all">
+                  <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-muted/50 border border-border hover:border-violet-500/50 transition-all">
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs font-medium">
+                        <span className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-medium">
                           {relatedPost.category}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-violet-400 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors line-clamp-2">
                         {relatedPost.title}
                       </h3>
-                      <p className="text-slate-400 text-sm mb-4 line-clamp-2 flex-1">{relatedPost.excerpt}</p>
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-2 flex-1">{relatedPost.excerpt}</p>
                       <div className="flex items-center gap-1 text-violet-400 text-sm font-medium group-hover:gap-2 transition-all">
                         Read Article
                         <ChevronRight className="w-4 h-4" />
@@ -238,11 +238,11 @@ export function BlogPostClient({ slug }: { slug: string }) {
       )}
 
       {/* All Posts CTA */}
-      <section className="py-16 border-t border-slate-800">
+      <section className="py-16 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 text-white rounded-full hover:bg-slate-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground rounded-full hover:bg-muted/70 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             View All Articles

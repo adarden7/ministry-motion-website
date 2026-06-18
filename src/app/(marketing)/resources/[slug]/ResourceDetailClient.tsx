@@ -48,12 +48,12 @@ function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
   return (
     <div className="mt-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-white">Checklist ({total} items)</h2>
-        <span className="text-sm text-white/50">
+        <h2 className="text-2xl font-bold text-foreground">Checklist ({total} items)</h2>
+        <span className="text-sm text-muted-foreground">
           {completed} / {total} complete
         </span>
       </div>
-      <div className="h-2 w-full rounded-full bg-white/10 mb-8 overflow-hidden">
+      <div className="h-2 w-full rounded-full bg-muted mb-8 overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-violet-600 to-fuchsia-600 transition-all"
           style={{ width: `${total ? (completed / total) * 100 : 0}%` }}
@@ -62,7 +62,7 @@ function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
       <div className="space-y-8">
         {groups.map((group, gi) => (
           <div key={gi}>
-            <h3 className="text-lg font-semibold text-white mb-3">{group.title}</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-3">{group.title}</h3>
             <ul className="space-y-2">
               {group.items.map((item, ii) => {
                 const key = `${gi}-${ii}`;
@@ -77,12 +77,12 @@ function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
                         className={`mt-0.5 w-5 h-5 rounded-md border flex items-center justify-center flex-shrink-0 transition-colors ${
                           checked
                             ? 'bg-violet-600 border-violet-600'
-                            : 'border-white/30 group-hover:border-violet-400'
+                            : 'border-muted-foreground/40 group-hover:border-violet-400'
                         }`}
                       >
                         {checked && <Check className="w-3.5 h-3.5 text-white" />}
                       </span>
-                      <span className={`text-sm leading-relaxed ${checked ? 'text-white/40 line-through' : 'text-white/75'}`}>
+                      <span className={`text-sm leading-relaxed ${checked ? 'text-muted-foreground line-through' : 'text-foreground/90'}`}>
                         {item}
                       </span>
                     </button>
@@ -101,20 +101,20 @@ function TemplatePreview({ resource }: { resource: ResourceContent }) {
   const cols = resource.template ?? [];
   return (
     <div className="mt-12">
-      <h2 className="text-2xl font-bold text-white mb-6">Template Columns</h2>
-      <div className="overflow-x-auto rounded-xl border border-white/10">
+      <h2 className="text-2xl font-bold text-foreground mb-6">Template Columns</h2>
+      <div className="overflow-x-auto rounded-xl border border-border">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-white/[0.04]">
-              <th className="text-left text-white font-semibold px-4 py-3 border-b border-white/10">Column</th>
-              <th className="text-left text-white font-semibold px-4 py-3 border-b border-white/10">Example</th>
+            <tr className="bg-muted">
+              <th className="text-left text-foreground font-semibold px-4 py-3 border-b border-border">Column</th>
+              <th className="text-left text-foreground font-semibold px-4 py-3 border-b border-border">Example</th>
             </tr>
           </thead>
           <tbody>
             {cols.map((c, i) => (
-              <tr key={i} className="border-b border-white/5 last:border-0">
-                <td className="px-4 py-3 text-white/80 font-medium">{c.header}</td>
-                <td className="px-4 py-3 text-white/50">{c.example ?? '—'}</td>
+              <tr key={i} className="border-b border-border/60 last:border-0">
+                <td className="px-4 py-3 text-foreground font-medium">{c.header}</td>
+                <td className="px-4 py-3 text-muted-foreground">{c.example ?? '—'}</td>
               </tr>
             ))}
           </tbody>
