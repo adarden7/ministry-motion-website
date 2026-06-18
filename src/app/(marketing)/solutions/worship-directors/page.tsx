@@ -35,8 +35,8 @@ const useCases = [
       'Per-singer pitch accuracy scores mapped to SATB parts',
       'God Quotient: lyrical depth, theological alignment, and theme consistency',
     ],
-    stat: '< 1hr',
-    statLabel: 'from video upload to complete performance scorecard',
+    stat: 'Same-day',
+    statLabel: 'typical turnaround from upload to scorecard (varies with length)',
   },
   {
     number: '02',
@@ -77,9 +77,9 @@ const useCases = [
     icon: Radio,
     color: 'amber',
     title: 'Live Service Analysis',
-    subtitle: 'Real-time pitch accuracy, vocal health ring, and OBS integration',
+    subtitle: 'Real-time pitch accuracy, vocal health ring, and OBS integration (on the roadmap)',
     description:
-      'During rehearsal or live service, stream audio directly into the platform for real-time analysis. The vocal health ring displays team-wide vocal fatigue indicators. Full OBS integration allows stream overlays for production teams.',
+      'On our roadmap: stream audio directly into the platform during rehearsal or live service for real-time analysis. The vocal health ring will display team-wide vocal fatigue indicators, and OBS integration will allow stream overlays for production teams.',
     bullets: [
       'Real-time pitch accuracy scoring per vocalist during live performance',
       'Vocal health ring: aggregated fatigue and strain indicators across the team',
@@ -171,7 +171,7 @@ export default function WorshipDirectorsPage() {
             </div>
 
             <p className="text-sm text-slate-500 mt-4">
-              30-day free trial · PCO integration included · No credit card required
+              30-day free trial · PCO import (beta) · No credit card required
             </p>
           </div>
         </div>
@@ -182,10 +182,10 @@ export default function WorshipDirectorsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '< 1hr', label: 'Sunday video to Monday scorecard' },
+              { value: 'Same-day', label: 'Sunday video to scorecard turnaround' },
               { value: '8+', label: 'AI agents in the advisory council' },
               { value: '30-day', label: 'Automated service prep timeline' },
-              { value: 'Live', label: 'Real-time vocal analysis during service' },
+              { value: 'Soon', label: 'Real-time vocal analysis during service' },
             ].map((item, i) => (
               <div key={i}>
                 <div className="text-2xl font-bold text-violet-400">{item.value}</div>

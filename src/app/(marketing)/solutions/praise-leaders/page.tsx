@@ -44,9 +44,9 @@ const useCases = [
     icon: Activity,
     color: 'violet',
     title: 'Know Who Practiced Before Rehearsal',
-    subtitle: 'Sing-Along Player with pitch tracking, XP, and streak combos',
+    subtitle: 'Sing-Along Player with pitch tracking, XP, and streak combos (in beta)',
     description:
-      'The Sing-Along Player lets team members practice their parts at home while the platform captures pitch accuracy, session length, and participation. You walk into rehearsal knowing exactly who prepared and who needs extra attention.',
+      'Currently in beta, the Sing-Along Player lets team members practice their parts at home while the platform captures pitch accuracy, session length, and participation. You walk into rehearsal knowing exactly who prepared and who needs extra attention.',
     bullets: [
       'Real-time pitch tracking during at-home practice sessions',
       'XP and combo streak system that makes practice genuinely fun',
@@ -171,7 +171,7 @@ export default function PraiseLeadersPage() {
             </div>
 
             <p className="text-sm text-slate-500 mt-4">
-              30-day free trial · PCO integration included · No credit card required
+              30-day free trial · PCO import (beta) · No credit card required
             </p>
           </div>
         </div>
