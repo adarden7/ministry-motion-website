@@ -17,8 +17,8 @@ import {
   Baby,
   Heart,
 } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { getSolutionBySlug, getAllSolutions, type Solution } from '@/lib/solutions-content';
+import { useMemo } from 'react';
+import { getSolutionBySlug, getAllSolutions } from '@/lib/solutions-content';
 import { useMarketing } from '@/context/MarketingContext';
 import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text';
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
@@ -47,17 +47,13 @@ const personaColors: Record<string, string> = {
 export default function SolutionPage() {
   const params = useParams();
   const persona = params.persona as string;
-  const [solution, setSolution] = useState<Solution | null>(null);
-  const [otherSolutions, setOtherSolutions] = useState<Solution[]>([]);
   const { openBetaModal } = useMarketing();
 
-  useEffect(() => {
-    const found = getSolutionBySlug(persona);
-    if (found) {
-      setSolution(found);
-      setOtherSolutions(getAllSolutions().filter((s) => s.slug !== persona).slice(0, 3));
-    }
-  }, [persona]);
+  const solution = useMemo(() => getSolutionBySlug(persona) ?? null, [persona]);
+  const otherSolutions = useMemo(
+    () => (solution ? getAllSolutions().filter((s) => s.slug !== persona).slice(0, 3) : []),
+    [solution, persona]
+  );
 
   if (!solution) {
     return (

@@ -4,22 +4,16 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { getProductBySlug, type ProductContent } from '@/lib/products-content';
+import { useMemo } from 'react';
+import { getProductBySlug } from '@/lib/products-content';
 import { useMarketing } from '@/context/MarketingContext';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const [product, setProduct] = useState<ProductContent | null>(null);
   const { openBetaModal } = useMarketing();
 
-  useEffect(() => {
-    const found = getProductBySlug(slug);
-    if (found) {
-      setProduct(found);
-    }
-  }, [slug]);
+  const product = useMemo(() => getProductBySlug(slug) ?? null, [slug]);
 
   if (!product) {
     return (
@@ -82,7 +76,7 @@ export default function ProductDetailPage() {
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={openBetaModal}
-                    className="group px-8 py-4 bg-background text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                    className="group px-8 py-4 bg-white text-slate-900 font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                   >
                     <span className="flex items-center gap-2">
                       Request Early Access
