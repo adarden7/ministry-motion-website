@@ -22,7 +22,7 @@ type ResourceType = 'Guide' | 'Tool' | 'Webinar' | 'Checklist';
 
 const typeConfig: Record<ResourceType, { color: string; label: string }> = {
   Guide: { color: 'blue', label: 'Guide' },
-  Tool: { color: 'emerald', label: 'Tool' },
+  Tool: { color: 'violet', label: 'Tool' },
   Webinar: { color: 'violet', label: 'Webinar' },
   Checklist: { color: 'amber', label: 'Checklist' },
 };
@@ -30,8 +30,7 @@ const typeConfig: Record<ResourceType, { color: string; label: string }> = {
 function TypeBadge({ type }: { type: ResourceType }) {
   const config = typeConfig[type];
   const colorMap: Record<string, string> = {
-    blue: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-    emerald: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300',
+    blue: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
     violet: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
     amber: 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300',
   };
@@ -52,7 +51,8 @@ const guides = [
     icon: Mic2,
     pages: '32 pages',
     audience: 'Worship Directors, Praise Leaders',
-    cta: 'Download PDF',
+    cta: 'Read Guide',
+    href: '/resources/complete-guide-ai-worship-ministry',
     comingSoon: false,
   },
   {
@@ -63,7 +63,8 @@ const guides = [
     icon: BookOpen,
     pages: '24 pages',
     audience: 'Church Admins, Executive Pastors',
-    cta: 'Download PDF',
+    cta: 'Read Guide',
+    href: '/resources/denominational-setup-guide',
     comingSoon: false,
   },
   {
@@ -74,8 +75,9 @@ const guides = [
     icon: Users,
     pages: '18 pages',
     audience: 'Ministry Directors, Volunteer Coordinators',
-    cta: 'Download PDF',
-    comingSoon: true,
+    cta: 'Read Guide',
+    href: '/resources/volunteer-health-playbook',
+    comingSoon: false,
   },
   {
     type: 'Guide' as ResourceType,
@@ -85,8 +87,9 @@ const guides = [
     icon: BarChart3,
     pages: '20 pages',
     audience: 'Senior Pastors, Elders, Finance Committees',
-    cta: 'Download PDF',
-    comingSoon: true,
+    cta: 'Read Guide',
+    href: '/resources/church-health-reporting',
+    comingSoon: false,
   },
 ];
 
@@ -94,11 +97,12 @@ const guides = [
 const tools = [
   {
     type: 'Tool' as ResourceType,
-    title: 'Church Tech ROI Calculator',
+    title: 'Church Giving ROI Calculator',
     description:
-      'Enter your current tool subscriptions, team size, and hours spent on administrative tasks. Get a customized analysis of potential savings from consolidating to Ministry Motion.',
+      'See the biggest return of all: the giving lift from moving members through the visitor → disciple → leader pipeline — and how few changed lives it takes to pay for the entire platform.',
     icon: Calculator,
     cta: 'Open Calculator',
+    href: '/resources/roi-calculator',
     comingSoon: false,
   },
   {
@@ -107,7 +111,8 @@ const tools = [
     description:
       'A 47-point checklist for migrating from Planning Center Online to Ministry Motion without data loss. Covers member records, service plans, song libraries, volunteer rosters, and giving history.',
     icon: RefreshCw,
-    cta: 'Download Checklist',
+    cta: 'Open Checklist',
+    href: '/resources/pco-migration-checklist',
     comingSoon: false,
   },
   {
@@ -117,7 +122,8 @@ const tools = [
       'Is your team ready to adopt AI vocal coaching and service analysis? This 25-question assessment scores your team across technical readiness, cultural openness, and data maturity.',
     icon: FileText,
     cta: 'Take Assessment',
-    comingSoon: true,
+    href: '/resources/readiness-assessment',
+    comingSoon: false,
   },
   {
     type: 'Tool' as ResourceType,
@@ -125,7 +131,8 @@ const tools = [
     description:
       'A downloadable spreadsheet template that helps you document every church software subscription, its cost, core use case, and which Ministry Motion features it overlaps with.',
     icon: BarChart3,
-    cta: 'Download Template',
+    cta: 'Open Template',
+    href: '/resources/ministry-subscription-stack-audit',
     comingSoon: false,
   },
 ];
@@ -140,8 +147,8 @@ const webinars = [
     icon: Video,
     duration: '45 min',
     presenter: 'Ministry Motion Team',
-    date: 'Recorded — watch anytime',
-    comingSoon: false,
+    date: 'Recording in production',
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -151,8 +158,8 @@ const webinars = [
     icon: Video,
     duration: '60 min',
     presenter: 'Panel: Senior Pastors + MM Team',
-    date: 'Recorded — watch anytime',
-    comingSoon: false,
+    date: 'Recording in production',
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -163,7 +170,7 @@ const webinars = [
     duration: '75 min',
     presenter: 'Ministry Motion Product Team',
     date: 'Live sessions monthly',
-    comingSoon: false,
+    comingSoon: true,
   },
   {
     type: 'Webinar' as ResourceType,
@@ -185,6 +192,7 @@ function ResourceCard({
   icon: Icon,
   cta,
   comingSoon,
+  href,
   meta,
 }: {
   type: ResourceType;
@@ -193,6 +201,7 @@ function ResourceCard({
   icon: typeof Download;
   cta: string;
   comingSoon: boolean;
+  href?: string;
   meta?: string[];
 }) {
   return (
@@ -214,15 +223,18 @@ function ResourceCard({
           ))}
         </div>
       )}
-      {comingSoon ? (
+      {comingSoon || !href ? (
         <span className="inline-block px-4 py-2 bg-muted text-muted-foreground text-sm rounded-lg text-center">
           Coming Soon
         </span>
       ) : (
-        <button className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
-          {type === 'Webinar' ? <Play className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+        <Link
+          href={href}
+          className="flex items-center justify-center gap-2 px-4 py-2 bg-violet-600 text-white text-sm font-medium rounded-lg hover:bg-violet-700 transition-colors"
+        >
+          {type === 'Webinar' ? <Play className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
           {cta}
-        </button>
+        </Link>
       )}
     </div>
   );
@@ -235,20 +247,20 @@ export default function ResourcesPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-6">
-              <BookOpen className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300">Ministry Motion Resources</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+              <BookOpen className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-300">Ministry Motion Resources</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
               Tools and Guides to{' '}
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-400 bg-clip-text text-transparent">
                 Accelerate Ministry
               </span>
             </h1>
@@ -266,8 +278,8 @@ export default function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
-                <BookOpen className="w-4 h-4 text-blue-600" />
+              <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                <BookOpen className="w-4 h-4 text-violet-600" />
               </div>
               <h2 className="text-2xl font-bold text-foreground">Guides</h2>
             </div>
@@ -285,6 +297,7 @@ export default function ResourcesPage() {
                 description={g.description}
                 icon={g.icon}
                 cta={g.cta}
+                href={g.href}
                 comingSoon={g.comingSoon}
                 meta={[g.pages, g.audience]}
               />
@@ -301,8 +314,8 @@ export default function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                <Calculator className="w-4 h-4 text-emerald-600" />
+              <div className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                <Calculator className="w-4 h-4 text-violet-600" />
               </div>
               <h2 className="text-2xl font-bold text-foreground">Tools & Checklists</h2>
             </div>
@@ -320,6 +333,7 @@ export default function ResourcesPage() {
                 description={t.description}
                 icon={t.icon}
                 cta={t.cta}
+                href={t.href}
                 comingSoon={t.comingSoon}
               />
             ))}
@@ -375,7 +389,7 @@ export default function ResourcesPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
               Join Beta Program
             </button>

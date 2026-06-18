@@ -128,21 +128,21 @@ export default function LeadershipPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
-              <Crown className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium text-amber-300">Solutions for Church Leadership</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+              <Crown className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-300">Solutions for Church Leadership</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Lead With{' '}
-              <span className="bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                 Kingdom Intelligence
               </span>
             </h1>
@@ -156,7 +156,7 @@ export default function LeadershipPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all text-lg shadow-lg shadow-amber-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
                 Request Demo
               </button>
@@ -186,7 +186,7 @@ export default function LeadershipPage() {
               { value: 'Multi-church', label: 'Cross-church analytics for denominations' },
             ].map((item, i) => (
               <div key={i}>
-                <div className="text-2xl font-bold text-amber-400">{item.value}</div>
+                <div className="text-2xl font-bold text-violet-400">{item.value}</div>
                 <div className="text-xs text-slate-400 mt-1">{item.label}</div>
               </div>
             ))}
@@ -198,7 +198,7 @@ export default function LeadershipPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider">Top 5 Use Cases</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Top 5 Use Cases</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
               Strategic Intelligence for Church Leadership
             </h2>
@@ -219,12 +219,8 @@ export default function LeadershipPage() {
                       <span className="text-sm font-mono text-muted-foreground">{uc.number}</span>
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                          uc.color === 'emerald'
-                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
-                            : uc.color === 'amber'
+                          uc.color === 'amber'
                             ? 'bg-amber-100 dark:bg-amber-900/30'
-                            : uc.color === 'blue'
-                            ? 'bg-blue-100 dark:bg-blue-900/30'
                             : uc.color === 'rose'
                             ? 'bg-rose-100 dark:bg-rose-900/30'
                             : 'bg-violet-100 dark:bg-violet-900/30'
@@ -232,12 +228,8 @@ export default function LeadershipPage() {
                       >
                         <Icon
                           className={`w-5 h-5 ${
-                            uc.color === 'emerald'
-                              ? 'text-emerald-600'
-                              : uc.color === 'amber'
+                            uc.color === 'amber'
                               ? 'text-amber-600'
-                              : uc.color === 'blue'
-                              ? 'text-blue-600'
                               : uc.color === 'rose'
                               ? 'text-rose-600'
                               : 'text-violet-600'
@@ -251,7 +243,7 @@ export default function LeadershipPage() {
                     <ul className="space-y-3">
                       {uc.bullets.map((b, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <Check className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                          <Check className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                           <span className="text-foreground text-sm">{b}</span>
                         </li>
                       ))}
@@ -262,12 +254,8 @@ export default function LeadershipPage() {
                     <div className="bg-muted rounded-2xl border border-border p-10 text-center w-full max-w-sm">
                       <div
                         className={`text-5xl font-bold mb-3 ${
-                          uc.color === 'emerald'
-                            ? 'text-emerald-600'
-                            : uc.color === 'amber'
+                          uc.color === 'amber'
                             ? 'text-amber-600'
-                            : uc.color === 'blue'
-                            ? 'text-blue-600'
                             : uc.color === 'rose'
                             ? 'text-rose-600'
                             : 'text-violet-600'
@@ -289,7 +277,7 @@ export default function LeadershipPage() {
       <section className="py-20 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-amber-600 uppercase tracking-wider">Early Feedback</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Early Feedback</span>
             <h2 className="text-2xl font-bold text-foreground mt-2">What Pastors and Executive Leaders Are Saying</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -324,7 +312,7 @@ export default function LeadershipPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
               Request a Demo
             </button>

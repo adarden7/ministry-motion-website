@@ -25,7 +25,7 @@ const useCases = [
   {
     number: '01',
     icon: Music,
-    color: 'blue',
+    color: 'violet',
     title: 'SATB Rehearsal Tracks in 30 Seconds',
     subtitle: '$0.10 in AI processing costs vs. $50–200 per track from producers',
     description:
@@ -42,7 +42,7 @@ const useCases = [
   {
     number: '02',
     icon: Activity,
-    color: 'emerald',
+    color: 'violet',
     title: 'Know Who Practiced Before Rehearsal',
     subtitle: 'Sing-Along Player with pitch tracking, XP, and streak combos',
     description:
@@ -131,21 +131,21 @@ export default function PraiseLeadersPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
-              <Mic2 className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Solutions for Praise Leaders</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+              <Mic2 className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-300">Solutions for Praise Leaders</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Lead Worship With{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                 AI Precision
               </span>
             </h1>
@@ -158,7 +158,7 @@ export default function PraiseLeadersPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
                 Start Free Trial
               </button>
@@ -188,7 +188,7 @@ export default function PraiseLeadersPage() {
               { value: '8+', label: 'AI agents working for your team' },
             ].map((item, i) => (
               <div key={i}>
-                <div className="text-2xl font-bold text-blue-400">{item.value}</div>
+                <div className="text-2xl font-bold text-violet-400">{item.value}</div>
                 <div className="text-xs text-slate-400 mt-1">{item.label}</div>
               </div>
             ))}
@@ -200,7 +200,7 @@ export default function PraiseLeadersPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Top 5 Use Cases</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Top 5 Use Cases</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-2 mb-4">
               Everything a Praise Leader Needs
             </h2>
@@ -226,11 +226,7 @@ export default function PraiseLeadersPage() {
                       <span className="text-sm font-mono text-muted-foreground">{uc.number}</span>
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                          uc.color === 'blue'
-                            ? 'bg-blue-100 dark:bg-blue-900/30'
-                            : uc.color === 'emerald'
-                            ? 'bg-emerald-100 dark:bg-emerald-900/30'
-                            : uc.color === 'violet'
+                          uc.color === 'violet'
                             ? 'bg-violet-100 dark:bg-violet-900/30'
                             : uc.color === 'amber'
                             ? 'bg-amber-100 dark:bg-amber-900/30'
@@ -239,11 +235,7 @@ export default function PraiseLeadersPage() {
                       >
                         <Icon
                           className={`w-5 h-5 ${
-                            uc.color === 'blue'
-                              ? 'text-blue-600'
-                              : uc.color === 'emerald'
-                              ? 'text-emerald-600'
-                              : uc.color === 'violet'
+                            uc.color === 'violet'
                               ? 'text-violet-600'
                               : uc.color === 'amber'
                               ? 'text-amber-600'
@@ -258,7 +250,7 @@ export default function PraiseLeadersPage() {
                     <ul className="space-y-3">
                       {uc.bullets.map((b, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                          <Check className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                           <span className="text-foreground text-sm">{b}</span>
                         </li>
                       ))}
@@ -270,11 +262,7 @@ export default function PraiseLeadersPage() {
                     <div className="bg-muted rounded-2xl border border-border p-10 text-center w-full max-w-sm">
                       <div
                         className={`text-6xl font-bold mb-3 ${
-                          uc.color === 'blue'
-                            ? 'text-blue-600'
-                            : uc.color === 'emerald'
-                            ? 'text-emerald-600'
-                            : uc.color === 'violet'
+                          uc.color === 'violet'
                             ? 'text-violet-600'
                             : uc.color === 'amber'
                             ? 'text-amber-600'
@@ -298,7 +286,7 @@ export default function PraiseLeadersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Deep Dive</span>
+              <span className="text-sm font-semibold text-violet-400 uppercase tracking-wider">Deep Dive</span>
               <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-6">
                 The AI Vocal Coaching Engine
               </h2>
@@ -309,8 +297,8 @@ export default function PraiseLeadersPage() {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <Mic2 className="w-6 h-6 text-blue-400" />
+                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                    <Mic2 className="w-6 h-6 text-violet-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Virtuoso Coach</h3>
@@ -319,8 +307,8 @@ export default function PraiseLeadersPage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <Activity className="w-6 h-6 text-purple-400" />
+                  <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                    <Activity className="w-6 h-6 text-violet-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Vocal Health & Bio-Insight</h3>
@@ -329,8 +317,8 @@ export default function PraiseLeadersPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                    <Layers className="w-6 h-6 text-emerald-400" />
+                  <div className="w-12 h-12 rounded-xl bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+                    <Layers className="w-6 h-6 text-fuchsia-400" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Ensemble Blend Analyst</h3>
@@ -342,14 +330,14 @@ export default function PraiseLeadersPage() {
 
             {/* Visualizer Mockup */}
             <div className="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-fuchsia-500/5" />
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full bg-rose-500 animate-pulse" />
                     <span className="font-medium text-slate-300 tracking-wider text-sm uppercase">Live Analysis</span>
                   </div>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">Pitch: 94%</span>
+                  <span className="px-3 py-1 bg-violet-500/20 text-violet-400 text-xs font-bold rounded-full">Pitch: 94%</span>
                 </div>
                 
                 {/* Waveform bars */}
@@ -357,7 +345,7 @@ export default function PraiseLeadersPage() {
                   {[40, 65, 45, 80, 55, 90, 40, 20, 75, 50, 85, 60, 95, 42, 78].map((h, i) => (
                     <div 
                       key={i} 
-                      className="w-full bg-gradient-to-t from-blue-500 to-cyan-400 rounded-t-sm"
+                      className="w-full bg-gradient-to-t from-violet-600 to-fuchsia-400 rounded-t-sm"
                       style={{ height: `${h}%`, opacity: h > 70 ? 1 : 0.5 }}
                     />
                   ))}
@@ -375,7 +363,7 @@ export default function PraiseLeadersPage() {
                 </div>
                 
                 <div className="mt-8 text-center">
-                  <Link href="/modern-vocal-coach" className="inline-flex items-center gap-2 text-blue-400 font-medium hover:text-blue-300 transition-colors">
+                  <Link href="/modern-vocal-coach" className="inline-flex items-center gap-2 text-violet-400 font-medium hover:text-violet-300 transition-colors">
                     Try the interactive demo <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -389,7 +377,7 @@ export default function PraiseLeadersPage() {
       <section className="py-20 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Early Feedback</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Early Feedback</span>
             <h2 className="text-2xl font-bold text-foreground mt-2">
               What Praise Leaders Are Saying
             </h2>
@@ -426,7 +414,7 @@ export default function PraiseLeadersPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
               Sign Up for Beta
             </button>

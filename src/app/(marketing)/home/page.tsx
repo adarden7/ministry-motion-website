@@ -250,26 +250,26 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
       {/* Hero Section - Kingdom Building Focus */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-500/15 via-transparent to-transparent" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/25 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-500/15 via-transparent to-transparent" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-500/15 rounded-full blur-3xl" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-8">
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-200">Built for the Church, Powered by AI</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-8">
+              <Sparkles className="w-4 h-4 text-violet-400" />
+              <span className="text-sm font-medium text-violet-200">Built for the Church, Powered by AI</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Accelerate Kingdom Work.{' '}
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">Deepen Discipleship.</span>
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Deepen Discipleship.</span>
             </h1>
 
-            <p className="text-xl text-blue-100/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-violet-100/80 max-w-2xl mx-auto mb-10 leading-relaxed">
               Built specifically for church ministry structures.
               Pre-configured for worship, children's ministry, deacons, outreach, and more—with AI that accelerates spiritual growth.
             </p>
@@ -277,19 +277,19 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <button
                 onClick={openBetaModal}
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/25"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
                 Sign Up for Beta
               </button>
               <Link
-                href="/login"
+                href="https://app.ministrymotion.com/login"
                 className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all text-lg flex items-center justify-center gap-2"
               >
                 Login to App <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-            <p className="text-sm text-blue-200/60">
+            <p className="text-sm text-violet-200/60">
               PCO integration included · 30-day free trial · No credit card required
             </p>
           </div>
@@ -300,7 +300,7 @@ export default function HomePage() {
       <section id="resources" className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">The Challenge</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">The Challenge</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               The Discipleship Gap is Real
             </h2>
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             {discipleshipStats.map((item, i) => (
               <div key={i} className="text-center">
-                <div className="text-5xl font-bold text-blue-600 mb-2">{item.stat}</div>
+                <div className="text-5xl font-bold text-violet-600 mb-2">{item.stat}</div>
                 <p className="text-slate-700 font-medium mb-1">{item.label}</p>
                 <p className="text-xs text-slate-500">{item.source}</p>
               </div>
@@ -330,7 +330,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-sm font-semibold text-emerald-600 uppercase tracking-wider">Unlike Generic Platforms</span>
+              <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Unlike Generic Platforms</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 Pre-Built for How Churches Actually Work
               </h2>
@@ -349,8 +349,8 @@ export default function HomePage() {
                   'Connect → Grow → Serve → Go discipleship pathways'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-emerald-600" />
+                    <div className="w-6 h-6 rounded-full bg-violet-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-4 h-4 text-violet-600" />
                     </div>
                     <span className="text-slate-700">{item}</span>
                   </div>
@@ -370,20 +370,20 @@ export default function HomePage() {
               {ministryStructures.map((ministry, i) => (
                 <div
                   key={i}
-                  className={`p-5 rounded-xl border ${i === 0 ? 'bg-blue-50 border-blue-200' :
-                    i === 1 ? 'bg-emerald-50 border-emerald-200' :
+                  className={`p-5 rounded-xl border ${i === 0 ? 'bg-violet-50 border-violet-200' :
+                    i === 1 ? 'bg-fuchsia-50 border-fuchsia-200' :
                       i === 2 ? 'bg-amber-50 border-amber-200' :
                         i === 3 ? 'bg-rose-50 border-rose-200' :
                           i === 4 ? 'bg-violet-50 border-violet-200' :
-                            'bg-cyan-50 border-cyan-200'
+                            'bg-fuchsia-50 border-fuchsia-200'
                     }`}
                 >
-                  <ministry.icon className={`w-6 h-6 mb-3 ${i === 0 ? 'text-blue-600' :
-                    i === 1 ? 'text-emerald-600' :
+                  <ministry.icon className={`w-6 h-6 mb-3 ${i === 0 ? 'text-violet-600' :
+                    i === 1 ? 'text-fuchsia-600' :
                       i === 2 ? 'text-amber-600' :
                         i === 3 ? 'text-rose-600' :
                           i === 4 ? 'text-violet-600' :
-                            'text-cyan-600'
+                            'text-fuchsia-600'
                     }`} />
                   <h3 className="font-semibold text-slate-900 mb-2">{ministry.name}</h3>
                   <div className="flex flex-wrap gap-1">
@@ -409,7 +409,7 @@ export default function HomePage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Find Your Path</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Find Your Path</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               See How Ministry Motion Helps Your Role
             </h2>
@@ -423,22 +423,22 @@ export default function HomePage() {
               <Link
                 href={area.href || '#'}
                 key={i}
-                className="group bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:border-blue-300 transition-all block cursor-pointer"
+                className="group bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:border-violet-300 transition-all block cursor-pointer"
               >
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${area.color === 'blue' ? 'bg-blue-100 group-hover:bg-blue-200' :
-                  area.color === 'emerald' ? 'bg-emerald-100 group-hover:bg-emerald-200' :
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${area.color === 'blue' ? 'bg-violet-100 group-hover:bg-violet-200' :
+                  area.color === 'emerald' ? 'bg-violet-100 group-hover:bg-violet-200' :
                     area.color === 'amber' ? 'bg-amber-100 group-hover:bg-amber-200' :
                       area.color === 'rose' ? 'bg-rose-100 group-hover:bg-rose-200' :
                         'bg-violet-100 group-hover:bg-violet-200'
                   }`}>
-                  <area.icon className={`w-6 h-6 ${area.color === 'blue' ? 'text-blue-600' :
-                    area.color === 'emerald' ? 'text-emerald-600' :
+                  <area.icon className={`w-6 h-6 ${area.color === 'blue' ? 'text-violet-600' :
+                    area.color === 'emerald' ? 'text-violet-600' :
                       area.color === 'amber' ? 'text-amber-600' :
                         area.color === 'rose' ? 'text-rose-600' :
                           'text-violet-600'
                     }`} />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-violet-700 transition-colors">
                   {area.title}
                 </h3>
                 <p className="text-slate-600 text-sm group-hover:text-slate-700">{area.description}</p>
@@ -455,8 +455,8 @@ export default function HomePage() {
             <div className="order-2 lg:order-1 bg-slate-50 rounded-2xl p-8 border border-slate-200">
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-200">
-                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
-                    <Music className="w-5 h-5 text-blue-600" />
+                  <div className="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center">
+                    <Music className="w-5 h-5 text-violet-600" />
                   </div>
                   <div className="flex-1">
                     <div className="text-sm font-medium text-slate-900">Rehearsal Track Generated</div>
@@ -484,27 +484,27 @@ export default function HomePage() {
                     <div className="text-sm font-medium text-slate-900">Engagement Alert</div>
                     <div className="text-xs text-slate-500">3 members showing signs of drifting</div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-blue-600" />
+                  <ArrowRight className="w-5 h-5 text-violet-600" />
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
-                  <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-violet-50 rounded-xl border border-violet-200">
+                  <div className="w-10 h-10 rounded-lg bg-violet-600 flex items-center justify-center">
                     <Brain className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="text-sm font-medium text-slate-900">AI Recommendation</div>
                     <div className="text-xs text-slate-500">Sarah ready for children's ministry leadership course</div>
                   </div>
-                  <Sparkles className="w-5 h-5 text-blue-600" />
+                  <Sparkles className="w-5 h-5 text-violet-600" />
                 </div>
               </div>
             </div>
 
             <div className="order-1 lg:order-2">
-              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">20 AI Agents</span>
+              <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">20 AI Agents</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 AI That Works for Ministry,{' '}
-                <span className="text-blue-600">Not Just Automation</span>
+                <span className="text-violet-600">Not Just Automation</span>
               </h2>
               <p className="text-lg text-slate-600 mb-8">
                 Traditional church software makes you build workflows for everything.
@@ -521,7 +521,7 @@ export default function HomePage() {
                   { agent: 'Denomination Context', desc: 'Understands your tradition and terminology' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-                    <Zap className="w-5 h-5 text-blue-600" />
+                    <Zap className="w-5 h-5 text-violet-600" />
                     <div>
                       <span className="font-medium text-slate-900">{item.agent}</span>
                       <span className="text-slate-500 mx-2">·</span>
@@ -536,25 +536,25 @@ export default function HomePage() {
       </section>
 
       {/* The Engaged Member Advantage - Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600">
+      <section className="py-20 bg-gradient-to-br from-violet-600 via-violet-500 to-fuchsia-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                 Engaged Members Give 3x More
               </h2>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-xl text-violet-100 mb-8">
                 The research is clear: members who are actively discipled, serving, and connected
                 give nearly three times more than attendance-only members.
               </p>
-              <p className="text-blue-100 mb-8">
+              <p className="text-violet-100 mb-8">
                 Ministry Motion helps you move members along the discipleship journey—from first-time
                 visitor to servant leader—with tools that track progress, suggest next steps, and
                 celebrate milestones.
               </p>
               <button
                 onClick={openBetaModal}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 transition-colors"
               >
                 Get Early Access
                 <ArrowRight className="w-4 h-4" />
@@ -574,7 +574,7 @@ export default function HomePage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <span className="font-semibold text-white">{item.stage}</span>
-                        <span className="text-blue-200 text-sm ml-2">{item.desc}</span>
+                        <span className="text-violet-200 text-sm ml-2">{item.desc}</span>
                       </div>
                       <span className="text-white font-bold">{item.pct}</span>
                     </div>
@@ -587,7 +587,7 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              <p className="text-blue-200 text-sm mt-6">
+              <p className="text-violet-200 text-sm mt-6">
                 Track every member's journey and know exactly where they are.
               </p>
             </div>
@@ -612,7 +612,7 @@ export default function HomePage() {
             </div>
             <button
               onClick={openBetaModal}
-              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors"
             >
               Get Started with PCO Integration
             </button>
@@ -644,20 +644,20 @@ export default function HomePage() {
                       href={product.href}
                       className="flex items-center gap-3 group"
                     >
-                      <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center group-hover:bg-blue-50 transition-colors border border-slate-200">
-                        <product.icon className="w-4 h-4 text-blue-600" />
+                      <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center group-hover:bg-violet-50 transition-colors border border-slate-200">
+                        <product.icon className="w-4 h-4 text-violet-600" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium text-slate-900 group-hover:text-blue-600">{product.name}</span>
+                          <span className="text-sm font-medium text-slate-900 group-hover:text-violet-600">{product.name}</span>
                           {product.badge && (
-                            <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-blue-100 text-blue-700 rounded">
+                            <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-violet-100 text-violet-700 rounded">
                               {product.badge}
                             </span>
                           )}
                         </div>
                       </div>
-                      <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                      <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-violet-600 transition-colors" />
                     </Link>
                   ))}
                 </div>
@@ -666,7 +666,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-8">
-            <Link href="/products" className="text-blue-600 font-medium hover:text-blue-700">
+            <Link href="/products" className="text-violet-600 font-medium hover:text-violet-700">
               View all products →
             </Link>
           </div>
@@ -696,22 +696,23 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="absolute top-10 left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-indigo-500/15 rounded-full blur-3xl" />
+        <div className="absolute top-10 left-10 w-64 h-64 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-fuchsia-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Accelerate Kingdom Work?
           </h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-violet-100 mb-10 max-w-2xl mx-auto">
             Join churches who are transforming how they disciple, develop, and deploy their members.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-all text-lg"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 transition-all text-lg"
             >
               Sign Up for Beta
             </button>
@@ -761,7 +762,7 @@ export default function HomePage() {
                 <li><Link href="/products" className="hover:text-white">Products</Link></li>
                 <li><Link href="/pricing" className="hover:text-white">Pricing</Link></li>
                 <li><Link href="/compare" className="hover:text-white">Compare</Link></li>
-                <li><Link href="/login" className="hover:text-white">Log In</Link></li>
+                <li><Link href="https://app.ministrymotion.com/login" className="hover:text-white">Log In</Link></li>
               </ul>
             </div>
 
@@ -781,7 +782,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-blue-400" />
+                  <Shield className="w-5 h-5 text-violet-400" />
                   Security & Privacy
                 </h4>
                 <ul className="space-y-2 text-sm text-slate-400">
@@ -793,7 +794,7 @@ export default function HomePage() {
 
               <div>
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-emerald-400" />
+                  <Globe className="w-5 h-5 text-violet-400" />
                   Compliance
                 </h4>
                 <ul className="space-y-2 text-sm text-slate-400">

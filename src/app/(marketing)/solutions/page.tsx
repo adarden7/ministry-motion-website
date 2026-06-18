@@ -29,12 +29,12 @@ const personaIcons: Record<string, typeof Mic2> = {
 };
 
 const personaColors: Record<string, string> = {
-  'worship-leaders': 'from-blue-500 to-cyan-500',
+  'worship-leaders': 'from-violet-600 to-fuchsia-600',
   'pastors': 'from-violet-500 to-purple-500',
   'vocalists': 'from-rose-500 to-pink-500',
-  'administrators': 'from-blue-500 to-blue-600',
+  'administrators': 'from-violet-600 to-violet-700',
   'childrens-ministry': 'from-pink-500 to-rose-400',
-  'small-groups': 'from-blue-600 to-cyan-400',
+  'small-groups': 'from-violet-600 to-fuchsia-500',
   'denominations': 'from-amber-500 to-orange-500',
 };
 
@@ -46,8 +46,8 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -59,7 +59,7 @@ export default function SolutionsPage() {
           >
             <AnimatedGradientText className="mb-6">
               <span className="inline-flex items-center gap-2 text-slate-200">
-                <Sparkles className="w-4 h-4 text-blue-400" />
+                <Sparkles className="w-4 h-4 text-violet-400" />
                 <span>Solutions by Role</span>
                 <ChevronRight className="w-4 h-4" />
               </span>
@@ -67,7 +67,7 @@ export default function SolutionsPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Built for{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                 Your Role
               </span>
             </h1>
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, i) => {
               const Icon = personaIcons[solution.slug] || Users;
-              const colorClass = personaColors[solution.slug] || 'from-blue-500 to-cyan-500';
+              const colorClass = personaColors[solution.slug] || 'from-violet-600 to-fuchsia-600';
 
               return (
                 <motion.div
@@ -99,7 +99,7 @@ export default function SolutionsPage() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                 >
                   <Link href={`/solutions/${solution.slug}`}>
-                    <div className="group h-full rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-blue-500/50 transition-all hover:-translate-y-1">
+                    <div className="group h-full rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-violet-500/50 transition-all hover:-translate-y-1">
                       {/* Gradient Header */}
                       <div className={`h-2 bg-gradient-to-r ${colorClass}`} />
 
@@ -110,7 +110,7 @@ export default function SolutionsPage() {
                         </div>
 
                         {/* Title */}
-                        <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-violet-400 transition-colors">
                           {solution.title}
                         </h2>
 
@@ -130,7 +130,7 @@ export default function SolutionsPage() {
                         </div>
 
                         {/* CTA */}
-                        <div className="flex items-center gap-2 text-blue-400 font-medium group-hover:gap-4 transition-all">
+                        <div className="flex items-center gap-2 text-violet-400 font-medium group-hover:gap-4 transition-all">
                           See how we solve this
                           <ArrowRight className="w-4 h-4" />
                         </div>
@@ -196,7 +196,7 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-fuchsia-500/20 to-violet-600/20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -214,7 +214,7 @@ export default function SolutionsPage() {
             <ShimmerButton
               onClick={openBetaModal}
               className="h-14 px-8 text-lg font-semibold"
-              background="linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
+              background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
             >
               Sign Up for Beta
             </ShimmerButton>

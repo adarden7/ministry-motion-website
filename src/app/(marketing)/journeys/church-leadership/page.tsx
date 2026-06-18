@@ -107,31 +107,31 @@ export default function ChurchLeadershipJourneyPage() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-rose-900 to-pink-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-rose-500/20 via-transparent to-transparent" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-rose-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-3xl" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-6">
-            <Crown className="w-4 h-4 text-rose-300" />
-            <span className="text-sm font-medium text-rose-200">Senior Pastor Journey</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-6">
+            <Crown className="w-4 h-4 text-violet-400" />
+            <span className="text-sm font-medium text-violet-300">Senior Pastor Journey</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
             Pastor James's Journey:<br />
-            <span className="bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               From Financial Reports to Spiritual ROI
             </span>
           </h1>
 
-          <p className="text-lg text-rose-100/80 mb-6 max-w-2xl">
+          <p className="text-lg text-violet-100/80 mb-6 max-w-2xl">
             Pastor James Williams, Senior Pastor at Mt. Zion Fellowship (800 members, multi-campus),
             could see his budget but not his discipleship. See how 90 days gave him the spiritual
             health data his board never had before.
           </p>
 
-          <div className="flex flex-wrap gap-4 text-sm text-rose-200">
+          <div className="flex flex-wrap gap-4 text-sm text-violet-300">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>800 members</span>
@@ -172,7 +172,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Day 1 — Executive View"
             icon={Zap}
-            color="bg-rose-50 border-rose-200 text-rose-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">A dashboard built for pastoral leadership</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -210,7 +210,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Week 1 — First Data-Driven Insights"
             icon={BarChart3}
-            color="bg-indigo-50 border-indigo-200 text-indigo-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">The board sees spiritual health data for the first time</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -255,7 +255,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Month 1 — Board Shifts Strategy"
             icon={Target}
-            color="bg-emerald-50 border-emerald-200 text-emerald-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Data drives discipleship budget decisions</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -288,7 +288,7 @@ export default function ChurchLeadershipJourneyPage() {
           <TimelineStepBadge
             label="Month 3 — Transformational Leadership"
             icon={TrendingUp}
-            color="bg-amber-50 border-amber-200 text-amber-700"
+            color="bg-violet-500/10 border-violet-500/20 text-violet-400"
           />
           <h2 className="text-2xl font-bold text-foreground mb-2">Proving spiritual ROI becomes standard board reporting</h2>
           <p className="text-muted-foreground mb-8 max-w-2xl">
@@ -324,7 +324,7 @@ export default function ChurchLeadershipJourneyPage() {
         {/* Results Summary */}
         <section>
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-200 text-rose-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 mb-4">
               <Award className="w-4 h-4" />
               <span className="text-sm font-semibold">Pastor James's 3-Month Results</span>
             </div>
@@ -339,9 +339,9 @@ export default function ChurchLeadershipJourneyPage() {
           </div>
 
           {/* Discipleship pipeline insight panel */}
-          <Card className="p-6 border border-border bg-gradient-to-br from-rose-50/50 to-background mb-6">
+          <Card className="p-6 border border-border bg-muted/30 mb-6">
             <div className="flex items-start gap-3 mb-4">
-              <Heart className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+              <Heart className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">The Platform's Core Insight for Senior Leaders</p>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -354,10 +354,10 @@ export default function ChurchLeadershipJourneyPage() {
             </div>
             <div className="grid grid-cols-4 gap-2">
               {[
-                { stage: 'Connect', pct: '100%', color: 'bg-blue-200' },
-                { stage: 'Grow', pct: '65%', color: 'bg-violet-200' },
-                { stage: 'Serve', pct: '40%', color: 'bg-emerald-200' },
-                { stage: 'Go', pct: '15%', color: 'bg-amber-200' },
+                { stage: 'Connect', pct: '100%', color: 'bg-violet-400' },
+                { stage: 'Grow', pct: '65%', color: 'bg-fuchsia-400' },
+                { stage: 'Serve', pct: '40%', color: 'bg-violet-300' },
+                { stage: 'Go', pct: '15%', color: 'bg-fuchsia-300' },
               ].map((item) => (
                 <div key={item.stage} className="text-center">
                   <div className="text-lg font-bold text-foreground">{item.pct}</div>
@@ -370,8 +370,8 @@ export default function ChurchLeadershipJourneyPage() {
 
           <Card className="p-6 border border-border bg-muted/30">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0">
-                <Crown className="w-5 h-5 text-rose-600" />
+              <div className="w-10 h-10 rounded-full bg-violet-500/10 border border-violet-500/20 flex items-center justify-center flex-shrink-0">
+                <Crown className="w-5 h-5 text-violet-400" />
               </div>
               <div>
                 <p className="font-semibold text-foreground mb-1">Pastor James Williams, Senior Pastor</p>
@@ -400,7 +400,7 @@ export default function ChurchLeadershipJourneyPage() {
               <a
                 key={link.href}
                 href={link.href}
-                className="flex flex-col items-center p-4 bg-muted rounded-xl border border-border hover:border-rose-300 hover:bg-rose-50/30 transition-all text-center"
+                className="flex flex-col items-center p-4 bg-muted rounded-xl border border-border hover:border-violet-500/40 hover:bg-violet-500/5 transition-all text-center"
               >
                 <span className="text-sm font-semibold text-foreground">{link.label}</span>
                 <span className="text-xs text-muted-foreground mt-0.5">{link.sub}</span>
@@ -410,18 +410,18 @@ export default function ChurchLeadershipJourneyPage() {
         </section>
 
         {/* CTA */}
-        <section className="text-center py-12 bg-gradient-to-br from-rose-600 via-pink-600 to-fuchsia-700 rounded-2xl text-white relative overflow-hidden">
+        <section className="text-center py-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="relative">
             <h2 className="text-2xl font-bold mb-3">Start Your Journey</h2>
-            <p className="text-rose-100 mb-6 max-w-md mx-auto">
+            <p className="text-violet-100 mb-6 max-w-md mx-auto">
               Lead your church with spiritual health data — not just financial reports.
               AI facilitates and guides — humans always in the loop.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button
                 onClick={openBetaModal}
-                className="bg-white text-rose-700 hover:bg-rose-50 font-semibold px-8 py-3"
+                className="bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-3"
               >
                 Sign Up for Beta
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -434,7 +434,7 @@ export default function ChurchLeadershipJourneyPage() {
                 <a href="/pricing">View Pricing</a>
               </Button>
             </div>
-            <p className="text-rose-200/70 text-xs mt-4">
+            <p className="text-violet-200/70 text-xs mt-4">
               PCO integration included · 30-day free trial · No credit card required
             </p>
           </div>

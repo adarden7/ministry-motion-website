@@ -34,8 +34,8 @@ function PitchVisualizer() {
     <div className="bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-sm text-emerald-400 font-mono">LIVE ANALYSIS</span>
+          <div className="w-3 h-3 rounded-full bg-violet-500 animate-pulse" />
+          <span className="text-sm text-violet-400 font-mono">LIVE ANALYSIS</span>
         </div>
         <span className="text-xs text-slate-500 font-mono">44.1kHz / 16-bit</span>
       </div>
@@ -58,12 +58,12 @@ function PitchVisualizer() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <span className="text-4xl font-bold text-white font-mono">{currentNote}</span>
-          <span className={`text-lg font-mono ${cents >= 0 ? 'text-emerald-400' : 'text-amber-400'}`}>
+          <span className={`text-lg font-mono ${cents >= 0 ? 'text-violet-400' : 'text-amber-400'}`}>
             {cents >= 0 ? '+' : ''}{cents}¢
           </span>
         </div>
         <div className="text-right">
-          <div className="text-2xl font-bold text-emerald-400">{accuracy}%</div>
+          <div className="text-2xl font-bold text-violet-400">{accuracy}%</div>
           <div className="text-xs text-slate-500">accuracy</div>
         </div>
       </div>
@@ -98,7 +98,7 @@ function BlendRadar() {
     <div className="bg-slate-900 rounded-2xl p-6 border border-slate-700 shadow-2xl">
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm font-semibold text-white">Ensemble Blend Score</span>
-        <span className="text-xs px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full font-mono">
+        <span className="text-xs px-2 py-1 bg-violet-500/20 text-violet-400 rounded-full font-mono">
           {Math.round((scores.s + scores.a + scores.t + scores.b) / 4)}% overall
         </span>
       </div>
@@ -154,7 +154,7 @@ export default function LandingPage() {
       name: 'Virtuoso Coach',
       icon: Mic2,
       description: 'Real-time vocal analysis with pitch detection, breath control feedback, and personalized training plans',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-violet-500 to-fuchsia-500',
       demo: 'Analyzing soprano section... Pitch accuracy: 94%. Vibrato rate: 5.8Hz (ideal). Breath support: improving 12% this month.'
     },
     {
@@ -175,7 +175,7 @@ export default function LandingPage() {
       name: 'Ministry Matcher',
       icon: Target,
       description: 'Recommends optimal ministry placements based on spiritual gifts, skills, personality, and team needs',
-      color: 'from-emerald-500 to-teal-500',
+      color: 'from-violet-500 to-fuchsia-500',
       demo: 'Rachel scored 92% ministry fit for Children\'s Ministry Director based on: teaching gift (high), organizational strength, 18 months volunteer experience, leadership readiness score.'
     },
     {
@@ -189,7 +189,7 @@ export default function LandingPage() {
       name: 'Denomination AI',
       icon: Church,
       description: 'Adapts terminology, worship style recommendations, and governance to your theological tradition',
-      color: 'from-indigo-500 to-violet-500',
+      color: 'from-violet-500 to-purple-500',
       demo: 'Context loaded: Assembly of God tradition. Adjusting: worship style → charismatic, governance → elder-led, terminology → "altar call" not "invitation", spiritual gifts → including prophetic.'
     },
   ];
@@ -207,30 +207,30 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           HERO — Lead with the impossible: live pitch visualization
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-600/15 via-transparent to-transparent" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
+      <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-600/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-fuchsia-600/15 via-transparent to-transparent" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-violet-500/15 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-500/15 rounded-full blur-3xl" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Copy */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-violet-500/20 border border-blue-500/30 backdrop-blur-sm mb-8">
-                <Sparkles className="w-4 h-4 text-blue-400" />
-                <span className="text-sm font-medium text-blue-200">The AI-Native Worship Platform</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-8">
+                <Sparkles className="w-4 h-4 text-violet-400" />
+                <span className="text-sm font-medium text-violet-200">The AI-Native Worship Platform</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
                 See Every Voice.{' '}
-                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
                   Grow Every Member.
                 </span>
               </h1>
 
-              <p className="text-xl text-blue-100/80 max-w-xl mb-8 leading-relaxed">
+              <p className="text-xl text-violet-100/80 max-w-xl mb-8 leading-relaxed">
                 Real-time vocal analysis, AI coaching agents, and the only discipleship
                 journey engine built specifically for worship ministry.
               </p>
@@ -238,7 +238,7 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
                 <button
                   onClick={openBetaModal}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
+                  className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
                 >
                   Start Free Trial
                 </button>
@@ -251,7 +251,7 @@ export default function LandingPage() {
                 </Link>
               </div>
 
-              <div className="flex items-center gap-6 text-sm text-blue-200/60">
+              <div className="flex items-center gap-6 text-sm text-violet-200/60">
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> No credit card</span>
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> 30 days free</span>
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> PCO import</span>
@@ -279,9 +279,9 @@ export default function LandingPage() {
           <p className="text-center text-sm text-slate-400 mb-5 font-medium uppercase tracking-widest">Find your solution</p>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { label: "I'm a Praise Leader", href: '/solutions/praise-leaders', gradient: 'from-blue-500 to-cyan-500' },
+              { label: "I'm a Praise Leader", href: '/solutions/praise-leaders', gradient: 'from-violet-600 to-fuchsia-600' },
               { label: "I'm a Worship Director", href: '/solutions/worship-directors', gradient: 'from-violet-500 to-purple-500' },
-              { label: "I'm a Ministries Director", href: '/solutions/ministries-directors', gradient: 'from-emerald-500 to-teal-500' },
+              { label: "I'm a Ministries Director", href: '/solutions/ministries-directors', gradient: 'from-violet-500 to-fuchsia-500' },
               { label: "I'm a Church Admin", href: '/solutions/church-admins', gradient: 'from-amber-500 to-orange-500' },
               { label: "I'm Church Leadership", href: '/solutions/leadership', gradient: 'from-rose-500 to-pink-500' },
             ].map((persona) => (
@@ -341,7 +341,7 @@ export default function LandingPage() {
       <section className="py-24 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Category Defining</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Category Defining</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
               Capabilities Built for Worship Ministry
             </h2>
@@ -397,25 +397,25 @@ export default function LandingPage() {
             ].map((feature, i) => (
               <div
                 key={i}
-                className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-600 transition-all hover:-translate-y-1"
+                className="group relative bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:border-violet-300 dark:hover:border-violet-600 transition-all hover:-translate-y-1"
               >
                 <div className="absolute -top-3 right-6">
-                  <span className={`px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-r ${feature.color === 'blue' ? 'from-blue-500 to-cyan-500' :
+                  <span className={`px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-r ${feature.color === 'blue' ? 'from-violet-500 to-fuchsia-500' :
                     feature.color === 'violet' ? 'from-violet-500 to-purple-500' :
-                      feature.color === 'emerald' ? 'from-emerald-500 to-teal-500' :
+                      feature.color === 'emerald' ? 'from-violet-500 to-fuchsia-500' :
                         feature.color === 'rose' ? 'from-rose-500 to-pink-500' :
                           feature.color === 'amber' ? 'from-amber-500 to-yellow-500' :
-                            'from-cyan-500 to-blue-500'
+                            'from-violet-500 to-fuchsia-500'
                     } text-white shadow-lg`}>
                     {feature.badge}
                   </span>
                 </div>
-                <feature.icon className={`w-10 h-10 mb-4 ${feature.color === 'blue' ? 'text-blue-600' :
+                <feature.icon className={`w-10 h-10 mb-4 ${feature.color === 'blue' ? 'text-violet-600' :
                   feature.color === 'violet' ? 'text-violet-600' :
-                    feature.color === 'emerald' ? 'text-emerald-600' :
+                    feature.color === 'emerald' ? 'text-violet-600' :
                       feature.color === 'rose' ? 'text-rose-600' :
                         feature.color === 'amber' ? 'text-amber-600' :
-                          'text-cyan-600'
+                          'text-violet-600'
                   }`} />
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400">{feature.description}</p>
@@ -431,7 +431,7 @@ export default function LandingPage() {
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">Autonomous Intelligence</span>
+            <span className="text-sm font-semibold text-violet-400 uppercase tracking-wider">Autonomous Intelligence</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
               20 AI Agents Working While You Sleep
             </h2>
@@ -461,7 +461,7 @@ export default function LandingPage() {
                       <div className="text-sm text-slate-400 line-clamp-1">{agent.description}</div>
                     </div>
                     {activeAgent === i && (
-                      <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <div className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
                     )}
                   </div>
                 </button>
@@ -486,8 +486,8 @@ export default function LandingPage() {
               {/* Simulated agent output */}
               <div className="bg-slate-900 rounded-xl p-4 border border-slate-700">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs text-emerald-400 font-mono">Agent Processing...</span>
+                  <div className="w-2 h-2 rounded-full bg-violet-500 animate-pulse" />
+                  <span className="text-xs text-violet-400 font-mono">Agent Processing...</span>
                 </div>
                 <p className="text-sm text-slate-300 font-mono leading-relaxed">
                   {agents[activeAgent].demo}
@@ -516,7 +516,7 @@ export default function LandingPage() {
             {[
               {
                 category: 'Plan & Schedule',
-                gradient: 'from-blue-500 to-cyan-500',
+                gradient: 'from-violet-500 to-fuchsia-500',
                 products: [
                   { name: 'Service Planning', desc: 'AI-powered song selection & theme alignment', icon: Calendar },
                   { name: 'Team Scheduling', desc: 'Auto-schedule based on skills & availability', icon: Users },
@@ -534,7 +534,7 @@ export default function LandingPage() {
               },
               {
                 category: 'Engage & Analyze',
-                gradient: 'from-emerald-500 to-teal-500',
+                gradient: 'from-violet-500 to-fuchsia-500',
                 products: [
                   { name: 'Community Chat', desc: 'AI-moderated, denomination-aware messaging', icon: MessageSquare },
                   { name: 'Service Analytics', desc: 'YouTube analysis, engagement metrics', icon: BarChart3 },
@@ -549,11 +549,11 @@ export default function LandingPage() {
                   <div className="space-y-4">
                     {group.products.map((product, j) => (
                       <div key={j} className="flex items-start gap-3 group cursor-pointer">
-                        <div className="w-9 h-9 rounded-lg bg-white dark:bg-slate-700 flex items-center justify-center border border-slate-200 dark:border-slate-600 group-hover:border-blue-400 transition-colors flex-shrink-0">
-                          <product.icon className="w-4 h-4 text-blue-600" />
+                        <div className="w-9 h-9 rounded-lg bg-white dark:bg-slate-700 flex items-center justify-center border border-slate-200 dark:border-slate-600 group-hover:border-violet-400 transition-colors flex-shrink-0">
+                          <product.icon className="w-4 h-4 text-violet-600" />
                         </div>
                         <div>
-                          <div className="font-semibold text-slate-900 dark:text-white text-sm group-hover:text-blue-600 transition-colors">{product.name}</div>
+                          <div className="font-semibold text-slate-900 dark:text-white text-sm group-hover:text-violet-600 transition-colors">{product.name}</div>
                           <div className="text-xs text-slate-500 dark:text-slate-400">{product.desc}</div>
                         </div>
                       </div>
@@ -565,7 +565,7 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/products" className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 group">
+            <Link href="/products" className="inline-flex items-center gap-2 text-violet-600 font-medium hover:text-violet-700 group">
               Explore all products
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -591,7 +591,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
               <div className="p-4 font-semibold text-slate-500 text-sm">Feature</div>
               <div className="p-4 font-semibold text-slate-500 text-sm text-center">Planning Center</div>
-              <div className="p-4 font-semibold text-blue-600 text-sm text-center">Ministry Motion</div>
+              <div className="p-4 font-semibold text-violet-600 text-sm text-center">Ministry Motion</div>
             </div>
             {[
               { feature: 'Service Planning', pco: true, mm: true },
@@ -607,7 +607,7 @@ export default function LandingPage() {
               { feature: 'Blend Analysis Engine', pco: false, mm: true },
               { feature: 'Cross-Church Intelligence', pco: false, mm: true },
             ].map((row, i) => (
-              <div key={i} className={`grid grid-cols-3 border-b border-slate-100 dark:border-slate-800 ${!row.pco && row.mm ? 'bg-blue-50/50 dark:bg-blue-900/10' : ''
+              <div key={i} className={`grid grid-cols-3 border-b border-slate-100 dark:border-slate-800 ${!row.pco && row.mm ? 'bg-violet-50/50 dark:bg-violet-900/10' : ''
                 }`}>
                 <div className="p-4 text-sm text-slate-700 dark:text-slate-300">{row.feature}</div>
                 <div className="p-4 text-center">
@@ -618,7 +618,7 @@ export default function LandingPage() {
                   )}
                 </div>
                 <div className="p-4 text-center">
-                  <Check className="w-5 h-5 text-blue-600 mx-auto" />
+                  <Check className="w-5 h-5 text-violet-600 mx-auto" />
                 </div>
               </div>
             ))}
@@ -639,16 +639,16 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           DISCIPLESHIP JOURNEY — Interactive visualization
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-violet-600 via-violet-500 to-fuchsia-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:48px_48px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="text-white">
-              <span className="text-sm font-semibold text-blue-200 uppercase tracking-wider">The Journey Engine</span>
+              <span className="text-sm font-semibold text-violet-200 uppercase tracking-wider">The Journey Engine</span>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 mt-2">
                 From Visitor to Servant Leader — Tracked & Gamified
               </h2>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-xl text-violet-100 mb-8">
                 A purpose-built discipleship progression system for worship ministries.
                 XP rewards, achievement badges, and AI-recommended next steps
                 keep your members growing.
@@ -665,7 +665,7 @@ export default function LandingPage() {
                     <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
                       <item.icon className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-blue-50">{item.label}</span>
+                    <span className="text-violet-50">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -675,8 +675,8 @@ export default function LandingPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="space-y-6">
                 {[
-                  { stage: 'Connect', desc: 'First visit → regular attendance', xp: '0-100 XP', pct: 100, color: 'bg-emerald-400' },
-                  { stage: 'Grow', desc: 'Small group + Bible study', xp: '100-500 XP', pct: 65, color: 'bg-blue-400' },
+                  { stage: 'Connect', desc: 'First visit → regular attendance', xp: '0-100 XP', pct: 100, color: 'bg-violet-400' },
+                  { stage: 'Grow', desc: 'Small group + Bible study', xp: '100-500 XP', pct: 65, color: 'bg-fuchsia-400' },
                   { stage: 'Serve', desc: 'Active in ministry + volunteering', xp: '500-2000 XP', pct: 40, color: 'bg-violet-400' },
                   { stage: 'Go', desc: 'Leading others + multiplying', xp: '2000+ XP', pct: 15, color: 'bg-amber-400' },
                 ].map((item, i) => (
@@ -684,9 +684,9 @@ export default function LandingPage() {
                     <div className="flex items-center justify-between mb-2">
                       <div>
                         <span className="font-bold text-white text-lg">{item.stage}</span>
-                        <span className="text-blue-200 text-sm ml-3">{item.desc}</span>
+                        <span className="text-violet-200 text-sm ml-3">{item.desc}</span>
                       </div>
-                      <span className="text-xs font-mono text-blue-200/60">{item.xp}</span>
+                      <span className="text-xs font-mono text-violet-200/60">{item.xp}</span>
                     </div>
                     <div className="h-3 bg-white/10 rounded-full overflow-hidden">
                       <div className={`h-full ${item.color} rounded-full transition-all duration-1000`} style={{ width: `${item.pct}%` }} />
@@ -695,8 +695,8 @@ export default function LandingPage() {
                 ))}
               </div>
               <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
-                <span className="text-sm text-blue-200">Your church: <strong className="text-white">247 members tracked</strong></span>
-                <Gauge className="w-5 h-5 text-blue-200" />
+                <span className="text-sm text-violet-200">Your church: <strong className="text-white">247 members tracked</strong></span>
+                <Gauge className="w-5 h-5 text-violet-200" />
               </div>
             </div>
           </div>
@@ -747,7 +747,7 @@ export default function LandingPage() {
                     <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
                     <div className="text-sm text-slate-500">{testimonial.role}</div>
                   </div>
-                  <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400 text-xs font-bold rounded-full">
                     {testimonial.metric}
                   </span>
                 </div>
@@ -763,7 +763,7 @@ export default function LandingPage() {
       <section className="py-24 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Switch Stories</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Switch Stories</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
               Why Churches Switch to Ministry Motion
             </h2>
@@ -803,7 +803,7 @@ export default function LandingPage() {
                 <div>
                   <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
                   <div className="text-sm text-slate-500">{testimonial.role}</div>
-                  <span className="inline-block mt-2 px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded">
+                  <span className="inline-block mt-2 px-2 py-1 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 text-xs font-medium rounded">
                     {testimonial.tag}
                   </span>
                 </div>
@@ -865,13 +865,13 @@ export default function LandingPage() {
               <div
                 key={i}
                 className={`rounded-2xl p-8 border ${plan.highlight
-                  ? 'bg-white dark:bg-slate-900 border-blue-500 shadow-xl shadow-blue-500/10 ring-2 ring-blue-500 relative'
+                  ? 'bg-white dark:bg-slate-900 border-violet-500 shadow-xl shadow-violet-500/10 ring-2 ring-violet-500 relative'
                   : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700'
                   }`}
               >
                 {plan.highlight && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-bold rounded-full shadow-lg">
+                    <span className="px-4 py-1.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-bold rounded-full shadow-lg">
                       Most Popular
                     </span>
                   </div>
@@ -895,7 +895,7 @@ export default function LandingPage() {
                 <button
                   onClick={openBetaModal}
                   className={`w-full py-3 rounded-xl font-semibold transition-all ${plan.highlight
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg shadow-blue-500/25'
+                    ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:from-violet-700 hover:to-fuchsia-700 shadow-lg shadow-violet-500/25'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700'
                     }`}
                 >
@@ -910,20 +910,20 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           FINAL CTA
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent" />
+      <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
             Your Worship Team Deserves{' '}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">AI-Powered Growth</span>
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">AI-Powered Growth</span>
           </h2>
-          <p className="text-xl text-blue-100/70 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-violet-100/70 mb-10 max-w-2xl mx-auto">
             Join the churches seeing measurable vocal improvement, deeper engagement, and transformed ministry effectiveness.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
-              className="px-10 py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all text-lg shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"
+              className="px-10 py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
             >
               Start Your Free 30-Day Trial
             </button>
@@ -934,7 +934,7 @@ export default function LandingPage() {
               Book a Demo
             </Link>
           </div>
-          <p className="text-sm text-blue-200/40 mt-6">
+          <p className="text-sm text-violet-200/40 mt-6">
             No credit card required · Free Planning Center import · Set up in under an hour
           </p>
         </div>
@@ -946,7 +946,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <Radio className="w-6 h-6 text-blue-400" />
+                <Radio className="w-6 h-6 text-violet-400" />
                 <span className="text-lg font-bold">Ministry Motion</span>
               </div>
               <p className="text-sm text-slate-400 mb-6 max-w-xs">

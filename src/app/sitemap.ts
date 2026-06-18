@@ -12,6 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/collective',
     '/privacy',
     '/terms',
+    '/resources',
+    '/resources/complete-guide-ai-worship-ministry',
+    '/resources/denominational-setup-guide',
+    '/resources/volunteer-health-playbook',
+    '/resources/church-health-reporting',
+    '/resources/pco-migration-checklist',
+    '/resources/ministry-subscription-stack-audit',
+    '/resources/roi-calculator',
+    '/resources/readiness-assessment',
   ];
 
   return staticPages.map((route) => ({

@@ -1,22 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   Calendar,
   Clock,
   Tag,
-  Share2,
   Twitter,
   Linkedin,
   Link2,
   ChevronRight,
   BookOpen,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { getPostBySlug, getAllPosts, type BlogPost } from '@/lib/blog-content';
+import { useState, useMemo } from 'react';
+import { getPostBySlug, getAllPosts } from '@/lib/blog-content';
 import { useMarketing } from '@/context/MarketingContext';
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 import ReactMarkdown from 'react-markdown';
@@ -24,28 +23,20 @@ import ReactMarkdown from 'react-markdown';
 export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
   const [copied, setCopied] = useState(false);
   const { openBetaModal } = useMarketing();
 
-  useEffect(() => {
-    const foundPost = getPostBySlug(slug);
-    if (foundPost) {
-      setPost(foundPost);
-      // Get related posts by category or tags
-      const allPosts = getAllPosts();
-      const related = allPosts
-        .filter(
-          (p) =>
-            p.slug !== slug &&
-            (p.category === foundPost.category ||
-              p.tags.some((tag) => foundPost.tags.includes(tag)))
-        )
-        .slice(0, 3);
-      setRelatedPosts(related);
-    }
-  }, [slug]);
+  const post = useMemo(() => getPostBySlug(slug) ?? null, [slug]);
+  const relatedPosts = useMemo(() => {
+    if (!post) return [];
+    return getAllPosts()
+      .filter(
+        (p) =>
+          p.slug !== slug &&
+          (p.category === post.category || p.tags.some((tag) => post.tags.includes(tag)))
+      )
+      .slice(0, 3);
+  }, [post, slug]);
 
   if (!post) {
     return (
@@ -72,7 +63,7 @@ export default function BlogPostPage() {
     <div className="min-h-screen bg-background text-white antialiased">
       {/* Header */}
       <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/20 via-transparent to-transparent" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
@@ -104,7 +95,7 @@ export default function BlogPostPage() {
             {/* Meta */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400 mb-8">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xs font-bold">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center text-white text-xs font-bold">
                   MM
                 </div>
                 <span>{post.author}</span>
@@ -196,7 +187,7 @@ export default function BlogPostPage() {
               prose-li:marker:text-violet-400 prose-li:my-2
               prose-blockquote:border-violet-500 prose-blockquote:bg-background/[0.02] prose-blockquote:py-4 prose-blockquote:px-8 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:text-xl prose-blockquote:italic prose-blockquote:my-10
               prose-code:text-violet-300 prose-code:bg-background/[0.05] prose-code:px-2 prose-code:py-1 prose-code:rounded-md
-              prose-pre:bg-[#12121a] prose-pre:border prose-pre:border-white/[0.06] prose-pre:p-6 prose-pre:rounded-xl prose-pre:my-10
+              prose-pre:bg-slate-900 prose-pre:border prose-pre:border-white/[0.06] prose-pre:p-6 prose-pre:rounded-xl prose-pre:my-10
               prose-img:rounded-2xl prose-img:my-12
               prose-table:text-white/70 prose-th:text-white prose-th:border-white/[0.06] prose-td:border-white/[0.06]
               prose-hr:border-white/[0.06] prose-hr:my-12"
@@ -212,7 +203,7 @@ export default function BlogPostPage() {
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 lg:p-12 border border-slate-700/50">
             <div className="flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center">
                   <BookOpen className="w-10 h-10 text-white" />
                 </div>
               </div>
@@ -229,7 +220,7 @@ export default function BlogPostPage() {
                 <ShimmerButton
                   onClick={openBetaModal}
                   className="h-12 px-6 font-semibold"
-                  background="linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)"
+                  background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
                 >
                   Sign Up for Beta
                 </ShimmerButton>
@@ -247,20 +238,20 @@ export default function BlogPostPage() {
             <div className="grid md:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
                 <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
-                  <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-blue-500/50 transition-all">
+                  <article className="group h-full flex flex-col rounded-2xl overflow-hidden bg-slate-800/50 border border-slate-700/50 hover:border-violet-500/50 transition-all">
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex items-center gap-3 mb-4">
                         <span className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs font-medium">
                           {relatedPost.category}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-violet-400 transition-colors line-clamp-2">
                         {relatedPost.title}
                       </h3>
                       <p className="text-slate-400 text-sm mb-4 line-clamp-2 flex-1">
                         {relatedPost.excerpt}
                       </p>
-                      <div className="flex items-center gap-1 text-blue-400 text-sm font-medium group-hover:gap-2 transition-all">
+                      <div className="flex items-center gap-1 text-violet-400 text-sm font-medium group-hover:gap-2 transition-all">
                         Read Article
                         <ChevronRight className="w-4 h-4" />
                       </div>

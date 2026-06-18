@@ -42,7 +42,6 @@ export function BetaSignupForm({
     role: '',
     interests: []
   });
-  const [honeypot, setHoneypot] = useState(''); // RT-07 FIX: bot trap
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -65,11 +64,7 @@ export function BetaSignupForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // RT-07 FIX: Silently reject bot submissions
-    if (honeypot) {
-      setSuccess(true);
-      return;
-    }
+
     setIsSubmitting(true);
     setError(null);
 
@@ -111,9 +106,9 @@ export function BetaSignupForm({
         <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
           <Check className="w-8 h-8 text-primary" />
         </div>
-        <h3 className="text-xl font-bold text-foreground mb-2">You're on the list!</h3>
+        <h3 className="text-xl font-bold text-foreground mb-2">You&apos;re on the list!</h3>
         <p className="text-muted-foreground mb-6">
-          Thank you for signing up for beta access. We'll reach out soon with your exclusive invitation.
+          Thank you for signing up for beta access. We&apos;ll reach out soon with your exclusive invitation.
         </p>
         {onClose && (
           <button
@@ -135,17 +130,7 @@ export function BetaSignupForm({
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
-      {/* RT-07 FIX: Honeypot — invisible to real users, filled by bots */}
-      <div style={{ position: 'absolute', left: '-9999px', opacity: 0 }} aria-hidden="true">
-        <input
-          type="text"
-          name="website_url"
-          tabIndex={-1}
-          autoComplete="off"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-        />
-      </div>
+
       {error && (
         <div className="flex items-center gap-2 p-3 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm">
           <AlertCircle className="w-4 h-4 flex-shrink-0" />
@@ -153,7 +138,7 @@ export function BetaSignupForm({
         </div>
       )}
 
-      <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
+      <div className={compact ? 'space-y-3' : 'grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'}>
         <div>
           <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-1">
             First Name *
@@ -235,7 +220,7 @@ export function BetaSignupForm({
         />
       </div>
 
-      <div className={compact ? 'space-y-3' : 'grid grid-cols-2 gap-4'}>
+      <div className={compact ? 'space-y-3' : 'grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4'}>
         <div>
           <label htmlFor="churchSize" className="block text-sm font-medium text-foreground mb-1">
             Church Size *
@@ -275,13 +260,13 @@ export function BetaSignupForm({
           <label className="block text-sm font-medium text-foreground mb-2">
             What features interest you most?
           </label>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {interestOptions.map(option => (
               <button
                 key={option.id}
                 type="button"
                 onClick={() => handleInterestToggle(option.id)}
-                className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${formData.interests?.includes(option.id)
+                className={`px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm rounded-full border transition-colors ${formData.interests?.includes(option.id)
                   ? 'bg-primary/20 border-primary/40 text-primary'
                   : 'bg-muted border-border text-muted-foreground hover:border-primary/30 hover:text-foreground'
                   }`}
@@ -310,7 +295,7 @@ export function BetaSignupForm({
 
       <p className="text-xs text-muted-foreground text-center">
         By signing up, you agree to our Terms of Service and Privacy Policy.
-        We'll never share your information.
+        We&apos;ll never share your information.
       </p>
     </form>
   );

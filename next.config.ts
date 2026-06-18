@@ -32,14 +32,28 @@ const nextConfig: NextConfig = {
       },
     ];
 
+    const personaRewrites = personaDomains.flatMap(({ hosts, destination }) =>
+      hosts.map((host) => ({
+        source: '/',
+        has: [{ type: 'host' as const, value: host }],
+        destination,
+      }))
+    );
+
     return {
-      beforeFiles: personaDomains.flatMap(({ hosts, destination }) =>
-        hosts.map((host) => ({
-          source: '/',
-          has: [{ type: 'host' as const, value: host }],
-          destination,
-        }))
-      ),
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'app.ministrymotion.com',
+            },
+          ],
+          destination: 'https://worshipwise-studio-1089767403917.us-east1.run.app/:path*',
+        },
+        ...personaRewrites,
+      ],
     };
   },
 };

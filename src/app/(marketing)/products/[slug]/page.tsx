@@ -23,7 +23,7 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-white mb-4">Product not found</h1>
           <Link href="/products" className="text-white/50 hover:text-white transition-colors">
@@ -39,8 +39,8 @@ export default function ProductDetailPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[150px]" />
-          <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-violet-600/10 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-violet-600/10 rounded-full blur-[150px]" />
+          <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-fuchsia-600/10 rounded-full blur-[120px]" />
         </div>
 
         <div className="relative max-w-5xl mx-auto px-6">
@@ -145,7 +145,7 @@ export default function ProductDetailPage() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="p-6 rounded-xl bg-background/[0.02] border border-white/[0.06]"
               >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 to-violet-500/20 flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center mb-4">
                   <feature.icon className="w-5 h-5 text-white/60" />
                 </div>
                 <h3 className="text-lg font-medium text-white mb-2">
