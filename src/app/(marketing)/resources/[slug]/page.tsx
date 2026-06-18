@@ -22,10 +22,11 @@ import {
   ClipboardList,
   type LucideIcon,
 } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
 import { getResourceBySlug, type ResourceContent, type ResourceIconKey } from '@/lib/resources';
 import { checklistToCsv, templateToCsv, downloadText, printHtml } from '@/lib/resources/download';
 import { useMarketing } from '@/context/MarketingContext';
+import { ArticleBody } from '@/components/blog/ArticleBody';
+import { extractHeadings } from '@/components/blog/headings';
 
 const iconMap: Record<ResourceIconKey, LucideIcon> = {
   mic: Mic2,
@@ -38,19 +39,6 @@ const iconMap: Record<ResourceIconKey, LucideIcon> = {
   video: Video,
   clipboard: ClipboardList,
 };
-
-const proseClasses = `prose prose-invert prose-lg max-w-none
-  prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
-  prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:border-b prose-h2:border-white/10 prose-h2:pb-3
-  prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4
-  prose-p:text-white/70 prose-p:leading-relaxed prose-p:mb-6
-  prose-a:text-violet-400 prose-a:no-underline hover:prose-a:text-violet-300
-  prose-strong:text-white prose-strong:font-semibold
-  prose-ul:text-white/70 prose-ol:text-white/70 prose-ul:mb-6 prose-ol:mb-6
-  prose-li:marker:text-violet-400 prose-li:my-1.5
-  prose-blockquote:border-violet-500 prose-blockquote:bg-white/[0.02] prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:text-white/80 prose-blockquote:not-italic
-  prose-table:text-white/70 prose-th:text-white prose-th:bg-white/[0.04] prose-th:border-white/10 prose-td:border-white/10 prose-table:text-sm
-  prose-hr:border-white/10 prose-hr:my-10`;
 
 function InteractiveChecklist({ resource }: { resource: ResourceContent }) {
   const groups = useMemo(() => resource.checklist ?? [], [resource.checklist]);
@@ -242,8 +230,8 @@ export default function ResourceDetailPage() {
       {/* Body */}
       <section className="py-16 bg-background">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div ref={articleRef} className={proseClasses}>
-            <ReactMarkdown>{resource.body}</ReactMarkdown>
+          <div ref={articleRef}>
+            <ArticleBody content={resource.body} headings={extractHeadings(resource.body)} />
           </div>
 
           {hasChecklist && <InteractiveChecklist resource={resource} />}

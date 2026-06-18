@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from './ThemeToggle';
 import { useMarketing } from '@/context/MarketingContext';
@@ -19,6 +19,18 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
     const [solutionsOpen, setSolutionsOpen] = useState(false);
     const [resourcesOpen, setResourcesOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    // Hover-intent: opening cancels any pending close; leaving waits ~180ms so
+    // the cursor can cross into the menu without it snapping shut.
+    const openMenu = (set: (v: boolean) => void) => {
+        if (closeTimer.current) clearTimeout(closeTimer.current);
+        set(true);
+    };
+    const scheduleClose = (set: (v: boolean) => void) => {
+        if (closeTimer.current) clearTimeout(closeTimer.current);
+        closeTimer.current = setTimeout(() => set(false), 180);
+    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-[100] w-full border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
@@ -34,19 +46,21 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                     {/* Solutions dropdown */}
                     <div
                         className="relative"
-                        onMouseEnter={() => setSolutionsOpen(true)}
-                        onMouseLeave={() => setSolutionsOpen(false)}
+                        onMouseEnter={() => openMenu(setSolutionsOpen)}
+                        onMouseLeave={() => scheduleClose(setSolutionsOpen)}
                     >
                         <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
                             Solutions <ChevronDown className="h-3 w-3" />
                         </button>
                         {solutionsOpen && (
-                            <div className="absolute top-full left-0 mt-1 w-56 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
-                                <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
-                                <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
-                                <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
-                                <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
-                                <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
+                            <div className="absolute top-full left-0 pt-2 w-56">
+                                <div className="rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                    <Link href="/solutions/praise-leaders" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Praise Leaders</Link>
+                                    <Link href="/solutions/worship-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Worship Directors</Link>
+                                    <Link href="/solutions/ministries-directors" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Ministries Directors</Link>
+                                    <Link href="/solutions/church-admins" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Admins</Link>
+                                    <Link href="/solutions/leadership" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Church Leadership</Link>
+                                </div>
                             </div>
                         )}
                     </div>
@@ -57,17 +71,19 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                     {/* Resources dropdown */}
                     <div
                         className="relative"
-                        onMouseEnter={() => setResourcesOpen(true)}
-                        onMouseLeave={() => setResourcesOpen(false)}
+                        onMouseEnter={() => openMenu(setResourcesOpen)}
+                        onMouseLeave={() => scheduleClose(setResourcesOpen)}
                     >
                         <button className="flex items-center gap-1 transition-colors hover:text-foreground/80 text-foreground/60">
                             Resources <ChevronDown className="h-3 w-3" />
                         </button>
                         {resourcesOpen && (
-                            <div className="absolute top-full left-0 mt-1 w-48 rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
-                                <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
-                                <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
-                                <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
+                            <div className="absolute top-full left-0 pt-2 w-48">
+                                <div className="rounded-md border border-white/10 bg-slate-950/95 backdrop-blur-md py-1 shadow-xl">
+                                    <Link href="/blog" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Blog</Link>
+                                    <Link href="/resources" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Guides &amp; Tools</Link>
+                                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-foreground/70 hover:text-foreground hover:bg-white/5">Case Studies</Link>
+                                </div>
                             </div>
                         )}
                     </div>
