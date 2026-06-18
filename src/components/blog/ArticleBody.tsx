@@ -58,17 +58,19 @@ export function ArticleBody({ content, headings }: { content: string; headings: 
         </a>
       );
     },
+    // table-fixed + wrapping keeps wide tables inside the column width instead
+    // of forcing horizontal scroll; overflow-x-auto remains as a mobile fallback.
     table: ({ children }) => (
       <div className="not-prose my-8 overflow-x-auto rounded-xl border border-border">
-        <table className="w-full text-sm text-left">{children}</table>
+        <table className="w-full table-fixed text-[0.8125rem] text-left">{children}</table>
       </div>
     ),
     thead: ({ children }) => <thead className="bg-muted">{children}</thead>,
     th: ({ children }) => (
-      <th className="px-4 py-3 font-semibold text-foreground border-b border-border">{children}</th>
+      <th className="px-3 py-2.5 font-semibold text-foreground border-b border-border align-top break-words hyphens-auto">{children}</th>
     ),
     td: ({ children }) => (
-      <td className="px-4 py-3 text-muted-foreground border-b border-border/60 align-top">{children}</td>
+      <td className="px-3 py-2.5 text-muted-foreground border-b border-border/60 align-top break-words hyphens-auto">{children}</td>
     ),
     img: ({ src, alt }) => (
       <figure className="not-prose my-10">
