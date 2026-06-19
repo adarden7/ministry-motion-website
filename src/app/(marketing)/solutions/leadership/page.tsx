@@ -16,6 +16,7 @@ import {
   Zap
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
+import { AppScreenshot } from '@/components/marketing/AppScreenshot';
 
 // Top 5 use cases for Church Leadership (Pastors, Elders, Denominational Leaders)
 const useCases = [
@@ -191,6 +192,20 @@ export default function LeadershipPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Product preview */}
+      <section className="py-20 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">See it in action</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A single church-health score across five dimensions — engagement, growth, volunteer health,
+              community, and discipleship — board-ready at a glance.
+            </p>
+          </div>
+          <AppScreenshot src="/app/analytics.png" alt="Ministry Motion analytics hub — five-dimension church health radar and composite score" priority />
         </div>
       </section>
 
