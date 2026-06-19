@@ -18,6 +18,7 @@ import {
   Shield
 } from 'lucide-react';
 import { useMarketing } from '@/context/MarketingContext';
+import { AppScreenshot } from '@/components/marketing/AppScreenshot';
 
 // Top 5 use cases for Worship Directors
 const useCases = [
@@ -193,6 +194,20 @@ export default function WorshipDirectorsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Product preview */}
+      <section className="py-20 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">See it in action</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Live service analysis scores every singer&apos;s pitch and vocal health in real time, with team
+              performance and alerts surfaced the moment they matter.
+            </p>
+          </div>
+          <AppScreenshot src="/app/live-analysis.png" alt="Ministry Motion live service analysis — real-time worship team performance and vocal health" priority />
         </div>
       </section>
 

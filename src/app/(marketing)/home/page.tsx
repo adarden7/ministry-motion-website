@@ -42,6 +42,7 @@ import {
 import { useMarketing } from '@/context/MarketingContext';
 import { signInAsDemo } from '@/lib/demo-auth';
 import { Loader2 } from 'lucide-react';
+import { AppScreenshot } from '@/components/marketing/AppScreenshot';
 
 // Pre-built ministry structures - key differentiator
 const ministryStructures = [
@@ -293,6 +294,20 @@ export default function HomePage() {
               PCO import (beta) · 30-day free trial · No credit card required
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Platform preview */}
+      <section className="py-20 bg-white border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">One platform for every part of ministry</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Plan services, develop singers, track discipleship, and read your church&apos;s health — all in one
+              place, with AI working alongside your team.
+            </p>
+          </div>
+          <AppScreenshot src="/app/dashboard.png" alt="Ministry Motion dashboard — ministry overview with advancement tracking" priority />
         </div>
       </section>
 
