@@ -278,9 +278,26 @@ export default function ChurchAdminsPage() {
                   </div>
 
                   <div className={`${isEven ? '' : 'lg:order-1'} flex items-center justify-center`}>
-                    <div className="bg-muted rounded-2xl border border-border p-10 text-center w-full max-w-sm">
+                    <div
+                      className={`relative w-full max-w-sm rounded-3xl border p-12 text-center overflow-hidden ${
+                        uc.color === 'amber'
+                          ? 'border-amber-500/20 bg-gradient-to-br from-amber-500/10 to-transparent'
+                          : uc.color === 'rose'
+                          ? 'border-rose-500/20 bg-gradient-to-br from-rose-500/10 to-transparent'
+                          : 'border-violet-500/20 bg-gradient-to-br from-violet-500/10 to-transparent'
+                      }`}
+                    >
                       <div
-                        className={`text-5xl font-bold mb-3 ${
+                        className={`absolute -top-10 -right-10 w-36 h-36 rounded-full blur-3xl ${
+                          uc.color === 'amber'
+                            ? 'bg-amber-500/10'
+                            : uc.color === 'rose'
+                            ? 'bg-rose-500/10'
+                            : 'bg-violet-500/10'
+                        }`}
+                      />
+                      <div
+                        className={`relative text-6xl font-bold mb-3 ${
                           uc.color === 'amber'
                             ? 'text-amber-600'
                             : uc.color === 'rose'
@@ -290,7 +307,7 @@ export default function ChurchAdminsPage() {
                       >
                         {uc.stat}
                       </div>
-                      <div className="text-muted-foreground text-sm">{uc.statLabel}</div>
+                      <div className="relative text-muted-foreground text-sm">{uc.statLabel}</div>
                     </div>
                   </div>
                 </div>

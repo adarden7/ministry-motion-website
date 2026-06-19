@@ -70,6 +70,18 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                   {product.description}
                 </p>
 
+                {/* Benefit stats — clean inline strip, no boxes */}
+                <div className="flex flex-wrap gap-x-10 gap-y-4 mb-8 pt-2">
+                  {product.benefits.map((benefit, i) => (
+                    <div key={i}>
+                      <div className="text-2xl sm:text-3xl font-semibold text-foreground">
+                        {benefit.stat}
+                      </div>
+                      <div className="text-sm text-muted-foreground">{benefit.label}</div>
+                    </div>
+                  ))}
+                </div>
+
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={openBetaModal}
@@ -89,33 +101,28 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                 </div>
               </div>
 
-              {/* Benefits */}
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <h3 className="text-lg font-medium text-foreground mb-6">Key Benefits</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                  {product.benefits.map((benefit, i) => (
-                    <div key={i} className="text-center">
-                      <div className="text-3xl font-semibold text-foreground mb-1">
-                        {benefit.stat}
+              {/* Live app screenshot */}
+              {shot ? (
+                <AppScreenshot src={shot.src} alt={shot.alt} priority />
+              ) : (
+                <div className="p-8 rounded-2xl bg-card border border-border">
+                  <h3 className="text-lg font-medium text-foreground mb-6">Key Benefits</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    {product.benefits.map((benefit, i) => (
+                      <div key={i} className="text-center">
+                        <div className="text-3xl font-semibold text-foreground mb-1">
+                          {benefit.stat}
+                        </div>
+                        <div className="text-sm text-muted-foreground">{benefit.label}</div>
                       </div>
-                      <div className="text-sm text-muted-foreground">{benefit.label}</div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Product screenshot */}
-      {shot && (
-        <section className="py-12">
-          <div className="max-w-5xl mx-auto px-6">
-            <AppScreenshot src={shot.src} alt={shot.alt} priority />
-          </div>
-        </section>
-      )}
 
       {/* Features */}
       <section className="py-20 border-t border-border">
