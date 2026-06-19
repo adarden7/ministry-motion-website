@@ -523,18 +523,18 @@ export default function ProductsPage() {
   const [showBetaModal, setShowBetaModal] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
+    <div className="min-h-screen bg-background text-foreground antialiased">
       <MarketingNav currentPage="products" onBetaSignupClick={() => setShowBetaModal(true)} />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-violet-50/50 via-white to-fuchsia-50/30 overflow-hidden">
+      <section className="relative pt-32 pb-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-violet-200/20 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-fuchsia-200/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Every tool your worship ministry needs
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Plan, develop, engage, and analyze—all in one integrated platform.
             No more switching between disconnected tools.
           </p>
@@ -545,7 +545,7 @@ export default function ProductsPage() {
               <a
                 key={pillar.id}
                 href={`#${pillar.id}`}
-                className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-full hover:border-violet-300 hover:text-violet-600 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-slate-300 bg-white/5 border border-white/10 rounded-full hover:border-violet-400 hover:text-white transition-colors"
               >
                 {pillar.title}
               </a>
@@ -557,11 +557,11 @@ export default function ProductsPage() {
       {/* Product Pillars */}
       {productPillars.map((pillar, pillarIndex) => {
         const gradients = [
-          'bg-gradient-to-br from-white via-violet-50/20 to-white',
-          'bg-gradient-to-br from-violet-50/30 via-slate-50 to-fuchsia-50/20',
-          'bg-gradient-to-br from-white via-violet-50/15 to-fuchsia-50/10',
-          'bg-gradient-to-br from-amber-50/30 via-slate-50 to-orange-50/20',
-          'bg-gradient-to-br from-white via-violet-50/20 to-slate-50'
+          'bg-background',
+          'bg-muted/30',
+          'bg-background',
+          'bg-muted/30',
+          'bg-background'
         ];
         return (
         <section
@@ -578,13 +578,13 @@ export default function ProductsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             {/* Pillar header */}
             <div className="max-w-3xl mb-16">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 mb-4">
-                <span className="text-sm font-medium text-violet-700">{pillar.title}</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 mb-4">
+                <span className="text-sm font-medium text-violet-600 dark:text-violet-300">{pillar.title}</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                 {pillar.subtitle}
               </h2>
-              <p className="text-lg text-slate-600">
+              <p className="text-lg text-muted-foreground">
                 {pillar.description}
               </p>
             </div>
@@ -594,11 +594,11 @@ export default function ProductsPage() {
               {pillar.products.map((product, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-lg hover:border-slate-300 transition-all group"
+                  className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg hover:border-violet-500/40 transition-all group"
                 >
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-violet-500/10 flex items-center justify-center group-hover:bg-violet-500/20 transition-colors">
                       <product.icon className="w-6 h-6 text-violet-600" />
                     </div>
                     {product.badge && (
@@ -617,14 +617,14 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">{product.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-1">{product.name}</h3>
                   <p className="text-sm text-violet-600 font-medium mb-3">{product.tagline}</p>
-                  <p className="text-slate-600 text-sm mb-4">{product.description}</p>
+                  <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
                     {product.features.slice(0, 4).map((feature, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-slate-600">
+                      <li key={j} className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Check className="w-4 h-4 text-violet-600 flex-shrink-0" />
                         {feature}
                       </li>
@@ -651,9 +651,9 @@ export default function ProductsPage() {
               </div>
 
               {/* See It In Action CTA */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">See It In Action</h3>
-                <p className="text-slate-600 mb-6">
+              <div className="bg-card rounded-2xl border border-border p-8">
+                <h3 className="text-xl font-bold text-foreground mb-3">See It In Action</h3>
+                <p className="text-muted-foreground mb-6">
                   {pillar.solutionLabel}. Explore real workflows, features, and outcomes designed for your role.
                 </p>
                 <Link
