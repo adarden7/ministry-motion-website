@@ -6,6 +6,15 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useMemo } from 'react';
 import { getProductBySlug } from '@/lib/products-content';
 import { useMarketing } from '@/context/MarketingContext';
+import { AppScreenshot } from '@/components/marketing/AppScreenshot';
+
+// Maps each product to its most representative real app screenshot.
+const PRODUCT_SHOTS: Record<string, { src: string; alt: string }> = {
+  'vocal-coaching': { src: '/app/vocal-coach.png', alt: 'Ministry Motion AI Vocal Coach — artist emulation and personalized training plans' },
+  'analytics': { src: '/app/analytics.png', alt: 'Ministry Motion Analytics Hub — five-dimension church health radar and composite score' },
+  'discipleship': { src: '/app/journey.png', alt: 'Ministry Motion journey pipeline — Connect, Grow, Serve, Go discipleship stages' },
+  'agent-council': { src: '/app/dashboard.png', alt: 'Ministry Motion dashboard — ministry overview with advancement tracking' },
+};
 
 export function ProductDetailClient({ slug }: { slug: string }) {
   const { openBetaModal } = useMarketing();
@@ -13,6 +22,8 @@ export function ProductDetailClient({ slug }: { slug: string }) {
   const product = useMemo(() => getProductBySlug(slug) ?? null, [slug]);
 
   if (!product) return null;
+
+  const shot = PRODUCT_SHOTS[product.slug];
 
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
@@ -32,7 +43,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
             {/* Back link */}
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 text-white/50 hover:text-white mb-8 transition-colors"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               All Features
@@ -51,11 +62,11 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                   {product.title}
                 </h1>
 
-                <p className="text-xl text-white/60 mb-4">
+                <p className="text-xl text-muted-foreground mb-4">
                   {product.tagline}
                 </p>
 
-                <p className="text-white/40 mb-8 leading-relaxed">
+                <p className="text-muted-foreground mb-8 leading-relaxed">
                   {product.description}
                 </p>
 
@@ -71,7 +82,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                   </button>
                   <Link
                     href="/pricing"
-                    className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-background/5 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 text-muted-foreground font-medium rounded-full border border-border hover:bg-muted hover:text-foreground transition-all duration-300"
                   >
                     See Pricing
                   </Link>
@@ -79,15 +90,15 @@ export function ProductDetailClient({ slug }: { slug: string }) {
               </div>
 
               {/* Benefits */}
-              <div className="p-8 rounded-2xl bg-background/[0.03] border border-white/[0.06]">
-                <h3 className="text-lg font-medium text-white mb-6">Key Benefits</h3>
+              <div className="p-8 rounded-2xl bg-card border border-border">
+                <h3 className="text-lg font-medium text-foreground mb-6">Key Benefits</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                   {product.benefits.map((benefit, i) => (
                     <div key={i} className="text-center">
-                      <div className="text-3xl font-semibold text-white mb-1">
+                      <div className="text-3xl font-semibold text-foreground mb-1">
                         {benefit.stat}
                       </div>
-                      <div className="text-sm text-white/50">{benefit.label}</div>
+                      <div className="text-sm text-muted-foreground">{benefit.label}</div>
                     </div>
                   ))}
                 </div>
@@ -97,8 +108,17 @@ export function ProductDetailClient({ slug }: { slug: string }) {
         </div>
       </section>
 
+      {/* Product screenshot */}
+      {shot && (
+        <section className="py-12">
+          <div className="max-w-5xl mx-auto px-6">
+            <AppScreenshot src={shot.src} alt={shot.alt} priority />
+          </div>
+        </section>
+      )}
+
       {/* Features */}
-      <section className="py-20 border-t border-white/[0.06]">
+      <section className="py-20 border-t border-border">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -110,7 +130,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
             <h2 className="text-3xl font-semibold mb-4">
               Powerful capabilities
             </h2>
-            <p className="text-white/50 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Everything you need, built into one integrated platform.
             </p>
           </motion.div>
@@ -123,15 +143,15 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-background/[0.02] border border-white/[0.06]"
+                className="p-6 rounded-xl bg-card border border-border"
               >
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center mb-4">
-                  <feature.icon className="w-5 h-5 text-white/60" />
+                  <feature.icon className="w-5 h-5 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-medium text-white mb-2">
+                <h3 className="text-lg font-medium text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-white/50 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -141,7 +161,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 border-t border-white/[0.06]">
+      <section className="py-20 border-t border-border">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -153,7 +173,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
             <h2 className="text-3xl font-semibold mb-4">
               How it works
             </h2>
-            <p className="text-white/50">
+            <p className="text-muted-foreground">
               Sign up in minutes, see results in days.
             </p>
           </motion.div>
@@ -168,12 +188,12 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-6"
               >
-                <div className="w-10 h-10 rounded-full bg-background/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-white/60 font-medium">
+                <div className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center flex-shrink-0 text-muted-foreground font-medium">
                   {i + 1}
                 </div>
                 <div className="pt-1">
-                  <h3 className="text-lg font-medium text-white mb-2">{step.title}</h3>
-                  <p className="text-white/50">{step.description}</p>
+                  <h3 className="text-lg font-medium text-foreground mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -182,7 +202,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* Who It's For */}
-      <section className="py-20 border-t border-white/[0.06]">
+      <section className="py-20 border-t border-border">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -194,7 +214,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
             <h2 className="text-3xl font-semibold mb-4">
               Built for you
             </h2>
-            <p className="text-white/50">
+            <p className="text-muted-foreground">
               Whether you're starting out or leading at the highest level.
             </p>
           </motion.div>
@@ -207,10 +227,10 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 rounded-xl bg-background/[0.02] border border-white/[0.06]"
+                className="p-6 rounded-xl bg-card border border-border"
               >
-                <h3 className="font-medium text-white mb-2">{item.role}</h3>
-                <p className="text-sm text-white/50">{item.benefit}</p>
+                <h3 className="font-medium text-foreground mb-2">{item.role}</h3>
+                <p className="text-sm text-muted-foreground">{item.benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -218,7 +238,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
       </section>
 
       {/* CTA */}
-      <section className="py-32 border-t border-white/[0.06]">
+      <section className="py-32 border-t border-border">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -229,13 +249,13 @@ export function ProductDetailClient({ slug }: { slug: string }) {
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">
               {product.ctaTitle}
             </h2>
-            <p className="text-lg text-white/50 mb-10 max-w-xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
               {product.ctaDescription}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={openBetaModal}
-                className="group px-8 py-4 bg-background text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                className="group px-8 py-4 bg-white text-slate-900 font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(124,58,237,0.25)]"
               >
                 <span className="flex items-center gap-2">
                   Request Early Access
@@ -244,7 +264,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
               </button>
               <Link
                 href="/products"
-                className="px-8 py-4 text-white/70 font-medium rounded-full border border-white/10 hover:bg-background/5 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 text-muted-foreground font-medium rounded-full border border-border hover:bg-muted hover:text-foreground transition-all duration-300 flex items-center gap-2"
               >
                 Explore Other Features
                 <ArrowRight className="w-4 h-4" />
