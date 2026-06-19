@@ -28,6 +28,7 @@ import {
   Smartphone
 } from 'lucide-react';
 import { BetaSignupModal, MarketingNav } from '@/components/marketing';
+import { AppScreenshot } from '@/components/marketing/AppScreenshot';
 
 // Complete product catalog organized by pillar
 const productPillars = [
@@ -39,6 +40,7 @@ const productPillars = [
     color: 'teal',
     solutionHref: '/solutions/worship-directors',
     solutionLabel: 'See how Worship Directors use these tools',
+    shot: { src: '/app/dashboard.png', alt: 'Ministry Motion dashboard — ministry overview, advancement tracking, and service planning' },
     products: [
       {
         name: 'Service Planning',
@@ -110,6 +112,7 @@ const productPillars = [
     color: 'violet',
     solutionHref: '/solutions/praise-leaders',
     solutionLabel: 'See how Praise Leaders use these tools',
+    shot: { src: '/app/vocal-coach.png', alt: 'Ministry Motion AI Vocal Coach — artist emulation and personalized training plans' },
     products: [
       {
         name: 'AI Vocal Coaching',
@@ -226,6 +229,7 @@ const productPillars = [
     color: 'blue',
     solutionHref: '/solutions/ministries-directors',
     solutionLabel: 'See how Ministries Directors use these tools',
+    shot: { src: '/app/journey.png', alt: 'Ministry Motion journey pipeline — Connect, Grow, Serve, Go discipleship stages' },
     products: [
       {
         name: 'Unified Communications',
@@ -297,6 +301,7 @@ const productPillars = [
     color: 'amber',
     solutionHref: '/solutions/leadership',
     solutionLabel: 'See how Church Leadership uses these tools',
+    shot: { src: '/app/analytics.png', alt: 'Ministry Motion Analytics Hub — five-dimension church health radar and composite score' },
     products: [
       {
         name: 'Service Analytics',
@@ -383,6 +388,7 @@ const productPillars = [
     color: 'rose',
     solutionHref: '/solutions/leadership',
     solutionLabel: 'See how AI transforms leadership decisions',
+    shot: { src: '/app/live-analysis.png', alt: 'Ministry Motion live streaming analytics — real-time vocal health alerts and team performance' },
     products: [
       {
         name: 'Vocal Coaching Agents',
@@ -454,6 +460,7 @@ const productPillars = [
     color: 'slate',
     solutionHref: '/solutions/church-admins',
     solutionLabel: 'See how Church Admins use these tools',
+    shot: { src: '/app/dashboard.png', alt: 'Ministry Motion dashboard — people management, roles, and multi-campus governance' },
     products: [
       {
         name: 'People Management',
@@ -643,12 +650,10 @@ export default function ProductsPage() {
               ))}
             </div>
 
-            {/* Demo placeholder + See It In Action CTA */}
+            {/* Real product screenshot + See It In Action CTA */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Demo GIF placeholder */}
-              <div className="bg-muted rounded-lg aspect-video flex items-center justify-center border border-border">
-                <span className="text-muted-foreground text-sm">Demo coming soon</span>
-              </div>
+              {/* Live app screenshot */}
+              <AppScreenshot src={pillar.shot.src} alt={pillar.shot.alt} />
 
               {/* See It In Action CTA */}
               <div className="bg-card rounded-2xl border border-border p-8">
