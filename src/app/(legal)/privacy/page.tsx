@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">1. Introduction</h2>
             <p>
-              WorshipWise ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our worship service management application.
+              MinistryMotion ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our worship service management application.
             </p>
           </section>
 
@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">4. Google API Services - Limited Use Disclosure</h2>
             <p className="font-medium">
-              WorshipWise's use and transfer of information received from Google APIs adheres to{' '}
+              MinistryMotion's use and transfer of information received from Google APIs adheres to{' '}
               <a href="https://developers.google.com/terms/api-services-user-data-policy" className="text-primary underline" target="_blank" rel="noopener noreferrer">
                 Google API Services User Data Policy
               </a>, including the Limited Use requirements.
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-semibold mb-3">12. Contact Us</h2>
             <p>For privacy-related questions or requests, contact us at:</p>
             <p className="mt-2">
-              Email: privacy@worshipwise.app<br />
+              Email: privacy@ministrymotion.com<br />
               Address: [Your Business Address]
             </p>
           </section>

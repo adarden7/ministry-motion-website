@@ -1,12 +1,12 @@
 /**
- * WorshipWise Service Worker
+ * MinistryMotion Service Worker
  * Provides offline support, caching, and background sync
  */
 
 const CACHE_VERSION = 'v1';
-const STATIC_CACHE = `worshipwise-static-${CACHE_VERSION}`;
-const DYNAMIC_CACHE = `worshipwise-dynamic-${CACHE_VERSION}`;
-const API_CACHE = `worshipwise-api-${CACHE_VERSION}`;
+const STATIC_CACHE = `ministrymotion-static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `ministrymotion-dynamic-${CACHE_VERSION}`;
+const API_CACHE = `ministrymotion-api-${CACHE_VERSION}`;
 
 // Static assets to cache on install
 const STATIC_ASSETS = [
@@ -71,7 +71,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter((name) => {
-              return name.startsWith('worshipwise-') &&
+              return name.startsWith('ministrymotion-') &&
                 name !== STATIC_CACHE &&
                 name !== DYNAMIC_CACHE &&
                 name !== API_CACHE;
@@ -307,7 +307,7 @@ self.addEventListener('push', (event) => {
   console.log('[ServiceWorker] Push received');
 
   let data = {
-    title: 'WorshipWise',
+    title: 'MinistryMotion',
     body: 'You have a new notification',
     icon: '/icons/icon.svg',
   };
