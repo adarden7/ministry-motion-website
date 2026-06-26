@@ -12,14 +12,14 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using WorshipWise ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Service.
+              By accessing or using MinistryMotion ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the Service.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-3">2. Description of Service</h2>
             <p>
-              WorshipWise provides worship service management tools including:
+              MinistryMotion provides worship service management tools including:
             </p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Service planning and scheduling</li>
@@ -73,7 +73,7 @@ export default function TermsOfServicePage() {
 
             <h3 className="text-lg font-medium mt-4 mb-2">5.2 Our Intellectual Property</h3>
             <p>
-              The Service, including its design, features, and code, is owned by WorshipWise and protected by intellectual property laws.
+              The Service, including its design, features, and code, is owned by MinistryMotion and protected by intellectual property laws.
             </p>
 
             <h3 className="text-lg font-medium mt-4 mb-2">5.3 Third-Party Content</h3>
@@ -134,7 +134,7 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">11. Limitation of Liability</h2>
             <p className="font-medium uppercase">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, WORSHIPWISE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, MINISTRYMOTION SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES.
             </p>
             <p className="mt-2">
               Our total liability shall not exceed the amount you paid us in the 12 months preceding the claim.
@@ -144,7 +144,7 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">12. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless WorshipWise from any claims, damages, or expenses arising from your use of the Service or violation of these Terms.
+              You agree to indemnify and hold harmless MinistryMotion from any claims, damages, or expenses arising from your use of the Service or violation of these Terms.
             </p>
           </section>
 
@@ -172,7 +172,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl font-semibold mb-3">15. General Provisions</h2>
             <h3 className="text-lg font-medium mt-4 mb-2">15.1 Entire Agreement</h3>
             <p>
-              These Terms constitute the entire agreement between you and WorshipWise regarding the Service.
+              These Terms constitute the entire agreement between you and MinistryMotion regarding the Service.
             </p>
 
             <h3 className="text-lg font-medium mt-4 mb-2">15.2 Severability</h3>
@@ -195,14 +195,14 @@ export default function TermsOfServicePage() {
             <h2 className="text-xl font-semibold mb-3">16. Contact Information</h2>
             <p>For questions about these Terms, contact us at:</p>
             <p className="mt-2">
-              Email: legal@worshipwise.app<br />
+              Email: legal@ministrymotion.com<br />
               Address: [Your Business Address]
             </p>
           </section>
 
           <section className="border-t pt-6 mt-8">
             <p className="text-sm text-muted-foreground">
-              By using WorshipWise, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.
+              By using MinistryMotion, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.
             </p>
           </section>
         </CardContent>
