@@ -3,7 +3,7 @@ $envs = @(
   @{ Name = "SMTP_PORT"; Value = "465" },
   @{ Name = "SMTP_USER"; Value = "resend" },
   @{ Name = "SMTP_PASS"; Value = "re_8j41PNPD_M59nwF9Vc5ujJJ1YFpXW9ULK" },
-  @{ Name = "LEAD_NOTIFICATION_EMAIL"; Value = "ahkeem@dardenbehavioralcounseling.com" }
+  @{ Name = "LEAD_NOTIFICATION_EMAIL"; Value = "leads@ministrymotion.com" }
 )
 
 foreach ($e in $envs) {
