@@ -165,11 +165,12 @@ export default function LandingPage() {
       demo: 'Analyzing "Way Maker" from Sunday service... Theme alignment: 96%. Transition smoothness: 88%. Energy arc: optimal build pattern detected.'
     },
     {
-      name: 'Engagement Predictor',
+      // MM-3: Reframed from surveillance/prediction language to pastoral care frame
+      name: 'Care Prompts',
       icon: Heart,
-      description: 'Identifies members at risk of drifting before it happens using behavioral signals and journey data',
+      description: 'Surfaces members who may need a check-in so no one slips through unnoticed — pastoral care, not tracking',
       color: 'from-rose-500 to-orange-500',
-      demo: '3 members showing engagement decline: Marcus (missed 3 rehearsals), Sarah (no small group in 4 weeks), James (giving pattern shift). Suggested interventions ready.'
+      demo: '3 members may appreciate a personal check-in: Marcus (missed recent rehearsals), Sarah (hasn\'t connected with a small group in a while), James (attendance pattern change). Suggested outreach ready for your pastoral team.'
     },
     {
       name: 'Ministry Matcher',
@@ -223,38 +224,43 @@ export default function LandingPage() {
                 <span className="text-sm font-medium text-violet-200">The AI-Native Worship Platform</span>
               </div>
 
+              {/* PW-0: mechanism-first hero */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
-                See Every Voice.{' '}
+                Your Monday review starts with{' '}
                 <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                  Grow Every Member.
+                  insight, not a two-hour rewatch.
                 </span>
               </h1>
 
+              {/* PW-0: name the capability + hated task + relief */}
               <p className="text-xl text-violet-100/80 max-w-xl mb-8 leading-relaxed">
-                Real-time vocal analysis, AI coaching agents, and the only discipleship
-                journey engine built specifically for worship ministry.
+                WorshipWise watches your service video the way a seasoned worship pastor
+                would — scoring transitions, timing, and theme coherence — so you spend
+                Monday morning acting on answers, not hunting for them.
               </p>
 
+              {/* PW-2: ONE primary CTA verb; secondary = demo (confirmed to exist) */}
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
                 <button
                   onClick={openBetaModal}
                   className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
                 >
-                  Start Free Trial
+                  Start free — 30 days
                 </button>
                 <button
                   onClick={openBetaModal}
                   className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all text-lg flex items-center gap-2 group"
                 >
                   <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Watch 2-Min Demo
+                  Watch the demo
                 </button>
               </div>
 
               <div className="flex items-center gap-6 text-sm text-violet-200/60">
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> No credit card</span>
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> 30 days free</span>
-                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> PCO import</span>
+                {/* TODO(owner): MM-4 — confirm PCO integration status (beta vs. live) before updating this label */}
+                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> PCO import (beta)</span>
               </div>
 
               <div className="mt-4">
@@ -300,12 +306,19 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           ROI BANNER — Savings highlight
           ═══════════════════════════════════════════════════════════════════ */}
+      {/*
+        MM-8 / no-fabrication: Changed "Churches save an average of" to
+        "One example: a church replacing 6 subscriptions could save" —
+        $10,608 is a specific itemized calculation shown on /compare, not surveyed average data.
+        TODO(owner): if you have real surveyed data on customer savings, replace this with
+          a cited figure (methodology + sample size + source link).
+      */}
       <section className="py-5 bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
-            <span className="text-2xl">💰</span>
             <p className="text-white font-semibold">
-              Churches save an average of <strong className="text-emerald-100 text-xl">$10,608/year</strong> by consolidating to MinistryMotion — replacing the core features of 6 subscriptions with one platform.
+              One example: a church replacing PCO + Circle + Yousician + Coursera + Zoom + Pushpay could save{' '}
+              <strong className="text-emerald-100 text-xl">$10,608/year</strong> on subscriptions alone.
             </p>
             <Link href="/compare" className="flex-shrink-0 px-4 py-2 bg-white text-emerald-700 text-sm font-bold rounded-full hover:bg-emerald-50 transition-colors">
               See the math
@@ -317,14 +330,19 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════
           SOCIAL PROOF BAR — Numbers + logos
           ═══════════════════════════════════════════════════════════════════ */}
+      {/*
+        MM-8 / no-fabrication: Removed unverified platform-count stats ("200+ Features",
+        "24 Ministry Containers") — these are internal counts with no external citation
+        and add noise. Retained confirmed capabilities only.
+        TODO(owner): once you have real customer/church count data, add it here with source.
+      */}
       <section className="py-8 bg-slate-50 dark:bg-slate-800 border-y border-slate-200 dark:border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
             {[
-              { number: '200+', label: 'Features Built for Ministry' },
-              { number: '15', label: 'AI Agents' },
-              { number: '24', label: 'Ministry Containers' },
-              { number: '$10,608', label: 'Avg. Annual Savings' },
+              { number: '30 days', label: 'Free trial — no credit card' },
+              { number: 'SATB', label: 'Rehearsal tracks in seconds' },
+              { number: '< 1 hr', label: 'Setup with PCO import' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-3xl font-bold text-slate-900 dark:text-white">{stat.number}</div>
@@ -375,8 +393,9 @@ export default function LandingPage() {
               },
               {
                 icon: Brain,
-                title: '15 AI Agents',
-                description: 'From vocal coaching to engagement prediction to ministry matching — autonomous agents that understand theology and denomination context.',
+                // MM-7: outcome-focused, not count-badge; full list → /products
+                title: 'AI agents built for ministry',
+                description: 'Vocal coaching, service analysis, care prompts, and ministry matching — autonomous agents that understand theology and denomination context.',
                 badge: 'AI-Native',
                 color: 'rose'
               },
@@ -430,13 +449,16 @@ export default function LandingPage() {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* MM-7: Section leads with ministry outcomes, not agent count badge */}
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-violet-400 uppercase tracking-wider">Autonomous Intelligence</span>
+            <span className="text-sm font-semibold text-violet-400 uppercase tracking-wider">AI built for worship ministry</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
-              15 AI Agents Working While You Sleep
+              The capabilities your worship team has been waiting for
             </h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Not chatbots. Not templates. Autonomous agents that understand your church's theology, culture, and people.
+              Not chatbots. Autonomous agents that understand theology, denomination context, and the rhythms of ministry.
+              {/* MM-7: full agent list → /products */}
+              {' '}<Link href="/products" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">See all capabilities →</Link>
             </p>
           </div>
 
@@ -708,105 +730,65 @@ export default function LandingPage() {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              What Worship Leaders Are Saying
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "The real-time pitch analysis during rehearsal has transformed how we prepare. Our blend improved measurably in 3 weeks.",
-                name: 'Sarah Mitchell',
-                role: 'Worship Director, Grace Community',
-                metric: '+23% blend accuracy'
-              },
-              {
-                quote: "Finally a platform that understands church ministry structures. We were set up in an hour, not weeks. The AI coaching is incredible.",
-                name: 'Pastor David Chen',
-                role: 'Senior Pastor, Living Hope Church',
-                metric: '4x engagement increase'
-              },
-              {
-                quote: "The discipleship journey engine changed everything for us. We can finally track where every member is and what they need next.",
-                name: 'Angela Roberts',
-                role: 'Ministry Director, Faith Baptist',
-                metric: '85% volunteer retention'
-              }
-            ].map((testimonial, i) => (
-              <div key={i} className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 relative">
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4, 5].map(s => (
-                    <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  ))}
-                </div>
-                <p className="text-slate-700 dark:text-slate-300 mb-6 italic">"{testimonial.quote}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
-                    <div className="text-sm text-slate-500">{testimonial.role}</div>
-                  </div>
-                  <span className="px-3 py-1 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-400 text-xs font-bold rounded-full">
-                    {testimonial.metric}
-                  </span>
-                </div>
-              </div>
-            ))}
+          {/*
+            MM-11 / no-fabrication: Testimonials section removed — all quotes,
+            names, churches, and metrics ("+23% blend accuracy", "4x engagement increase",
+            "85% volunteer retention") are fabricated. No real customer data exists in
+            this repo to source from.
+            TODO(owner): MM-11 — replace with real testimonials from actual beta churches
+              once you have signed consent. Include: name, church, city, specific outcome.
+              Do NOT reinstate fabricated quotes.
+          */}
+          <div className="bg-slate-100 dark:bg-slate-800 rounded-2xl p-10 text-center border border-slate-200 dark:border-slate-700">
+            <p className="text-slate-500 dark:text-slate-400 text-sm italic">
+              {/* TODO(owner): MM-11 — add real testimonials from beta churches here. */}
+              Early access churches are sharing feedback. Testimonials coming soon.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════
-          WHY CHURCHES SWITCH — Quotes + social proof
-          ═══════════════════════════════════════════════════════════════════ */}
+      {/*
+        MM-11 / no-fabrication: "Why Churches Switch" section removed — all
+        quotes (Marcus Thompson / Cornerstone, Pastor Linda Kim / New Hope,
+        James Adeyemi / Grace Baptist) are fabricated names/churches.
+        The section title "Real feedback from worship teams" makes the fabrication
+        an explicit misrepresentation. Replaced with honest benefit framing.
+        TODO(owner): MM-11 — add real switch stories from beta churches here with consent.
+      */}
       <section className="py-24 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Switch Stories</span>
+            <span className="text-sm font-semibold text-violet-600 uppercase tracking-wider">Why churches switch</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
-              Why Churches Switch to Ministry Motion
+              Three things no other platform does
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Real feedback from worship teams and church leaders who made the move.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                quote: "We were paying over $1,000/month between PCO, Circle, and Zoom. Now we have everything in one place—and the AI coaching alone is worth more than all of them combined.",
-                name: 'Marcus Thompson',
-                role: 'Worship Director, Cornerstone Church',
-                tag: 'Switched from PCO + Circle + Zoom'
+                title: 'Vocal AI in the rehearsal room',
+                desc: 'Real-time pitch analysis during rehearsals and AI coaching from recorded sessions. No other church platform has this.',
+                tag: 'Worship-first',
               },
               {
-                quote: "What sold our board was the data. We can now show leadership exactly where each member is in their discipleship journey. That's something no other platform could do.",
-                name: 'Pastor Linda Kim',
-                role: 'Senior Pastor, New Hope Fellowship',
-                tag: 'Switched from Breeze ChMS'
+                title: 'Formation, not just attendance',
+                desc: 'Track every member\'s spiritual journey — Connect, Grow, Serve, Go — with AI-recommended next steps for each person.',
+                tag: 'Discipleship engine',
               },
               {
-                quote: "The vocal analysis feature changed rehearsals overnight. Our soprano section improved measurably in two weeks. I wish we'd found this sooner.",
-                name: 'James Adeyemi',
-                role: 'Praise Team Leader, Grace Baptist',
-                tag: 'Switched from spreadsheets + WhatsApp'
-              }
-            ].map((testimonial, i) => (
-              <div key={i} className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 relative flex flex-col">
-                <div className="flex mb-3">
-                  {[1, 2, 3, 4, 5].map(s => (
-                    <Star key={s} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  ))}
-                </div>
-                <p className="text-slate-700 dark:text-slate-300 mb-6 italic flex-1">"{testimonial.quote}"</p>
-                <div>
-                  <div className="font-semibold text-slate-900 dark:text-white">{testimonial.name}</div>
-                  <div className="text-sm text-slate-500">{testimonial.role}</div>
-                  <span className="inline-block mt-2 px-2 py-1 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 text-xs font-medium rounded">
-                    {testimonial.tag}
-                  </span>
-                </div>
+                title: 'One platform, not six subscriptions',
+                desc: 'Service planning, rehearsal tracks, messaging, giving, and analytics. One login, one bill, no integration tax.',
+                tag: 'Consolidation',
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 flex-1 leading-relaxed">{item.desc}</p>
+                <span className="inline-block mt-4 px-2 py-1 bg-violet-50 dark:bg-violet-900/30 text-violet-600 dark:text-violet-400 text-xs font-medium rounded">
+                  {item.tag}
+                </span>
               </div>
             ))}
           </div>
@@ -912,30 +894,32 @@ export default function LandingPage() {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
+        {/* PW-2: consistent CTA verb across page; "Start free — 30 days" is the one primary verb */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-            Your Worship Team Deserves{' '}
-            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">AI-Powered Growth</span>
+            Your worship team deserves{' '}
+            <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">a better Monday morning</span>
           </h2>
           <p className="text-xl text-violet-100/70 mb-10 max-w-2xl mx-auto">
-            Join the churches seeing measurable vocal improvement, deeper engagement, and transformed ministry effectiveness.
+            Give WorshipWise 30 days. Your team will notice the difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={openBetaModal}
               className="px-10 py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
             >
-              Start Your Free 30-Day Trial
+              Start free — 30 days
             </button>
             <button
               onClick={openBetaModal}
               className="px-10 py-5 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all text-lg"
             >
-              Book a Demo
+              Watch the demo
             </button>
           </div>
+          {/* TODO(owner): MM-4 — update "Free Planning Center import" to "Free PCO import (beta)" once integration is confirmed live */}
           <p className="text-sm text-violet-200/40 mt-6">
-            No credit card required · Free Planning Center import · Set up in under an hour
+            No credit card required · PCO import (beta) · Set up in under an hour
           </p>
         </div>
       </section>

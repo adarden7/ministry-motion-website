@@ -9,8 +9,9 @@ export function MarketingFooter() {
             <Link href="/" className="inline-block text-xl font-bold text-foreground mb-6">
               MinistryMotion<span className="text-violet-500">.</span>
             </Link>
+            {/* MM-7: Outcome-focused description; no agent-count badge */}
             <p className="max-w-sm mb-6 leading-relaxed">
-              The AI-native ministry intelligence platform. Replace disconnected tools with 15 specialized AI agents working 24/7 to develop your people and track spiritual growth.
+              The complete platform for worship ministry — AI vocal coaching, service analysis, discipleship journeys, and unified communications, built for the church.
             </p>
           </div>
 

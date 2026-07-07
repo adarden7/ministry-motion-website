@@ -108,27 +108,28 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                         )}
                     </div>
                 </nav>
+                {/* MM-10: Single ThemeToggle instance — shared across both breakpoints */}
                 <div className="flex flex-1 items-center justify-end space-x-2">
-                    <div className="md:hidden flex items-center pr-2">
-                        <ThemeToggle />
+                    <ThemeToggle />
+                    <div className="md:hidden flex items-center pl-2">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                             aria-expanded={mobileMenuOpen}
-                            className="ml-4 text-foreground p-1"
+                            className="text-foreground p-1"
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden /> : <Menu className="w-6 h-6" aria-hidden />}
                         </button>
                     </div>
                     <nav className="hidden md:flex items-center space-x-2">
-                        <ThemeToggle />
+                        {/* PW-1: Log In is nav secondary — not a hero CTA */}
                         <Link href="https://app.ministrymotion.com/login">
                             <Button variant="ghost" size="sm">
                                 Log In
                             </Button>
                         </Link>
                         <Button size="sm" onClick={openBetaModal}>
-                            Get Started
+                            Start free
                         </Button>
                     </nav>
                 </div>
