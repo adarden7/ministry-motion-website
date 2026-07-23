@@ -30,6 +30,10 @@ const nextConfig: NextConfig = {
         hosts: ['musicministrystudio.com', 'www.musicministrystudio.com'],
         destination: '/solutions/worship-directors',
       },
+      {
+        hosts: ['worshipcollective.ai', 'www.worshipcollective.ai'],
+        destination: '/collective',
+      },
     ];
 
     const personaRewrites = personaDomains.flatMap(({ hosts, destination }) =>
