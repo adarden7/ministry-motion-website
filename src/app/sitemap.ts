@@ -14,7 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pricing',
     '/compare',
     '/products',
+    // Worship Collective standalone mini-site (also served on worshipcollective.ai).
     '/collective',
+    '/collective/how-it-works',
+    '/collective/membership',
+    '/collective/certifications',
     '/resources',
     '/blog',
     '/case-studies',

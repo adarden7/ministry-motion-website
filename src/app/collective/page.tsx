@@ -19,11 +19,11 @@ import {
   Zap,
   Shield
 } from 'lucide-react';
-import { BetaSignupModal, MarketingNav } from '@/components/marketing';
+import { useCollective } from '@/components/collective';
 
 export default function WorshipCollectivePage() {
+  const { openJoinModal } = useCollective();
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
-  const [showBetaModal, setShowBetaModal] = useState(false);
   // Generate decorative particle positions once (stable across renders).
   const [particles] = useState(() =>
     Array.from({ length: 20 }, () => ({
@@ -35,10 +35,7 @@ export default function WorshipCollectivePage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white antialiased">
-      {/* Navigation */}
-      <MarketingNav currentPage="home" onBetaSignupClick={() => setShowBetaModal(true)} />
-
+    <>
       {/* Hero Section  */}
       <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
         {/* Background effects */}
@@ -64,45 +61,52 @@ export default function WorshipCollectivePage() {
         </div>
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Exclusive badge */}
+          {/* Community badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-8">
             <Sparkles className="w-4 h-4 text-violet-400" />
-            <span className="text-sm font-medium text-violet-300">Invitation Only · Limited Membership</span>
+            <span className="text-sm font-medium text-violet-300">A Community for Worship Leaders</span>
           </div>
 
           {/* Main heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
             <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-              The Worship Collective
+              Worship Collective
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl sm:text-2xl text-white/70 max-w-3xl mx-auto mb-4 leading-relaxed">
-            An ultra-exclusive community for elite worship leaders ready to
-            <span className="text-violet-300"> master their craft</span> and
-            <span className="text-violet-300"> lead with excellence</span>.
+            A membership community where worship leaders
+            <span className="text-violet-300"> belong</span>,
+            <span className="text-violet-300"> connect</span>, and
+            <span className="text-violet-300"> grow together</span>.
           </p>
 
           <p className="text-lg text-white/50 max-w-2xl mx-auto mb-10">
-            Earn your invitation through dedication. Train with world-class mentors.
-            Join a global network of worship excellence.
+            Join directly. Train with mentors. Grow inside a global network of worship
+            leaders who take their craft as seriously as you do.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <button
-              onClick={() => setShowBetaModal(true)}
+              onClick={openJoinModal}
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white font-bold rounded-full hover:shadow-2xl hover:shadow-violet-500/30 transition-all hover:-translate-y-1 text-lg"
             >
-              Sign Up for Beta
+              Join the Community
             </button>
+            <Link
+              href="/how-it-works"
+              className="w-full sm:w-auto px-8 py-4 border border-violet-500/30 text-white font-semibold rounded-full hover:bg-violet-500/10 transition-all text-lg"
+            >
+              See how it works
+            </Link>
           </div>
 
           {/* Beta message */}
           <div className="max-w-2xl mx-auto text-center">
             <p className="text-sm text-white/50">
-              Be among the first to experience elite worship leadership training
+              Now welcoming founding members during our beta
             </p>
           </div>
         </div>
@@ -124,24 +128,24 @@ export default function WorshipCollectivePage() {
                 <span className="text-sm font-medium text-violet-400">The Experience</span>
               </div>
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                <span className="text-white">Not just training.</span>
+                <span className="text-white">More than a platform.</span>
                 <br />
                 <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-                  Transformation.
+                  A place to belong.
                 </span>
               </h2>
               <p className="text-lg text-white/70 mb-8 leading-relaxed">
-                The Worship Collective is a rigorous credentialing program that elevates
-                dedicated worship leaders to the highest levels of musical and spiritual excellence.
-                This isn&apos;t for everyone—it&apos;s for those called to lead worship at the highest level.
+                Worship Collective is a membership community for worship leaders who want to grow
+                alongside people who get it. Learn in cohorts, connect in interest groups, and earn
+                credentials that mean something — all in one place, at your own pace.
               </p>
               <div className="space-y-4">
                 {[
-                  'Personal AI coaching with advanced analytics',
-                  'Weekly cohort sessions with expert mentors',
-                  'Masterclasses from globally recognized worship leaders',
-                  'Credential certification recognized across churches',
-                  'Exclusive community of like-minded leaders',
+                  'A network of worship leaders who push each other forward',
+                  'Weekly cohort sessions with experienced mentors',
+                  'Masterclasses from recognized worship leaders',
+                  'Credentials recognized across churches',
+                  'AI-assisted coaching that meets you where you are',
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center flex-shrink-0">
@@ -203,7 +207,7 @@ export default function WorshipCollectivePage() {
         </div>
       </section>
 
-      {/* The Journey / Credentialing Path */}
+      {/* The Growth Path / Milestones */}
       <section id="journey" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/10 to-transparent" />
 
@@ -211,55 +215,55 @@ export default function WorshipCollectivePage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
               <Target className="w-4 h-4 text-violet-400" />
-              <span className="text-sm font-medium text-violet-400">The Credentialing Journey</span>
+              <span className="text-sm font-medium text-violet-400">The Growth Path</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Earn your place among the elite
+              Milestones you&apos;ll reach together
             </h2>
             <p className="text-lg text-white/70">
-              Entry into The Worship Collective is earned, not given. Complete these requirements
-              within your church&apos;s Ministry Motion platform to unlock your invitation.
+              Membership is open — join directly and grow at your own pace. These are the
+              milestones members work toward on the path from their first cohort to recognized mastery.
             </p>
           </div>
 
-          {/* Requirements grid */}
+          {/* Milestones grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
                 icon: Mic2,
                 title: 'Vocal Excellence',
-                requirement: 'Minimum 75% average',
-                description: 'Demonstrate consistent pitch accuracy, tone quality, and breath control across multiple assessments.'
+                requirement: 'Grow toward 75%+',
+                description: 'Build consistent pitch accuracy, tone quality, and breath control across your assessments.'
               },
               {
                 icon: Trophy,
-                title: 'XP Achievement',
-                requirement: '5,000 XP in 6 months',
-                description: 'Show dedication through practice, community engagement, courses, and service participation.'
+                title: 'Consistent Practice',
+                requirement: 'Show up, week over week',
+                description: 'Earn recognition through practice, community engagement, courses, and service participation.'
               },
               {
                 icon: BookOpen,
                 title: 'Course Completion',
-                requirement: 'Minimum 3 courses',
-                description: 'Complete foundational courses in vocal technique, worship theology, and leadership.'
+                requirement: 'Finish your first 3 courses',
+                description: 'Work through foundational courses in vocal technique, worship theology, and leadership.'
               },
               {
                 icon: Heart,
                 title: 'Devotional Leadership',
-                requirement: 'Lead 10+ devotionals',
-                description: 'Demonstrate spiritual depth by leading team devotionals and prayer sessions.'
+                requirement: 'Lead your team',
+                description: 'Deepen spiritual maturity by leading team devotionals and prayer sessions.'
               },
               {
                 icon: Music,
-                title: 'Performance Hours',
-                requirement: '50+ hours recorded',
+                title: 'Time on the Mic',
+                requirement: 'Log your reps',
                 description: 'Accumulate tracked performance time through services and rehearsals.'
               },
               {
                 icon: Award,
-                title: 'Church Endorsement',
-                requirement: 'Leader recommendation',
-                description: 'Receive endorsement from your worship director or pastor confirming your readiness.'
+                title: 'Peer & Mentor Endorsement',
+                requirement: 'Vouched for by the community',
+                description: 'Receive endorsement from mentors and peers who have seen your growth first-hand.'
               },
             ].map((req, i) => (
               <div key={i} className="group p-6 rounded-2xl bg-gradient-to-br from-slate-900/50 to-slate-950/50 border border-violet-500/10 hover:border-violet-500/30 transition-all">
@@ -277,7 +281,7 @@ export default function WorshipCollectivePage() {
           <div className="mt-16 text-center">
             <p className="text-white/50 text-sm mb-4">Typical journey time</p>
             <div className="inline-flex items-center gap-4 px-6 py-3 bg-slate-900/50 rounded-full border border-violet-500/20">
-              <span className="text-white/70">Start</span>
+              <span className="text-white/70">Join</span>
               <div className="flex gap-1">
                 {[...Array(6)].map((_, i) => (
                   <div key={i} className="w-8 h-1 bg-gradient-to-r from-violet-600/50 to-fuchsia-500/80 rounded-full" />
@@ -285,7 +289,7 @@ export default function WorshipCollectivePage() {
               </div>
               <span className="text-violet-400 font-semibold">6 months</span>
               <ChevronRight className="w-4 h-4 text-violet-400" />
-              <span className="text-violet-300">Invitation</span>
+              <span className="text-violet-300">First credential</span>
             </div>
           </div>
         </div>
@@ -355,14 +359,14 @@ export default function WorshipCollectivePage() {
               </h2>
               <p className="text-lg text-white/70 mb-8 leading-relaxed">
                 You&apos;ll be placed in an intimate cohort of 8-12 worship leaders at similar skill levels.
-                Together, you&apos;ll progress through the program under the guidance of an expert mentor
+                Together, you&apos;ll progress under the guidance of an experienced mentor
                 who&apos;s walked the path before you.
               </p>
               <div className="space-y-4">
                 {[
                   { title: 'Weekly Live Sessions', desc: 'Real-time group coaching and feedback' },
                   { title: 'Peer Accountability', desc: 'Partners who push you to excellence' },
-                  { title: 'Expert Mentorship', desc: 'Guidance from master worship leaders' },
+                  { title: 'Expert Mentorship', desc: 'Guidance from seasoned worship leaders' },
                   { title: 'Lifetime Network', desc: 'Connections that last beyond the program' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -381,7 +385,7 @@ export default function WorshipCollectivePage() {
         </div>
       </section>
 
-      {/* Sing Like Your Favorite Artists — Facial-Acoustic Comparison */}
+      {/* Compare to professional gospel vocal styles — Vocal Style Analysis */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-violet-950/5 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -399,8 +403,8 @@ export default function WorshipCollectivePage() {
                 </span>
               </h2>
               <p className="text-lg text-white/70 mb-6 leading-relaxed">
-                The Worship Collective's facial-acoustic analysis feature analyzes audio sampled at 44.1kHz
-                to identify stylistic patterns in your vocal technique, then compares them to professional
+                Worship Collective&apos;s vocal-style analysis examines audio sampled at 44.1kHz
+                to identify stylistic patterns in your technique, then compares them to professional
                 gospel vocal styles — giving you a data-driven path to the sound you aspire to lead with.
               </p>
               <div className="space-y-4">
@@ -477,7 +481,7 @@ export default function WorshipCollectivePage() {
               See how Apple Watch data correlates with your vocal performance
             </h2>
             <p className="text-lg text-white/70">
-              For members who opt in, the Collective's biometric overlay connects wearable wellness data
+              For members who opt in, the Collective&apos;s biometric overlay connects wearable wellness data
               with vocal analysis — revealing how recovery, stress, and rest affect your performance.
             </p>
           </div>
@@ -782,6 +786,16 @@ export default function WorshipCollectivePage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/certifications"
+              className="inline-flex items-center gap-2 text-violet-300 hover:text-violet-200 transition-colors font-medium"
+            >
+              Explore the full certification path
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -796,22 +810,22 @@ export default function WorshipCollectivePage() {
               <span className="text-sm font-medium text-violet-400">Membership</span>
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Invest in your calling
+              One membership. Everything included.
             </h2>
             <p className="text-lg text-white/70">
-              Choose the path that matches your commitment to excellence.
+              Join directly and grow at your own pace — cohorts, mentorship, masterclasses, and credentials.
             </p>
           </div>
 
           <div className="max-w-lg mx-auto">
-            {/* Elite Tier */}
+            {/* Membership */}
             <div className="relative p-8 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-violet-500/40 hover:border-violet-500/60 transition-all">
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 border border-violet-500/30 mb-4">
                   <Crown className="w-4 h-4 text-violet-300" />
-                  <span className="text-sm font-medium text-violet-300">Elite</span>
+                  <span className="text-sm font-medium text-violet-300">Membership</span>
                 </div>
-                <p className="text-white/60 text-sm">For serious leaders pursuing mastery</p>
+                <p className="text-white/60 text-sm">For worship leaders serious about their craft</p>
               </div>
 
               <div className="mb-8">
@@ -819,12 +833,12 @@ export default function WorshipCollectivePage() {
                   <span className="text-4xl font-bold text-white">$49.99</span>
                   <span className="text-white/50">/mo</span>
                 </div>
-                <p className="text-white/40 text-sm">or $64.99/mo billed monthly</p>
+                <p className="text-white/40 text-sm">billed annually · or $64.99/mo billed monthly</p>
               </div>
 
               <div className="space-y-4 mb-8">
                 {[
-                  { feature: 'Intimate cohort placement (8 members)', included: true, highlight: true },
+                  { feature: 'Intimate cohort placement (8-12 members)', included: true, highlight: true },
                   { feature: 'Weekly live group sessions', included: true, highlight: true },
                   { feature: 'Access to all interest groups', included: true },
                   { feature: 'Live masterclasses + recordings', included: true, highlight: true },
@@ -849,10 +863,10 @@ export default function WorshipCollectivePage() {
               </div>
 
               <button
-                onClick={() => setShowBetaModal(true)}
+                onClick={openJoinModal}
                 className="block w-full py-4 text-center bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white font-bold rounded-full hover:shadow-xl hover:shadow-violet-500/30 transition-all text-lg"
               >
-                Sign Up for Beta
+                Join the Community
               </button>
             </div>
           </div>
@@ -860,7 +874,7 @@ export default function WorshipCollectivePage() {
           {/* Additional info */}
           <div className="mt-12 text-center">
             <p className="text-white/50 text-sm mb-4">
-              Invitation required · Must meet credentialing requirements
+              Open membership · Grow at your own pace
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/40">
               <div className="flex items-center gap-2">
@@ -873,7 +887,7 @@ export default function WorshipCollectivePage() {
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4" />
-                <span>Upgrade or downgrade freely</span>
+                <span>Switch billing freely</span>
               </div>
             </div>
           </div>
@@ -890,12 +904,12 @@ export default function WorshipCollectivePage() {
           <div className="space-y-4">
             {[
               {
-                q: 'How do I get invited to The Worship Collective?',
-                a: 'Complete the credentialing requirements within your church\'s Ministry Motion platform. Once you meet all criteria (75% vocal score, 5,000 XP, 3 courses, etc.), you\'ll receive an invitation to apply.'
+                q: 'How do I join Worship Collective?',
+                a: 'Membership is open to worship leaders — no invitation required. Join directly and we\'ll match you into a cohort within about two weeks. You grow at your own pace toward each credential.'
               },
               {
-                q: 'What if I don\'t meet all requirements yet?',
-                a: 'Keep working within your church\'s MinistryMotion platform! Track your progress toward each requirement. Most dedicated members reach invitation status within 6 months.'
+                q: 'Do I need to be at a MinistryMotion church to join?',
+                a: 'No. Worship Collective is a standalone community open to any worship leader. MinistryMotion is the engine that powers your coaching, analytics, and progress behind the scenes — but membership stands entirely on its own.'
               },
               {
                 q: 'How are cohorts assigned?',
@@ -903,7 +917,7 @@ export default function WorshipCollectivePage() {
               },
               {
                 q: 'Can I earn credentials without being in a cohort?',
-                a: 'No. The cohort experience is central to the program. Credentials are earned through cohort participation, peer accountability, and mentor assessment.'
+                a: 'The cohort experience is central to the community. Credentials are earned through cohort participation, peer accountability, and mentor assessment.'
               },
             ].map((faq, i) => (
               <div
@@ -928,68 +942,40 @@ export default function WorshipCollectivePage() {
         </div>
       </section>
 
-      {/* Beta Signup CTA */}
-      <section id="waitlist" className="py-24 relative overflow-hidden">
+      {/* Join CTA */}
+      <section id="join" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 via-fuchsia-500/20 to-violet-600/20" />
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 border border-violet-500/30 mb-8">
             <Sparkles className="w-4 h-4 text-violet-300" />
-            <span className="text-sm font-medium text-violet-200">Now accepting beta testers</span>
+            <span className="text-sm font-medium text-violet-200">Now welcoming founding members</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Ready to elevate your calling?
+              Ready to find your people?
             </span>
           </h2>
           <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-            Sign up for beta access and help shape the future of worship leadership excellence.
+            Join a community of worship leaders growing together — and help shape it from the start.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => setShowBetaModal(true)}
+              onClick={openJoinModal}
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white font-bold rounded-full hover:shadow-xl hover:shadow-violet-500/30 transition-all text-lg"
             >
-              Sign Up for Beta
+              Join the Community
             </button>
           </div>
 
           <p className="text-sm text-white/40 mt-6">
-            Be among the first to experience The Worship Collective
+            Be among the first to belong to Worship Collective
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 border-t border-violet-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-3">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
-              <div>
-                <span className="font-bold text-white">Worship Collective</span>
-                <div className="text-xs text-violet-500/60">By Ministry Motion</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-8 text-sm text-white/60">
-              <Link href="/landing" className="hover:text-white transition-colors">Ministry Motion</Link>
-              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
-              <Link href="/pricing" className="hover:text-white transition-colors">Contact</Link>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-violet-500/10 text-center text-sm text-white/40">
-            © 2026 Worship Collective by Ministry Motion. All rights reserved.
-          </div>
-        </div>
-      </footer>
-
-      <BetaSignupModal isOpen={showBetaModal} onClose={() => setShowBetaModal(false)} />
 
       {/* Custom styles */}
       <style jsx>{`
@@ -1007,6 +993,6 @@ export default function WorshipCollectivePage() {
           animation: float-particle 10s ease-in-out infinite;
         }
       `}</style>
-    </div>
+    </>
   );
 }
