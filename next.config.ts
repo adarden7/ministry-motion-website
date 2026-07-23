@@ -30,10 +30,10 @@ const nextConfig: NextConfig = {
         hosts: ['musicministrystudio.com', 'www.musicministrystudio.com'],
         destination: '/solutions/worship-directors',
       },
-      {
-        hosts: ['worshipcollective.ai', 'www.worshipcollective.ai'],
-        destination: '/collective',
-      },
+      // NOTE: worshipcollective.ai is a FULL standalone mini-site, not a single
+      // persona landing page. Its host routing is a catch-all handled in
+      // `src/middleware.ts` (every WC-host path -> /collective/*), so it is
+      // intentionally NOT listed here.
     ];
 
     const personaRewrites = personaDomains.flatMap(({ hosts, destination }) =>
@@ -43,6 +43,16 @@ const nextConfig: NextConfig = {
         destination,
       }))
     );
+
+    // Worship Collective sub-pages, exposed at clean root-relative paths on ALL
+    // hosts so the mini-site's root-relative internal links resolve everywhere
+    // (worshipcollective.ai via middleware; preview/localhost via these). The
+    // canonical `/collective/*` paths continue to work directly as well.
+    const collectiveRewrites = [
+      { source: '/how-it-works', destination: '/collective/how-it-works' },
+      { source: '/membership', destination: '/collective/membership' },
+      { source: '/certifications', destination: '/collective/certifications' },
+    ];
 
     return {
       beforeFiles: [
@@ -57,6 +67,7 @@ const nextConfig: NextConfig = {
           destination: 'https://worshipwise-studio-1089767403917.us-east1.run.app/:path*',
         },
         ...personaRewrites,
+        ...collectiveRewrites,
       ],
     };
   },
