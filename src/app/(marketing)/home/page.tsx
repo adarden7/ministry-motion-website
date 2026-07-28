@@ -238,7 +238,7 @@ export default function HomePage() {
                 onClick={openBetaModal}
                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
-                Start free — 30 days
+                Request early access
               </button>
               {/* PW-2: secondary — demo exists (TryDemoButton/signInAsDemo confirmed in codebase) */}
               <button
@@ -614,7 +614,7 @@ export default function HomePage() {
               onClick={openBetaModal}
               className="flex-shrink-0 px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors"
             >
-              Get early access
+              Request early access
             </button>
           </div>
         </div>
@@ -720,7 +720,7 @@ export default function HomePage() {
               onClick={openBetaModal}
               className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 transition-all text-lg"
             >
-              Start free — 30 days
+              Request early access
             </button>
             <button
               onClick={handleTryDemo}

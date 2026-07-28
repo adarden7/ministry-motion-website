@@ -62,7 +62,7 @@ export const pricingTier = defineType({
       name: 'ctaText',
       title: 'CTA Button Text',
       type: 'string',
-      initialValue: 'Get Started',
+      initialValue: 'Request early access',
     }),
     defineField({
       name: 'ctaUrl',

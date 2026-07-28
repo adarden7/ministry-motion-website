@@ -423,7 +423,7 @@ export default function ChurchLeadershipJourneyPage() {
                 onClick={openBetaModal}
                 className="bg-white text-violet-700 hover:bg-violet-50 font-semibold px-8 py-3"
               >
-                Sign Up for Beta
+                Request early access
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
               <Button

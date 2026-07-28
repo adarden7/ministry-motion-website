@@ -250,7 +250,7 @@ export function ResourceDetailClient({ slug }: { slug: string }) {
                 onClick={openBetaModal}
                 className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
               >
-                Join the beta
+                Request early access
               </button>
             </RailCard>
           </>
@@ -278,7 +278,7 @@ export function ResourceDetailClient({ slug }: { slug: string }) {
               onClick={openBetaModal}
               className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
             >
-              Join Beta Program
+              Request early access
             </button>
             <Link
               href="/resources"

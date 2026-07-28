@@ -216,7 +216,7 @@ export default function SolutionsPage() {
               className="h-14 px-8 text-lg font-semibold"
               background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
             >
-              Sign Up for Beta
+              Request early access
             </ShimmerButton>
           </motion.div>
         </div>

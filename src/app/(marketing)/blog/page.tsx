@@ -161,7 +161,7 @@ export default function BlogPage() {
             onClick={openBetaModal}
             className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
           >
-            Join Beta & Get Updates
+            Request early access
           </button>
         </div>
       </section>

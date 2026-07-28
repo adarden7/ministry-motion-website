@@ -129,7 +129,7 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                             </Button>
                         </Link>
                         <Button size="sm" onClick={openBetaModal}>
-                            Start free
+                            Request early access
                         </Button>
                     </nav>
                 </div>
@@ -147,7 +147,7 @@ export function MarketingNav({ currentPage: _currentPage, onBetaSignupClick: _on
                         <Link href="https://app.ministrymotion.com/login" onClick={() => setMobileMenuOpen(false)} className="w-full">
                             <Button variant="outline" className="w-full justify-center">Log In</Button>
                         </Link>
-                        <Button className="w-full justify-center" onClick={() => { setMobileMenuOpen(false); openBetaModal(); }}>Get Started</Button>
+                        <Button className="w-full justify-center" onClick={() => { setMobileMenuOpen(false); openBetaModal(); }}>Request early access</Button>
                     </div>
                 </div>
             )}

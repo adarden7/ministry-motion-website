@@ -639,13 +639,7 @@ export default function ComparePage() {
               onClick={() => setShowBetaModal(true)}
               className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 text-lg"
             >
-              Sign Up for Beta
-            </button>
-            <button
-              onClick={() => setShowBetaModal(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
-            >
-              Schedule Demo
+              Request early access
             </button>
           </div>
         </div>

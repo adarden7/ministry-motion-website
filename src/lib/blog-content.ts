@@ -1187,7 +1187,7 @@ The Kingdom is being built. Lives are being changed. Disciples are being made.
 
 ---
 
-*This concludes our 3-part Kingdom Building series. Ready to see Ministry Motion in action? [Start your free trial →](/home)*
+*This concludes our 3-part Kingdom Building series. Ready to see Ministry Motion in action? [Request early access →](/home)*
 
 ---
 
