@@ -1,6 +1,125 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminDb } from '@/lib/firebase-admin';
 
+// --- HubSpot upsert + submission-note helpers -------------------------------
+// FIX (event-critical, 2026-07-28): a duplicate/returning contact is a
+// SUCCESSFUL capture, not a failure. The previous code treated HubSpot's
+// 409 "Contact already exists" response as a hard error and 500'd the
+// whole request even though the contact WAS in the CRM. Now: on conflict we
+// (a) extract the existing contact's numeric ID from HubSpot's conflict
+// message and PATCH it with this submission's latest field values (newest
+// info wins — an upsert), and (b) log a dedicated Note engagement on the
+// contact so a repeat submission is VISIBLE on its timeline (with a
+// timestamp) instead of being silently swallowed as a no-op.
+interface HubSpotUpsertResult {
+  ok: boolean;
+  contactId?: string;
+  isExisting?: boolean;
+  error?: string;
+}
+
+function parseHubSpotError(text: string): { message?: string; category?: string } {
+  try {
+    const parsed = JSON.parse(text) as { message?: unknown; category?: unknown };
+    return {
+      message: typeof parsed.message === 'string' ? parsed.message : undefined,
+      category: typeof parsed.category === 'string' ? parsed.category : undefined,
+    };
+  } catch {
+    return {};
+  }
+}
+
+async function hubspotUpsertContact(
+  token: string,
+  properties: Record<string, string>
+): Promise<HubSpotUpsertResult> {
+  try {
+    const createRes = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ properties }),
+    });
+
+    if (createRes.ok) {
+      const data = (await createRes.json()) as { id?: string };
+      return { ok: true, contactId: data.id, isExisting: false };
+    }
+
+    const errText = await createRes.text();
+    const parsedErr = parseHubSpotError(errText);
+    const isConflict =
+      createRes.status === 409 ||
+      parsedErr.category === 'CONFLICT' ||
+      /already exists/i.test(parsedErr.message ?? errText);
+
+    if (!isConflict) {
+      return { ok: false, error: errText };
+    }
+
+    // Existing contact — pull its ID out of HubSpot's conflict message
+    // ("Contact already exists. Existing ID: 12345") so we can update it.
+    const idMatch = /existing id:?\s*#?\s*(\d+)/i.exec(parsedErr.message ?? errText);
+    const existingId = idMatch?.[1];
+
+    if (existingId) {
+      try {
+        const patchRes = await fetch(`https://api.hubapi.com/crm/v3/objects/contacts/${existingId}`, {
+          method: 'PATCH',
+          headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ properties }),
+        });
+        if (!patchRes.ok) {
+          console.error(
+            '[HubSpot Sync] Existing-contact update failed (non-fatal — contact already captured):',
+            await patchRes.text()
+          );
+        }
+      } catch (patchErr) {
+        console.error(
+          '[HubSpot Sync] Existing-contact update threw (non-fatal):',
+          patchErr instanceof Error ? patchErr.message : String(patchErr)
+        );
+      }
+    } else {
+      console.error('[HubSpot Sync] Conflict reported but no existing ID could be parsed from:', errText);
+    }
+
+    return { ok: true, contactId: existingId, isExisting: true };
+  } catch (err) {
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
+}
+
+async function hubspotLogSubmissionNote(token: string, contactId: string, noteBody: string): Promise<void> {
+  try {
+    const noteRes = await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ properties: { hs_timestamp: `${Date.now()}`, hs_note_body: noteBody } }),
+    });
+    if (!noteRes.ok) {
+      console.error('[HubSpot Sync] Failed to create submission note (non-fatal):', await noteRes.text());
+      return;
+    }
+    const noteData = (await noteRes.json()) as { id?: string };
+    if (!noteData.id) return;
+
+    const assocRes = await fetch(
+      `https://api.hubapi.com/crm/v4/objects/notes/${noteData.id}/associations/default/contacts/${contactId}`,
+      { method: 'PUT', headers: { Authorization: `Bearer ${token}` } }
+    );
+    if (!assocRes.ok) {
+      console.error('[HubSpot Sync] Failed to associate submission note with contact (non-fatal):', await assocRes.text());
+    }
+  } catch (err) {
+    console.error(
+      '[HubSpot Sync] Submission-note logging threw (non-fatal):',
+      err instanceof Error ? err.message : String(err)
+    );
+  }
+}
+
 // Insert leads directly into the database to avoid proxy issues.
 //
 // RESILIENCE NOTE (event-critical incident, 2026-07-28): the deployed
@@ -158,44 +277,66 @@ export async function POST(request: NextRequest) {
   }
 
   // 3) HubSpot CRM SYNCHRONIZATION — also isolated in its own try/catch.
+  // Uses hubspotUpsertContact so a 409 "Contact already exists" (a
+  // returning lead re-submitting) is treated as a CAPTURE, not a failure —
+  // the existing contact gets its fields updated and a Note is logged so
+  // the resubmission is visible on the contact's timeline.
+  let hubspotExisting = false;
   if (process.env.HUBSPOT_ACCESS_TOKEN) {
     try {
-      const hubspotPayload = {
-        properties: {
-          email: body.email,
-          firstname: body.firstName,
-          lastname: body.lastName,
-          phone: body.phone || '',
-          company: body.churchName,
-          jobtitle: body.role || '',
-          hs_lead_status: 'NEW',
-          church_size: body.churchSize || '' // Assuming there might be a custom property, or it just passes it implicitly
-        }
+      // ROOT CAUSE (event-critical, 2026-07-28): a live full-payload test
+      // showed HubSpot rejecting the ENTIRE contact with 400
+      // PROPERTY_DOESNT_EXIST when `church_size` was included — that
+      // custom property was never created in the HubSpot portal, so any
+      // real submission with a church size 500'd. Only send KNOWN-STANDARD
+      // HubSpot contact properties here; everything else (church size,
+      // interests, etc.) goes into the submission Note below instead of
+      // being invented as a contact property.
+      const properties: Record<string, string> = {
+        email: body.email || '',
+        firstname: body.firstName || '',
+        lastname: body.lastName || '',
+        phone: body.phone || '',
+        company: body.churchName || '',
+        jobtitle: body.role || '',
+        hs_lead_status: 'NEW',
       };
 
-      const hsResponse = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(hubspotPayload)
-      });
+      const hsResult = await hubspotUpsertContact(process.env.HUBSPOT_ACCESS_TOKEN, properties);
 
-      if (!hsResponse.ok) {
-        const hsErrorText = await hsResponse.text();
-        console.error('[HubSpot Sync] Failed to create contact:', hsErrorText);
-        channelErrors.hubspot = hsErrorText;
+      if (!hsResult.ok) {
+        console.error('[HubSpot Sync] Failed to create contact:', hsResult.error);
+        channelErrors.hubspot = hsResult.error || 'unknown HubSpot error';
       } else {
-        const hsData = await hsResponse.json();
-        console.log('[HubSpot Sync] Successfully created contact. ID:', hsData.id);
         hubspotOk = true;
+        hubspotExisting = Boolean(hsResult.isExisting);
+        console.log(
+          hsResult.isExisting
+            ? `[HubSpot Sync] Existing contact resubmitted (captured, updated): ${hsResult.contactId}`
+            : `[HubSpot Sync] Successfully created contact. ID: ${hsResult.contactId}`
+        );
+
+        // Log this submission as a Note on the contact so repeat
+        // submissions are visible on the timeline (not silently merged).
+        if (hsResult.contactId) {
+          const noteBody = [
+            `New MinistryMotion website form submission${hsResult.isExisting ? ' (repeat/returning contact)' : ''}`,
+            `Name: ${body.firstName || ''} ${body.lastName || ''}`.trim(),
+            `Email: ${body.email || 'N/A'}`,
+            `Church: ${body.churchName || 'N/A'}`,
+            `Church Size: ${body.churchSize || 'N/A'}`,
+            `Source: ${body.source || 'Website UI'}`,
+            body.interests && body.interests.length > 0 ? `Interests: ${body.interests.join(', ')}` : null,
+            `Submitted: ${new Date().toISOString()}`,
+          ].filter(Boolean).join('\n');
+          await hubspotLogSubmissionNote(process.env.HUBSPOT_ACCESS_TOKEN, hsResult.contactId, noteBody);
+        }
 
         // Optionally update the Firebase lead with the hubspot ID async
         // (only possible if the Firestore write above actually succeeded).
-        if (firestoreOk && docRef) {
+        if (firestoreOk && docRef && hsResult.contactId) {
           docRef.update({
-            hubspotContactId: hsData.id,
+            hubspotContactId: hsResult.contactId,
             hubspotSyncedAt: new Date().toISOString()
           }).catch(dbErr => console.error('[HubSpot Sync] Failed to tag Firebase document', dbErr.message));
         }
@@ -212,7 +353,8 @@ export async function POST(request: NextRequest) {
 
   // Honest success rule: the lead is "captured" if ANY durable channel
   // succeeded. Never fabricate success — if every channel failed, the lead
-  // is genuinely lost and the caller must see a real error.
+  // is genuinely lost and the caller must see a real error. A HubSpot 409
+  // (existing contact) counts as captured — see hubspotUpsertContact above.
   const captured = firestoreOk || emailOk || hubspotOk;
 
   if (captured) {
@@ -220,7 +362,7 @@ export async function POST(request: NextRequest) {
       {
         success: true,
         leadId,
-        channels: { firestore: firestoreOk, email: emailOk, hubspot: hubspotOk }
+        channels: { firestore: firestoreOk, email: emailOk, hubspot: hubspotOk, hubspotExisting }
       },
       { status: 200 }
     );
