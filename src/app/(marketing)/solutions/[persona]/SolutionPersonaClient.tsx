@@ -104,7 +104,7 @@ export function SolutionPersonaClient({ persona }: { persona: string }) {
                     className="h-14 px-8 text-lg font-semibold shadow-lg shadow-violet-500/25"
                     background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
                   >
-                    Sign Up for Beta
+                    Request early access
                   </ShimmerButton>
                   <Link
                     href="/pricing"
@@ -281,7 +281,7 @@ export function SolutionPersonaClient({ persona }: { persona: string }) {
                 className="h-14 px-8 text-lg font-semibold shadow-lg shadow-violet-500/25"
                 background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
               >
-                Sign Up for Beta
+                Request early access
               </ShimmerButton>
               <Link
                 href="/compare"

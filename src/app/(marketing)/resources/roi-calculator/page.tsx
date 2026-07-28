@@ -288,7 +288,7 @@ export default function RoiCalculatorPage() {
             onClick={openBetaModal}
             className="px-8 py-3.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
           >
-            Join Beta Program
+            Request early access
           </button>
         </div>
       </section>

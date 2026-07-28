@@ -302,7 +302,7 @@ export default function ReadinessAssessmentPage() {
                   onClick={openBetaModal}
                   className="px-8 py-3.5 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 transition-all"
                 >
-                  Join Beta Program
+                  Request early access
                 </button>
               </div>
             </div>

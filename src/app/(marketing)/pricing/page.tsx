@@ -31,7 +31,7 @@ const pricingTiers = [
     description: 'Try Ministry Motion risk-free. No credit card required.',
     teamSize: '5 team members',
     highlight: false,
-    cta: 'Start Free Trial',
+    cta: 'Request early access',
     features: {
       'Team Members': '5',
       'Service Planning': true,
@@ -60,7 +60,7 @@ const pricingTiers = [
     description: 'For growing worship teams getting organized',
     teamSize: '15 team members',
     highlight: false,
-    cta: 'Sign Up for Beta',
+    cta: 'Request early access',
     features: {
       'Team Members': '15',
       'Service Planning': true,
@@ -88,7 +88,7 @@ const pricingTiers = [
     description: 'Full AI experience with 15 autonomous agents',
     teamSize: '50 team members',
     highlight: true,
-    cta: 'Sign Up for Beta',
+    cta: 'Request early access',
     features: {
       'Team Members': '50',
       '15 AI Agents': true,
@@ -113,7 +113,7 @@ const pricingTiers = [
     description: 'For large churches and multi-site organizations',
     teamSize: 'Unlimited members',
     highlight: false,
-    cta: 'Contact Sales',
+    cta: 'Request early access',
     features: {
       'Everything in Pro': true,
       'Unlimited Team Members': true,
@@ -526,13 +526,7 @@ export default function PricingPage() {
               onClick={openBetaModal}
               className="w-full sm:w-auto px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-violet-50 text-lg"
             >
-              Sign Up for Beta
-            </button>
-            <button
-              onClick={openBetaModal}
-              className="w-full sm:w-auto px-8 py-4 bg-violet-700 text-white font-semibold rounded-lg border border-violet-500 hover:bg-violet-800 text-lg"
-            >
-              Talk to Sales
+              Request early access
             </button>
           </div>
         </div>

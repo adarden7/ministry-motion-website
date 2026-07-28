@@ -88,7 +88,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                     className="group px-8 py-4 bg-white text-slate-900 font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                   >
                     <span className="flex items-center gap-2">
-                      Request Early Access
+                      Request early access
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </button>
@@ -265,7 +265,7 @@ export function ProductDetailClient({ slug }: { slug: string }) {
                 className="group px-8 py-4 bg-white text-slate-900 font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(124,58,237,0.25)]"
               >
                 <span className="flex items-center gap-2">
-                  Request Early Access
+                  Request early access
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </button>

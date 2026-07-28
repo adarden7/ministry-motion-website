@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import {
   Mic2, Users, Calendar, BarChart3, MessageSquare, Sparkles,
-  Check, Headphones, BookOpen, Heart, Music, ChevronRight, Play,
+  Check, Headphones, BookOpen, Heart, Music, ChevronRight,
   Zap, Target, TrendingUp, Shield, Clock, Globe, Layers, Radio,
   Brain, Video, ArrowRight, Church, Star, Award, Flame, Volume2,
   AudioWaveform, GitCompare, Gauge
@@ -239,20 +239,13 @@ export default function LandingPage() {
                 Monday morning acting on answers, not hunting for them.
               </p>
 
-              {/* PW-2: ONE primary CTA verb; secondary = demo (confirmed to exist) */}
+              {/* PW-2: ONE primary CTA verb; secondary = demo (confirmed to exist, see TryDemoButton below) */}
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
                 <button
                   onClick={openBetaModal}
                   className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
                 >
-                  Start free — 30 days
-                </button>
-                <button
-                  onClick={openBetaModal}
-                  className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all text-lg flex items-center gap-2 group"
-                >
-                  <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Watch the demo
+                  Request early access
                 </button>
               </div>
 
@@ -816,7 +809,7 @@ export default function LandingPage() {
                 price: '$0',
                 desc: 'Try Ministry Motion risk-free',
                 features: ['Up to 5 team members', 'Service planning + scheduling', 'Basic vocal assessment', 'Community chat', '50 song library'],
-                cta: 'Start Free Trial',
+                cta: 'Request early access',
                 highlight: false
               },
               {
@@ -824,7 +817,7 @@ export default function LandingPage() {
                 price: '$99',
                 desc: 'For growing worship teams',
                 features: ['Up to 15 team members', 'Digital rehearsals + SATB tracks', 'Basic assessments', 'Integrated giving', 'PCO integration', '3 Learning Hub courses'],
-                cta: 'Sign Up for Beta',
+                cta: 'Request early access',
                 highlight: false
               },
               {
@@ -832,7 +825,7 @@ export default function LandingPage() {
                 price: '$199',
                 desc: 'Full AI experience for active churches',
                 features: ['Up to 100 team members', '15 AI Agents', 'All 18+ courses + Interactive Labs', 'Advanced analytics', 'Service video analysis', 'Discipleship journey engine'],
-                cta: 'Sign Up for Beta',
+                cta: 'Request early access',
                 highlight: true
               },
               {
@@ -840,7 +833,7 @@ export default function LandingPage() {
                 price: 'Custom',
                 desc: 'For large churches & networks',
                 features: ['Unlimited members', 'Everything in Pro', 'Cross-church intelligence', 'Multi-campus support', 'API access', 'Dedicated support + SLA'],
-                cta: 'Contact Sales',
+                cta: 'Request early access',
                 highlight: false
               }
             ].map((plan, i) => (
@@ -894,7 +887,7 @@ export default function LandingPage() {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-500/15 via-transparent to-transparent" />
-        {/* PW-2: consistent CTA verb across page; "Start free — 30 days" is the one primary verb */}
+        {/* PW-2: consistent CTA verb across page; "Request early access" is the one primary verb */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
             Your worship team deserves{' '}
@@ -908,13 +901,7 @@ export default function LandingPage() {
               onClick={openBetaModal}
               className="px-10 py-5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-0.5"
             >
-              Start free — 30 days
-            </button>
-            <button
-              onClick={openBetaModal}
-              className="px-10 py-5 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all text-lg"
-            >
-              Watch the demo
+              Request early access
             </button>
           </div>
           {/* TODO(owner): MM-4 — update "Free Planning Center import" to "Free PCO import (beta)" once integration is confirmed live */}

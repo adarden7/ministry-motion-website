@@ -166,7 +166,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
                 onClick={openBetaModal}
                 className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-sm font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all"
               >
-                Join the beta
+                Request early access
               </button>
             </RailCard>
           </>
@@ -219,7 +219,7 @@ export function BlogPostClient({ slug }: { slug: string }) {
                   className="h-12 px-6 font-semibold"
                   background="linear-gradient(135deg, #7c3aed 0%, #c026d3 100%)"
                 >
-                  Sign Up for Beta
+                  Request early access
                 </ShimmerButton>
               </div>
             </div>

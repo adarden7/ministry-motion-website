@@ -169,7 +169,7 @@ export default function ChurchAdminsPage() {
                 onClick={openBetaModal}
                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg shadow-lg shadow-violet-500/25"
               >
-                Start Free Trial
+                Request early access
               </button>
               <Link
                 href="/pricing"
@@ -358,7 +358,7 @@ export default function ChurchAdminsPage() {
               onClick={openBetaModal}
               className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all text-lg"
             >
-              Sign Up for Beta
+              Request early access
             </button>
             <Link
               href="/pricing"
