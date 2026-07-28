@@ -251,7 +251,7 @@ export default function LandingPage() {
 
               <div className="flex items-center gap-6 text-sm text-violet-200/60">
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> No credit card</span>
-                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> 30 days free</span>
+                <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> Early access</span>
                 {/* TODO(owner): MM-4 — confirm PCO integration status (beta vs. live) before updating this label */}
                 <span className="flex items-center gap-1"><Check className="w-4 h-4 text-emerald-400" /> PCO import (beta)</span>
               </div>
@@ -333,7 +333,6 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
             {[
-              { number: '30 days', label: 'Free trial — no credit card' },
               { number: 'SATB', label: 'Rehearsal tracks in seconds' },
               { number: '< 1 hr', label: 'Setup with PCO import' },
             ].map((stat, i) => (
@@ -894,7 +893,7 @@ export default function LandingPage() {
             <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">a better Monday morning</span>
           </h2>
           <p className="text-xl text-violet-100/70 mb-10 max-w-2xl mx-auto">
-            Give WorshipWise 30 days. Your team will notice the difference.
+            Give WorshipWise a try. Your team will notice the difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
@@ -906,7 +905,7 @@ export default function LandingPage() {
           </div>
           {/* TODO(owner): MM-4 — update "Free Planning Center import" to "Free PCO import (beta)" once integration is confirmed live */}
           <p className="text-sm text-violet-200/40 mt-6">
-            No credit card required · PCO import (beta) · Set up in under an hour
+            No credit card required · PCO import (beta)
           </p>
         </div>
       </section>

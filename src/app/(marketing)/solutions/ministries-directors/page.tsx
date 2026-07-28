@@ -170,7 +170,7 @@ export default function MinistriesDirectorsPage() {
             </div>
 
             <p className="text-sm text-slate-500 mt-4">
-              30-day free trial · PCO import (beta) · No credit card required
+              PCO import (beta) · No credit card required
             </p>
           </div>
         </div>

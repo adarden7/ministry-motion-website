@@ -27,8 +27,8 @@ const pricingTiers = [
     name: 'Free',
     price: 'Free',
     annualPrice: 'Free',
-    period: 'for 30 days',
-    description: 'Try Ministry Motion risk-free. No credit card required.',
+    period: '',
+    description: 'Core planning & scheduling to get your team started. No credit card required.',
     teamSize: '5 team members',
     highlight: false,
     cta: 'Request early access',
@@ -222,11 +222,7 @@ const featureCategories = [
 const faqs = [
   {
     q: 'Can I try before buying?',
-    a: 'Yes — the Free plan gives you 30 days of full access with no credit card required. Start today, explore all core features, and upgrade when you\'re ready. We don\'t believe in bait-and-switch trials.'
-  },
-  {
-    q: 'What happens after the free trial?',
-    a: 'After 30 days, your account moves to a limited free tier (5 team members, 50 songs, no AI agents). You keep all your data. Upgrade to any paid plan at any time to restore full access. We\'ll remind you before the trial ends.'
+    a: 'We\'re currently rolling out access in waves, so there isn\'t a self-serve signup yet. Request early access below and our team will get you set up on the Free plan — no credit card required, no bait-and-switch.'
   },
   {
     q: 'Do you offer church discounts?',
