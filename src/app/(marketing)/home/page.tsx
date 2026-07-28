@@ -712,7 +712,7 @@ export default function HomePage() {
             Ready to start with a better Monday morning?
           </h2>
           <p className="text-xl text-violet-100 mb-10 max-w-2xl mx-auto">
-            Give WorshipWise 30 days. Your team will notice the difference.
+            Give WorshipWise a try. Your team will notice the difference.
           </p>
           {/* TODO(owner): add founder story/bio — MM-11 */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
