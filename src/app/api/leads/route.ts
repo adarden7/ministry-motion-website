@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           from: '"Ministry Motion" <hello@ministrymotion.com>',
-          to: process.env.LEAD_NOTIFICATION_EMAIL || 'leads@ministrymotion.com',
+          to: process.env.LEAD_NOTIFICATION_EMAIL || 'ahkeem@dardenbehavioralcounseling.com',
           subject: `New Lead: ${body.firstName} ${body.lastName} - ${body.churchName}`,
           html: `
             <h2>New MinistryMotion Lead</h2>
