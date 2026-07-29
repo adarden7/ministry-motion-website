@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChurchSize, churchSizeLabels, BetaSignupFormData, LeadSource } from '@/lib/types/lead';
+import { postToLeadIntakeShadow } from '@/lib/lead-intake-shadow';
 import { Check, Loader2, AlertCircle } from 'lucide-react';
 
 interface BetaSignupFormProps {
@@ -68,10 +69,22 @@ export function BetaSignupForm({
     setIsSubmitting(true);
     setError(null);
 
-    try {
-      // Get UTM params from URL
-      const urlParams = new URLSearchParams(window.location.search);
+    // Get UTM params from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm: Record<string, string> = {
+      ...(urlParams.get('utm_source') ? { source: urlParams.get('utm_source')! } : {}),
+      ...(urlParams.get('utm_medium') ? { medium: urlParams.get('utm_medium')! } : {}),
+      ...(urlParams.get('utm_campaign') ? { campaign: urlParams.get('utm_campaign')! } : {}),
+    };
 
+    // Shadow-mode parity POST — OFF by default (NEXT_PUBLIC_LEAD_INTAKE_SHADOW must be
+    // explicitly 'true'). Fires the SAME submission to the shared lead-intake spine primitive
+    // IN ADDITION to (never instead of) the /api/leads call below; fire-and-forget, best-effort,
+    // and cannot affect this form's success/error state either way. See
+    // src/lib/lead-intake-shadow.ts for the full rationale.
+    void postToLeadIntakeShadow({ formData, source, utm });
+
+    try {
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
