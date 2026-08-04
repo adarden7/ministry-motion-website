@@ -1,6 +1,18 @@
 /**
  * Solutions Page Content
  * Persona-specific content for Ministry Motion solutions
+ *
+ * SYNC-NOTE (capabilities):
+ *   The FACTUAL capability catalogue + per-tier availability is derived from the
+ *   app's single source of truth — studio-worshipwise/src/lib/subscription-tiers.ts
+ *   — via `npm run sync:capabilities` -> src/lib/generated/capabilities.json,
+ *   surfaced on /pricing ("Every capability, by plan"). See src/lib/capabilities.ts.
+ *
+ *   The persona narrative below is hand-authored marketing prose (pain points,
+ *   testimonials) that cannot be auto-derived. When new capabilities ship, mirror
+ *   the app's factual feature name + one-line description into the relevant
+ *   persona (no invented claims). Last aligned 2026-08-03 for
+ *   PRs #336/#337/#339/#340/#342-#347.
  */
 
 import {
@@ -104,6 +116,16 @@ export const solutions: Solution[] = [
         description: 'One inbox for all team communication. Context-aware messaging means your worship team discussions stay with your worship team.',
         icon: MessageSquare,
       },
+      {
+        title: 'Service Theme Scoring',
+        description: 'Score each service on its expressed theme, its AI-assessed emergent theme, and alignment to your annual or quarterly theme—with a leadership rollup.',
+        icon: Target,
+      },
+      {
+        title: 'Per-Role Vocal Scoring',
+        description: 'Assess lead and background vocalists separately—lyrics and melody are scored independently per role, so feedback fits each singer\'s part.',
+        icon: Mic2,
+      },
     ],
     stats: [
       { value: '4hrs', label: 'Saved weekly on planning' },
@@ -163,6 +185,21 @@ export const solutions: Solution[] = [
         description: 'One dashboard shows all ministries. See how children\'s ministry feeds into youth, how youth produces worship team members.',
         icon: Layers,
       },
+      {
+        title: 'Role-Based Analytics Homes',
+        description: 'Every leader gets a curated home surface tuned to their role—Pastor, Ministry Admin, Worship Leader, or Member. Advanced tiles stay honest-empty until their data feeds are enabled.',
+        icon: BarChart3,
+      },
+      {
+        title: 'Theme → People Intelligence',
+        description: 'Find the people connected to a theme with tiered evidence. Planned-theme matching is live now; attributed and delta tiers populate as service and engagement feeds are enabled.',
+        icon: Users,
+      },
+      {
+        title: 'Ask Your Data (Beta)',
+        description: 'Ask questions of your church analytics in plain language. The governed query backend is live; the conversational UI surface is currently in beta.',
+        icon: Sparkles,
+      },
     ],
     stats: [
       { value: '39%', label: 'Christians aren\'t being discipled' },
@@ -216,6 +253,11 @@ export const solutions: Solution[] = [
         description: 'Earn your way into the elite Worship Collective. Get certified, get booked by other churches, and get paid for your gift.',
         icon: Crown,
       },
+      {
+        title: 'Per-Role Vocal Scoring',
+        description: 'Get scored for the role you\'re actually singing. Lead and background parts are assessed separately, with lyrics and melody graded independently.',
+        icon: Mic2,
+      },
     ],
     stats: [
       { value: '1000+', label: 'Vocal dimensions analyzed' },
@@ -268,6 +310,16 @@ export const solutions: Solution[] = [
         title: 'Training & Support',
         description: 'Comprehensive training library, live support, and a dedicated success manager for churches over 500.',
         icon: Heart,
+      },
+      {
+        title: 'Role-Based Analytics Homes',
+        description: 'Every staff role lands on a home surface built for them—Ministry Admin, Pastor, Worship Leader, or Member. Advanced tiles stay honest-empty until their data feeds are enabled.',
+        icon: BarChart3,
+      },
+      {
+        title: 'Ask Your Data (Beta)',
+        description: 'Query your church data in plain language instead of building reports. The governed query backend is live; the conversational UI surface is currently in beta.',
+        icon: Sparkles,
       },
     ],
     stats: [

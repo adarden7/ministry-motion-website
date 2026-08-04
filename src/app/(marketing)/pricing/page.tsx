@@ -20,6 +20,25 @@ import {
 } from 'lucide-react';
 import { MarketingNav } from '@/components/marketing';
 import { useMarketing } from '@/context/MarketingContext';
+import {
+  getCapabilityGroups,
+  getRecentlyShipped,
+  PRICING_COLUMN_TIERS,
+  PRICING_COLUMN_LABELS,
+  CAPABILITIES_GENERATED_AT,
+} from '@/lib/capabilities';
+
+// ---------------------------------------------------------------------------
+// SYNC-NOTE (capabilities): The "Every capability, by plan" section below is
+// DERIVED from the app's canonical catalogue — it renders from
+// src/lib/generated/capabilities.json via src/lib/capabilities.ts. Newly
+// shipped app features appear here automatically once the JSON is regenerated
+// (`npm run sync:capabilities`); do NOT hand-maintain that list.
+//
+// The hand-authored `pricingTiers` + `featureCategories` below remain marketing
+// prose (they include go-to-market concepts like PCO/giving that are not app
+// feature flags). Keep them in step with the canonical catalogue by eye.
+// ---------------------------------------------------------------------------
 
 // Pricing tiers — aligned with canonical subscription-tiers.ts
 const pricingTiers = [
@@ -270,6 +289,14 @@ export default function PricingPage() {
     }
   };
 
+  // Derived from the app's canonical catalogue (see SYNC-NOTE above).
+  const capabilityGroups = getCapabilityGroups();
+  const recentlyShipped = getRecentlyShipped();
+  const catalogueUpdated = new Date(CAPABILITIES_GENERATED_AT).toLocaleDateString(
+    'en-US',
+    { year: 'numeric', month: 'long', day: 'numeric' }
+  );
+
   return (
     <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased">
       {/* Navigation */}
@@ -476,6 +503,105 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Every capability, by plan — DERIVED from the app's canonical catalogue */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Every capability, by plan</h2>
+          <p className="text-slate-600 text-center mb-8 max-w-2xl mx-auto">
+            The full list of shipped capabilities, generated directly from the product so it stays in step with what&apos;s actually live. Updated {catalogueUpdated}.
+          </p>
+
+          {/* New in this release */}
+          {recentlyShipped.length > 0 && (
+            <div className="mb-12 rounded-2xl border border-violet-200 bg-violet-50/50 p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <Zap className="w-5 h-5 text-violet-600" />
+                <h3 className="text-lg font-bold text-slate-900">New this release</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {recentlyShipped.map((cap) => (
+                  <div key={cap.id} className="rounded-xl bg-white border border-slate-200 p-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span aria-hidden className="text-lg leading-none">{cap.icon}</span>
+                      <span className="font-semibold text-slate-900 text-sm">{cap.name}</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-relaxed">{cap.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+            {/* Header */}
+            <div className="grid grid-cols-[minmax(0,1fr)_repeat(4,72px)] sm:grid-cols-[minmax(0,1fr)_repeat(4,110px)] bg-slate-100 border-b border-slate-200">
+              <div className="p-4 font-semibold text-slate-700">Capability</div>
+              {PRICING_COLUMN_TIERS.map((t) => (
+                <div
+                  key={t}
+                  className={`p-4 text-center text-xs sm:text-sm font-semibold ${
+                    t === 'pro' ? 'text-violet-700 bg-violet-50' : 'text-slate-700'
+                  }`}
+                >
+                  {PRICING_COLUMN_LABELS[t]}
+                </div>
+              ))}
+            </div>
+
+            {capabilityGroups.map((group) => (
+              <div key={group.category}>
+                {/* Category header */}
+                <div className="grid grid-cols-[minmax(0,1fr)_repeat(4,72px)] sm:grid-cols-[minmax(0,1fr)_repeat(4,110px)] bg-slate-50 border-b border-slate-200">
+                  <div className="p-3 font-semibold text-slate-900">{group.label}</div>
+                  <div className="p-3" />
+                  <div className="p-3 bg-violet-50/50" />
+                  <div className="p-3" />
+                  <div className="p-3" />
+                </div>
+
+                {group.capabilities.map((cap) => (
+                  <div
+                    key={cap.id}
+                    className="grid grid-cols-[minmax(0,1fr)_repeat(4,72px)] sm:grid-cols-[minmax(0,1fr)_repeat(4,110px)] border-b border-slate-100 hover:bg-slate-50"
+                  >
+                    <div className="p-3 pl-6">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span aria-hidden className="text-base leading-none">{cap.icon}</span>
+                        <span className="text-sm font-medium text-slate-800">{cap.name}</span>
+                        {cap.isNew && (
+                          <span className="px-1.5 py-0.5 bg-violet-100 text-violet-700 text-[10px] font-bold rounded uppercase tracking-wide">
+                            New
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-slate-500 mt-0.5">{cap.description}</p>
+                    </div>
+                    {PRICING_COLUMN_TIERS.map((t) => (
+                      <div
+                        key={t}
+                        className={`p-3 flex items-center justify-center ${
+                          t === 'pro' ? 'bg-violet-50/30' : ''
+                        }`}
+                      >
+                        {cap.availability[t] ? (
+                          <Check className="w-4 h-4 text-green-600" />
+                        ) : (
+                          <X className="w-4 h-4 text-slate-300" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs text-slate-400 text-center mt-4">
+            Generated from the product&apos;s canonical feature registry. Worship Collective and individual artist tiers include additional capabilities shown on their own pages.
+          </p>
         </div>
       </section>
 
