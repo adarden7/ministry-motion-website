@@ -1,6 +1,21 @@
 /**
  * Individual Product Page Content
  * Detailed content for product detail pages
+ *
+ * SYNC-NOTE (capabilities):
+ *   The FACTUAL capability catalogue + per-tier availability is derived from the
+ *   app's single source of truth — studio-worshipwise/src/lib/subscription-tiers.ts
+ *   — via `npm run sync:capabilities` -> src/lib/generated/capabilities.json,
+ *   surfaced on the /pricing page ("Every capability, by plan"). See
+ *   src/lib/capabilities.ts.
+ *
+ *   The content below is hand-authored marketing NARRATIVE (taglines, how-it-works,
+ *   for-whom) that cannot be auto-derived. When new capabilities ship, mirror the
+ *   app's factual feature name + one-line description here (no invented claims).
+ *   Last aligned 2026-08-03 for PRs #336/#337/#339/#340/#342-#347 — added:
+ *   service_theme_scoring, canonical_theme_taxonomy, theme_people_intelligence,
+ *   role_based_analytics_homes, ask_your_data (UI beta), per_role_vocal_scoring,
+ *   satb_track_generation, youtube_song_ingestion.
  */
 
 import {
@@ -101,6 +116,12 @@ export const products: ProductContent[] = [
         description:
           'Uses a 768-dimensional vector database to instantly match a member\'s spiritual gifts, personality, and availability with immediate ministry needs.',
         icon: Sparkles,
+      },
+      {
+        title: 'Canonical Theme Taxonomy',
+        description:
+          'A governed library of 131 canonical worship themes with a select-don\'t-free-type picker, plus custom-theme extension. Keeps service planning consistent.',
+        icon: BookOpen,
       },
     ],
     howItWorks: [
@@ -266,6 +287,30 @@ export const products: ProductContent[] = [
           'Track patterns over weeks and months. See which songs resonate, which transitions work, what\'s improving.',
         icon: TrendingUp,
       },
+      {
+        title: 'Service Theme Scoring',
+        description:
+          'Tri-theme scoring per service — the expressed theme, the AI-assessed emergent theme, and alignment to your annual or quarterly theme — plus a leadership rollup.',
+        icon: Target,
+      },
+      {
+        title: 'Theme → People Intelligence',
+        description:
+          'Find people by theme with tiered evidence. Planned-theme matching is live now; attributed and delta tiers populate as service-attribution and engagement feeds are enabled.',
+        icon: Users,
+      },
+      {
+        title: 'Ask Your Data (Beta)',
+        description:
+          'Natural-language, governed queries over your church analytics. The query backend is live; the conversational UI surface is currently in beta.',
+        icon: Sparkles,
+      },
+      {
+        title: 'Role-Based Analytics Homes',
+        description:
+          'Curated per-persona home surfaces for Members, Worship Leaders, Pastors, and Ministry Admins. Advanced tiles show honest-empty until their underlying feeds are enabled.',
+        icon: BarChart3,
+      },
     ],
     howItWorks: [
       {
@@ -347,6 +392,24 @@ export const products: ProductContent[] = [
         description:
           'A rigid, proven curriculum that safely moves a singer from the foundational Choir level up to the primary Praise Team leadership.',
         icon: TrendingUp,
+      },
+      {
+        title: 'Per-Role Vocal Scoring',
+        description:
+          'Separate lead vs background vocal assessment — lyrics and melody are scored independently per role, so each singer is judged against what their part actually requires.',
+        icon: Mic2,
+      },
+      {
+        title: 'SATB Track Generation',
+        description:
+          'Generate four-part (Soprano / Alto / Tenor / Bass) rehearsal tracks for a song so every vocalist can practice their exact part.',
+        icon: Music,
+      },
+      {
+        title: 'YouTube Song Ingestion',
+        description:
+          'Ingest a song\'s audio directly from YouTube — the selected video is downloaded and stored for analysis and rehearsal (no fabricated key or metadata).',
+        icon: Video,
       },
     ],
     howItWorks: [

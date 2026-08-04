@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:capabilities": "node scripts/sync-capabilities.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

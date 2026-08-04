@@ -1,0 +1,1171 @@
+{
+  "$schema": "./capabilities.schema (generated — do not hand-edit)",
+  "generatedAt": "2026-08-04T00:08:34.110Z",
+  "source": "studio-worshipwise/src/lib/subscription-tiers.ts",
+  "note": "GENERATED FILE — do not hand-edit. Regenerate with `node scripts/sync-capabilities.mjs` after the app catalogue changes. Consumed via src/lib/capabilities.ts.",
+  "featureCount": 109,
+  "features": [
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "description": "Basic dashboard and overview",
+      "category": "core",
+      "icon": "📊"
+    },
+    {
+      "id": "profile",
+      "name": "User Profiles",
+      "description": "Personal profiles and settings",
+      "category": "core",
+      "icon": "👤"
+    },
+    {
+      "id": "basic_services",
+      "name": "Basic Services",
+      "description": "Create and manage worship services",
+      "category": "core",
+      "icon": "🎵"
+    },
+    {
+      "id": "testimony_sharing",
+      "name": "Testimony / Faith-Sharing",
+      "description": "Voluntary, opt-in testimony sharing + leader modeling-campaign tools",
+      "category": "core",
+      "icon": "🙌"
+    },
+    {
+      "id": "team_management",
+      "name": "Team Management",
+      "description": "Manage team members and roles",
+      "category": "team",
+      "icon": "👥"
+    },
+    {
+      "id": "role_permissions",
+      "name": "Role & Permissions",
+      "description": "Advanced role-based access control",
+      "category": "team",
+      "icon": "🔐"
+    },
+    {
+      "id": "team_scheduling",
+      "name": "Team Scheduling",
+      "description": "Schedule team members for services",
+      "category": "team",
+      "icon": "📅"
+    },
+    {
+      "id": "org_chart",
+      "name": "Organization Chart",
+      "description": "Visual organization structure",
+      "category": "team",
+      "icon": "🏢"
+    },
+    {
+      "id": "basic_messaging",
+      "name": "Basic Messaging",
+      "description": "Simple team messaging",
+      "category": "communication",
+      "icon": "💬"
+    },
+    {
+      "id": "advanced_messaging",
+      "name": "Advanced Messaging",
+      "description": "File sharing, reactions, threads",
+      "category": "communication",
+      "icon": "📱"
+    },
+    {
+      "id": "notifications",
+      "name": "Notifications",
+      "description": "Email and push notifications",
+      "category": "communication",
+      "icon": "🔔"
+    },
+    {
+      "id": "external_communications",
+      "name": "External Communications",
+      "description": "HubSpot integration and external messaging",
+      "category": "communication",
+      "icon": "📧"
+    },
+    {
+      "id": "chat_moderation",
+      "name": "Chat Moderation",
+      "description": "AI-powered chat moderation with denomination context and HITL review",
+      "category": "communication",
+      "icon": "🛡️"
+    },
+    {
+      "id": "basic_reports",
+      "name": "Basic Reports",
+      "description": "Simple service reports",
+      "category": "analytics",
+      "icon": "📈"
+    },
+    {
+      "id": "advanced_analytics",
+      "name": "Advanced Analytics",
+      "description": "Detailed performance analytics",
+      "category": "analytics",
+      "icon": "📊"
+    },
+    {
+      "id": "variance_tracking",
+      "name": "Variance Tracking",
+      "description": "Service timing variance analysis",
+      "category": "analytics",
+      "icon": "⏱️"
+    },
+    {
+      "id": "performance_scoring",
+      "name": "Performance Scoring",
+      "description": "Service performance evaluation",
+      "category": "analytics",
+      "icon": "⭐"
+    },
+    {
+      "id": "custom_reports",
+      "name": "Custom Reports",
+      "description": "Build custom report templates",
+      "category": "analytics",
+      "icon": "📋"
+    },
+    {
+      "id": "theme_engine",
+      "name": "Theme Planning",
+      "description": "Annual and quarterly theme management",
+      "category": "advanced",
+      "icon": "🎯"
+    },
+    {
+      "id": "values_engine",
+      "name": "Values Management",
+      "description": "Church core values with denomination templates",
+      "category": "advanced",
+      "icon": "⚖️"
+    },
+    {
+      "id": "alignment_tracking",
+      "name": "Alignment Tracking",
+      "description": "Track value and theme alignment across activities",
+      "category": "analytics",
+      "icon": "🔗"
+    },
+    {
+      "id": "values_analytics",
+      "name": "Values Analytics",
+      "description": "Advanced values alignment reporting and trends",
+      "category": "analytics",
+      "icon": "📊"
+    },
+    {
+      "id": "denomination_ai_context",
+      "name": "Denomination AI Context",
+      "description": "AI feedback tailored to your denomination",
+      "category": "advanced",
+      "icon": "⛪"
+    },
+    {
+      "id": "vocal_training",
+      "name": "Vocal Training",
+      "description": "Vocal range testing and training",
+      "category": "advanced",
+      "icon": "🎤"
+    },
+    {
+      "id": "vocal_studio",
+      "name": "Vocal Studio",
+      "description": "Camera-based vocal analysis studio",
+      "category": "advanced",
+      "icon": "🎙️"
+    },
+    {
+      "id": "vocal_practice_studio",
+      "name": "Vocal Practice Studio",
+      "description": "Lyrics-on-pitch-bars practice with real-time scoring",
+      "category": "advanced",
+      "icon": "🎶"
+    },
+    {
+      "id": "vocal_games",
+      "name": "Vocal Games",
+      "description": "Gamified vocal training exercises",
+      "category": "advanced",
+      "icon": "🎮"
+    },
+    {
+      "id": "interactive_avatars",
+      "name": "Interactive Coaching Avatars",
+      "description": "Live AI coaching avatars",
+      "category": "premium",
+      "icon": "🧑‍🏫"
+    },
+    {
+      "id": "song_selection_ai",
+      "name": "AI Song Selection",
+      "description": "AI-powered song recommendations",
+      "category": "advanced",
+      "icon": "🤖"
+    },
+    {
+      "id": "canonical_catalog_browse",
+      "name": "Song Catalog Browse",
+      "description": "Browse and search the global canonical song library",
+      "category": "advanced",
+      "icon": "📚"
+    },
+    {
+      "id": "canonical_catalog_import",
+      "name": "Song Catalog Import",
+      "description": "Import songs from the global catalog into your church library",
+      "category": "advanced",
+      "icon": "📥"
+    },
+    {
+      "id": "gamification",
+      "name": "Gamification",
+      "description": "XP, achievements, and badges",
+      "category": "advanced",
+      "icon": "🏆"
+    },
+    {
+      "id": "media_management",
+      "name": "Media Management",
+      "description": "Store and manage media files",
+      "category": "advanced",
+      "icon": "📁"
+    },
+    {
+      "id": "service_analysis",
+      "name": "Service Analysis",
+      "description": "Detailed service performance analysis",
+      "category": "advanced",
+      "icon": "🔍"
+    },
+    {
+      "id": "sovt_exercises",
+      "name": "SOVT Exercises",
+      "description": "Semi-Occluded Vocal Tract exercises",
+      "category": "advanced",
+      "icon": "🗣️"
+    },
+    {
+      "id": "register_training",
+      "name": "Register Training",
+      "description": "Passaggio detection and register blending",
+      "category": "advanced",
+      "icon": "🎙️"
+    },
+    {
+      "id": "lineup_alternative_recommender",
+      "name": "Lineup Alternative Recommender",
+      "description": "AI-ranked singer alternatives for lineup gaps",
+      "category": "advanced",
+      "icon": "🤖"
+    },
+    {
+      "id": "journey_practice_logging",
+      "name": "Practice Logging",
+      "description": "Log daily practice sessions",
+      "category": "advanced",
+      "icon": "📝"
+    },
+    {
+      "id": "journey_vocal_assessments",
+      "name": "Vocal Assessments",
+      "description": "Track vocal performance metrics",
+      "category": "advanced",
+      "icon": "🎤"
+    },
+    {
+      "id": "journey_skill_tracking",
+      "name": "Skill Tracking",
+      "description": "Monitor skill progression over time",
+      "category": "advanced",
+      "icon": "📈"
+    },
+    {
+      "id": "journey_youtube_timeline",
+      "name": "YouTube Timeline",
+      "description": "Clickable performance timeline on videos",
+      "category": "advanced",
+      "icon": "🎬"
+    },
+    {
+      "id": "journey_ai_feedback",
+      "name": "AI Feedback",
+      "description": "AI-generated personalized feedback",
+      "category": "advanced",
+      "icon": "🤖"
+    },
+    {
+      "id": "journey_training_impact",
+      "name": "Training Impact",
+      "description": "Measure course effectiveness",
+      "category": "advanced",
+      "icon": "📚"
+    },
+    {
+      "id": "journey_achievements",
+      "name": "Journey Achievements",
+      "description": "Unlock badges and milestones",
+      "category": "advanced",
+      "icon": "🏆"
+    },
+    {
+      "id": "journey_progress_charts",
+      "name": "Progress Charts",
+      "description": "Advanced skill visualizations",
+      "category": "advanced",
+      "icon": "📊"
+    },
+    {
+      "id": "journey_health_biomarkers",
+      "name": "Health & Biomarkers",
+      "description": "Track vocal health and prevent fatigue",
+      "category": "advanced",
+      "icon": "🩺"
+    },
+    {
+      "id": "journey_predictive_intelligence",
+      "name": "Predictive Intelligence",
+      "description": "Predict performance and optimize prep",
+      "category": "advanced",
+      "icon": "🔮"
+    },
+    {
+      "id": "journey_advanced_analytics",
+      "name": "Advanced Analytics",
+      "description": "Deep insights and correlations",
+      "category": "advanced",
+      "icon": "📊"
+    },
+    {
+      "id": "journey_milestones",
+      "name": "Milestones & Celebration",
+      "description": "Auto-detect breakthroughs",
+      "category": "advanced",
+      "icon": "🎉"
+    },
+    {
+      "id": "journey_coaching",
+      "name": "Personalized Coaching",
+      "description": "AI-powered coaching plans",
+      "category": "advanced",
+      "icon": "👨‍🏫"
+    },
+    {
+      "id": "journey_stage_tracking",
+      "name": "Stage Tracking",
+      "description": "Track member progress through Connect→Grow→Serve→Go pipeline",
+      "category": "advanced",
+      "icon": "📍"
+    },
+    {
+      "id": "journey_hitl_review",
+      "name": "HITL Review Queue",
+      "description": "Human-in-the-loop advancement review for leaders",
+      "category": "advanced",
+      "icon": "👥"
+    },
+    {
+      "id": "journey_programmatic_advancement",
+      "name": "Auto Advancement",
+      "description": "Rule-based automatic stage progression",
+      "category": "advanced",
+      "icon": "⚙️"
+    },
+    {
+      "id": "journey_agentic_advancement",
+      "name": "AI Council Advancement",
+      "description": "Multi-agent AI evaluation for stage transitions",
+      "category": "advanced",
+      "icon": "🤖"
+    },
+    {
+      "id": "member_directory",
+      "name": "Member Directory",
+      "description": "Basic member listing and contact info",
+      "category": "core",
+      "icon": "👥"
+    },
+    {
+      "id": "member_profiles",
+      "name": "Member Profiles",
+      "description": "Detailed member profiles with demographics",
+      "category": "core",
+      "icon": "👤"
+    },
+    {
+      "id": "member_engagement",
+      "name": "Member Engagement",
+      "description": "Track participation and growth analytics",
+      "category": "analytics",
+      "icon": "📊"
+    },
+    {
+      "id": "member_onboarding",
+      "name": "Member Onboarding",
+      "description": "Automated new member integration workflows",
+      "category": "advanced",
+      "icon": "🚀"
+    },
+    {
+      "id": "member_communication",
+      "name": "Member Communication",
+      "description": "Bulk messaging and targeted outreach",
+      "category": "communication",
+      "icon": "💬"
+    },
+    {
+      "id": "member_analytics",
+      "name": "Member Analytics",
+      "description": "Predictive analytics and demographic insights",
+      "category": "analytics",
+      "icon": "🔍"
+    },
+    {
+      "id": "stripe_payments",
+      "name": "Payment Processing",
+      "description": "Stripe payment integration",
+      "category": "integration",
+      "icon": "💳"
+    },
+    {
+      "id": "hubspot_crm",
+      "name": "HubSpot CRM",
+      "description": "Full HubSpot CRM integration",
+      "category": "integration",
+      "icon": "🔗"
+    },
+    {
+      "id": "api_access",
+      "name": "API Access",
+      "description": "REST API for custom integrations",
+      "category": "integration",
+      "icon": "🔌"
+    },
+    {
+      "id": "webhooks",
+      "name": "Webhooks",
+      "description": "Real-time event notifications",
+      "category": "integration",
+      "icon": "⚡"
+    },
+    {
+      "id": "sso",
+      "name": "Single Sign-On",
+      "description": "SSO with Google, Microsoft, etc.",
+      "category": "integration",
+      "icon": "🔑"
+    },
+    {
+      "id": "facial_acoustic_analysis",
+      "name": "Facial-Acoustic Analysis",
+      "description": "Real-time facial positioning for vocal coaching",
+      "category": "advanced",
+      "icon": "🎭"
+    },
+    {
+      "id": "sing_like_artist",
+      "name": "Sing Like Artist",
+      "description": "Match facial positioning of gospel legends",
+      "category": "advanced",
+      "icon": "⭐"
+    },
+    {
+      "id": "artist_vocal_profiles",
+      "name": "Artist Vocal Profiles",
+      "description": "CeCe Winans, Kirk Franklin, Tasha Cobbs profiles",
+      "category": "advanced",
+      "icon": "🎤"
+    },
+    {
+      "id": "personal_vocal_calibration",
+      "name": "Personal Calibration",
+      "description": "Personalized vocal recommendations",
+      "category": "advanced",
+      "icon": "🎯"
+    },
+    {
+      "id": "ministry_ai_coaching_journeys",
+      "name": "AI Coaching Journeys",
+      "description": "Personalized AI-driven vocal coaching paths",
+      "category": "advanced",
+      "icon": "🗺️"
+    },
+    {
+      "id": "ministry_gap_analysis",
+      "name": "Gap Analysis",
+      "description": "Identify vocal skill gaps with AI",
+      "category": "advanced",
+      "icon": "📊"
+    },
+    {
+      "id": "ministry_master_plans",
+      "name": "Master Plans",
+      "description": "Comprehensive vocal development plans",
+      "category": "advanced",
+      "icon": "📋"
+    },
+    {
+      "id": "ministry_practice_assignments",
+      "name": "Practice Assignments",
+      "description": "Structured practice tasks from AI coach",
+      "category": "advanced",
+      "icon": "📝"
+    },
+    {
+      "id": "ministry_ai_coaching_reminders",
+      "name": "AI Coaching Reminders",
+      "description": "Smart reminders for practice and coaching",
+      "category": "communication",
+      "icon": "⏰"
+    },
+    {
+      "id": "ministry_contextual_ai_feedback",
+      "name": "Contextual AI Feedback",
+      "description": "Non-repetitive, context-aware AI vocal feedback",
+      "category": "advanced",
+      "icon": "💬"
+    },
+    {
+      "id": "ministry_external_performance",
+      "name": "External Performance Analysis",
+      "description": "Analyze performances outside services",
+      "category": "advanced",
+      "icon": "🎬"
+    },
+    {
+      "id": "ministry_artist_comparison",
+      "name": "Artist Comparison",
+      "description": "Compare vocal metrics against professional artists",
+      "category": "advanced",
+      "icon": "⭐"
+    },
+    {
+      "id": "ministry_vocal_health_monitoring",
+      "name": "Vocal Health Monitoring",
+      "description": "Continuous vocal health tracking and alerts",
+      "category": "advanced",
+      "icon": "🩺"
+    },
+    {
+      "id": "ministry_bio_analytics",
+      "name": "Bio-Analytics",
+      "description": "Heart rate, sleep, and hydration correlation with performance",
+      "category": "advanced",
+      "icon": "❤️"
+    },
+    {
+      "id": "ministry_health_context",
+      "name": "Health Context Collection",
+      "description": "HealthKit/Google Fit integration for vocal insights",
+      "category": "advanced",
+      "icon": "📱"
+    },
+    {
+      "id": "ministry_perfect_pitch_quest",
+      "name": "Perfect Pitch Quest",
+      "description": "Gamified pitch training challenges",
+      "category": "advanced",
+      "icon": "🎯"
+    },
+    {
+      "id": "ministry_advanced_vocal_journeys",
+      "name": "Advanced Vocal Journeys",
+      "description": "Multi-stage vocal development programs",
+      "category": "advanced",
+      "icon": "🚀"
+    },
+    {
+      "id": "ministry_universal_tagging",
+      "name": "Universal Tagging",
+      "description": "Dynamic tag management across all entities",
+      "category": "advanced",
+      "icon": "🏷️"
+    },
+    {
+      "id": "ministry_ai_feedback_history",
+      "name": "AI Feedback History",
+      "description": "Longitudinal AI coaching feedback archive",
+      "category": "advanced",
+      "icon": "📚"
+    },
+    {
+      "id": "satb_player",
+      "name": "SATB Rehearsal Player",
+      "description": "Multi-track SATB playback with per-part mixer and bouncing ball guide",
+      "category": "advanced",
+      "icon": "🎼"
+    },
+    {
+      "id": "satb_certification",
+      "name": "Part Certification",
+      "description": "Singer certification on specific vocal parts with scoring pipeline",
+      "category": "advanced",
+      "icon": "✅"
+    },
+    {
+      "id": "arrangement_builder",
+      "name": "Arrangement Builder",
+      "description": "Praise leader workflow for creating and refining SATB arrangements",
+      "category": "advanced",
+      "icon": "🎹"
+    },
+    {
+      "id": "composers_portal",
+      "name": "Creators Portal",
+      "description": "AI music rendering, cross-song builder, introduction plans",
+      "category": "advanced",
+      "icon": "🎼"
+    },
+    {
+      "id": "digital_rehearsal_studio",
+      "name": "Digital Rehearsal Studio",
+      "description": "Section of Responsibility, Blend Circle, and Part Mixer for ensemble preparation",
+      "category": "advanced",
+      "icon": "🎛️"
+    },
+    {
+      "id": "ai_agents",
+      "name": "AI Agents",
+      "description": "Access to AI coaching agents (Virtuoso, Liturgist, Shepherd, etc.)",
+      "category": "advanced",
+      "icon": "🤖"
+    },
+    {
+      "id": "training_plans",
+      "name": "12-Week Training Plans",
+      "description": "AI-generated 12-week neuromuscular vocal training programmes with progressive weekly sessions",
+      "category": "advanced",
+      "icon": "📅"
+    },
+    {
+      "id": "wearable_companion",
+      "name": "Watch Companion",
+      "description": "Watch companion app for biometric tracking",
+      "category": "integration",
+      "icon": "⌚"
+    },
+    {
+      "id": "community_marketplace",
+      "name": "Community Marketplace",
+      "description": "Community knowledge marketplace",
+      "category": "advanced",
+      "icon": "🏪"
+    },
+    {
+      "id": "community_governance",
+      "name": "Community Governance",
+      "description": "Proposal voting and community decision-making",
+      "category": "advanced",
+      "icon": "🗳️"
+    },
+    {
+      "id": "worship_trajectory_analytics",
+      "name": "Worship Trajectory Analytics",
+      "description": "Track progress toward your worship style goal",
+      "category": "advanced",
+      "icon": "📊"
+    },
+    {
+      "id": "worship_style_recommendations",
+      "name": "Style Recommendations",
+      "description": "AI song recommendations weighted by your style trajectory",
+      "category": "advanced",
+      "icon": "🎯"
+    },
+    {
+      "id": "cross_church_intelligence",
+      "name": "Cross-Church Intelligence",
+      "description": "Insights from across 1,000+ churches",
+      "category": "advanced",
+      "icon": "🌐"
+    },
+    {
+      "id": "congregational_engagement_tracking",
+      "name": "Engagement Tracking",
+      "description": "Measure congregation response per song",
+      "category": "advanced",
+      "icon": "📈"
+    },
+    {
+      "id": "ccli_report",
+      "name": "CCLI Usage Report",
+      "description": "Aggregate song usage over a date range for CCLI reporting; CSV fallback always included",
+      "category": "analytics",
+      "icon": "📋"
+    },
+    {
+      "id": "ccli_managed_reporting",
+      "name": "Managed CCLI Reporting",
+      "description": "We aggregate your song usage and file your CCLI report for you each period (default on — opt out if another tool already reports for you)",
+      "category": "analytics",
+      "icon": "🗂️"
+    },
+    {
+      "id": "section_leaderboard",
+      "name": "Section Leaderboard",
+      "description": "Opt-in per-section leaderboard celebrating practice streaks and improvement (not raw scores)",
+      "category": "advanced",
+      "icon": "🏆"
+    },
+    {
+      "id": "service_theme_scoring",
+      "name": "Service Theme Scoring",
+      "description": "Tri-theme scoring per service — expressed theme, AI-assessed emergent theme, and alignment to your church annual/quarterly theme — plus service theme-coherence and a leadership rollup",
+      "category": "analytics",
+      "icon": "🎯"
+    },
+    {
+      "id": "canonical_theme_taxonomy",
+      "name": "Canonical Theme Taxonomy",
+      "description": "Governed library of 131 canonical worship themes with a select-don't-free-type picker plus custom-theme extension",
+      "category": "advanced",
+      "icon": "🗂️"
+    },
+    {
+      "id": "theme_people_intelligence",
+      "name": "Theme → People Intelligence",
+      "description": "Find people by theme with tiered evidence — planned (live now); attributed and delta populate as service-attribution and engagement feeds are enabled",
+      "category": "analytics",
+      "icon": "🧭"
+    },
+    {
+      "id": "role_based_analytics_homes",
+      "name": "Role-Based Analytics Homes",
+      "description": "Curated per-persona home surfaces (Member, Worship Leader, Pastor, Ministry Admin, Super Admin); advanced metrics show honest-empty until their underlying data feeds are enabled",
+      "category": "analytics",
+      "icon": "🏠"
+    },
+    {
+      "id": "ask_your_data",
+      "name": "Ask Your Data",
+      "description": "Natural-language governed queries over your church analytics; the query backend is live and the conversational UI surface is in beta",
+      "category": "analytics",
+      "icon": "💬"
+    },
+    {
+      "id": "per_role_vocal_scoring",
+      "name": "Per-Role Vocal Scoring",
+      "description": "Separate lead vs background vocal assessment — scores lyrics and melody independently per role",
+      "category": "advanced",
+      "icon": "🎤"
+    },
+    {
+      "id": "satb_track_generation",
+      "name": "SATB Track Generation",
+      "description": "Generate four-part (Soprano/Alto/Tenor/Bass) rehearsal tracks for a song for per-part practice",
+      "category": "advanced",
+      "icon": "🎼"
+    },
+    {
+      "id": "youtube_song_ingestion",
+      "name": "YouTube Song Ingestion",
+      "description": "Ingest a song's audio from YouTube — downloads and stores the audio for analysis and rehearsal (honors selected video; no fabricated key/metadata)",
+      "category": "integration",
+      "icon": "🎬"
+    }
+  ],
+  "tiers": [
+    {
+      "id": "free",
+      "name": "Free",
+      "description": "Perfect for small churches getting started",
+      "price": 0,
+      "billingPeriod": "monthly",
+      "maxUsers": 5,
+      "popular": false,
+      "customPricing": false,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "basic_messaging",
+        "basic_reports",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "member_directory",
+        "vocal_games",
+        "composers_portal"
+      ]
+    },
+    {
+      "id": "small",
+      "name": "Small Church",
+      "description": "Great for growing congregations",
+      "price": 99,
+      "billingPeriod": "monthly",
+      "maxUsers": 15,
+      "popular": false,
+      "customPricing": false,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "team_management",
+        "basic_messaging",
+        "notifications",
+        "basic_reports",
+        "variance_tracking",
+        "media_management",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "journey_skill_tracking",
+        "journey_youtube_timeline",
+        "member_directory",
+        "member_profiles",
+        "member_communication",
+        "vocal_games",
+        "vocal_studio",
+        "vocal_practice_studio",
+        "sovt_exercises",
+        "register_training",
+        "composers_portal",
+        "role_based_analytics_homes",
+        "youtube_song_ingestion"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "description": "Full-featured solution for active churches",
+      "price": 199,
+      "billingPeriod": "monthly",
+      "maxUsers": 50,
+      "popular": true,
+      "customPricing": false,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "team_management",
+        "role_permissions",
+        "team_scheduling",
+        "advanced_messaging",
+        "notifications",
+        "external_communications",
+        "basic_reports",
+        "advanced_analytics",
+        "variance_tracking",
+        "performance_scoring",
+        "vocal_training",
+        "vocal_studio",
+        "vocal_practice_studio",
+        "vocal_games",
+        "register_training",
+        "satb_player",
+        "satb_certification",
+        "digital_rehearsal_studio",
+        "gamification",
+        "media_management",
+        "service_analysis",
+        "theme_engine",
+        "values_engine",
+        "alignment_tracking",
+        "values_analytics",
+        "denomination_ai_context",
+        "chat_moderation",
+        "hubspot_crm",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "journey_skill_tracking",
+        "journey_youtube_timeline",
+        "journey_ai_feedback",
+        "journey_training_impact",
+        "journey_achievements",
+        "journey_progress_charts",
+        "member_directory",
+        "member_profiles",
+        "member_engagement",
+        "member_onboarding",
+        "member_communication",
+        "ai_agents",
+        "training_plans",
+        "community_marketplace",
+        "community_governance",
+        "canonical_catalog_browse",
+        "canonical_catalog_import",
+        "section_leaderboard",
+        "service_theme_scoring",
+        "canonical_theme_taxonomy",
+        "theme_people_intelligence",
+        "role_based_analytics_homes",
+        "ask_your_data",
+        "per_role_vocal_scoring",
+        "satb_track_generation",
+        "youtube_song_ingestion"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "description": "Complete solution for large organizations",
+      "price": 0,
+      "billingPeriod": "monthly",
+      "maxUsers": -1,
+      "popular": false,
+      "customPricing": true,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "team_management",
+        "role_permissions",
+        "team_scheduling",
+        "org_chart",
+        "advanced_messaging",
+        "notifications",
+        "external_communications",
+        "basic_reports",
+        "advanced_analytics",
+        "variance_tracking",
+        "performance_scoring",
+        "custom_reports",
+        "vocal_training",
+        "vocal_studio",
+        "vocal_practice_studio",
+        "vocal_games",
+        "register_training",
+        "satb_player",
+        "satb_certification",
+        "arrangement_builder",
+        "composers_portal",
+        "digital_rehearsal_studio",
+        "song_selection_ai",
+        "gamification",
+        "media_management",
+        "service_analysis",
+        "theme_engine",
+        "values_engine",
+        "alignment_tracking",
+        "values_analytics",
+        "denomination_ai_context",
+        "chat_moderation",
+        "stripe_payments",
+        "hubspot_crm",
+        "api_access",
+        "webhooks",
+        "sso",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "journey_skill_tracking",
+        "journey_youtube_timeline",
+        "journey_ai_feedback",
+        "journey_training_impact",
+        "journey_achievements",
+        "journey_progress_charts",
+        "journey_health_biomarkers",
+        "journey_predictive_intelligence",
+        "journey_advanced_analytics",
+        "journey_milestones",
+        "journey_coaching",
+        "member_directory",
+        "member_profiles",
+        "member_engagement",
+        "member_onboarding",
+        "member_communication",
+        "member_analytics",
+        "ai_agents",
+        "training_plans",
+        "community_marketplace",
+        "community_governance",
+        "canonical_catalog_browse",
+        "canonical_catalog_import",
+        "wearable_companion",
+        "worship_trajectory_analytics",
+        "worship_style_recommendations",
+        "cross_church_intelligence",
+        "congregational_engagement_tracking",
+        "section_leaderboard",
+        "ccli_report",
+        "ccli_managed_reporting",
+        "service_theme_scoring",
+        "canonical_theme_taxonomy",
+        "theme_people_intelligence",
+        "role_based_analytics_homes",
+        "ask_your_data",
+        "per_role_vocal_scoring",
+        "satb_track_generation",
+        "youtube_song_ingestion"
+      ]
+    },
+    {
+      "id": "worship-collective",
+      "name": "Worship Collective",
+      "description": "Premium tier for certified worship artists and leaders",
+      "price": 299,
+      "billingPeriod": "monthly",
+      "maxUsers": 100,
+      "popular": true,
+      "customPricing": false,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "team_management",
+        "role_permissions",
+        "team_scheduling",
+        "org_chart",
+        "advanced_messaging",
+        "notifications",
+        "external_communications",
+        "basic_reports",
+        "advanced_analytics",
+        "variance_tracking",
+        "performance_scoring",
+        "custom_reports",
+        "vocal_training",
+        "vocal_studio",
+        "vocal_practice_studio",
+        "vocal_games",
+        "register_training",
+        "satb_player",
+        "satb_certification",
+        "arrangement_builder",
+        "composers_portal",
+        "digital_rehearsal_studio",
+        "song_selection_ai",
+        "gamification",
+        "media_management",
+        "service_analysis",
+        "theme_engine",
+        "values_engine",
+        "alignment_tracking",
+        "values_analytics",
+        "denomination_ai_context",
+        "chat_moderation",
+        "stripe_payments",
+        "hubspot_crm",
+        "api_access",
+        "webhooks",
+        "sso",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "journey_skill_tracking",
+        "journey_youtube_timeline",
+        "journey_ai_feedback",
+        "journey_training_impact",
+        "journey_achievements",
+        "journey_progress_charts",
+        "journey_health_biomarkers",
+        "journey_predictive_intelligence",
+        "journey_advanced_analytics",
+        "journey_milestones",
+        "journey_coaching",
+        "member_directory",
+        "member_profiles",
+        "member_engagement",
+        "member_onboarding",
+        "member_communication",
+        "member_analytics",
+        "interactive_avatars",
+        "facial_acoustic_analysis",
+        "sing_like_artist",
+        "artist_vocal_profiles",
+        "personal_vocal_calibration",
+        "ministry_ai_coaching_journeys",
+        "ministry_gap_analysis",
+        "ministry_master_plans",
+        "ministry_practice_assignments",
+        "ministry_ai_coaching_reminders",
+        "ministry_contextual_ai_feedback",
+        "ministry_external_performance",
+        "ministry_artist_comparison",
+        "ministry_vocal_health_monitoring",
+        "ministry_bio_analytics",
+        "ministry_health_context",
+        "ministry_perfect_pitch_quest",
+        "ministry_advanced_vocal_journeys",
+        "ministry_universal_tagging",
+        "ministry_ai_feedback_history",
+        "ai_agents",
+        "training_plans",
+        "community_marketplace",
+        "community_governance",
+        "canonical_catalog_browse",
+        "canonical_catalog_import",
+        "wearable_companion",
+        "worship_trajectory_analytics",
+        "worship_style_recommendations",
+        "cross_church_intelligence",
+        "congregational_engagement_tracking",
+        "section_leaderboard",
+        "ccli_report",
+        "ccli_managed_reporting",
+        "service_theme_scoring",
+        "canonical_theme_taxonomy",
+        "theme_people_intelligence",
+        "role_based_analytics_homes",
+        "ask_your_data",
+        "per_role_vocal_scoring",
+        "satb_track_generation",
+        "youtube_song_ingestion"
+      ]
+    },
+    {
+      "id": "collective-individual-elite",
+      "name": "Collective Individual Elite",
+      "description": "Premium individual tier for worship artists — facial-acoustic analysis, AI coaching, artist profiles",
+      "price": 49.99,
+      "billingPeriod": "monthly",
+      "maxUsers": 1,
+      "popular": false,
+      "customPricing": false,
+      "featureIds": [
+        "dashboard",
+        "profile",
+        "basic_services",
+        "testimony_sharing",
+        "advanced_messaging",
+        "notifications",
+        "basic_reports",
+        "advanced_analytics",
+        "vocal_training",
+        "vocal_studio",
+        "vocal_practice_studio",
+        "vocal_games",
+        "register_training",
+        "satb_player",
+        "satb_certification",
+        "gamification",
+        "media_management",
+        "service_analysis",
+        "journey_practice_logging",
+        "journey_vocal_assessments",
+        "journey_skill_tracking",
+        "journey_youtube_timeline",
+        "journey_ai_feedback",
+        "journey_training_impact",
+        "journey_achievements",
+        "journey_progress_charts",
+        "journey_health_biomarkers",
+        "journey_coaching",
+        "interactive_avatars",
+        "facial_acoustic_analysis",
+        "sing_like_artist",
+        "artist_vocal_profiles",
+        "personal_vocal_calibration",
+        "ministry_ai_coaching_journeys",
+        "ministry_gap_analysis",
+        "ministry_practice_assignments",
+        "ministry_contextual_ai_feedback",
+        "ministry_vocal_health_monitoring",
+        "ministry_bio_analytics",
+        "ministry_health_context",
+        "ai_agents",
+        "training_plans",
+        "per_role_vocal_scoring",
+        "satb_track_generation",
+        "youtube_song_ingestion"
+      ]
+    }
+  ]
+}
