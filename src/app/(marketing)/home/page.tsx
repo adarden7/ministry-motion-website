@@ -213,7 +213,7 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 backdrop-blur-sm mb-8">
               <Sparkles className="w-4 h-4 text-violet-400" />
-              <span className="text-sm font-medium text-violet-200">Built for the Church, Powered by AI</span>
+              <span className="text-sm font-medium text-violet-200">lift everyone who cares</span>
             </div>
 
             {/* PW-0: mechanism-first hero headline */}
