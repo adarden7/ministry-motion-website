@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ministrymotion.com'),
   title: {
-    default: 'MinistryMotion - Everything Your Worship Ministry Needs',
+    default: 'MinistryMotion - lift everyone who cares',
     template: '%s | MinistryMotion',
   },
   description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     'ministry platform',
   ],
   openGraph: {
-    title: 'MinistryMotion - Everything Your Worship Ministry Needs',
+    title: 'MinistryMotion - lift everyone who cares',
     description:
       'Plan services, develop your team with AI, analyze performance, and unify communications. The complete worship ministry platform.',
     type: 'website',
