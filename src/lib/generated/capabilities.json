@@ -1,9 +1,9 @@
 {
   "$schema": "./capabilities.schema (generated — do not hand-edit)",
-  "generatedAt": "2026-08-04T00:08:34.110Z",
+  "generatedAt": "2026-08-09T19:25:43.112Z",
   "source": "studio-worshipwise/src/lib/subscription-tiers.ts",
   "note": "GENERATED FILE — do not hand-edit. Regenerate with `node scripts/sync-capabilities.mjs` after the app catalogue changes. Consumed via src/lib/capabilities.ts.",
-  "featureCount": 109,
+  "featureCount": 110,
   "features": [
     {
       "id": "dashboard",
@@ -459,6 +459,13 @@
       "description": "SSO with Google, Microsoft, etc.",
       "category": "integration",
       "icon": "🔑"
+    },
+    {
+      "id": "musician_network",
+      "name": "Musicians Network",
+      "description": "Cross-church directory of certified vocalists & instrumentalists with multi-select search and cross-person availability",
+      "category": "advanced",
+      "icon": "🎸"
     },
     {
       "id": "facial_acoustic_analysis",
@@ -1066,6 +1073,7 @@
         "member_onboarding",
         "member_communication",
         "member_analytics",
+        "musician_network",
         "interactive_avatars",
         "facial_acoustic_analysis",
         "sing_like_artist",
