@@ -6,6 +6,9 @@
 
 import type { ResourceContent } from './types';
 import { aiWorshipGuide } from './content/ai-worship-guide';
+import { contextualVocalDevelopment } from './content/contextual-vocal-development';
+import { singingAppScoreVanityMetric } from './content/singing-app-score-vanity-metric';
+import { theBlendGapWorshipVocalFeedback } from './content/the-blend-gap-worship-vocal-feedback';
 import { denominationalSetupGuide } from './content/denominational-setup-guide';
 import { volunteerHealthPlaybook } from './content/volunteer-health-playbook';
 import { churchHealthReporting } from './content/church-health-reporting';
@@ -13,6 +16,9 @@ import { pcoMigrationChecklist } from './content/pco-migration-checklist';
 import { stackAudit } from './content/stack-audit';
 
 export const resourceContent: ResourceContent[] = [
+  contextualVocalDevelopment,
+  singingAppScoreVanityMetric,
+  theBlendGapWorshipVocalFeedback,
   aiWorshipGuide,
   denominationalSetupGuide,
   volunteerHealthPlaybook,

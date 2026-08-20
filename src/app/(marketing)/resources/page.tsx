@@ -45,6 +45,42 @@ function TypeBadge({ type }: { type: ResourceType }) {
 const guides = [
   {
     type: 'Guide' as ResourceType,
+    title: 'Contextually Relevant Vocal Development for Worship Teams',
+    description:
+      'The complete argument for measuring what actually makes a worship singer better: coordination over accuracy, the ensemble over the soloist, and readiness tied to the church’s real service — grounded in Ministry Motion’s DSP.',
+    icon: Mic2,
+    pages: '30 pages',
+    audience: 'Worship Directors, Vocal Coaches',
+    cta: 'Read Guide',
+    href: '/resources/contextually-relevant-vocal-development-worship-teams',
+    comingSoon: false,
+  },
+  {
+    type: 'Guide' as ResourceType,
+    title: 'Why Your Singing-App Score Is Lying to You',
+    description:
+      'That 95% measured whether you tracked a guide vocal — not whether you can sing. The documented failure mode, why a mediocre voice scores high and a masterful one scores “wrong,” and what to measure instead.',
+    icon: BarChart3,
+    pages: '8 pages',
+    audience: 'Worship Directors, Singers',
+    cta: 'Read Guide',
+    href: '/resources/singing-app-score-vanity-metric',
+    comingSoon: false,
+  },
+  {
+    type: 'Guide' as ResourceType,
+    title: 'The Blend Gap: The One Thing No Singing App Measures',
+    description:
+      'Every consumer vocal app grades a soloist against a track. None can answer the question a worship team lives inside — am I in tune with the person next to me? That relative-ensemble gap is the core worship need, and it is wide open.',
+    icon: Users,
+    pages: '8 pages',
+    audience: 'Worship & Choir Directors',
+    cta: 'Read Guide',
+    href: '/resources/the-blend-gap-worship-vocal-feedback',
+    comingSoon: false,
+  },
+  {
+    type: 'Guide' as ResourceType,
     title: 'The Complete Guide to AI in Worship Ministry',
     description:
       'A 32-page comprehensive guide covering AI vocal coaching, service analysis, journey pipeline tracking, and agent-driven ministry operations. Includes implementation checklists and ROI frameworks.',
