@@ -580,7 +580,7 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-              Ministry Motion vs Planning Center
+              MinistryMotion vs Planning Center
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400">
               Keep what works. Add what's missing.
@@ -591,7 +591,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-3 bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
               <div className="p-4 font-semibold text-slate-500 text-sm">Feature</div>
               <div className="p-4 font-semibold text-slate-500 text-sm text-center">Planning Center</div>
-              <div className="p-4 font-semibold text-blue-600 text-sm text-center">Ministry Motion</div>
+              <div className="p-4 font-semibold text-blue-600 text-sm text-center">MinistryMotion</div>
             </div>
             {[
               { feature: 'Service Planning', pco: true, mm: true },
@@ -765,7 +765,7 @@ export default function LandingPage() {
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Switch Stories</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2 mb-4">
-              Why Churches Switch to Ministry Motion
+              Why Churches Switch to MinistryMotion
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Real feedback from worship teams and church leaders who made the move.
@@ -832,7 +832,7 @@ export default function LandingPage() {
               {
                 name: 'Free',
                 price: '$0',
-                desc: 'Try Ministry Motion risk-free',
+                desc: 'Try MinistryMotion risk-free',
                 features: ['Up to 5 team members', 'Service planning + scheduling', 'Basic vocal assessment', 'Community chat', '50 song library'],
                 cta: 'Start Free Trial',
                 highlight: false
@@ -947,7 +947,7 @@ export default function LandingPage() {
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <Radio className="w-6 h-6 text-blue-400" />
-                <span className="text-lg font-bold">Ministry Motion</span>
+                <span className="text-lg font-bold">MinistryMotion</span>
               </div>
               <p className="text-sm text-slate-400 mb-6 max-w-xs">
                 The AI-native worship platform. Built for the church, powered by 20 specialized AI agents.
@@ -991,7 +991,7 @@ export default function LandingPage() {
 
         <div className="border-t border-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
             <div className="flex items-center gap-4 text-sm text-slate-500">
               <span>Built on Google Cloud</span>
               <span>·</span>

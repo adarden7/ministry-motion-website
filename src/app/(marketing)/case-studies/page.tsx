@@ -28,7 +28,7 @@ const placeholderCaseStudies = [
       { label: 'Monthly SaaS cost reduction', value: '-$680/mo', icon: TrendingUp },
     ],
     highlight:
-      'Consolidated from 5 separate tools to Ministry Motion Pro within 60 days of joining the beta program.',
+      'Consolidated from 5 separate tools to MinistryMotion Pro within 60 days of joining the beta program.',
     status: 'coming-soon' as const,
   },
   {
@@ -119,7 +119,7 @@ export default function CaseStudiesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
               <Building2 className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Ministry Motion Case Studies</span>
+              <span className="text-sm font-medium text-blue-300">MinistryMotion Case Studies</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
@@ -226,7 +226,7 @@ export default function CaseStudiesPage() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-foreground mb-3">What Our Case Studies Will Measure</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Unlike typical church software case studies that measure user adoption, Ministry Motion
+              Unlike typical church software case studies that measure user adoption, MinistryMotion
               case studies measure actual discipleship, health, and financial outcomes.
             </p>
           </div>
@@ -315,14 +315,14 @@ export default function CaseStudiesPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
               <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
               <Link href="/solutions/praise-leaders" className="hover:text-white transition-colors">Solutions</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

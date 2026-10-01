@@ -175,7 +175,7 @@ export default function PraiseLeadersPage() {
 
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               From rehearsal track generation to ensemble blend analysis and personal vocal coaching—
-              Ministry Motion gives Praise Leaders the tools to build a truly excellent worship team.
+              MinistryMotion gives Praise Leaders the tools to build a truly excellent worship team.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -467,14 +467,14 @@ export default function PraiseLeadersPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/solutions/worship-directors" className="hover:text-white transition-colors">Worship Directors</Link>
               <Link href="/solutions/ministries-directors" className="hover:text-white transition-colors">Ministry Directors</Link>
               <Link href="/solutions/church-admins" className="hover:text-white transition-colors">Church Admins</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

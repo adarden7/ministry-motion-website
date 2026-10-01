@@ -221,7 +221,7 @@ export default function BlogPostPage() {
                   Want to see these insights in action?
                 </h3>
                 <p className="text-slate-400 mb-4">
-                  Ministry Motion turns this research into practical tools for your church.
+                  MinistryMotion turns this research into practical tools for your church.
                   Track discipleship, prevent disconnection, and grow your ministry.
                 </p>
               </div>

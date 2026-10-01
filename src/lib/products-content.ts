@@ -58,7 +58,7 @@ export const products: ProductContent[] = [
     title: 'The Agent Council',
     tagline: '15 specialized AI agents automating your ministry 24/7',
     description:
-      'Replace your siloed 2010s software stack with the Agent Council. Ministry Motion includes 15 highly-specialized AI agents—from Succession Planners to Vocal Coaches to Pastoral Shepherds—working autonomously to analyze your data, identify risks, and accelerate spiritual growth.',
+      'Replace your siloed 2010s software stack with the Agent Council. MinistryMotion includes 15 highly-specialized AI agents—from Succession Planners to Vocal Coaches to Pastoral Shepherds—working autonomously to analyze your data, identify risks, and accelerate spiritual growth.',
     badges: ['Industry First', 'Fully Autonomous', 'Mission Critical'],
     benefits: [
       { stat: '15', label: 'Specialized AI agents' },
@@ -140,7 +140,7 @@ export const products: ProductContent[] = [
     title: 'Discipleship Intelligence',
     tagline: 'Finally track the spiritual journey: Connect → Grow → Serve → Go',
     description:
-      'Did you know 39% of Christians in your church lack discipleship? Ministry Motion is the first platform designed to track the actual spiritual journey. By abandoning the "event-attendance" model, we use data to ensure every single member is being guided toward spiritual maturity.',
+      'Did you know 39% of Christians in your church lack discipleship? MinistryMotion is the first platform designed to track the actual spiritual journey. By abandoning the "event-attendance" model, we use data to ensure every single member is being guided toward spiritual maturity.',
     badges: ['Data-Driven', 'Retention Focus', 'Burnout Prevention'],
     benefits: [
       { stat: '39%', label: 'Of Christians lack discipleship' },
@@ -222,7 +222,7 @@ export const products: ProductContent[] = [
     title: 'Service Analytics',
     tagline: 'Know what actually happened—not just what was planned',
     description:
-      'Ministry Motion is the only platform that analyzes your actual services. Upload YouTube recordings and AI automatically segments, identifies songs, recognizes singers, and scores performance. Finally see the full picture.',
+      'MinistryMotion is the only platform that analyzes your actual services. Upload YouTube recordings and AI automatically segments, identifies songs, recognizes singers, and scores performance. Finally see the full picture.',
     badges: ['Industry First', 'AI Video Analysis', 'Unique Insights'],
     benefits: [
       { stat: '100%', label: 'Service visibility' },
@@ -304,7 +304,7 @@ export const products: ProductContent[] = [
     title: 'Vocal Sandbox & Biometrics',
     tagline: ' Gamified, biomechanic vocal training embedded in your workflow',
     description:
-      'Ministry Motion brings professional vocal coaching to every member of your team through the Virtuoso Agent. Real-time pitch analysis, breath control feedback, biometric health monitoring, and SATB isolated rehearsal tracks—all unified in one platform.',
+      'MinistryMotion brings professional vocal coaching to every member of your team through the Virtuoso Agent. Real-time pitch analysis, breath control feedback, biometric health monitoring, and SATB isolated rehearsal tracks—all unified in one platform.',
     badges: ['Real-Time Feedback', 'SATB Isolation', 'Biometric Tracking'],
     benefits: [
       { stat: '1000+', label: 'Vocal dimensions analyzed' },

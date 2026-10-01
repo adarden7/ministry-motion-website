@@ -209,7 +209,7 @@ export default function WorshipCollectivePage() {
             </h2>
             <p className="text-lg text-rose-100/70">
               Entry into The Worship Collective is earned, not given. Complete these requirements
-              within your church&apos;s Ministry Motion platform to unlock your invitation.
+              within your church&apos;s MinistryMotion platform to unlock your invitation.
             </p>
           </div>
 
@@ -882,7 +882,7 @@ export default function WorshipCollectivePage() {
             {[
               {
                 q: 'How do I get invited to The Worship Collective?',
-                a: 'Complete the credentialing requirements within your church\'s Ministry Motion platform. Once you meet all criteria (75% vocal score, 5,000 XP, 3 courses, etc.), you\'ll receive an invitation to apply.'
+                a: 'Complete the credentialing requirements within your church\'s MinistryMotion platform. Once you meet all criteria (75% vocal score, 5,000 XP, 3 courses, etc.), you\'ll receive an invitation to apply.'
               },
               {
                 q: 'What if I don\'t meet all requirements yet?',
@@ -959,15 +959,15 @@ export default function WorshipCollectivePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+              <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
               <div>
                 <span className="font-bold text-rose-100">Worship Collective</span>
-                <div className="text-xs text-rose-500/60">By Ministry Motion</div>
+                <div className="text-xs text-rose-500/60">By MinistryMotion</div>
               </div>
             </div>
 
             <div className="flex items-center gap-8 text-sm text-rose-100/60">
-              <Link href="/landing" className="hover:text-rose-100 transition-colors">Ministry Motion</Link>
+              <Link href="/landing" className="hover:text-rose-100 transition-colors">MinistryMotion</Link>
               <Link href="#" className="hover:text-rose-100 transition-colors">Privacy</Link>
               <Link href="#" className="hover:text-rose-100 transition-colors">Terms</Link>
               <Link href="#" className="hover:text-rose-100 transition-colors">Contact</Link>
@@ -975,7 +975,7 @@ export default function WorshipCollectivePage() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-rose-500/10 text-center text-sm text-rose-100/40">
-            © 2026 Worship Collective by Ministry Motion. All rights reserved.
+            © 2026 Worship Collective by MinistryMotion. All rights reserved.
           </div>
         </div>
       </footer>

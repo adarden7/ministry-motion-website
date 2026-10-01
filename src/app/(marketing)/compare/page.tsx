@@ -30,7 +30,7 @@ import {
 } from 'lucide-react';
 import { BetaSignupModal, MarketingNav } from '@/components/marketing';
 
-// Comprehensive feature comparison data - Ministry Motion vs PCO vs Breeze
+// Comprehensive feature comparison data - MinistryMotion vs PCO vs Breeze
 const comparisonCategories = [
   {
     name: 'Service Planning & Scheduling',
@@ -225,11 +225,11 @@ export default function ComparePage() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-indigo-500/15 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Ministry Motion vs.{' '}
+            MinistryMotion vs.{' '}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">the Competition</span>
           </h1>
           <p className="text-xl text-blue-100/80 max-w-3xl mx-auto mb-8">
-            See exactly what you get with Ministry Motion compared to Planning Center and One Church.
+            See exactly what you get with MinistryMotion compared to Planning Center and One Church.
             We don't just match their features—we add AI-powered capabilities no one else has.
           </p>
         </div>
@@ -246,7 +246,7 @@ export default function ComparePage() {
                 <tr className="bg-slate-100 border-b border-slate-200">
                   <th className="text-left p-4 font-semibold text-slate-700">Capability</th>
                   <th className="p-4 text-center">
-                    <span className="text-blue-600 font-semibold">Ministry Motion</span>
+                    <span className="text-blue-600 font-semibold">MinistryMotion</span>
                   </th>
                   <th className="p-4 text-center">
                     <span className="text-slate-600 font-semibold">Planning Center</span>
@@ -338,7 +338,7 @@ export default function ComparePage() {
             </div>
 
             <div className="bg-slate-800 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-teal-400 mb-4">Where Ministry Motion Surpasses Both</h3>
+              <h3 className="text-lg font-semibold text-teal-400 mb-4">Where MinistryMotion Surpasses Both</h3>
               <ul className="space-y-3">
                 {[
                   'AI-powered everything',
@@ -359,7 +359,7 @@ export default function ComparePage() {
           <div className="mt-8 p-6 bg-teal-900/50 rounded-xl border border-blue-700">
             <p className="text-lg text-center text-blue-100">
               <strong className="text-white">Our positioning:</strong> PCO is excellent at organizing worship ministry. One Church is great for full-featured church management.
-              Ministry Motion does both AND develops your team, analyzes your services, tracks discipleship journeys, and moves members toward
+              MinistryMotion does both AND develops your team, analyzes your services, tracks discipleship journeys, and moves members toward
               spiritual maturity—all with AI that works for you instead of workflows you have to build.
             </p>
           </div>
@@ -371,7 +371,7 @@ export default function ComparePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">Detailed Feature Comparison</h2>
           <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            Click any category to collapse or expand. Highlighted rows are capabilities unique to Ministry Motion.
+            Click any category to collapse or expand. Highlighted rows are capabilities unique to MinistryMotion.
           </p>
 
           {/* Pricing summary row */}
@@ -381,7 +381,7 @@ export default function ComparePage() {
                 <p className="text-sm font-semibold text-blue-200 uppercase tracking-wide">Monthly Cost</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-blue-200 mb-1">Ministry Motion Pro</p>
+                <p className="text-xs text-blue-200 mb-1">MinistryMotion Pro</p>
                 <p className="text-3xl font-black">$199<span className="text-base font-normal text-blue-200">/mo</span></p>
                 <p className="text-xs text-blue-200 mt-1">Everything included</p>
               </div>
@@ -423,7 +423,7 @@ export default function ComparePage() {
                         <tr className="bg-slate-100 border-t border-slate-200">
                           <th className="text-left p-3 text-sm font-medium text-slate-600">Feature</th>
                           <th className="p-3 text-center min-w-[120px]">
-                            <span className="text-sm font-semibold text-blue-600">Ministry Motion</span>
+                            <span className="text-sm font-semibold text-blue-600">MinistryMotion</span>
                           </th>
                           <th className="p-3 text-center min-w-[120px]">
                             <span className="text-sm font-semibold text-slate-600">Planning Center</span>
@@ -502,9 +502,9 @@ export default function ComparePage() {
               </p>
             </div>
 
-            {/* Ministry Motion */}
+            {/* MinistryMotion */}
             <div className="bg-blue-600 rounded-2xl p-6 text-white">
-              <h3 className="text-lg font-semibold mb-6">Ministry Motion Pro</h3>
+              <h3 className="text-lg font-semibold mb-6">MinistryMotion Pro</h3>
 
               <div className="space-y-3 mb-6">
                 {[
@@ -560,19 +560,19 @@ export default function ComparePage() {
                 number: '01',
                 heading: 'Integration ≠ Intelligence',
                 subhead: 'PCO integrates tools. MM unifies data and adds AI.',
-                body: 'Planning Center connects your scheduling, giving, and check-ins — but each module is still a separate silo. Ministry Motion starts with a unified member record, then layers AI reasoning on top. The result: agents that can act across your entire ministry without you building workflows.'
+                body: 'Planning Center connects your scheduling, giving, and check-ins — but each module is still a separate silo. MinistryMotion starts with a unified member record, then layers AI reasoning on top. The result: agents that can act across your entire ministry without you building workflows.'
               },
               {
                 number: '02',
                 heading: 'Attendance ≠ Discipleship',
                 subhead: 'PCO tracks check-ins. MM tracks spiritual growth.',
-                body: 'Knowing who showed up on Sunday is useful. Knowing where they are in the Connect → Grow → Serve → Go journey — and what they need next — is transformational. Ministry Motion measures lyrical God-directedness, engagement patterns, and progression toward ministry activation.'
+                body: 'Knowing who showed up on Sunday is useful. Knowing where they are in the Connect → Grow → Serve → Go journey — and what they need next — is transformational. MinistryMotion measures lyrical God-directedness, engagement patterns, and progression toward ministry activation.'
               },
               {
                 number: '03',
                 heading: '6 Tools ≠ 1 Platform',
                 subhead: 'Replace PCO + Circle + Yousician + Coursera + Zoom + Pushpay',
-                body: 'The average church using Planning Center still pays for 5–6 other tools to cover community, vocal training, LMS, rehearsals, and giving. Ministry Motion replaces the core features of all 6 subscriptions — saving an average of $10,608/year with no integration headaches.'
+                body: 'The average church using Planning Center still pays for 5–6 other tools to cover community, vocal training, LMS, rehearsals, and giving. MinistryMotion replaces the core features of all 6 subscriptions — saving an average of $10,608/year with no integration headaches.'
               }
             ].map((reason, i) => (
               <div key={i} className="relative bg-slate-50 rounded-2xl p-8 border border-slate-200">
@@ -614,7 +614,7 @@ export default function ComparePage() {
             {[
               { title: 'Export your data', description: 'Download from your current platform' },
               { title: 'We import it', description: 'AI-powered import + our team assists' },
-              { title: 'You\'re live', description: 'Start using Ministry Motion in days' }
+              { title: 'You\'re live', description: 'Start using MinistryMotion in days' }
             ].map((step, i) => (
               <div key={i} className="bg-slate-50 rounded-xl p-6">
                 <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-bold flex items-center justify-center mx-auto mb-4">
@@ -659,10 +659,10 @@ export default function ComparePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+              <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-slate-500">
-              © 2025 Ministry Motion. All rights reserved.
+              © 2025 MinistryMotion. All rights reserved.
             </p>
           </div>
         </div>

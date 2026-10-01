@@ -1,6 +1,6 @@
 /**
  * Static Blog Content
- * Research-backed articles from Ministry Motion's strategic content
+ * Research-backed articles from MinistryMotion's strategic content
  * These can be migrated to Sanity CMS once configured
  */
 
@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'discipleship-crisis-39-percent-not-discipled',
     title: 'The Discipleship Crisis: 39% of Christians Aren\'t Being Discipled',
     excerpt: 'Lifeway Research reveals a staggering gap in church discipleship. Here\'s what the data shows and how technology can help close the gap.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-02-03',
     readTime: '7 min read',
     category: 'Research',
@@ -64,9 +64,9 @@ Research from Thom Rainer's *Simple Church* shows that churches with clear disci
 
 The problem? Most churches know this intellectually but lack the tools to implement it at scale.
 
-### How Ministry Motion Addresses the Gap
+### How MinistryMotion Addresses the Gap
 
-Ministry Motion was built specifically to solve the discipleship tracking problem:
+MinistryMotion was built specifically to solve the discipleship tracking problem:
 
 1. **Journey Mapping**: Every member has a visible pathway from first-time guest to ministry leader
 2. **Auto-Enrollment**: When someone completes one stage, they're automatically invited to the next
@@ -101,14 +101,14 @@ The 39% don't need another program. They need someone to notice them, guide them
 
 ---
 
-*Ministry Motion is built on 25 years of church consulting research to help churches move from event management to transformation tracking. [Learn more about our approach →](/home)*
+*MinistryMotion is built on 25 years of church consulting research to help churches move from event management to transformation tracking. [Learn more about our approach →](/home)*
     `,
   },
   {
     slug: 'engaged-members-give-3x-more',
     title: 'The 3x Giving Factor: Why Engaged Members Transform Church Finances',
     excerpt: 'Vanco research shows that engaged church members give three times more than occasional attenders. Here\'s what drives engagement—and giving.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-01-28',
     readTime: '6 min read',
     category: 'Research',
@@ -161,9 +161,9 @@ But they can't connect:
 
 This siloed data means churches miss the relationship between discipleship and giving.
 
-### Ministry Motion's Integrated Approach
+### MinistryMotion's Integrated Approach
 
-Ministry Motion treats giving as a **discipleship outcome**, not just a financial transaction:
+MinistryMotion treats giving as a **discipleship outcome**, not just a financial transaction:
 
 1. **Journey Integration**: See how members' giving correlates with their discipleship stage
 2. **Engagement Scoring**: Track multiple engagement factors in one dashboard
@@ -203,14 +203,14 @@ Giving is one metric of a much larger transformation.
 
 ---
 
-*Ministry Motion integrates giving data with engagement tracking to help churches see the full picture of member health. [See how it works →](/home)*
+*MinistryMotion integrates giving data with engagement tracking to help churches see the full picture of member health. [See how it works →](/home)*
     `,
   },
   {
     slug: '43-percent-leave-feeling-disconnected',
     title: 'Why 43% of Church Leavers Cite Disconnection—And How to Stop It',
     excerpt: 'Church studies reveal that nearly half of people who leave felt disconnected from their congregation. Early detection can change this.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-01-21',
     readTime: '8 min read',
     category: 'Research',
@@ -271,7 +271,7 @@ Churches are great at #4 (programming) but often struggle with #1-3 at scale.
 
 ### How Technology Can Help (Not Replace) Connection
 
-Ministry Motion approaches retention through **proactive detection**:
+MinistryMotion approaches retention through **proactive detection**:
 
 **At-Risk Scoring**
 - Algorithms identify members showing early disconnection patterns
@@ -321,14 +321,14 @@ The question isn't whether your church cares about connection. It's whether you 
 
 ---
 
-*Ministry Motion's at-risk detection helps pastoral teams identify disconnection early, when intervention can still make a difference. [Learn more →](/home)*
+*MinistryMotion's at-risk detection helps pastoral teams identify disconnection early, when intervention can still make a difference. [Learn more →](/home)*
     `,
   },
   {
     slug: '87-percent-leaders-open-to-ai',
     title: '87% of Ministry Leaders Are Open to AI—Here\'s What They Want',
     excerpt: 'A Ministry Tech Survey reveals overwhelming openness to AI among church leaders. But adoption depends on solving the right problems.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-01-14',
     readTime: '5 min read',
     category: 'Technology',
@@ -391,7 +391,7 @@ There's a critical distinction between:
 
 The 87% are open because they see AI as a tool, not a replacement.
 
-### What Ministry Motion Does with AI
+### What MinistryMotion Does with AI
 
 Our AI integration focuses on the high-openness, appropriate-use areas:
 
@@ -423,7 +423,7 @@ Our AI integration focuses on the high-openness, appropriate-use areas:
 
 Here's what's remarkable: most church management systems have none of this. They're still focused on databases and calendars.
 
-Ministry Motion is building what the 87% are waiting for—AI that solves real ministry problems without crossing ethical lines.
+MinistryMotion is building what the 87% are waiting for—AI that solves real ministry problems without crossing ethical lines.
 
 ### Addressing the Concerns
 
@@ -445,14 +445,14 @@ The platforms that answer that question well will define the next generation of 
 
 ---
 
-*Ministry Motion is building AI-native church software that respects both the power and the limits of artificial intelligence. [See our AI capabilities →](/home)*
+*MinistryMotion is building AI-native church software that respects both the power and the limits of artificial intelligence. [See our AI capabilities →](/home)*
     `,
   },
   {
     slug: 'planning-center-vs-ministry-motion',
     title: 'Beyond Scheduling: What Planning Center Can\'t Tell You',
     excerpt: 'Planning Center excels at scheduling. But the next generation of church software answers different questions entirely.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-01-07',
     readTime: '6 min read',
     category: 'Comparison',
@@ -498,7 +498,7 @@ These are "what does it mean" questions. Critical for transformation.
 
 Planning Center is built around **events**: services, groups, classes. You schedule them, people attend, you record it.
 
-Ministry Motion is built around **journeys**: discipleship pathways, spiritual progression, ministry development. Events are touchpoints along a larger arc.
+MinistryMotion is built around **journeys**: discipleship pathways, spiritual progression, ministry development. Events are touchpoints along a larger arc.
 
 The difference:
 
@@ -511,7 +511,7 @@ The difference:
 
 ### Features Planning Center Doesn't Have
 
-Based on the 14 Pillars of Ministry Motion:
+Based on the 14 Pillars of MinistryMotion:
 
 **AI Vocal Coaching**
 - No ChMS competitor offers this
@@ -545,7 +545,7 @@ Here's a scenario:
 **Planning Center can tell you:**
 "We scheduled 'Goodness of God' for Sunday's worship set."
 
-**Ministry Motion can tell you:**
+**MinistryMotion can tell you:**
 "'Goodness of God' was scheduled but actually ran 90 seconds longer than planned. The second verse was skipped. Sarah's vocal performance showed 92% pitch accuracy but the AI detected some vocal strain. Compared to last month, she's improved 4% overall. The congregation engagement (based on video analysis) peaked during the chorus."
 
 That's the difference between scheduling software and a ministry operating system.
@@ -558,7 +558,7 @@ That's the difference between scheduling software and a ministry operating syste
 - You don't need analytics beyond attendance
 - Budget is the primary constraint
 
-**Ministry Motion makes sense if:**
+**MinistryMotion makes sense if:**
 - You want to track spiritual transformation, not just attendance
 - You need AI-powered tools (vocal coaching, video analysis)
 - You want to see what actually happened in services
@@ -567,9 +567,9 @@ That's the difference between scheduling software and a ministry operating syste
 
 ### Not Either/Or (For Now)
 
-Many churches will continue using Planning Center for scheduling while adding Ministry Motion for transformation tracking. The systems can coexist.
+Many churches will continue using Planning Center for scheduling while adding MinistryMotion for transformation tracking. The systems can coexist.
 
-Over time, as Ministry Motion's scheduling capabilities mature, churches may consolidate. But no one needs to rip and replace immediately.
+Over time, as MinistryMotion's scheduling capabilities mature, churches may consolidate. But no one needs to rip and replace immediately.
 
 ### The Future of Church Software
 
@@ -577,11 +577,11 @@ The church tech industry is at an inflection point. For 20 years, the question w
 
 The new question is: "Can we digitize transformation?" Can software help us track not just what happened, but what it means? Can it help us see who's growing and who needs help?
 
-That's what Ministry Motion is building.
+That's what MinistryMotion is building.
 
 ---
 
-*See how Ministry Motion compares to other platforms on our [comparison page →](/compare)*
+*See how MinistryMotion compares to other platforms on our [comparison page →](/compare)*
     `,
   },
   // ============================================
@@ -591,7 +591,7 @@ That's what Ministry Motion is building.
     slug: 'kingdom-building-part-1-crisis',
     title: 'Kingdom Building Part 1: The Church\'s Quiet Crisis',
     excerpt: 'While the world races ahead with AI and technology, the church has been left behind—focused on tithes and "the show" while a generation drifts away. It\'s time for a different approach.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-02-05',
     readTime: '12 min read',
     category: 'Vision',
@@ -703,7 +703,7 @@ Imagine a church where:
 - **Denominational context** shapes every interaction appropriately
 - **Accountability** is built into the system, not dependent on memory
 
-This isn't science fiction. This is what Ministry Motion is building.
+This isn't science fiction. This is what MinistryMotion is building.
 
 ### The Vision That Must Be Written Down
 
@@ -730,7 +730,7 @@ In Part 2, we'll explore exactly how technology can bridge this gap—not by rep
     slug: 'kingdom-building-part-2-platform',
     title: 'Kingdom Building Part 2: A Platform for Transformation',
     excerpt: 'What if every ministry leader—not just worship—had AI-powered tools to develop their people? Here\'s how technology can serve the Great Commission.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-02-05',
     readTime: '14 min read',
     category: 'Vision',
@@ -740,7 +740,7 @@ In Part 2, we'll explore exactly how technology can bridge this gap—not by rep
 
 In Part 1, we explored the quiet crisis in the church—how we've optimized for tithes and "the show" while leaving transformation analog. Now let's talk about what a different approach looks like.
 
-The key insight is this: **what Ministry Motion does for worship leaders, it can do for every ministry leader.**
+The key insight is this: **what MinistryMotion does for worship leaders, it can do for every ministry leader.**
 
 ### The Universal Ministry Framework
 
@@ -757,7 +757,7 @@ The worship ministry happens to be further along in our platform because AI voca
 
 ### What Every Ministry Leader Gets
 
-Today, every ministry leader in Ministry Motion has access to:
+Today, every ministry leader in MinistryMotion has access to:
 
 **Communication & Coordination**
 - Ministry-specific communication channels
@@ -789,7 +789,7 @@ Today, every ministry leader in Ministry Motion has access to:
 
 ### The "Right People, Right Gifts, Right Time" Engine
 
-Here's where it gets powerful. Ministry Motion doesn't just track activities—it tracks **transformation**.
+Here's where it gets powerful. MinistryMotion doesn't just track activities—it tracks **transformation**.
 
 > *"As each has received a gift, use it to serve one another, as good stewards of God's varied grace."* — 1 Peter 4:10
 
@@ -888,13 +888,13 @@ This isn't replacing human connection. It's **making human connection possible a
 
 ### The 25 Years of IP Difference
 
-Ministry Motion isn't assembling generic software components. It's built on **25 years of church consulting research** that understands how transformation actually happens.
+MinistryMotion isn't assembling generic software components. It's built on **25 years of church consulting research** that understands how transformation actually happens.
 
 The Simple Church model. The Connect-Grow-Serve-Go framework. Discipleship journeys. Ministry activation pathways. Spiritual gifts integration. Denominational context awareness.
 
 These aren't features bolted onto a calendar app. They're the **foundation** that every feature is built upon.
 
-When you create a class in Ministry Motion, the system knows where that class fits in the discipleship journey. When someone completes it, they're automatically invited to the appropriate next step. When they've completed enough steps, they're surfaced as potential leaders. When they're deployed, their impact is tracked.
+When you create a class in MinistryMotion, the system knows where that class fits in the discipleship journey. When someone completes it, they're automatically invited to the appropriate next step. When they've completed enough steps, they're surfaced as potential leaders. When they're deployed, their impact is tracked.
 
 This is a **tapestry of ministry in motion**, not a collection of disconnected tools.
 
@@ -913,7 +913,7 @@ The platform supports this by:
 
 > *"And what you have heard from me in the presence of many witnesses entrust to faithful men, who will be able to teach others also."* — 2 Timothy 2:2
 
-Paul's model wasn't programs—it was people investing in people, in a chain of multiplication. Ministry Motion makes that chain visible and accountable.
+Paul's model wasn't programs—it was people investing in people, in a chain of multiplication. MinistryMotion makes that chain visible and accountable.
 
 ### Cross-Ministry Intelligence
 
@@ -921,13 +921,13 @@ Here's something traditional church software can't do: show how ministries conne
 
 When someone completes children's ministry training, that should flow into youth ministry readiness. When youth graduates show leadership potential, worship or outreach should know. When small group facilitators burn out, pastoral care should be alerted.
 
-Ministry Motion provides this **cross-ministry intelligence** because all data lives in one system with one data model, designed for transformation tracking.
+MinistryMotion provides this **cross-ministry intelligence** because all data lives in one system with one data model, designed for transformation tracking.
 
 ### What God Is Seeking
 
 > *"But the hour is coming, and is now here, when the true worshipers will worship the Father in spirit and truth, for the Father is seeking such people to worship him."* — John 4:23
 
-God is looking for authentic worshipers—people whose lives are aligned with their profession. Ministry Motion helps churches produce those people by:
+God is looking for authentic worshipers—people whose lives are aligned with their profession. MinistryMotion helps churches produce those people by:
 
 - Making discipleship visible and accountable
 - Connecting gifts to service
@@ -946,7 +946,7 @@ In Part 3, we'll look at what happens when churches actually implement this visi
     slug: 'kingdom-building-part-3-transformation',
     title: 'Kingdom Building Part 3: Lives Changed, Kingdom Built',
     excerpt: 'When discipleship becomes visible and accountable, transformation follows. Here\'s what it looks like when churches put people—not programs—at the center.',
-    author: 'Ministry Motion Team',
+    author: 'MinistryMotion Team',
     publishedAt: '2025-02-05',
     readTime: '11 min read',
     category: 'Vision',
@@ -960,7 +960,7 @@ The results aren't just metrics. They're lives.
 
 ### The New Member Experience
 
-Consider what it's like to be a new believer in a church using Ministry Motion:
+Consider what it's like to be a new believer in a church using MinistryMotion:
 
 **Week 1**: You make a decision for Christ. You're immediately connected to a mentor—not eventually, not hopefully, but **systematically**. The platform ensures no new believer falls through the cracks.
 
@@ -1047,7 +1047,7 @@ But the metric that matters most isn't on any dashboard: **lives genuinely chang
 
 ### The Call
 
-This is what Ministry Motion is about. Not replacing human connection with technology. Not automating pastoral care. Not reducing discipleship to data points.
+This is what MinistryMotion is about. Not replacing human connection with technology. Not automating pastoral care. Not reducing discipleship to data points.
 
 It's about:
 
@@ -1061,7 +1061,7 @@ The tools exist. The framework exists. The platform exists.
 
 > *"His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord."* — Matthew 25:23
 
-Faithfulness means using every tool available to multiply what we've been given. Ministry Motion is one of those tools.
+Faithfulness means using every tool available to multiply what we've been given. MinistryMotion is one of those tools.
 
 ### The Invitation
 
@@ -1080,7 +1080,7 @@ The Kingdom is being built. Lives are being changed. Disciples are being made.
 
 ---
 
-*This concludes our 3-part Kingdom Building series. Ready to see Ministry Motion in action? [Start your free trial →](/home)*
+*This concludes our 3-part Kingdom Building series. Ready to see MinistryMotion in action? [Start your free trial →](/home)*
 
 ---
 

@@ -57,7 +57,7 @@ const guides = [
   },
   {
     type: 'Guide' as ResourceType,
-    title: 'Denominational Setup Guide: Configuring Ministry Motion for Your Tradition',
+    title: 'Denominational Setup Guide: Configuring MinistryMotion for Your Tradition',
     description:
       'Step-by-step configuration guide for Baptist, Methodist, Pentecostal, Presbyterian, and non-denominational church structures. Covers terminology customization, role hierarchy setup, and doctrine-sensitive AI context.',
     icon: BookOpen,
@@ -96,7 +96,7 @@ const tools = [
     type: 'Tool' as ResourceType,
     title: 'Church Tech ROI Calculator',
     description:
-      'Enter your current tool subscriptions, team size, and hours spent on administrative tasks. Get a customized analysis of potential savings from consolidating to Ministry Motion.',
+      'Enter your current tool subscriptions, team size, and hours spent on administrative tasks. Get a customized analysis of potential savings from consolidating to MinistryMotion.',
     icon: Calculator,
     cta: 'Open Calculator',
     comingSoon: false,
@@ -105,7 +105,7 @@ const tools = [
     type: 'Checklist' as ResourceType,
     title: 'PCO Migration Checklist',
     description:
-      'A 47-point checklist for migrating from Planning Center Online to Ministry Motion without data loss. Covers member records, service plans, song libraries, volunteer rosters, and giving history.',
+      'A 47-point checklist for migrating from Planning Center Online to MinistryMotion without data loss. Covers member records, service plans, song libraries, volunteer rosters, and giving history.',
     icon: RefreshCw,
     cta: 'Download Checklist',
     comingSoon: false,
@@ -123,7 +123,7 @@ const tools = [
     type: 'Tool' as ResourceType,
     title: 'Ministry Subscription Stack Audit',
     description:
-      'A downloadable spreadsheet template that helps you document every church software subscription, its cost, core use case, and which Ministry Motion features it overlaps with.',
+      'A downloadable spreadsheet template that helps you document every church software subscription, its cost, core use case, and which MinistryMotion features it overlaps with.',
     icon: BarChart3,
     cta: 'Download Template',
     comingSoon: false,
@@ -139,7 +139,7 @@ const webinars = [
       'A 45-minute live session covering the five highest-impact AI capabilities for worship teams: rehearsal track generation, service analysis, vocal coaching, journey pipeline, and the AI advisory council.',
     icon: Video,
     duration: '45 min',
-    presenter: 'Ministry Motion Team',
+    presenter: 'MinistryMotion Team',
     date: 'Recorded — watch anytime',
     comingSoon: false,
   },
@@ -156,12 +156,12 @@ const webinars = [
   },
   {
     type: 'Webinar' as ResourceType,
-    title: 'Live Demo: Full Ministry Motion Walkthrough',
+    title: 'Live Demo: Full MinistryMotion Walkthrough',
     description:
       'An unscripted live walkthrough of the complete platform—from member onboarding through service analysis through post-service scorecard. Q&A included.',
     icon: Video,
     duration: '75 min',
-    presenter: 'Ministry Motion Product Team',
+    presenter: 'MinistryMotion Product Team',
     date: 'Live sessions monthly',
     comingSoon: false,
   },
@@ -172,7 +172,7 @@ const webinars = [
       'A deep-dive session for experienced users on configuring the Staff Room, setting agent priorities, and running effective round-table sessions with all 8+ AI agents.',
     icon: Video,
     duration: '50 min',
-    presenter: 'Ministry Motion Engineering',
+    presenter: 'MinistryMotion Engineering',
     date: 'Coming Q2 2026',
     comingSoon: true,
   },
@@ -243,7 +243,7 @@ export default function ResourcesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-6">
               <BookOpen className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium text-emerald-300">Ministry Motion Resources</span>
+              <span className="text-sm font-medium text-emerald-300">MinistryMotion Resources</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
@@ -255,7 +255,7 @@ export default function ResourcesPage() {
 
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Downloadable guides, ROI calculators, migration checklists, and recorded webinars—
-              everything you need to evaluate, adopt, and get the most out of Ministry Motion.
+              everything you need to evaluate, adopt, and get the most out of MinistryMotion.
             </p>
           </div>
         </div>
@@ -393,14 +393,14 @@ export default function ResourcesPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
               <Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link>
               <Link href="/solutions/praise-leaders" className="hover:text-white transition-colors">Solutions</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

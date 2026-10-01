@@ -1,6 +1,6 @@
 /**
  * Solutions Page Content
- * Persona-specific content for Ministry Motion solutions
+ * Persona-specific content for MinistryMotion solutions
  */
 
 import {
@@ -64,7 +64,7 @@ export const solutions: Solution[] = [
     slug: 'worship-leaders',
     title: 'For Worship Leaders',
     subtitle: 'Lead with Confidence, Develop with Excellence',
-    description: 'Ministry Motion gives you the tools to plan services, develop your team, and see what actually happened—not just what was scheduled.',
+    description: 'MinistryMotion gives you the tools to plan services, develop your team, and see what actually happened—not just what was scheduled.',
     heroTagline: 'From overwhelmed scheduler to transformational leader',
     painPoints: [
       'Spending more time on scheduling than leading',
@@ -123,7 +123,7 @@ export const solutions: Solution[] = [
     slug: 'pastors',
     title: 'For Pastors & Church Leadership',
     subtitle: 'See Your Church\'s Spiritual Health, Not Just Attendance',
-    description: 'Ministry Motion shows you who\'s actually growing in their faith, who\'s at risk of leaving, and what programs are producing real transformation.',
+    description: 'MinistryMotion shows you who\'s actually growing in their faith, who\'s at risk of leaving, and what programs are producing real transformation.',
     heroTagline: 'From attendance counter to transformation tracker',
     painPoints: [
       'Can\'t measure discipleship—only attendance and giving',
@@ -176,7 +176,7 @@ export const solutions: Solution[] = [
     slug: 'vocalists',
     title: 'For Worship Team Members',
     subtitle: 'Grow Your Gift. Track Your Progress. Earn Your Place.',
-    description: 'Ministry Motion gives you the tools to develop your vocal skills, prepare for services, and build a track record of excellence.',
+    description: 'MinistryMotion gives you the tools to develop your vocal skills, prepare for services, and build a track record of excellence.',
     heroTagline: 'From nervous volunteer to confident worship leader',
     painPoints: [
       'Want to improve but can\'t afford voice lessons',
@@ -229,7 +229,7 @@ export const solutions: Solution[] = [
     slug: 'administrators',
     title: 'For Church Administrators',
     subtitle: 'One Platform. All Ministries. Zero Integration Headaches.',
-    description: 'Ministry Motion consolidates your fragmented tech stack into one unified platform that actually talks to itself.',
+    description: 'MinistryMotion consolidates your fragmented tech stack into one unified platform that actually talks to itself.',
     heroTagline: 'From tech juggler to operations leader',
     painPoints: [
       'Managing 5-10 different software subscriptions',
@@ -282,7 +282,7 @@ export const solutions: Solution[] = [
     slug: 'childrens-ministry',
     title: 'For Children\'s Ministry Leaders',
     subtitle: 'Nurture Young Disciples. Equip Families. Track Growth.',
-    description: 'Ministry Motion gives children\'s ministry leaders the tools to track spiritual development, manage check-in, and partner with parents in discipleship.',
+    description: 'MinistryMotion gives children\'s ministry leaders the tools to track spiritual development, manage check-in, and partner with parents in discipleship.',
     heroTagline: 'From babysitting service to discipleship powerhouse',
     painPoints: [
       'No way to track children\'s spiritual development over years',
@@ -299,7 +299,7 @@ export const solutions: Solution[] = [
       },
       {
         title: 'Integrated Check-in',
-        description: 'Secure check-in that connects to the full Ministry Motion platform. Parents, children, and attendance all linked to discipleship records.',
+        description: 'Secure check-in that connects to the full MinistryMotion platform. Parents, children, and attendance all linked to discipleship records.',
         icon: ClipboardCheck,
       },
       {
@@ -341,7 +341,7 @@ export const solutions: Solution[] = [
     slug: 'small-groups',
     title: 'For Small Group Leaders',
     subtitle: 'Lead Transformational Groups. Develop Disciples. Multiply.',
-    description: 'Ministry Motion equips small group leaders with tools to facilitate genuine transformation, track member growth, and prepare the next generation of leaders.',
+    description: 'MinistryMotion equips small group leaders with tools to facilitate genuine transformation, track member growth, and prepare the next generation of leaders.',
     heroTagline: 'From social gatherings to discipleship engines',
     painPoints: [
       'No visibility into whether group members are actually growing',
@@ -400,7 +400,7 @@ export const solutions: Solution[] = [
     slug: 'denominations',
     title: 'For Denominations & Conferences',
     subtitle: 'Unprecedented Visibility Across Your Network',
-    description: 'Ministry Motion\'s multi-tenant architecture gives denominational leaders cross-church insights no other platform can provide.',
+    description: 'MinistryMotion\'s multi-tenant architecture gives denominational leaders cross-church insights no other platform can provide.',
     heroTagline: 'From disconnected churches to unified intelligence',
     painPoints: [
       'No visibility into individual church health',

@@ -73,7 +73,7 @@ export default function SolutionsPage() {
             </h1>
 
             <p className="text-lg text-slate-400 mb-4">
-              Ministry Motion adapts to how you work. Whether you lead worship, children&apos;s ministry,
+              MinistryMotion adapts to how you work. Whether you lead worship, children&apos;s ministry,
               small groups, outreach, or the entire church—we&apos;ve built tools specifically for you.
             </p>
             <p className="text-slate-500">
@@ -158,7 +158,7 @@ export default function SolutionsPage() {
               Every Role. One Platform.
             </h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Unlike separate tools that create silos, Ministry Motion connects everyone
+              Unlike separate tools that create silos, MinistryMotion connects everyone
               on your team with a unified view of ministry health.
             </p>
           </motion.div>
@@ -209,7 +209,7 @@ export default function SolutionsPage() {
               Ready to transform your ministry?
             </h2>
             <p className="text-xl text-slate-300 mb-10">
-              Join the beta and see why churches are switching to Ministry Motion.
+              Join the beta and see why churches are switching to MinistryMotion.
             </p>
             <ShimmerButton
               onClick={openBetaModal}

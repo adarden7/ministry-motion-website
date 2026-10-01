@@ -55,7 +55,7 @@ const useCases = [
     title: 'Context-Aware Communications',
     subtitle: 'Journey stage and engagement data personalize every message automatically',
     description:
-      'Communications sent through Ministry Motion are automatically personalized based on each recipient\'s journey stage, engagement score, and ministry involvement. A "Serve" stage member receives a different message than a "Connect" stage visitor—with no manual segmentation required.',
+      'Communications sent through MinistryMotion are automatically personalized based on each recipient\'s journey stage, engagement score, and ministry involvement. A "Serve" stage member receives a different message than a "Connect" stage visitor—with no manual segmentation required.',
     bullets: [
       'Journey stage segmentation: Connect, Grow, Serve, and Go audiences automatically',
       'Engagement-based targeting: reach at-risk members with tailored care messages',
@@ -72,7 +72,7 @@ const useCases = [
     title: 'Replaces the Core Features of 6 Subscriptions',
     subtitle: `PCO + Circle + Yousician + Coursera + Zoom + Pushpay = $${totalCost}/mo → MM Pro $199/mo`,
     description:
-      'Ministry Motion Pro consolidates the core features of six separate SaaS tools—service planning, community, vocal training, learning management, rehearsal meetings, and giving—into one platform. One vendor relationship, one data model, one invoice.',
+      'MinistryMotion Pro consolidates the core features of six separate SaaS tools—service planning, community, vocal training, learning management, rehearsal meetings, and giving—into one platform. One vendor relationship, one data model, one invoice.',
     bullets: [
       `Planning Center equivalent: service planning, scheduling, and song library`,
       `Circle equivalent: community spaces, discussions, and member profiles`,
@@ -106,7 +106,7 @@ const useCases = [
     title: 'Deep Planning Center Integration',
     subtitle: 'Import and sync your PCO data seamlessly into MinistryMotion',
     description:
-      'Ministry Motion imports your Planning Center Online data and keeps it synchronized in one direction—PCO is the authoritative source. Members, services, rosters, and song libraries import automatically so administrators spend zero time on manual exports or reconciliation. Full bi-directional sync is on the roadmap.',
+      'MinistryMotion imports your Planning Center Online data and keeps it synchronized in one direction—PCO is the authoritative source. Members, services, rosters, and song libraries import automatically so administrators spend zero time on manual exports or reconciliation. Full bi-directional sync is on the roadmap.',
     bullets: [
       'PCO member data imports automatically with contact details and roles',
       'Service plans, rosters, and song libraries pull in from Planning Center',
@@ -161,7 +161,7 @@ export default function ChurchAdminsPage() {
 
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               Eliminate the spreadsheet-juggling, tool-switching, and data-reconciliation that consumes
-              church administrators. Ministry Motion brings every system under one unified member record.
+              church administrators. MinistryMotion brings every system under one unified member record.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -191,7 +191,7 @@ export default function ChurchAdminsPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-xl font-bold text-white mb-2">What you may be paying today</h2>
-            <p className="text-slate-400 text-sm">Combined cost of tools Ministry Motion Pro replaces the core features of</p>
+            <p className="text-slate-400 text-sm">Combined cost of tools MinistryMotion Pro replaces the core features of</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {replacedTools.map((tool, i) => (
@@ -212,7 +212,7 @@ export default function ChurchAdminsPage() {
             <div className="text-2xl text-slate-500 font-light">vs.</div>
             <div>
               <div className="text-3xl font-bold text-emerald-400">$199/mo</div>
-              <div className="text-slate-400 text-sm">Ministry Motion Pro</div>
+              <div className="text-slate-400 text-sm">MinistryMotion Pro</div>
             </div>
             <div className="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl">
               <div className="text-emerald-400 font-bold text-xl">${totalCost - 199}/mo potential savings</div>
@@ -369,14 +369,14 @@ export default function ChurchAdminsPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/solutions/worship-directors" className="hover:text-white transition-colors">Worship Directors</Link>
               <Link href="/solutions/ministries-directors" className="hover:text-white transition-colors">Ministry Directors</Link>
               <Link href="/solutions/leadership" className="hover:text-white transition-colors">Leadership</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Ministry Motion Studio',
-  description: 'Content management for Ministry Motion',
+  title: 'MinistryMotion Studio',
+  description: 'Content management for MinistryMotion',
 };
 
 export default function StudioLayout({
