@@ -138,10 +138,33 @@ export default function PraiseLeadersPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-4">
               <Mic2 className="w-4 h-4 text-blue-400" />
               <span className="text-sm font-medium text-blue-300">Solutions for Praise Leaders</span>
             </div>
+
+            {/*
+              PARENT-BRAND ATTRIBUTION — load-bearing, not decoration.
+
+              praiseleaderstudio.com / .ai REWRITE to this route rather than redirecting, so the
+              visitor's address bar reads "praiseleaderstudio.com" for the entire visit and the
+              product appears to BE "Praise Leader Studio". The app they are eventually asked to
+              install is listed as MinistryMotion, and Apple cannot vary an app's name per
+              audience: title, subtitle, description and keywords are GLOBAL to the listing, and
+              Custom Product Pages vary only screenshots, previews and promo text. Shipping a
+              separate per-persona app instead would breach App Store Review Guideline 4.3(a)
+              (multiple Bundle IDs of the same app) and would split one church's data in two.
+
+              So the parent brand has to be named HERE, before the tap — this line is the only
+              place the connection can be made. See studio-worshipwise docs/app-store-listing.md.
+            */}
+            <p className="text-sm text-slate-400 mb-6">
+              <span className="font-semibold text-slate-300">Praise Leader Studio</span> is a{' '}
+              <Link href="/" className="text-blue-400 underline underline-offset-2 hover:text-blue-300">
+                MinistryMotion
+              </Link>{' '}
+              app
+            </p>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Lead Worship With{' '}

@@ -137,10 +137,26 @@ export default function WorshipDirectorsPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm mb-4">
               <Layers className="w-4 h-4 text-emerald-400" />
               <span className="text-sm font-medium text-emerald-300">Solutions for Worship Directors</span>
             </div>
+
+            {/*
+              PARENT-BRAND ATTRIBUTION — see the fuller note on the praise-leaders page for why
+              this cannot be solved in the App Store listing instead.
+
+              Deliberately does NOT name a sub-brand: TWO vanity domains rewrite to this one route
+              — worshipdirectorstudio.com AND musicministrystudio.com. Naming either would be wrong
+              for half the arrivals, so this names only the parent, which is true for both.
+            */}
+            <p className="text-sm text-slate-400 mb-6">
+              Part of{' '}
+              <Link href="/" className="font-semibold text-emerald-400 underline underline-offset-2 hover:text-emerald-300">
+                MinistryMotion
+              </Link>{' '}
+              — one app for your whole worship ministry
+            </p>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Direct With{' '}
