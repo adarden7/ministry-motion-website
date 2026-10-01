@@ -106,15 +106,23 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold mb-3">Text Messaging (SMS)</h2>
             <p>
-              MinistryMotion is operated by Darden Behavioral Counseling. If you opt in to text messages from
-              MinistryMotion, we send account, billing, and service notifications (for example, a service plan
-              ready for review or a new demo request). Message frequency varies. Message and data rates may apply.
-              Reply STOP to opt out at any time, or HELP for help.
+              MinistryMotion is operated by Darden Behavioral Counseling. We collect your mobile phone number and a
+              record of your consent (the wording you agreed to, and the date and time) when you opt in to text
+              messages from MinistryMotion.
             </p>
             <p className="mt-2">
-              We do not sell, rent, or share your mobile number or text-messaging consent with third parties or
-              affiliates for marketing or promotional purposes. Consent to receive texts is not a condition of
-              using MinistryMotion.
+              We use your number to send two kinds of texts. If you opt in on a MinistryMotion sign-up form
+              (see <a href="/sms-consent">/sms-consent</a>), we send promotional and marketing texts: product updates,
+              offers, and invitations, up to 4 messages per month. If you are a MinistryMotion account user and opt in
+              to notifications, we send account, billing, and service notifications (for example, a service plan ready
+              for review), and message frequency varies. Message and data rates may apply. Reply STOP to opt out at
+              any time, or HELP for help. Consent to receive texts is not a condition of purchase or of using
+              MinistryMotion.
+            </p>
+            <p className="mt-2">
+              Mobile information will not be shared with third parties or affiliates for marketing or promotional
+              purposes. Text messaging opt-in data and consent will not be shared with any third party. We use
+              service providers only to deliver the messages for us.
             </p>
           </section>
 

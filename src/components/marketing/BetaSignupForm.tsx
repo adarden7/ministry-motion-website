@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { ChurchSize, churchSizeLabels, BetaSignupFormData, LeadSource } from '@/lib/types/lead';
 import { postToLeadIntakeShadow } from '@/lib/lead-intake-shadow';
 import { Check, Loader2, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
+import { SMS_CONSENT_TEXT } from '@/lib/sms-consent';
 
 interface BetaSignupFormProps {
   source?: LeadSource;
@@ -44,6 +46,7 @@ export function BetaSignupForm({
     interests: []
   });
 
+  const [smsConsent, setSmsConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -90,6 +93,8 @@ export function BetaSignupForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...formData,
+          smsConsent,
+          smsConsentText: smsConsent ? SMS_CONSENT_TEXT : undefined,
           source,
           utmSource: urlParams.get('utm_source') || undefined,
           utmMedium: urlParams.get('utm_medium') || undefined,
@@ -215,6 +220,25 @@ export function BetaSignupForm({
           className={inputClass}
           placeholder="(555) 123-4567"
         />
+      </div>
+
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="smsConsent"
+          name="smsConsent"
+          checked={smsConsent}
+          onChange={e => setSmsConsent(e.target.checked)}
+          className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-primary"
+        />
+        <label htmlFor="smsConsent" className="text-xs text-muted-foreground">
+          {SMS_CONSENT_TEXT}{' '}
+          <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link>
+          {' · '}
+          <Link href="/terms" className="underline hover:text-foreground">Terms</Link>
+          {' · '}
+          <Link href="/sms-consent" className="underline hover:text-foreground">SMS details</Link>
+        </label>
       </div>
 
       <div>

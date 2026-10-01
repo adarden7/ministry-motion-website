@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function TermsOfServicePage() {
@@ -159,6 +160,25 @@ export default function TermsOfServicePage() {
             <p>
               Any disputes shall be resolved through binding arbitration, except you may bring claims in small claims court.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold mb-3">Text Message Program Terms (SMS)</h2>
+            <p>
+              These terms apply to MinistryMotion marketing text messages, which are sent by Darden Behavioral
+              Counseling on behalf of MinistryMotion.
+            </p>
+            <ul className="list-disc pl-6 space-y-1 mt-2">
+              <li><strong>Program:</strong> MinistryMotion product updates, offers, and invitations sent by text message to people who opt in.</li>
+              <li><strong>How to opt in:</strong> check the unchecked text message box beside the phone number field on a MinistryMotion sign-up form (see <Link href="/sms-consent">/sms-consent</Link> for the exact wording). Opting in is optional and is not a condition of purchase or of using the Service.</li>
+              <li><strong>Message frequency:</strong> up to 4 messages per month.</li>
+              <li><strong>Cost:</strong> message and data rates may apply, depending on your mobile plan.</li>
+              <li><strong>How to opt out:</strong> reply STOP at any time. You will receive one confirmation message and no further texts. Reply START to opt back in.</li>
+              <li><strong>Help:</strong> reply HELP for help, or contact us through <a href="https://dardenbehavioralcounseling.com">dardenbehavioralcounseling.com</a> or at legal@ministrymotion.com.</li>
+              <li><strong>Eligibility:</strong> you must be at least 18 years old and the authorized user of the mobile number you provide.</li>
+              <li><strong>Carriers:</strong> wireless carriers are not liable for delayed or undelivered messages.</li>
+              <li><strong>Privacy:</strong> see our <Link href="/privacy">Privacy Policy</Link>. Mobile information is not shared with third parties or affiliates for marketing or promotional purposes.</li>
+            </ul>
           </section>
 
           <section>

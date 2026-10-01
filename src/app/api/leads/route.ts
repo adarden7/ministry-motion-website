@@ -147,6 +147,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // SMS marketing consent: only an explicit `true` counts. Stamp the time server-side and keep the
+  // exact wording the visitor saw, so the consent record travels with the lead.
+  const smsConsent = body.smsConsent === true;
+  body.smsConsent = smsConsent;
+  body.smsConsentText = smsConsent && typeof body.smsConsentText === 'string' ? body.smsConsentText : null;
+  body.smsConsentAt = smsConsent ? new Date().toISOString() : null;
+
   let firestoreOk = false;
   let emailOk = false;
   let hubspotOk = false;
@@ -197,6 +204,7 @@ export async function POST(request: NextRequest) {
               <p><strong>Name:</strong> ${body.firstName} ${body.lastName}</p>
               <p><strong>Email:</strong> ${body.email}</p>
               <p><strong>Phone:</strong> ${body.phone || 'N/A'}</p>
+              <p><strong>SMS marketing consent:</strong> ${smsConsent ? `Yes (${body.smsConsentAt})` : 'No'}</p>
               <p><strong>Church Name:</strong> ${body.churchName}</p>
               <p><strong>Church Size:</strong> ${body.churchSize || 'N/A'}</p>
               <p><strong>Role/Title:</strong> ${body.role || 'N/A'}</p>
@@ -325,6 +333,7 @@ export async function POST(request: NextRequest) {
             `Email: ${body.email || 'N/A'}`,
             `Church: ${body.churchName || 'N/A'}`,
             `Church Size: ${body.churchSize || 'N/A'}`,
+            `SMS marketing consent: ${smsConsent ? `Yes, ${body.smsConsentAt}` : 'No'}`,
             `Source: ${body.source || 'Website UI'}`,
             body.interests && body.interests.length > 0 ? `Interests: ${body.interests.join(', ')}` : null,
             `Submitted: ${new Date().toISOString()}`,
