@@ -46,7 +46,7 @@ export function MarketingFooter() {
         </div>
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} MinistryMotion. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} MinistryMotion, operated by Darden Behavioral Counseling. All rights reserved.</p>
           <p className="flex items-center gap-1">
             Built for <span className="text-foreground">transformation.</span>
           </p>

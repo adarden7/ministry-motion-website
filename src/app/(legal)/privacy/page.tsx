@@ -104,6 +104,21 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section>
+            <h2 className="text-xl font-semibold mb-3">Text Messaging (SMS)</h2>
+            <p>
+              MinistryMotion is operated by Darden Behavioral Counseling. If you opt in to text messages from
+              MinistryMotion, we send account, billing, and service notifications (for example, a service plan
+              ready for review or a new demo request). Message frequency varies. Message and data rates may apply.
+              Reply STOP to opt out at any time, or HELP for help.
+            </p>
+            <p className="mt-2">
+              We do not sell, rent, or share your mobile number or text-messaging consent with third parties or
+              affiliates for marketing or promotional purposes. Consent to receive texts is not a condition of
+              using MinistryMotion.
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-xl font-semibold mb-3">7. Your Rights and Choices</h2>
             <p>You have the right to:</p>
             <ul className="list-disc pl-6 space-y-1">
