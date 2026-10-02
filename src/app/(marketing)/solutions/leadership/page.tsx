@@ -26,7 +26,7 @@ const useCases = [
     title: 'Prove Discipleship Drives Giving',
     subtitle: 'Journey stage → giving correlation: Serve-stage members give 2.3x more on average',
     description:
-      'Ministry Motion tracks the correlation between discipleship depth and giving behavior across your congregation. The data is clear: members who reach the Serve stage of the discipleship journey give significantly more than Connect-stage attendees. Leadership can now present this correlation in board meetings with actual data.',
+      'MinistryMotion tracks the correlation between discipleship depth and giving behavior across your congregation. The data is clear: members who reach the Serve stage of the discipleship journey give significantly more than Connect-stage attendees. Leadership can now present this correlation in board meetings with actual data.',
     bullets: [
       'Journey stage cross-referenced with integrated giving data automatically',
       'Discipleship ROI report: dollar per discipleship investment across all programs',
@@ -77,7 +77,7 @@ const useCases = [
     title: 'Spiritual Health Reporting',
     subtitle: '5-dimension quantified health vs. financial-only reporting',
     description:
-      'Ministry Motion moves church leadership beyond attendance counts and offering totals. The 5-dimension Church Health Radar quantifies discipleship depth, volunteer engagement, community connectedness, leadership pipeline strength, and giving health—giving leadership a complete picture of congregation vitality.',
+      'MinistryMotion moves church leadership beyond attendance counts and offering totals. The 5-dimension Church Health Radar quantifies discipleship depth, volunteer engagement, community connectedness, leadership pipeline strength, and giving health—giving leadership a complete picture of congregation vitality.',
     bullets: [
       'Discipleship Depth: percentage of members advancing through the pipeline',
       'Volunteer Engagement: serving rates and burnout-risk indicators',
@@ -149,7 +149,7 @@ export default function LeadershipPage() {
 
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               Pastors, elders, and denominational leaders deserve more than attendance reports.
-              Ministry Motion provides discipleship data, leadership pipeline visibility,
+              MinistryMotion provides discipleship data, leadership pipeline visibility,
               and spiritual health intelligence that drives strategic decisions.
             </p>
 
@@ -342,14 +342,14 @@ export default function LeadershipPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/solutions/worship-directors" className="hover:text-white transition-colors">Worship Directors</Link>
               <Link href="/solutions/ministries-directors" className="hover:text-white transition-colors">Ministry Directors</Link>
               <Link href="/solutions/church-admins" className="hover:text-white transition-colors">Church Admins</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

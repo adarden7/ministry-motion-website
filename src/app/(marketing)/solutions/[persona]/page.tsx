@@ -180,7 +180,7 @@ export default function SolutionPage() {
               Sound Familiar?
             </h2>
             <p className="text-lg text-slate-400">
-              We built Ministry Motion to solve these exact challenges.
+              We built MinistryMotion to solve these exact challenges.
             </p>
           </motion.div>
 
@@ -213,7 +213,7 @@ export default function SolutionPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              How Ministry Motion Helps
+              How MinistryMotion Helps
             </h2>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Purpose-built tools designed for your specific role and responsibilities.

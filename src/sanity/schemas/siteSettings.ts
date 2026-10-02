@@ -9,7 +9,7 @@ export const siteSettings = defineType({
       name: 'siteName',
       title: 'Site Name',
       type: 'string',
-      initialValue: 'Ministry Motion',
+      initialValue: 'MinistryMotion',
     }),
     defineField({
       name: 'tagline',

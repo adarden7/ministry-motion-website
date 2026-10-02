@@ -189,7 +189,7 @@ export default function ChurchLeadershipJourneyPage() {
             />
             <MilestoneCard
               title="Health Score baseline — 5 dimensions established"
-              description="Ministry Motion establishes a baseline Health Score across: Discipleship Depth, Team Readiness, Leadership Pipeline, Member Care, and Community Engagement."
+              description="MinistryMotion establishes a baseline Health Score across: Discipleship Depth, Team Readiness, Leadership Pipeline, Member Care, and Community Engagement."
               screenshot="Health Score baseline dashboard showing 5 dimension gauges with initial scores, data source indicators, and 30-day trend projection lines"
             />
             <MilestoneCard
@@ -232,7 +232,7 @@ export default function ChurchLeadershipJourneyPage() {
             />
             <MilestoneCard
               title="Engagement-to-giving correlation: Serve-stage gives 2.3x more"
-              description="Ministry Motion surfaces a data insight: Serve-stage members at Mt. Zion give 2.3x more than Connect-stage members on average. Discipleship investment now has a financial ROI story."
+              description="MinistryMotion surfaces a data insight: Serve-stage members at Mt. Zion give 2.3x more than Connect-stage members on average. Discipleship investment now has a financial ROI story."
               screenshot="Engagement-to-giving correlation chart showing giving level by journey stage with 2.3x multiplier annotation for Serve vs. Connect stage comparison"
             />
           </div>
@@ -310,7 +310,7 @@ export default function ChurchLeadershipJourneyPage() {
             />
             <MilestoneCard
               title="District leadership interest in denominational rollout"
-              description="Based on the district-wide briefing, three other churches in the denomination have requested access to Ministry Motion. A denominational pilot program is under discussion."
+              description="Based on the district-wide briefing, three other churches in the denomination have requested access to MinistryMotion. A denominational pilot program is under discussion."
               screenshot="Denominational pilot interest summary showing 3 church interest letters, pilot program proposal framework, and district leadership sign-off confirmation"
             />
             <MilestoneCard

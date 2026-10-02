@@ -680,7 +680,7 @@ export default function ProductsPage() {
               Everything works together
             </h2>
             <p className="text-lg text-slate-300">
-              Unlike cobbled-together tools, every Ministry Motion feature shares data seamlessly.
+              Unlike cobbled-together tools, every MinistryMotion feature shares data seamlessly.
               No duplicate entry. No sync issues. No integration headaches.
             </p>
           </div>
@@ -749,10 +749,10 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+              <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-slate-500">
-              © 2026 Ministry Motion. All rights reserved.
+              © 2026 MinistryMotion. All rights reserved.
             </p>
           </div>
         </div>

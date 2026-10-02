@@ -114,7 +114,7 @@ const blogPosts = [
     slug: 'how-to-set-up-planning-center-integration',
     title: 'How to Set Up Planning Center Integration',
     excerpt:
-      'Connect Ministry Motion to Planning Center Online in under 10 minutes and import your members, services, and rosters—without manual exports, CSV files, or data reconciliation.',
+      'Connect MinistryMotion to Planning Center Online in under 10 minutes and import your members, services, and rosters—without manual exports, CSV files, or data reconciliation.',
     category: 'How-To Guides',
     readTime: '5 min read',
   },
@@ -132,9 +132,9 @@ const blogPosts = [
   {
     id: '11',
     slug: 'ministry-motion-vs-planning-center-which-is-right',
-    title: 'Ministry Motion vs. Planning Center: Which Is Right for Your Church?',
+    title: 'MinistryMotion vs. Planning Center: Which Is Right for Your Church?',
     excerpt:
-      'Planning Center is the industry standard for service planning. Ministry Motion adds AI coaching, member analytics, and learning management. This head-to-head helps you decide if you need one, the other, or both.',
+      'Planning Center is the industry standard for service planning. MinistryMotion adds AI coaching, member analytics, and learning management. This head-to-head helps you decide if you need one, the other, or both.',
     category: 'Comparison & ROI',
     readTime: '8 min read',
   },
@@ -152,7 +152,7 @@ const blogPosts = [
     slug: 'replacing-6-subscriptions-with-one-platform',
     title: "Replacing 6 Subscriptions With 1: A Real-World Cost Analysis",
     excerpt:
-      'PCO, Circle, Yousician, Coursera, Zoom, and Pushpay can cost over $1,000/month combined. We walk through which core features Ministry Motion Pro replaces and where the savings are real.',
+      'PCO, Circle, Yousician, Coursera, Zoom, and Pushpay can cost over $1,000/month combined. We walk through which core features MinistryMotion Pro replaces and where the savings are real.',
     category: 'Comparison & ROI',
     readTime: '6 min read',
   },
@@ -161,7 +161,7 @@ const blogPosts = [
     slug: 'ai-vocal-coaching-vs-human-coach-cost-comparison',
     title: 'AI Vocal Coaching vs. Human Vocal Coach: A Cost and Outcome Comparison',
     excerpt:
-      'A human vocal coach costs $60–120/hour. AI vocal coaching in Ministry Motion costs $0.10 in processing per rehearsal track. We compare outcomes, consistency, and appropriate use cases for each.',
+      'A human vocal coach costs $60–120/hour. AI vocal coaching in MinistryMotion costs $0.10 in processing per rehearsal track. We compare outcomes, consistency, and appropriate use cases for each.',
     category: 'Comparison & ROI',
     readTime: '7 min read',
   },
@@ -181,14 +181,14 @@ const blogPosts = [
     slug: 'how-satb-ai-separation-actually-works',
     title: 'How AI SATB Voice Separation Actually Works (Technical Deep Dive)',
     excerpt:
-      'A technical breakdown of the source separation pipeline behind Ministry Motion rehearsal tracks—from audio ingestion through frequency domain separation to part recombination with blend mix.',
+      'A technical breakdown of the source separation pipeline behind MinistryMotion rehearsal tracks—from audio ingestion through frequency domain separation to part recombination with blend mix.',
     category: 'Deep Dives',
     readTime: '12 min read',
   },
   {
     id: '17',
     slug: 'the-architecture-of-the-unifiedmember-system',
-    title: "The Architecture of Ministry Motion's UnifiedMember System",
+    title: "The Architecture of MinistryMotion's UnifiedMember System",
     excerpt:
       'How we built a single member record that serves 20 specialized AI agents, all ministry dashboards, PCO integration, and real-time journey pipeline tracking—without data fragmentation.',
     category: 'Deep Dives',
@@ -208,7 +208,7 @@ const blogPosts = [
     slug: 'wearable-hrv-data-in-ministry-what-it-actually-measures',
     title: 'Wearable HRV Data in Ministry: What It Actually Measures and What It Does Not',
     excerpt:
-      'Apple Watch and Galaxy Watch HRV data can surface patterns associated with physiological stress. This deep dive explains what the data means, what it cannot diagnose, and how Ministry Motion uses it responsibly.',
+      'Apple Watch and Galaxy Watch HRV data can surface patterns associated with physiological stress. This deep dive explains what the data means, what it cannot diagnose, and how MinistryMotion uses it responsibly.',
     category: 'Deep Dives',
     readTime: '13 min read',
   },
@@ -273,7 +273,7 @@ export default function BlogPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
               <BookOpen className="w-4 h-4 text-blue-400" />
-              <span className="text-sm font-medium text-blue-300">Ministry Motion Blog</span>
+              <span className="text-sm font-medium text-blue-300">MinistryMotion Blog</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-white">
@@ -387,7 +387,7 @@ export default function BlogPage() {
             Stay ahead of the conversation
           </h2>
           <p className="text-slate-300 mb-8">
-            Get new articles and Ministry Motion updates delivered directly to your inbox.
+            Get new articles and MinistryMotion updates delivered directly to your inbox.
             Join our beta and be the first to access new features as we publish about them.
           </p>
           <button
@@ -403,14 +403,14 @@ export default function BlogPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/solutions/praise-leaders" className="hover:text-white transition-colors">Solutions</Link>
               <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
               <Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

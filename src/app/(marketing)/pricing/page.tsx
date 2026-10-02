@@ -29,7 +29,7 @@ const pricingTiers = [
     price: '$0',
     annualPrice: '$0',
     period: '30 days free',
-    description: 'Try Ministry Motion risk-free. No credit card required.',
+    description: 'Try MinistryMotion risk-free. No credit card required.',
     teamSize: '5 team members',
     highlight: false,
     cta: 'Start Free Trial',
@@ -544,10 +544,10 @@ export default function PricingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+              <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             </div>
             <p className="text-sm text-slate-500">
-              © 2026 Ministry Motion. All rights reserved.
+              © 2026 MinistryMotion. All rights reserved.
             </p>
           </div>
         </div>

@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: '"Ministry Motion" <hello@ministrymotion.com>',
+            from: '"MinistryMotion" <hello@ministrymotion.com>',
             to: process.env.LEAD_NOTIFICATION_EMAIL || 'ahkeem@dardenbehavioralcounseling.com',
             subject: `New Lead: ${body.firstName} ${body.lastName} - ${body.churchName}`,
             html: `
@@ -63,26 +63,26 @@ export async function POST(request: NextRequest) {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            from: '"Ministry Motion" <hello@ministrymotion.com>',
+            from: '"MinistryMotion" <hello@ministrymotion.com>',
             to: body.email,
-            subject: 'Welcome to Ministry Motion Beta!',
+            subject: 'Welcome to MinistryMotion Beta!',
             html: `
               <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
                 <div style="background: #1a1a2e; padding: 32px; border-radius: 12px 12px 0 0; text-align: center;">
-                  <h1 style="margin: 0; color: #fff; font-size: 28px;">Welcome to Ministry Motion!</h1>
+                  <h1 style="margin: 0; color: #fff; font-size: 28px;">Welcome to MinistryMotion!</h1>
                   <p style="margin: 8px 0 0; color: #a5b4fc; font-size: 16px;">Your beta request is confirmed.</p>
                 </div>
                 <div style="padding: 40px 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
                   <h3 style="margin-top: 0; font-size: 18px; color: #1e293b;">Hi ${body.firstName},</h3>
                   <p style="font-size: 16px; line-height: 1.6; color: #475569;">
-                    Thank you for signing up for the Ministry Motion early access beta! We're thrilled to have you onboard.
+                    Thank you for signing up for the MinistryMotion early access beta! We're thrilled to have you onboard.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6; color: #475569;">
                     We're currently processing beta requests and rolling out access in waves. Keep an eye on your inbox, as we'll be reaching out very soon with your exclusive invitation and next steps to log in!
                   </p>
                   <p style="font-size: 16px; line-height: 1.6; color: #475569; margin-top: 32px;">
                     Blessings,<br/>
-                    <strong>The Ministry Motion Team</strong>
+                    <strong>The MinistryMotion Team</strong>
                   </p>
                 </div>
               </div>

@@ -336,7 +336,7 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-slate-600 mb-8">
                 Circle and other community platforms make you build everything from scratch.
-                Ministry Motion comes with your ministry structures, roles, and responsibilities already configured.
+                MinistryMotion comes with your ministry structures, roles, and responsibilities already configured.
                 Just customize and go.
               </p>
 
@@ -411,7 +411,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Find Your Path</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
-              See How Ministry Motion Helps Your Role
+              See How MinistryMotion Helps Your Role
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Every role has unique needs. Explore features tailored to your ministry area.
@@ -548,7 +548,7 @@ export default function HomePage() {
                 give nearly three times more than attendance-only members.
               </p>
               <p className="text-blue-100 mb-8">
-                Ministry Motion helps you move members along the discipleship journey—from first-time
+                MinistryMotion helps you move members along the discipleship journey—from first-time
                 visitor to servant leader—with tools that track progress, suggest next steps, and
                 celebrate milestones.
               </p>
@@ -606,7 +606,7 @@ export default function HomePage() {
               <div>
                 <h3 className="text-xl font-bold text-white">Already using Planning Center?</h3>
                 <p className="text-slate-400">
-                  Ministry Motion integrates seamlessly. Keep your data, add AI superpowers.
+                  MinistryMotion integrates seamlessly. Keep your data, add AI superpowers.
                 </p>
               </div>
             </div>
@@ -737,7 +737,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+                <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
               </div>
               <p className="text-sm text-slate-400 mb-6">
                 The complete platform for church ministry—built for discipleship, powered by AI.
@@ -862,7 +862,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-slate-500">
-                © 2026 Ministry Motion. All rights reserved.
+                © 2026 MinistryMotion. All rights reserved.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500">
                 <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>

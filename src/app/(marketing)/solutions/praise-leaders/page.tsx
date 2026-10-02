@@ -138,10 +138,33 @@ export default function PraiseLeadersPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm mb-4">
               <Mic2 className="w-4 h-4 text-blue-400" />
               <span className="text-sm font-medium text-blue-300">Solutions for Praise Leaders</span>
             </div>
+
+            {/*
+              PARENT-BRAND ATTRIBUTION — load-bearing, not decoration.
+
+              praiseleaderstudio.com / .ai REWRITE to this route rather than redirecting, so the
+              visitor's address bar reads "praiseleaderstudio.com" for the entire visit and the
+              product appears to BE "Praise Leader Studio". The app they are eventually asked to
+              install is listed as MinistryMotion, and Apple cannot vary an app's name per
+              audience: title, subtitle, description and keywords are GLOBAL to the listing, and
+              Custom Product Pages vary only screenshots, previews and promo text. Shipping a
+              separate per-persona app instead would breach App Store Review Guideline 4.3(a)
+              (multiple Bundle IDs of the same app) and would split one church's data in two.
+
+              So the parent brand has to be named HERE, before the tap — this line is the only
+              place the connection can be made. See studio-worshipwise docs/app-store-listing.md.
+            */}
+            <p className="text-sm text-slate-400 mb-6">
+              <span className="font-semibold text-slate-300">Praise Leader Studio</span> is a{' '}
+              <Link href="/" className="text-blue-400 underline underline-offset-2 hover:text-blue-300">
+                MinistryMotion
+              </Link>{' '}
+              app
+            </p>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
               Lead Worship With{' '}
@@ -152,7 +175,7 @@ export default function PraiseLeadersPage() {
 
             <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
               From rehearsal track generation to ensemble blend analysis and personal vocal coaching—
-              Ministry Motion gives Praise Leaders the tools to build a truly excellent worship team.
+              MinistryMotion gives Praise Leaders the tools to build a truly excellent worship team.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -444,14 +467,14 @@ export default function PraiseLeadersPage() {
       <footer className="py-12 bg-slate-900 border-t border-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <img src="/logos/ministry-motion-text-logo-white.svg" alt="Ministry Motion" className="h-8 w-auto" />
+            <img src="/logos/ministry-motion-text-logo-white.svg" alt="MinistryMotion" className="h-8 w-auto" />
             <nav className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <Link href="/solutions/worship-directors" className="hover:text-white transition-colors">Worship Directors</Link>
               <Link href="/solutions/ministries-directors" className="hover:text-white transition-colors">Ministry Directors</Link>
               <Link href="/solutions/church-admins" className="hover:text-white transition-colors">Church Admins</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             </nav>
-            <p className="text-sm text-slate-500">© 2026 Ministry Motion. All rights reserved.</p>
+            <p className="text-sm text-slate-500">© 2026 MinistryMotion. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -210,8 +210,8 @@ export default function ChurchAdminJourneyPage() {
             />
             <MilestoneCard
               title="Compare page PDF shared with senior pastor"
-              description="David generates and shares the platform comparison PDF with the senior pastor. The document shows Ministry Motion vs. current tool stack on features, cost, and data fragmentation."
-              screenshot="Tool comparison PDF showing Ministry Motion vs. Mailchimp + PraiseCharts + spreadsheets feature matrix with cost comparison column and data-fragmentation row"
+              description="David generates and shares the platform comparison PDF with the senior pastor. The document shows MinistryMotion vs. current tool stack on features, cost, and data fragmentation."
+              screenshot="Tool comparison PDF showing MinistryMotion vs. Mailchimp + PraiseCharts + spreadsheets feature matrix with cost comparison column and data-fragmentation row"
             />
             <MilestoneCard
               title="Unified member profiles replacing 3 spreadsheets"
@@ -243,7 +243,7 @@ export default function ChurchAdminJourneyPage() {
             />
             <MilestoneCard
               title="Cancel Mailchimp and PraiseCharts subscriptions"
-              description="With Ministry Motion handling communications and song management, Mailchimp ($149/mo) and PraiseCharts ($99/mo) subscriptions are cancelled. $248/mo savings begins immediately."
+              description="With MinistryMotion handling communications and song management, Mailchimp ($149/mo) and PraiseCharts ($99/mo) subscriptions are cancelled. $248/mo savings begins immediately."
               screenshot="Subscription cancellation confirmation emails for Mailchimp and PraiseCharts side by side with monthly savings calculator showing $248/month"
             />
             <MilestoneCard
@@ -276,8 +276,8 @@ export default function ChurchAdminJourneyPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <MilestoneCard
               title="Full tech stack consolidated: 6 tools to 1"
-              description="PCO (retained), Mailchimp, PraiseCharts, an events tool, a giving platform, and a spreadsheet system — all consolidated into Ministry Motion's unified platform."
-              screenshot="Tech stack consolidation summary showing 6 previous tools with red X marks all pointing to Ministry Motion logo, with final 1-platform architecture diagram"
+              description="PCO (retained), Mailchimp, PraiseCharts, an events tool, a giving platform, and a spreadsheet system — all consolidated into MinistryMotion's unified platform."
+              screenshot="Tech stack consolidation summary showing 6 previous tools with red X marks all pointing to MinistryMotion logo, with final 1-platform architecture diagram"
             />
             <MilestoneCard
               title="Annual savings: $10,608 documented"
