@@ -40,6 +40,9 @@ export interface Lead {
   lastName: string;
   email: string;
   phone: string;
+  smsConsent?: boolean;      // opted in to MinistryMotion marketing texts (unchecked by default)
+  smsConsentText?: string;   // exact wording shown at opt-in
+  smsConsentAt?: string;     // ISO timestamp the consent was recorded server-side
 
   // Church info
   churchName: string;
@@ -90,6 +93,8 @@ export interface BetaSignupFormData {
   churchSize: ChurchSize;
   role?: string;
   interests?: string[];
+  smsConsent?: boolean;
+  smsConsentText?: string;
 }
 
 // API request/response types

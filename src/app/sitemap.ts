@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/solutions',
     '/privacy',
     '/terms',
+    '/sms-consent',
     // Dedicated persona solution pages (own folders).
     '/solutions/praise-leaders',
     '/solutions/worship-directors',
